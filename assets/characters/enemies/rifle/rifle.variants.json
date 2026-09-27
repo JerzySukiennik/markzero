@@ -1,0 +1,106 @@
+{
+ "kind": "rifle",
+ "default": "A",
+ "height_m": 1.8,
+ "variants": {
+  "A": {
+   "show": [
+    "rifle_balaclava"
+   ],
+   "hide": [
+    "rifle_bandana",
+    "rifle_cap",
+    "rifle_cap_visor"
+   ],
+   "colors": {
+    "mat_top": [
+     0.05,
+     0.05,
+     0.055
+    ],
+    "mat_pants": [
+     0.05,
+     0.05,
+     0.055
+    ],
+    "mat_shoes": [
+     0.03,
+     0.03,
+     0.03
+    ],
+    "mat_gloves": [
+     0.03,
+     0.03,
+     0.03
+    ],
+    "mat_vest": [
+     0.07,
+     0.075,
+     0.07
+    ],
+    "mat_balaclava": [
+     0.025,
+     0.025,
+     0.028
+    ],
+    "mat_skin": [
+     0.24,
+     0.14,
+     0.09
+    ]
+   }
+  },
+  "B": {
+   "show": [
+    "rifle_bandana",
+    "rifle_cap",
+    "rifle_cap_visor"
+   ],
+   "hide": [
+    "rifle_balaclava"
+   ],
+   "colors": {
+    "mat_top": [
+     0.13,
+     0.14,
+     0.09
+    ],
+    "mat_pants": [
+     0.25,
+     0.21,
+     0.15
+    ],
+    "mat_shoes": [
+     0.2,
+     0.15,
+     0.09
+    ],
+    "mat_gloves": [
+     0.12,
+     0.1,
+     0.07
+    ],
+    "mat_vest": [
+     0.24,
+     0.2,
+     0.14
+    ],
+    "mat_cap": [
+     0.13,
+     0.14,
+     0.09
+    ],
+    "mat_bandana": [
+     0.07,
+     0.07,
+     0.06
+    ],
+    "mat_skin": [
+     0.12,
+     0.068,
+     0.043
+    ]
+   }
+  }
+ }
+}
