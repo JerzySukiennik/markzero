@@ -1,0 +1,689 @@
+{
+ "en_pistol_shot_1": {
+  "file": "enemies/en_pistol_shot_1",
+  "loop": false,
+  "gain": 1.5,
+  "desc": "9 mm / .45 pistol shot (Walther PPQ, Colt 1911, Bersa .380), close (real recording: ppq_near_1)"
+ },
+ "en_pistol_shot_2": {
+  "file": "enemies/en_pistol_shot_2",
+  "loop": false,
+  "gain": 1.5,
+  "desc": "9 mm / .45 pistol shot (Walther PPQ, Colt 1911, Bersa .380), close (real recording: ppq_near_2)"
+ },
+ "en_pistol_shot_3": {
+  "file": "enemies/en_pistol_shot_3",
+  "loop": false,
+  "gain": 1.5,
+  "desc": "9 mm / .45 pistol shot (Walther PPQ, Colt 1911, Bersa .380), close (real recording: ppq_near_3)"
+ },
+ "en_pistol_shot_4": {
+  "file": "enemies/en_pistol_shot_4",
+  "loop": false,
+  "gain": 1.5,
+  "desc": "9 mm / .45 pistol shot (Walther PPQ, Colt 1911, Bersa .380), close (real recording: m1911_near_1)"
+ },
+ "en_pistol_shot_5": {
+  "file": "enemies/en_pistol_shot_5",
+  "loop": false,
+  "gain": 1.5,
+  "desc": "9 mm / .45 pistol shot (Walther PPQ, Colt 1911, Bersa .380), close (real recording: m1911_near_2)"
+ },
+ "en_pistol_shot_6": {
+  "file": "enemies/en_pistol_shot_6",
+  "loop": false,
+  "gain": 1.5,
+  "desc": "9 mm / .45 pistol shot (Walther PPQ, Colt 1911, Bersa .380), close (real recording: bersa_near_1)"
+ },
+ "en_pistol_shot_far_1": {
+  "file": "enemies/en_pistol_shot_far_1",
+  "loop": false,
+  "gain": 1.3,
+  "desc": "9 mm / .45 pistol shot (Walther PPQ, Colt 1911, Bersa .380), distant (real recording: ppq_mid_1)"
+ },
+ "en_pistol_shot_far_2": {
+  "file": "enemies/en_pistol_shot_far_2",
+  "loop": false,
+  "gain": 1.3,
+  "desc": "9 mm / .45 pistol shot (Walther PPQ, Colt 1911, Bersa .380), distant (real recording: ppq_mid_2)"
+ },
+ "en_pistol_shot_far_3": {
+  "file": "enemies/en_pistol_shot_far_3",
+  "loop": false,
+  "gain": 1.3,
+  "desc": "9 mm / .45 pistol shot (Walther PPQ, Colt 1911, Bersa .380), distant (real recording: m1911_mid_1)"
+ },
+ "en_pistol_shot_far_4": {
+  "file": "enemies/en_pistol_shot_far_4",
+  "loop": false,
+  "gain": 1.3,
+  "desc": "9 mm / .45 pistol shot (Walther PPQ, Colt 1911, Bersa .380), distant (real recording: m1911_mid_2)"
+ },
+ "en_pistol_shot_far_5": {
+  "file": "enemies/en_pistol_shot_far_5",
+  "loop": false,
+  "gain": 1.3,
+  "desc": "9 mm / .45 pistol shot (Walther PPQ, Colt 1911, Bersa .380), distant (real recording: bersa_mid_1)"
+ },
+ "en_rifle_shot_1": {
+  "file": "enemies/en_rifle_shot_1",
+  "loop": false,
+  "gain": 1.5,
+  "desc": "7.62x39 rifle shot (AK-47, SKS), close (real recording: ak_near_1)"
+ },
+ "en_rifle_shot_2": {
+  "file": "enemies/en_rifle_shot_2",
+  "loop": false,
+  "gain": 1.5,
+  "desc": "7.62x39 rifle shot (AK-47, SKS), close (real recording: ak_near_2)"
+ },
+ "en_rifle_shot_3": {
+  "file": "enemies/en_rifle_shot_3",
+  "loop": false,
+  "gain": 1.5,
+  "desc": "7.62x39 rifle shot (AK-47, SKS), close (real recording: ak_near_3)"
+ },
+ "en_rifle_shot_4": {
+  "file": "enemies/en_rifle_shot_4",
+  "loop": false,
+  "gain": 1.5,
+  "desc": "7.62x39 rifle shot (AK-47, SKS), close (real recording: ak_near_4)"
+ },
+ "en_rifle_shot_5": {
+  "file": "enemies/en_rifle_shot_5",
+  "loop": false,
+  "gain": 1.5,
+  "desc": "7.62x39 rifle shot (AK-47, SKS), close (real recording: sks_near_1)"
+ },
+ "en_rifle_shot_6": {
+  "file": "enemies/en_rifle_shot_6",
+  "loop": false,
+  "gain": 1.5,
+  "desc": "7.62x39 rifle shot (AK-47, SKS), close (real recording: sks_near_2)"
+ },
+ "en_rifle_shot_far_1": {
+  "file": "enemies/en_rifle_shot_far_1",
+  "loop": false,
+  "gain": 1.3,
+  "desc": "7.62x39 rifle shot (AK-47, SKS), distant (real recording: ak_mid_1)"
+ },
+ "en_rifle_shot_far_2": {
+  "file": "enemies/en_rifle_shot_far_2",
+  "loop": false,
+  "gain": 1.3,
+  "desc": "7.62x39 rifle shot (AK-47, SKS), distant (real recording: ak_mid_2)"
+ },
+ "en_rifle_shot_far_3": {
+  "file": "enemies/en_rifle_shot_far_3",
+  "loop": false,
+  "gain": 1.3,
+  "desc": "7.62x39 rifle shot (AK-47, SKS), distant (real recording: sks_mid_1)"
+ },
+ "en_rifle_shot_far_4": {
+  "file": "enemies/en_rifle_shot_far_4",
+  "loop": false,
+  "gain": 1.3,
+  "desc": "7.62x39 rifle shot (AK-47, SKS), distant (real recording: sks_mid_2)"
+ },
+ "en_shell_drop_1": {
+  "file": "enemies/en_shell_drop_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "brass casing tinkles on concrete"
+ },
+ "en_shell_drop_2": {
+  "file": "enemies/en_shell_drop_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "brass casing tinkles on concrete"
+ },
+ "en_shell_drop_3": {
+  "file": "enemies/en_shell_drop_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "brass casing tinkles on concrete"
+ },
+ "en_pistol_mag_out": {
+  "file": "enemies/en_pistol_mag_out",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "pistol magazine release + drop"
+ },
+ "en_pistol_mag_in": {
+  "file": "enemies/en_pistol_mag_in",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "pistol magazine seated"
+ },
+ "en_pistol_slide": {
+  "file": "enemies/en_pistol_slide",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "pistol slide racked (Jurek's pump recording, sped up)"
+ },
+ "en_rifle_mag_out": {
+  "file": "enemies/en_rifle_mag_out",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "rifle magazine rocked out"
+ },
+ "en_rifle_mag_in": {
+  "file": "enemies/en_rifle_mag_in",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "rifle magazine rocked in"
+ },
+ "en_rifle_bolt": {
+  "file": "enemies/en_rifle_bolt",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "charging handle pulled and released (Jurek's pump recording)"
+ },
+ "en_rpg_handle": {
+  "file": "enemies/en_rpg_handle",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "RPG hammer cocked / grip"
+ },
+ "en_rpg_click": {
+  "file": "enemies/en_rpg_click",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "RPG trigger"
+ },
+ "en_rpg_load": {
+  "file": "enemies/en_rpg_load",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "rocket slid into the muzzle and locked"
+ },
+ "en_rpg_launch": {
+  "file": "enemies/en_rpg_launch",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "RPG launch: pop + back-blast + sustainer roar"
+ },
+ "en_rpg_flight": {
+  "file": "enemies/en_rpg_flight",
+  "loop": true,
+  "gain": 0.8,
+  "desc": "rocket in flight (loop; attach to the rocket)"
+ },
+ "en_explosion": {
+  "file": "enemies/en_explosion",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "RPG warhead explosion with debris"
+ },
+ "en_bullet_flyby": {
+  "file": "enemies/en_bullet_flyby",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "a bullet cracks past"
+ },
+ "en_impact_concrete": {
+  "file": "enemies/en_impact_concrete",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "bullet into concrete"
+ },
+ "en_impact_metal": {
+  "file": "enemies/en_impact_metal",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "bullet on metal / armour ping"
+ },
+ "en_swish_1": {
+  "file": "enemies/en_swish_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "fist swing + sleeve"
+ },
+ "en_swish_2": {
+  "file": "enemies/en_swish_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "fist swing + sleeve"
+ },
+ "en_swish_3": {
+  "file": "enemies/en_swish_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "fist swing + sleeve"
+ },
+ "en_swish_4": {
+  "file": "enemies/en_swish_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "fist swing + sleeve"
+ },
+ "en_knife_swish": {
+  "file": "enemies/en_knife_swish",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "blade swish"
+ },
+ "en_knife_hit": {
+  "file": "enemies/en_knife_hit",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "knife hit"
+ },
+ "en_bat_swish": {
+  "file": "enemies/en_bat_swish",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "heavy swing (bat / throw)"
+ },
+ "en_bat_hit": {
+  "file": "enemies/en_bat_hit",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "bat connects"
+ },
+ "en_punch_hit_1": {
+  "file": "enemies/en_punch_hit_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "punch lands"
+ },
+ "en_punch_hit_2": {
+  "file": "enemies/en_punch_hit_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "punch lands"
+ },
+ "en_punch_hit_3": {
+  "file": "enemies/en_punch_hit_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "punch lands"
+ },
+ "en_hit_body": {
+  "file": "enemies/en_hit_body",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "the thug takes a hit"
+ },
+ "en_ground_pound": {
+  "file": "enemies/en_ground_pound",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "brute ground-pound"
+ },
+ "en_step_1": {
+  "file": "enemies/en_step_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "street footstep (boots / sneakers on concrete)"
+ },
+ "en_step_2": {
+  "file": "enemies/en_step_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "street footstep (boots / sneakers on concrete)"
+ },
+ "en_step_3": {
+  "file": "enemies/en_step_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "street footstep (boots / sneakers on concrete)"
+ },
+ "en_step_4": {
+  "file": "enemies/en_step_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "street footstep (boots / sneakers on concrete)"
+ },
+ "en_step_5": {
+  "file": "enemies/en_step_5",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "street footstep (boots / sneakers on concrete)"
+ },
+ "en_step_6": {
+  "file": "enemies/en_step_6",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "street footstep (boots / sneakers on concrete)"
+ },
+ "en_cloth_1": {
+  "file": "enemies/en_cloth_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "clothing rustle"
+ },
+ "en_cloth_2": {
+  "file": "enemies/en_cloth_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "clothing rustle"
+ },
+ "en_cloth_3": {
+  "file": "enemies/en_cloth_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "clothing rustle"
+ },
+ "en_cloth_4": {
+  "file": "enemies/en_cloth_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "clothing rustle"
+ },
+ "en_body_fall": {
+  "file": "enemies/en_body_fall",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "body hits the ground"
+ },
+ "en_web_creak": {
+  "file": "enemies/en_web_creak",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "webbing strains"
+ },
+ "en_grunt_1": {
+  "file": "enemies/en_grunt_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "short effort grunt (punch, stab, throw) \u2014 3grunt1.wav"
+ },
+ "en_grunt_2": {
+  "file": "enemies/en_grunt_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "short effort grunt (punch, stab, throw) \u2014 3grunt3.wav"
+ },
+ "en_grunt_3": {
+  "file": "enemies/en_grunt_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "short effort grunt (punch, stab, throw) \u2014 3grunt4.wav"
+ },
+ "en_grunt_4": {
+  "file": "enemies/en_grunt_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "short effort grunt (punch, stab, throw) \u2014 3grunt5.wav"
+ },
+ "en_grunt_5": {
+  "file": "enemies/en_grunt_5",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "short effort grunt (punch, stab, throw) \u2014 1yell6.wav"
+ },
+ "en_grunt_6": {
+  "file": "enemies/en_grunt_6",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "short effort grunt (punch, stab, throw) \u2014 2yell9.wav"
+ },
+ "en_pain_1": {
+  "file": "enemies/en_pain_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "hit / pain (short, sharp) \u2014 pain1.wav"
+ },
+ "en_pain_2": {
+  "file": "enemies/en_pain_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "hit / pain (short, sharp) \u2014 pain2.wav"
+ },
+ "en_pain_3": {
+  "file": "enemies/en_pain_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "hit / pain (short, sharp) \u2014 pain4.wav"
+ },
+ "en_pain_4": {
+  "file": "enemies/en_pain_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "hit / pain (short, sharp) \u2014 pain5.wav"
+ },
+ "en_pain_5": {
+  "file": "enemies/en_pain_5",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "hit / pain (short, sharp) \u2014 painh.wav"
+ },
+ "en_pain_6": {
+  "file": "enemies/en_pain_6",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "hit / pain (short, sharp) \u2014 1yell8.wav"
+ },
+ "en_death_1": {
+  "file": "enemies/en_death_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "death groan / last breath \u2014 die1.wav"
+ },
+ "en_death_2": {
+  "file": "enemies/en_death_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "death groan / last breath \u2014 die2.wav"
+ },
+ "en_death_3": {
+  "file": "enemies/en_death_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "death groan / last breath \u2014 deathh.wav"
+ },
+ "en_death_4": {
+  "file": "enemies/en_death_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "death groan / last breath \u2014 dpg_09.wav"
+ },
+ "en_death_5": {
+  "file": "enemies/en_death_5",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "death groan / last breath \u2014 dpg_12.wav"
+ },
+ "en_death_6": {
+  "file": "enemies/en_death_6",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "death groan / last breath \u2014 dpg_14.wav"
+ },
+ "en_alert_1": {
+  "file": "enemies/en_alert_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "startled 'huh?!' \u2014 1yell9 (no words)"
+ },
+ "en_alert_2": {
+  "file": "enemies/en_alert_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "startled 'huh?!' \u2014 1yell10 (no words)"
+ },
+ "en_alert_3": {
+  "file": "enemies/en_alert_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "startled 'huh?!' \u2014 3yell4 (no words)"
+ },
+ "en_struggle": {
+  "file": "enemies/en_struggle",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "straining against the webbing: growl, growl, grunt + cloth"
+ },
+ "en_brute_roar": {
+  "file": "enemies/en_brute_roar",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "brute roar: a real yell + growl pitched down (bigger chest), low rumble"
+ },
+ "en_brute_grunt": {
+  "file": "enemies/en_brute_grunt",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "brute effort grunt (pitched down)"
+ },
+ "en_brute_breath": {
+  "file": "enemies/en_brute_breath",
+  "loop": false,
+  "gain": 0.6,
+  "desc": "brute heavy breath / low growl (3yell13 growl pitched down)"
+ },
+ "en_pistol_shot": {
+  "variants": [
+   "en_pistol_shot_1",
+   "en_pistol_shot_2",
+   "en_pistol_shot_3",
+   "en_pistol_shot_4",
+   "en_pistol_shot_5",
+   "en_pistol_shot_6"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "9 mm / .45 pistol shot (Walther PPQ, Colt 1911, Bersa .380), close (random)"
+ },
+ "en_pistol_shot_far": {
+  "variants": [
+   "en_pistol_shot_far_1",
+   "en_pistol_shot_far_2",
+   "en_pistol_shot_far_3",
+   "en_pistol_shot_far_4",
+   "en_pistol_shot_far_5"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "9 mm / .45 pistol shot (Walther PPQ, Colt 1911, Bersa .380), distant (random)"
+ },
+ "en_rifle_shot": {
+  "variants": [
+   "en_rifle_shot_1",
+   "en_rifle_shot_2",
+   "en_rifle_shot_3",
+   "en_rifle_shot_4",
+   "en_rifle_shot_5",
+   "en_rifle_shot_6"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "7.62x39 rifle shot (AK-47, SKS), close (random)"
+ },
+ "en_rifle_shot_far": {
+  "variants": [
+   "en_rifle_shot_far_1",
+   "en_rifle_shot_far_2",
+   "en_rifle_shot_far_3",
+   "en_rifle_shot_far_4"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "7.62x39 rifle shot (AK-47, SKS), distant (random)"
+ },
+ "en_shell_drop": {
+  "variants": [
+   "en_shell_drop_1",
+   "en_shell_drop_2",
+   "en_shell_drop_3"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "shell casing drop (random of 3)"
+ },
+ "en_swish": {
+  "variants": [
+   "en_swish_1",
+   "en_swish_2",
+   "en_swish_3",
+   "en_swish_4"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "punch swish (random of 4)"
+ },
+ "en_punch_hit": {
+  "variants": [
+   "en_punch_hit_1",
+   "en_punch_hit_2",
+   "en_punch_hit_3"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "punch impact (random of 3)"
+ },
+ "en_step": {
+  "variants": [
+   "en_step_1",
+   "en_step_2",
+   "en_step_3",
+   "en_step_4",
+   "en_step_5",
+   "en_step_6"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "footstep (random of 6)"
+ },
+ "en_cloth": {
+  "variants": [
+   "en_cloth_1",
+   "en_cloth_2",
+   "en_cloth_3",
+   "en_cloth_4"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "cloth rustle (random of 4)"
+ },
+ "en_grunt": {
+  "variants": [
+   "en_grunt_1",
+   "en_grunt_2",
+   "en_grunt_3",
+   "en_grunt_4",
+   "en_grunt_5",
+   "en_grunt_6"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "short effort grunt (punch, stab, throw) (random)"
+ },
+ "en_pain": {
+  "variants": [
+   "en_pain_1",
+   "en_pain_2",
+   "en_pain_3",
+   "en_pain_4",
+   "en_pain_5",
+   "en_pain_6"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "hit / pain (short, sharp) (random)"
+ },
+ "en_death": {
+  "variants": [
+   "en_death_1",
+   "en_death_2",
+   "en_death_3",
+   "en_death_4",
+   "en_death_5",
+   "en_death_6"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "death groan / last breath (random)"
+ },
+ "en_alert": {
+  "variants": [
+   "en_alert_1",
+   "en_alert_2",
+   "en_alert_3"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "startled 'huh?!' when he spots you (random)"
+ }
+}

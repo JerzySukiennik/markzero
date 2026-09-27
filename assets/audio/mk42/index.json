@@ -1,0 +1,464 @@
+{
+ "mk42_lock_1": {
+  "file": "mk42/mk42_lock_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate clamps onto the body: click + ring + thump",
+  "duration": 0.55
+ },
+ "mk42_lock_2": {
+  "file": "mk42/mk42_lock_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate clamps onto the body: click + ring + thump",
+  "duration": 0.55
+ },
+ "mk42_lock_3": {
+  "file": "mk42/mk42_lock_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate clamps onto the body: click + ring + thump",
+  "duration": 0.533
+ },
+ "mk42_lock_4": {
+  "file": "mk42/mk42_lock_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate clamps onto the body: click + ring + thump",
+  "duration": 0.504
+ },
+ "mk42_lock_5": {
+  "file": "mk42/mk42_lock_5",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate clamps onto the body: click + ring + thump",
+  "duration": 0.478
+ },
+ "mk42_lock_6": {
+  "file": "mk42/mk42_lock_6",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate clamps onto the body: click + ring + thump",
+  "duration": 0.512
+ },
+ "mk42_lock_7": {
+  "file": "mk42/mk42_lock_7",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate clamps onto the body: click + ring + thump",
+  "duration": 0.434
+ },
+ "mk42_lock_8": {
+  "file": "mk42/mk42_lock_8",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate clamps onto the body: click + ring + thump",
+  "duration": 0.465
+ },
+ "mk42_lock": {
+  "variants": [
+   "mk42_lock_1",
+   "mk42_lock_2",
+   "mk42_lock_3",
+   "mk42_lock_4",
+   "mk42_lock_5",
+   "mk42_lock_6",
+   "mk42_lock_7",
+   "mk42_lock_8"
+  ],
+  "desc": "family of 8 lock clamps (random pick)"
+ },
+ "mk42_lock_big_1": {
+  "file": "mk42/mk42_lock_big_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "large plate (chest/back/helmet) locks: double click + heavy thump",
+  "duration": 0.8
+ },
+ "mk42_lock_big_2": {
+  "file": "mk42/mk42_lock_big_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "large plate (chest/back/helmet) locks: double click + heavy thump",
+  "duration": 0.759
+ },
+ "mk42_lock_big_3": {
+  "file": "mk42/mk42_lock_big_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "large plate (chest/back/helmet) locks: double click + heavy thump",
+  "duration": 0.712
+ },
+ "mk42_lock_big": {
+  "variants": [
+   "mk42_lock_big_1",
+   "mk42_lock_big_2",
+   "mk42_lock_big_3"
+  ],
+  "desc": "family of heavy locks"
+ },
+ "mk42_wake_1": {
+  "file": "mk42/mk42_wake_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate wakes: latch release + micro-thruster puff",
+  "duration": 0.36
+ },
+ "mk42_wake_2": {
+  "file": "mk42/mk42_wake_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate wakes: latch release + micro-thruster puff",
+  "duration": 0.36
+ },
+ "mk42_wake_3": {
+  "file": "mk42/mk42_wake_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate wakes: latch release + micro-thruster puff",
+  "duration": 0.36
+ },
+ "mk42_wake": {
+  "variants": [
+   "mk42_wake_1",
+   "mk42_wake_2",
+   "mk42_wake_3"
+  ],
+  "desc": "plate wake + thruster puff"
+ },
+ "mk42_whoosh_1": {
+  "file": "mk42/mk42_whoosh_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate flight pass: thruster hiss with doppler + air",
+  "duration": 1.3
+ },
+ "mk42_whoosh_2": {
+  "file": "mk42/mk42_whoosh_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate flight pass: thruster hiss with doppler + air",
+  "duration": 1.3
+ },
+ "mk42_whoosh_3": {
+  "file": "mk42/mk42_whoosh_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate flight pass: thruster hiss with doppler + air",
+  "duration": 1.3
+ },
+ "mk42_whoosh_4": {
+  "file": "mk42/mk42_whoosh_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate flight pass: thruster hiss with doppler + air",
+  "duration": 1.115
+ },
+ "mk42_whoosh_5": {
+  "file": "mk42/mk42_whoosh_5",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate flight pass: thruster hiss with doppler + air",
+  "duration": 0.948
+ },
+ "mk42_whoosh": {
+  "variants": [
+   "mk42_whoosh_1",
+   "mk42_whoosh_2",
+   "mk42_whoosh_3",
+   "mk42_whoosh_4",
+   "mk42_whoosh_5"
+  ],
+  "desc": "plate flight whooshes (varied)"
+ },
+ "mk42_whoosh_big_1": {
+  "file": "mk42/mk42_whoosh_big_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "big piece flight pass: turbine whine + air",
+  "duration": 1.8
+ },
+ "mk42_whoosh_big_2": {
+  "file": "mk42/mk42_whoosh_big_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "big piece flight pass: turbine whine + air",
+  "duration": 1.711
+ },
+ "mk42_whoosh_big": {
+  "variants": [
+   "mk42_whoosh_big_1",
+   "mk42_whoosh_big_2"
+  ],
+  "desc": "big piece flight whooshes"
+ },
+ "mk42_servo_1": {
+  "file": "mk42/mk42_servo_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "servo chatter as a plate seats itself",
+  "duration": 0.261
+ },
+ "mk42_servo_2": {
+  "file": "mk42/mk42_servo_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "servo chatter as a plate seats itself",
+  "duration": 0.25
+ },
+ "mk42_servo_3": {
+  "file": "mk42/mk42_servo_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "servo chatter as a plate seats itself",
+  "duration": 0.25
+ },
+ "mk42_servo_4": {
+  "file": "mk42/mk42_servo_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "servo chatter as a plate seats itself",
+  "duration": 0.25
+ },
+ "mk42_servo": {
+  "variants": [
+   "mk42_servo_1",
+   "mk42_servo_2",
+   "mk42_servo_3",
+   "mk42_servo_4"
+  ],
+  "desc": "servo chatter"
+ },
+ "mk42_faceplate_latch": {
+  "file": "mk42/mk42_faceplate_latch",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "faceplate halves latch shut: pressure hiss + latch + dull tick",
+  "duration": 0.479
+ },
+ "mk42_faceplate_unlatch": {
+  "file": "mk42/mk42_faceplate_unlatch",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "faceplate unlatches: release click + pressure hiss",
+  "duration": 0.273
+ },
+ "mk42_faceplate_slide": {
+  "file": "mk42/mk42_faceplate_slide",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "faceplate halves slide round the helmet",
+  "duration": 0.591
+ },
+ "mk42_flap_open": {
+  "file": "mk42/mk42_flap_open",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "stabiliser flaps snap open",
+  "duration": 0.671
+ },
+ "mk42_flap_close": {
+  "file": "mk42/mk42_flap_close",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "stabiliser flaps fold shut",
+  "duration": 0.44
+ },
+ "mk42_eject": {
+  "file": "mk42/mk42_eject",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "suit blows apart: blast + plates scattering",
+  "duration": 2.0
+ },
+ "mk42_plate_hit_1": {
+  "file": "mk42/mk42_plate_hit_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armour plate hits the ground hard",
+  "duration": 0.733
+ },
+ "mk42_plate_hit_2": {
+  "file": "mk42/mk42_plate_hit_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armour plate hits the ground hard",
+  "duration": 0.472
+ },
+ "mk42_plate_hit_3": {
+  "file": "mk42/mk42_plate_hit_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armour plate hits the ground hard",
+  "duration": 0.491
+ },
+ "mk42_plate_hit": {
+  "variants": [
+   "mk42_plate_hit_1",
+   "mk42_plate_hit_2",
+   "mk42_plate_hit_3"
+  ],
+  "desc": "plate hits the ground"
+ },
+ "mk42_plate_bounce_1": {
+  "file": "mk42/mk42_plate_bounce_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate bounces / rattles on the ground",
+  "duration": 0.369
+ },
+ "mk42_plate_bounce_2": {
+  "file": "mk42/mk42_plate_bounce_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate bounces / rattles on the ground",
+  "duration": 0.4
+ },
+ "mk42_plate_bounce_3": {
+  "file": "mk42/mk42_plate_bounce_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate bounces / rattles on the ground",
+  "duration": 0.193
+ },
+ "mk42_plate_bounce": {
+  "variants": [
+   "mk42_plate_bounce_1",
+   "mk42_plate_bounce_2",
+   "mk42_plate_bounce_3"
+  ],
+  "desc": "light bounce / rattle"
+ },
+ "mk42_suit_ready": {
+  "file": "mk42/mk42_suit_ready",
+  "loop": false,
+  "gain": 0.8,
+  "desc": "all plates locked: system-ready chime",
+  "duration": 1.062
+ },
+ "human_step_1": {
+  "file": "mk42/human_step_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "sneaker footstep",
+  "duration": 0.114
+ },
+ "human_step_2": {
+  "file": "mk42/human_step_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "sneaker footstep",
+  "duration": 0.108
+ },
+ "human_step_3": {
+  "file": "mk42/human_step_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "sneaker footstep",
+  "duration": 0.103
+ },
+ "human_step_4": {
+  "file": "mk42/human_step_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "sneaker footstep",
+  "duration": 0.1
+ },
+ "human_step_5": {
+  "file": "mk42/human_step_5",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "sneaker footstep",
+  "duration": 0.1
+ },
+ "human_step_6": {
+  "file": "mk42/human_step_6",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "sneaker footstep",
+  "duration": 0.1
+ },
+ "human_step": {
+  "variants": [
+   "human_step_1",
+   "human_step_2",
+   "human_step_3",
+   "human_step_4",
+   "human_step_5",
+   "human_step_6"
+  ],
+  "desc": "sneaker footsteps"
+ },
+ "human_step_run_1": {
+  "file": "mk42/human_step_run_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "running footstep (heavier heel strike)",
+  "duration": 0.129
+ },
+ "human_step_run_2": {
+  "file": "mk42/human_step_run_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "running footstep (heavier heel strike)",
+  "duration": 0.12
+ },
+ "human_step_run_3": {
+  "file": "mk42/human_step_run_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "running footstep (heavier heel strike)",
+  "duration": 0.12
+ },
+ "human_step_run_4": {
+  "file": "mk42/human_step_run_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "running footstep (heavier heel strike)",
+  "duration": 0.12
+ },
+ "human_step_run": {
+  "variants": [
+   "human_step_run_1",
+   "human_step_run_2",
+   "human_step_run_3",
+   "human_step_run_4"
+  ],
+  "desc": "running footsteps"
+ },
+ "human_step_scuff": {
+  "file": "mk42/human_step_scuff",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "stumbling step with a scuff",
+  "duration": 0.32
+ },
+ "human_land": {
+  "file": "mk42/human_land",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "landing from a jump / fall",
+  "duration": 0.609
+ },
+ "human_jump_push": {
+  "file": "mk42/human_jump_push",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "push-off into a jump",
+  "duration": 0.621
+ },
+ "human_cloth": {
+  "file": "mk42/human_cloth",
+  "loop": false,
+  "gain": 0.6,
+  "desc": "cloth rustle on a big arm move",
+  "duration": 0.63
+ },
+ "human_hit_body": {
+  "file": "mk42/human_hit_body",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "body shoved (stumble)",
+  "duration": 0.734
+ }
+}

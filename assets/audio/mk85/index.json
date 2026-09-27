@@ -1,0 +1,314 @@
+{
+ "im_step_heavy_1": {
+  "file": "mk85/im_step_heavy_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armoured footstep (Jurek's recording + low thump + plate rattle)"
+ },
+ "im_step_heavy_2": {
+  "file": "mk85/im_step_heavy_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armoured footstep (Jurek's recording + low thump + plate rattle)"
+ },
+ "im_step_heavy_3": {
+  "file": "mk85/im_step_heavy_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armoured footstep (Jurek's recording + low thump + plate rattle)"
+ },
+ "im_step_heavy_4": {
+  "file": "mk85/im_step_heavy_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armoured footstep (Jurek's recording + low thump + plate rattle)"
+ },
+ "im_step_heavy": {
+  "variants": [
+   "im_step_heavy_1",
+   "im_step_heavy_2",
+   "im_step_heavy_3",
+   "im_step_heavy_4"
+  ],
+  "desc": "armoured footstep (Jurek's recording + low thump + plate rattle) \u2014 random variant, jitter pitch \u00b15%"
+ },
+ "im_step_run_1": {
+  "file": "mk85/im_step_run_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armoured footstep (Jurek's recording + low thump + plate rattle)"
+ },
+ "im_step_run_2": {
+  "file": "mk85/im_step_run_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armoured footstep (Jurek's recording + low thump + plate rattle)"
+ },
+ "im_step_run_3": {
+  "file": "mk85/im_step_run_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armoured footstep (Jurek's recording + low thump + plate rattle)"
+ },
+ "im_step_run": {
+  "variants": [
+   "im_step_run_1",
+   "im_step_run_2",
+   "im_step_run_3"
+  ],
+  "desc": "armoured footstep (Jurek's recording + low thump + plate rattle) \u2014 random variant, jitter pitch \u00b15%"
+ },
+ "im_servo_short": {
+  "file": "mk85/im_servo_short",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "short servo move"
+ },
+ "im_servo_heavy": {
+  "file": "mk85/im_servo_heavy",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "heavy servo push"
+ },
+ "im_jump": {
+  "file": "mk85/im_jump",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "jump push-off: boot kick + thruster puff"
+ },
+ "im_land_soft": {
+  "file": "mk85/im_land_soft",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armoured landing, soft"
+ },
+ "im_land_hero": {
+  "file": "mk85/im_land_hero",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "hero landing: fist + knee into concrete, ground cracks"
+ },
+ "im_thruster_burst": {
+  "file": "mk85/im_thruster_burst",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "boot thruster burst (hover catch)"
+ },
+ "im_thruster_puff": {
+  "file": "mk85/im_thruster_puff",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "small palm/boot trim puff"
+ },
+ "im_thruster_ignite": {
+  "file": "mk85/im_thruster_ignite",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "thrusters light: whine up + ignition roar"
+ },
+ "im_takeoff": {
+  "file": "mk85/im_takeoff",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "launch off the ground: roar + ground blast"
+ },
+ "im_brake": {
+  "file": "mk85/im_brake",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "mid-air stop: air rush + retro thrust"
+ },
+ "im_boost": {
+  "file": "mk85/im_boost",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "boost: surge + sonic thump"
+ },
+ "im_flap": {
+  "file": "mk85/im_flap",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "stabiliser flap / vane actuates"
+ },
+ "im_whoosh_punch": {
+  "file": "mk85/im_whoosh_punch",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armoured punch whoosh"
+ },
+ "im_punch_impact": {
+  "file": "mk85/im_punch_impact",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armoured fist impact"
+ },
+ "im_block_impact": {
+  "file": "mk85/im_block_impact",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "hit taken on the forearm guard"
+ },
+ "im_unibeam_charge": {
+  "file": "mk85/im_unibeam_charge",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "chest reactor charging (unibeam)"
+ },
+ "im_unibeam_fire": {
+  "file": "mk85/im_unibeam_fire",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "unibeam firing (1.3 s)"
+ },
+ "mk85_nano_tap": {
+  "file": "mk85/mk85_nano_tap",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "fingers tap the chest housing (activates the nanites)"
+ },
+ "mk85_nano_flow": {
+  "file": "mk85/mk85_nano_flow",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "liquid-metal nanites pouring over the body (slither + sparkle)"
+ },
+ "mk85_nano_crystallise": {
+  "file": "mk85/mk85_nano_crystallise",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "surface resolves: fine crystalline ticks"
+ },
+ "mk85_nano_helmet": {
+  "file": "mk85/mk85_nano_helmet",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "helmet flows up over the face in segments"
+ },
+ "mk85_nano_helmet_open": {
+  "file": "mk85/mk85_nano_helmet_open",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "helmet recedes into the collar"
+ },
+ "mk85_nano_lock": {
+  "file": "mk85/mk85_nano_lock",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "suit locks, eyes and reactor light"
+ },
+ "mk85_nano_recede": {
+  "file": "mk85/mk85_nano_recede",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "nanites flow back into the reactor"
+ },
+ "mk85_wing_deploy": {
+  "file": "mk85/mk85_wing_deploy",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "back wing-pack unfolds (nano growth + plates lock)"
+ },
+ "mk85_wing_retract": {
+  "file": "mk85/mk85_wing_retract",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "wing-pack folds and melts back into the back"
+ },
+ "mk85_rocket_launch": {
+  "file": "mk85/mk85_rocket_launch",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "wing-pack micro-rocket volley"
+ },
+ "mk85_blade_deploy": {
+  "file": "mk85/mk85_blade_deploy",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "wrist blades grow out (nano + blade ring)"
+ },
+ "mk85_blade_hum": {
+  "file": "mk85/mk85_blade_hum",
+  "loop": true,
+  "gain": 0.7,
+  "desc": "energy blade hum (loop)",
+  "loopStart": 0.0
+ },
+ "mk85_blade_slash": {
+  "file": "mk85/mk85_blade_slash",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "blade slash"
+ },
+ "mk85_blade_retract": {
+  "file": "mk85/mk85_blade_retract",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "blades melt back into the gauntlets"
+ },
+ "mk85_shield_up": {
+  "file": "mk85/mk85_shield_up",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "hex energy shield forms from the forearm"
+ },
+ "mk85_shield_hit": {
+  "file": "mk85/mk85_shield_hit",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "impact on the energy shield"
+ },
+ "mk85_shield_down": {
+  "file": "mk85/mk85_shield_down",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "shield collapses back into the forearm"
+ },
+ "mk85_cannon_deploy": {
+  "file": "mk85/mk85_cannon_deploy",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "forearm reshapes into the multi-barrel cannon"
+ },
+ "mk85_cannon_charge": {
+  "file": "mk85/mk85_cannon_charge",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "cannon spins up / charges"
+ },
+ "mk85_cannon_fire": {
+  "file": "mk85/mk85_cannon_fire",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "cannon blast"
+ },
+ "mk85_cannon_retract": {
+  "file": "mk85/mk85_cannon_retract",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "cannon melts back into the forearm"
+ },
+ "mk85_missile_deploy": {
+  "file": "mk85/mk85_missile_deploy",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "shoulder micro-missile pods pop up"
+ },
+ "mk85_missile_launch": {
+  "file": "mk85/mk85_missile_launch",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "micro-missile salvo"
+ },
+ "mk85_gauntlet_form": {
+  "file": "mk85/mk85_gauntlet_form",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "nano gauntlet forms, stones seat one by one"
+ },
+ "mk85_snap": {
+  "file": "mk85/mk85_snap",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "the snap: fingers + a wave of energy"
+ }
+}

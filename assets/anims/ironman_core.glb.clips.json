@@ -1,0 +1,1153 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "idle",
+   "frames": 121,
+   "fps": 30,
+   "loop": true,
+   "duration": 4.0,
+   "events": [],
+   "label": "Idle (armoured)",
+   "category": "ground"
+  },
+  {
+   "name": "walk",
+   "frames": 34,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.1,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "im_step_heavy",
+     "at": "piv_ankleR",
+     "kind": "step",
+     "foot": "R"
+    },
+    {
+     "t": 0.55,
+     "sfx": "im_step_heavy",
+     "at": "piv_ankleL",
+     "kind": "step",
+     "foot": "L"
+    }
+   ],
+   "label": "Walk (heavy armoured stride)",
+   "category": "ground",
+   "speed_mps": 0.968,
+   "stride_m": 1.065,
+   "note": "in place; play at rate = ground_speed / 0.97"
+  },
+  {
+   "name": "run",
+   "frames": 22,
+   "fps": 30,
+   "loop": true,
+   "duration": 0.7,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "im_step_run",
+     "at": "piv_ankleR",
+     "kind": "step",
+     "foot": "R"
+    },
+    {
+     "t": 0.35,
+     "sfx": "im_step_run",
+     "at": "piv_ankleL",
+     "kind": "step",
+     "foot": "L"
+    }
+   ],
+   "label": "Run (armoured)",
+   "category": "ground",
+   "speed_mps": 3.109,
+   "stride_m": 2.176,
+   "note": "in place; play at rate = ground_speed / 3.11"
+  },
+  {
+   "name": "turn_L",
+   "frames": 31,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.0,
+   "events": [
+    {
+     "t": 0.4,
+     "sfx": "im_step_heavy",
+     "at": "piv_ankleL",
+     "kind": "step",
+     "foot": "L"
+    },
+    {
+     "t": 0.7,
+     "sfx": "im_step_heavy",
+     "at": "piv_ankleR",
+     "kind": "step",
+     "foot": "R"
+    },
+    {
+     "t": 0.12,
+     "sfx": "im_servo_short",
+     "at": "piv_hips"
+    }
+   ],
+   "label": "Turn 90 L",
+   "category": "ground",
+   "root_motion": true,
+   "root_yaw_deg": 90,
+   "note": "piv_root rotates 90 deg about Y: apply it to the character's heading"
+  },
+  {
+   "name": "turn_R",
+   "frames": 31,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.0,
+   "events": [
+    {
+     "t": 0.4,
+     "sfx": "im_step_heavy",
+     "at": "piv_ankleR",
+     "kind": "step",
+     "foot": "R"
+    },
+    {
+     "t": 0.7,
+     "sfx": "im_step_heavy",
+     "at": "piv_ankleL",
+     "kind": "step",
+     "foot": "L"
+    },
+    {
+     "t": 0.12,
+     "sfx": "im_servo_short",
+     "at": "piv_hips"
+    }
+   ],
+   "label": "Turn 90 R",
+   "category": "ground",
+   "root_motion": true,
+   "root_yaw_deg": -90,
+   "note": "piv_root rotates 90 deg about Y: apply it to the character's heading"
+  },
+  {
+   "name": "jump",
+   "frames": 34,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.1,
+   "events": [
+    {
+     "t": 0.26,
+     "sfx": "im_servo_short",
+     "at": "piv_hips"
+    },
+    {
+     "t": 0.38,
+     "sfx": "im_jump",
+     "at": "piv_root",
+     "kind": "jump_launch",
+     "vfx": "dust"
+    }
+   ],
+   "label": "Jump (in place, ends in fall)",
+   "category": "ground",
+   "note": "apply the jump impulse at the jump_launch event (0.38 s); blend to fall at the end"
+  },
+  {
+   "name": "fall",
+   "frames": 49,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.6,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "wind_high",
+     "at": "piv_chest",
+     "loop": true,
+     "kind": "loop_start"
+    }
+   ],
+   "label": "Fall (airborne, no thrust)",
+   "category": "ground"
+  },
+  {
+   "name": "land_soft",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.03,
+     "sfx": "im_land_soft",
+     "at": "piv_root",
+     "vfx": "dust",
+     "kind": "impact",
+     "strength": 0.4
+    }
+   ],
+   "label": "Land (soft)",
+   "category": "ground"
+  },
+  {
+   "name": "land_hero",
+   "frames": 58,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.9,
+   "events": [
+    {
+     "t": 0.12,
+     "sfx": "im_land_hero",
+     "at": "piv_wristR",
+     "vfx": "ground_impact",
+     "kind": "impact",
+     "strength": 1.0
+    },
+    {
+     "t": 0.12,
+     "vfx": "dust",
+     "at": "piv_root"
+    },
+    {
+     "t": 1.12,
+     "sfx": "im_servo_heavy",
+     "at": "piv_hips"
+    },
+    {
+     "t": 1.5,
+     "sfx": "im_step_heavy",
+     "at": "piv_ankleR",
+     "kind": "step",
+     "foot": "R"
+    }
+   ],
+   "label": "Hero landing (three-point, fist into the ground)",
+   "category": "ground",
+   "preview": {
+    "views": [
+     "side",
+     "front34",
+     "hero"
+    ]
+   }
+  },
+  {
+   "name": "takeoff",
+   "frames": 46,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.5,
+   "events": [
+    {
+     "t": 0.28,
+     "sfx": "im_thruster_ignite",
+     "vfx": "thruster_on",
+     "at": "piv_thrusterL",
+     "kind": "thruster_on"
+    },
+    {
+     "t": 0.29,
+     "vfx": "thruster_on",
+     "at": "piv_thrusterR"
+    },
+    {
+     "t": 0.4,
+     "sfx": "im_takeoff",
+     "vfx": "dust",
+     "at": "piv_root",
+     "kind": "launch"
+    }
+   ],
+   "label": "Takeoff (crouch, ignite, launch -> hover)",
+   "category": "flight",
+   "root_motion": true,
+   "root_travel": [
+    0,
+    2.6,
+    0
+   ]
+  },
+  {
+   "name": "hover",
+   "frames": 121,
+   "fps": 30,
+   "loop": true,
+   "duration": 4.0,
+   "events": [
+    {
+     "t": 1.46,
+     "sfx": "im_thruster_burst",
+     "vfx": "thruster_burst",
+     "at": "piv_thrusterL",
+     "kind": "thrust_burst"
+    },
+    {
+     "t": 1.47,
+     "vfx": "thruster_burst",
+     "at": "piv_thrusterR"
+    },
+    {
+     "t": 2.98,
+     "sfx": "im_thruster_puff",
+     "vfx": "thruster_burst",
+     "at": "piv_palmR",
+     "kind": "thrust_burst"
+    }
+   ],
+   "label": "Hover (sags and catches itself)",
+   "category": "flight"
+  },
+  {
+   "name": "fly_slow",
+   "frames": 91,
+   "fps": 30,
+   "loop": true,
+   "duration": 3.0,
+   "events": [],
+   "label": "Fly slow (upright drift)",
+   "category": "flight"
+  },
+  {
+   "name": "fly_cruise",
+   "frames": 121,
+   "fps": 30,
+   "loop": true,
+   "duration": 4.0,
+   "events": [
+    {
+     "t": 3.05,
+     "sfx": "im_thruster_puff",
+     "at": "piv_thrusterL",
+     "kind": "thrust_burst"
+    }
+   ],
+   "label": "Fly cruise (horizontal, arms by the hips)",
+   "category": "flight"
+  },
+  {
+   "name": "fly_fast",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [],
+   "label": "Fly fast (streamlined)",
+   "category": "flight"
+  },
+  {
+   "name": "fly_bank_L",
+   "frames": 91,
+   "fps": 30,
+   "loop": true,
+   "duration": 3.0,
+   "events": [],
+   "label": "Bank L (turning, inside flaps open)",
+   "category": "flight"
+  },
+  {
+   "name": "fly_bank_R",
+   "frames": 91,
+   "fps": 30,
+   "loop": true,
+   "duration": 3.0,
+   "events": [],
+   "label": "Bank R (turning, inside flaps open)",
+   "category": "flight"
+  },
+  {
+   "name": "fly_strafe_L_start",
+   "frames": 19,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.6,
+   "events": [
+    {
+     "t": 0.14,
+     "sfx": "im_flap",
+     "at": "piv_flap_hipL"
+    },
+    {
+     "t": 0.16,
+     "sfx": "im_thruster_puff",
+     "vfx": "thruster_burst",
+     "at": "piv_palmR",
+     "kind": "thrust_burst"
+    }
+   ],
+   "label": "Strafe L start (anticipation -> lean)",
+   "category": "flight"
+  },
+  {
+   "name": "fly_strafe_L",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [],
+   "label": "Strafe L (held lean)",
+   "category": "flight",
+   "note": "play fly_strafe_L_start first and fly_strafe_L_stop after"
+  },
+  {
+   "name": "fly_strafe_L_stop",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.18,
+     "sfx": "im_thruster_puff",
+     "vfx": "thruster_burst",
+     "at": "piv_palmL",
+     "kind": "thrust_burst"
+    }
+   ],
+   "label": "Strafe L stop (counter-thrust -> settle)",
+   "category": "flight"
+  },
+  {
+   "name": "fly_strafe_R_start",
+   "frames": 19,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.6,
+   "events": [
+    {
+     "t": 0.14,
+     "sfx": "im_flap",
+     "at": "piv_flap_hipR"
+    },
+    {
+     "t": 0.16,
+     "sfx": "im_thruster_puff",
+     "vfx": "thruster_burst",
+     "at": "piv_palmL",
+     "kind": "thrust_burst"
+    }
+   ],
+   "label": "Strafe R start (anticipation -> lean)",
+   "category": "flight"
+  },
+  {
+   "name": "fly_strafe_R",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [],
+   "label": "Strafe R (held lean)",
+   "category": "flight",
+   "note": "play fly_strafe_R_start first and fly_strafe_R_stop after"
+  },
+  {
+   "name": "fly_strafe_R_stop",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.18,
+     "sfx": "im_thruster_puff",
+     "vfx": "thruster_burst",
+     "at": "piv_palmR",
+     "kind": "thrust_burst"
+    }
+   ],
+   "label": "Strafe R stop (counter-thrust -> settle)",
+   "category": "flight"
+  },
+  {
+   "name": "fly_ascend",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [],
+   "label": "Ascend (palms pressing down, looking up)",
+   "category": "flight"
+  },
+  {
+   "name": "fly_descend",
+   "frames": 76,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.5,
+   "events": [
+    {
+     "t": 0.9,
+     "sfx": "im_thruster_puff",
+     "vfx": "thruster_burst",
+     "at": "piv_thrusterL",
+     "kind": "thrust_burst"
+    }
+   ],
+   "label": "Descend (legs ready, braking bursts)",
+   "category": "flight"
+  },
+  {
+   "name": "fly_brake",
+   "frames": 49,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.6,
+   "events": [
+    {
+     "t": 0.12,
+     "sfx": "im_brake",
+     "at": "piv_chest",
+     "kind": "brake"
+    },
+    {
+     "t": 0.16,
+     "vfx": "thruster_burst",
+     "at": "piv_palmL"
+    },
+    {
+     "t": 0.16,
+     "vfx": "thruster_burst",
+     "at": "piv_palmR"
+    },
+    {
+     "t": 0.14,
+     "sfx": "im_flap",
+     "at": "piv_flap_backL"
+    }
+   ],
+   "label": "Brake (mid-air stop, palms forward)",
+   "category": "flight"
+  },
+  {
+   "name": "boost",
+   "frames": 28,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.9,
+   "events": [
+    {
+     "t": 0.16,
+     "sfx": "im_boost",
+     "vfx": "boost_ring",
+     "at": "piv_hips",
+     "kind": "boost"
+    }
+   ],
+   "label": "Boost (one-shot surge, ends in fly_fast)",
+   "category": "flight"
+  },
+  {
+   "name": "fly_to_hover",
+   "frames": 34,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.1,
+   "events": [
+    {
+     "t": 0.16,
+     "sfx": "im_thruster_puff",
+     "vfx": "thruster_burst",
+     "at": "piv_palmL",
+     "kind": "thrust_burst"
+    },
+    {
+     "t": 0.17,
+     "vfx": "thruster_burst",
+     "at": "piv_palmR"
+    }
+   ],
+   "label": "Cruise -> hover",
+   "category": "flight"
+  },
+  {
+   "name": "hover_to_fly",
+   "frames": 31,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.0,
+   "events": [
+    {
+     "t": 0.19,
+     "sfx": "im_thruster_ignite",
+     "vfx": "thruster_burst",
+     "at": "piv_thrusterL",
+     "kind": "thrust_burst"
+    },
+    {
+     "t": 0.2,
+     "vfx": "thruster_burst",
+     "at": "piv_thrusterR"
+    }
+   ],
+   "label": "Hover -> cruise",
+   "category": "flight"
+  },
+  {
+   "name": "aim_R",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [],
+   "label": "Aim R (upper layer)",
+   "category": "combat",
+   "aim_joints_yaw": {
+    "piv_spine": 0.35,
+    "piv_chest": 0.25
+   },
+   "aim_target": [
+    0,
+    1.45,
+    -10
+   ],
+   "layer": "upper",
+   "blend": "override",
+   "joints": [
+    "piv_chest",
+    "piv_neck",
+    "piv_head",
+    "piv_clavicleR",
+    "piv_shoulderR",
+    "piv_elbowR",
+    "piv_wristR",
+    "piv_f_thumb1R",
+    "piv_f_thumb2R",
+    "piv_f_index1R",
+    "piv_f_index2R",
+    "piv_f_middle1R",
+    "piv_f_middle2R",
+    "piv_f_ring1R",
+    "piv_f_ring2R",
+    "piv_f_pinky1R",
+    "piv_f_pinky2R"
+   ]
+  },
+  {
+   "name": "aim_L",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [],
+   "label": "Aim L (upper layer)",
+   "category": "combat",
+   "aim_joints_yaw": {
+    "piv_spine": 0.35,
+    "piv_chest": 0.25
+   },
+   "aim_target": [
+    0,
+    1.45,
+    -10
+   ],
+   "layer": "upper",
+   "blend": "override",
+   "joints": [
+    "piv_chest",
+    "piv_neck",
+    "piv_head",
+    "piv_clavicleL",
+    "piv_shoulderL",
+    "piv_elbowL",
+    "piv_wristL",
+    "piv_f_thumb1L",
+    "piv_f_thumb2L",
+    "piv_f_index1L",
+    "piv_f_index2L",
+    "piv_f_middle1L",
+    "piv_f_middle2L",
+    "piv_f_ring1L",
+    "piv_f_ring2L",
+    "piv_f_pinky1L",
+    "piv_f_pinky2L"
+   ]
+  },
+  {
+   "name": "aim_both",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [],
+   "label": "Aim LR (upper layer)",
+   "category": "combat",
+   "aim_joints_yaw": {
+    "piv_spine": 0.5,
+    "piv_chest": 0.5
+   },
+   "aim_target": [
+    0,
+    1.45,
+    -10
+   ],
+   "layer": "upper",
+   "blend": "override",
+   "joints": [
+    "piv_chest",
+    "piv_neck",
+    "piv_head",
+    "piv_clavicleL",
+    "piv_shoulderL",
+    "piv_elbowL",
+    "piv_wristL",
+    "piv_f_thumb1L",
+    "piv_f_thumb2L",
+    "piv_f_index1L",
+    "piv_f_index2L",
+    "piv_f_middle1L",
+    "piv_f_middle2L",
+    "piv_f_ring1L",
+    "piv_f_ring2L",
+    "piv_f_pinky1L",
+    "piv_f_pinky2L",
+    "piv_clavicleR",
+    "piv_shoulderR",
+    "piv_elbowR",
+    "piv_wristR",
+    "piv_f_thumb1R",
+    "piv_f_thumb2R",
+    "piv_f_index1R",
+    "piv_f_index2R",
+    "piv_f_middle1R",
+    "piv_f_middle2R",
+    "piv_f_ring1R",
+    "piv_f_ring2R",
+    "piv_f_pinky1R",
+    "piv_f_pinky2R"
+   ]
+  },
+  {
+   "name": "aim_R_full",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [],
+   "label": "Aim R (full body)",
+   "category": "combat"
+  },
+  {
+   "name": "aim_L_full",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [],
+   "label": "Aim L (full body)",
+   "category": "combat"
+  },
+  {
+   "name": "aim_both_full",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [],
+   "label": "Aim LR (full body)",
+   "category": "combat"
+  },
+  {
+   "name": "shoot_R",
+   "frames": 19,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.6,
+   "events": [
+    {
+     "t": 0.066,
+     "sfx": "repulsor_fire",
+     "vfx": "repulsor_fire",
+     "at": "piv_palmR",
+     "kind": "fire",
+     "target": [
+      0,
+      1.45,
+      -10
+     ]
+    }
+   ],
+   "label": "Shoot R (upper layer)",
+   "category": "combat",
+   "fire_time": 0.066,
+   "layer": "upper",
+   "blend": "override",
+   "joints": [
+    "piv_chest",
+    "piv_neck",
+    "piv_head",
+    "piv_clavicleR",
+    "piv_shoulderR",
+    "piv_elbowR",
+    "piv_wristR",
+    "piv_f_thumb1R",
+    "piv_f_thumb2R",
+    "piv_f_index1R",
+    "piv_f_index2R",
+    "piv_f_middle1R",
+    "piv_f_middle2R",
+    "piv_f_ring1R",
+    "piv_f_ring2R",
+    "piv_f_pinky1R",
+    "piv_f_pinky2R"
+   ]
+  },
+  {
+   "name": "shoot_L",
+   "frames": 19,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.6,
+   "events": [
+    {
+     "t": 0.066,
+     "sfx": "repulsor_fire",
+     "vfx": "repulsor_fire",
+     "at": "piv_palmL",
+     "kind": "fire",
+     "target": [
+      0,
+      1.45,
+      -10
+     ]
+    }
+   ],
+   "label": "Shoot L (upper layer)",
+   "category": "combat",
+   "fire_time": 0.066,
+   "layer": "upper",
+   "blend": "override",
+   "joints": [
+    "piv_chest",
+    "piv_neck",
+    "piv_head",
+    "piv_clavicleL",
+    "piv_shoulderL",
+    "piv_elbowL",
+    "piv_wristL",
+    "piv_f_thumb1L",
+    "piv_f_thumb2L",
+    "piv_f_index1L",
+    "piv_f_index2L",
+    "piv_f_middle1L",
+    "piv_f_middle2L",
+    "piv_f_ring1L",
+    "piv_f_ring2L",
+    "piv_f_pinky1L",
+    "piv_f_pinky2L"
+   ]
+  },
+  {
+   "name": "shoot_both",
+   "frames": 19,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.6,
+   "events": [
+    {
+     "t": 0.066,
+     "sfx": "repulsor_fire",
+     "vfx": "repulsor_fire",
+     "at": "piv_palmL",
+     "kind": "fire",
+     "target": [
+      0,
+      1.45,
+      -10
+     ]
+    },
+    {
+     "t": 0.066,
+     "sfx": "repulsor_fire",
+     "vfx": "repulsor_fire",
+     "at": "piv_palmR",
+     "kind": "fire",
+     "target": [
+      0,
+      1.45,
+      -10
+     ]
+    }
+   ],
+   "label": "Shoot LR (upper layer)",
+   "category": "combat",
+   "fire_time": 0.066,
+   "layer": "upper",
+   "blend": "override",
+   "joints": [
+    "piv_chest",
+    "piv_neck",
+    "piv_head",
+    "piv_clavicleL",
+    "piv_shoulderL",
+    "piv_elbowL",
+    "piv_wristL",
+    "piv_f_thumb1L",
+    "piv_f_thumb2L",
+    "piv_f_index1L",
+    "piv_f_index2L",
+    "piv_f_middle1L",
+    "piv_f_middle2L",
+    "piv_f_ring1L",
+    "piv_f_ring2L",
+    "piv_f_pinky1L",
+    "piv_f_pinky2L",
+    "piv_clavicleR",
+    "piv_shoulderR",
+    "piv_elbowR",
+    "piv_wristR",
+    "piv_f_thumb1R",
+    "piv_f_thumb2R",
+    "piv_f_index1R",
+    "piv_f_index2R",
+    "piv_f_middle1R",
+    "piv_f_middle2R",
+    "piv_f_ring1R",
+    "piv_f_ring2R",
+    "piv_f_pinky1R",
+    "piv_f_pinky2R"
+   ]
+  },
+  {
+   "name": "shoot_R_full",
+   "frames": 19,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.6,
+   "events": [
+    {
+     "t": 0.066,
+     "sfx": "repulsor_fire",
+     "vfx": "repulsor_fire",
+     "at": "piv_palmR",
+     "kind": "fire",
+     "target": [
+      0,
+      1.45,
+      -10
+     ]
+    }
+   ],
+   "label": "Shoot R (full body)",
+   "category": "combat",
+   "fire_time": 0.066
+  },
+  {
+   "name": "shoot_L_full",
+   "frames": 19,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.6,
+   "events": [
+    {
+     "t": 0.066,
+     "sfx": "repulsor_fire",
+     "vfx": "repulsor_fire",
+     "at": "piv_palmL",
+     "kind": "fire",
+     "target": [
+      0,
+      1.45,
+      -10
+     ]
+    }
+   ],
+   "label": "Shoot L (full body)",
+   "category": "combat",
+   "fire_time": 0.066
+  },
+  {
+   "name": "shoot_both_full",
+   "frames": 19,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.6,
+   "events": [
+    {
+     "t": 0.066,
+     "sfx": "repulsor_fire",
+     "vfx": "repulsor_fire",
+     "at": "piv_palmL",
+     "kind": "fire",
+     "target": [
+      0,
+      1.45,
+      -10
+     ]
+    },
+    {
+     "t": 0.066,
+     "sfx": "repulsor_fire",
+     "vfx": "repulsor_fire",
+     "at": "piv_palmR",
+     "kind": "fire",
+     "target": [
+      0,
+      1.45,
+      -10
+     ]
+    }
+   ],
+   "label": "Shoot LR (full body)",
+   "category": "combat",
+   "fire_time": 0.066
+  },
+  {
+   "name": "charge_blast",
+   "frames": 73,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.4,
+   "events": [
+    {
+     "t": 0.32,
+     "sfx": "repulsor_charge",
+     "vfx": "repulsor_charge",
+     "at": "piv_palmR",
+     "kind": "charge"
+    },
+    {
+     "t": 0.33,
+     "vfx": "repulsor_charge",
+     "at": "piv_palmL"
+    },
+    {
+     "t": 1.5,
+     "sfx": "repulsor_fire_big",
+     "vfx": "repulsor_blast",
+     "at": "piv_palmR",
+     "kind": "fire",
+     "big": true,
+     "target": [
+      0,
+      1.3,
+      -10
+     ],
+     "between": [
+      "piv_palmL",
+      "piv_palmR"
+     ]
+    }
+   ],
+   "label": "Charged two-hand blast",
+   "category": "combat",
+   "fire_time": 1.5
+  },
+  {
+   "name": "unibeam",
+   "frames": 97,
+   "fps": 30,
+   "loop": false,
+   "duration": 3.2,
+   "events": [
+    {
+     "t": 0.4,
+     "sfx": "im_unibeam_charge",
+     "at": "piv_reactor",
+     "kind": "charge"
+    },
+    {
+     "t": 1.1,
+     "sfx": "im_unibeam_fire",
+     "vfx": "unibeam",
+     "at": "piv_reactor",
+     "kind": "beam_on",
+     "duration": 1.25,
+     "target": [
+      0,
+      1.4,
+      -10
+     ]
+    },
+    {
+     "t": 2.35,
+     "kind": "beam_off",
+     "at": "piv_reactor"
+    }
+   ],
+   "label": "Unibeam (braced chest beam)",
+   "category": "combat",
+   "beam": [
+    1.1,
+    2.35
+   ]
+  },
+  {
+   "name": "punch_R",
+   "frames": 29,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.9333333333333333,
+   "events": [
+    {
+     "t": 0.22,
+     "sfx": "im_whoosh_punch",
+     "at": "piv_wristR"
+    },
+    {
+     "t": 0.31,
+     "sfx": "im_punch_impact",
+     "vfx": "punch_impact",
+     "at": "piv_wristR",
+     "kind": "hit"
+    }
+   ],
+   "label": "Punch R",
+   "category": "combat",
+   "hit_time": 0.31
+  },
+  {
+   "name": "punch_L",
+   "frames": 29,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.9333333333333333,
+   "events": [
+    {
+     "t": 0.22,
+     "sfx": "im_whoosh_punch",
+     "at": "piv_wristL"
+    },
+    {
+     "t": 0.31,
+     "sfx": "im_punch_impact",
+     "vfx": "punch_impact",
+     "at": "piv_wristL",
+     "kind": "hit"
+    }
+   ],
+   "label": "Punch L",
+   "category": "combat",
+   "hit_time": 0.31
+  },
+  {
+   "name": "block",
+   "frames": 40,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.3,
+   "events": [
+    {
+     "t": 0.1,
+     "sfx": "im_servo_short",
+     "at": "piv_chest"
+    },
+    {
+     "t": 0.46,
+     "sfx": "im_block_impact",
+     "vfx": "sparks",
+     "at": "piv_wristR",
+     "kind": "hit"
+    }
+   ],
+   "label": "Block (forearm guard, takes a hit)",
+   "category": "combat",
+   "hit_time": 0.46
+  }
+ ]
+}

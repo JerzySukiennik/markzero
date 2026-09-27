@@ -1,0 +1,45 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "window_open",
+   "frames": 43,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.4,
+   "events": [
+    {
+     "t": 0.35,
+     "sfx": "city_window_unlatch",
+     "at": "win_handle"
+    },
+    {
+     "t": 0.58,
+     "sfx": "city_window_open",
+     "at": "window_a"
+    }
+   ],
+   "note": "hand on handle by 0.35 s; handle turns 90 deg 0.35-0.55; right leaf pushed open 0.55-1.4, left follows 0.08 s later"
+  },
+  {
+   "name": "window_close",
+   "frames": 37,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.2,
+   "events": [
+    {
+     "t": 0.84,
+     "sfx": "city_window_close",
+     "at": "window_a"
+    },
+    {
+     "t": 1.0,
+     "sfx": "city_window_latch",
+     "at": "win_handle"
+    }
+   ],
+   "note": "reach 0-0.25 s; both leaves pulled shut 0.25-0.85 (left leads); handle turned back 0.85-1.05; settle"
+  }
+ ]
+}

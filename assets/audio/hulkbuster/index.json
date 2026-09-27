@@ -1,0 +1,278 @@
+{
+ "hb_step_heavy_1": {
+  "file": "hulkbuster/hb_step_heavy_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Hulkbuster footstep: Jurek's armour step slowed + slammed door + concrete thump + metal groan"
+ },
+ "hb_step_heavy_2": {
+  "file": "hulkbuster/hb_step_heavy_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Hulkbuster footstep: Jurek's armour step slowed + slammed door + concrete thump + metal groan"
+ },
+ "hb_step_heavy_3": {
+  "file": "hulkbuster/hb_step_heavy_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Hulkbuster footstep: Jurek's armour step slowed + slammed door + concrete thump + metal groan"
+ },
+ "hb_step_heavy_4": {
+  "file": "hulkbuster/hb_step_heavy_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Hulkbuster footstep: Jurek's armour step slowed + slammed door + concrete thump + metal groan"
+ },
+ "hb_step_run_1": {
+  "file": "hulkbuster/hb_step_run_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Hulkbuster running step (lighter, quicker)"
+ },
+ "hb_step_run_2": {
+  "file": "hulkbuster/hb_step_run_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Hulkbuster running step (lighter, quicker)"
+ },
+ "hb_land": {
+  "file": "hulkbuster/hb_land",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Hulkbuster landing from a jump"
+ },
+ "hb_land_heavy": {
+  "file": "hulkbuster/hb_land_heavy",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "3-tonne impact: ground crack, rubble, armour slam"
+ },
+ "hb_hydraulic_hiss": {
+  "file": "hulkbuster/hb_hydraulic_hiss",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "hydraulic vent/hiss after a lock or a heavy move"
+ },
+ "hb_hydraulic_breath": {
+  "file": "hulkbuster/hb_hydraulic_breath",
+  "loop": false,
+  "gain": 0.6,
+  "desc": "idle hydraulic 'breath' - soft pressure hiss with servo creak"
+ },
+ "hb_servo_heavy": {
+  "file": "hulkbuster/hb_servo_heavy",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "heavy arm/torso servo"
+ },
+ "hb_piston_fire": {
+  "file": "hulkbuster/hb_piston_fire",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "elbow piston fires: percussive slam + pneumatic blast"
+ },
+ "hb_swing_heavy": {
+  "file": "hulkbuster/hb_swing_heavy",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "huge fist swinging through air"
+ },
+ "hb_block_impact": {
+  "file": "hulkbuster/hb_block_impact",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "something hits the raised forearm shield"
+ },
+ "hb_clamp": {
+  "file": "hulkbuster/hb_clamp",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate clamps onto the frame"
+ },
+ "hb_clamp_heavy": {
+  "file": "hulkbuster/hb_clamp_heavy",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "big module (back frame, legs, torso) slams and locks"
+ },
+ "hb_faceplate": {
+  "file": "hulkbuster/hb_faceplate",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Hulkbuster faceplate: heavy servo slide + latch clack (CC bank; no user recording)"
+ },
+ "hb_flap": {
+  "file": "hulkbuster/hb_flap",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "stabiliser flap deploys/retracts"
+ },
+ "hb_plate_whoosh": {
+  "file": "hulkbuster/hb_plate_whoosh",
+  "loop": false,
+  "gain": 0.8,
+  "desc": "a flying module passes (micro-thrusters + air)"
+ },
+ "hb_power_up": {
+  "file": "hulkbuster/hb_power_up",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "systems online: eyes and reactor light"
+ },
+ "hb_part_blowoff": {
+  "file": "hulkbuster/hb_part_blowoff",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "an arm plate is blown off"
+ },
+ "hb_rocket_ignite": {
+  "file": "hulkbuster/hb_rocket_ignite",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "boot + back rockets ignite (deep, rumbling)"
+ },
+ "hb_rocket_loop": {
+  "file": "hulkbuster/hb_rocket_loop",
+  "loop": true,
+  "gain": 0.9,
+  "desc": "Hulkbuster rocket flight loop - deep rumble, not a jet whine"
+ },
+ "hb_rocket_burst": {
+  "file": "hulkbuster/hb_rocket_burst",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "thrust burst (catches a sag, strafe, braking)"
+ },
+ "hb_mega_charge": {
+  "file": "hulkbuster/hb_mega_charge",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "mega repulsor charge (Jurek's repulsor charge, deepened)"
+ },
+ "hb_mega_blast": {
+  "file": "hulkbuster/hb_mega_blast",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "mega repulsor beam blast"
+ },
+ "hb_unibeam_charge": {
+  "file": "hulkbuster/hb_unibeam_charge",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "chest unibeam charge"
+ },
+ "hb_unibeam_blast": {
+  "file": "hulkbuster/hb_unibeam_blast",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "unibeam fires"
+ },
+ "vr_reentry": {
+  "file": "hulkbuster/vr_reentry",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Veronica re-entry roar, swelling as she streaks down"
+ },
+ "vr_flip": {
+  "file": "hulkbuster/vr_flip",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "attitude thrusters flip the pod"
+ },
+ "vr_retro": {
+  "file": "hulkbuster/vr_retro",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "retro-rocket braking burn"
+ },
+ "vr_hover_loop": {
+  "file": "hulkbuster/vr_hover_loop",
+  "loop": true,
+  "gain": 0.8,
+  "desc": "Veronica hovering (loop)"
+ },
+ "vr_clamp_release": {
+  "file": "hulkbuster/vr_clamp_release",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "payload clamps release"
+ },
+ "vr_bay_open": {
+  "file": "hulkbuster/vr_bay_open",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "bay petals swing open"
+ },
+ "vr_bay_close": {
+  "file": "hulkbuster/vr_bay_close",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "bay petals close and lock"
+ },
+ "vr_release_1": {
+  "file": "hulkbuster/vr_release_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "a module is released from the bay and fires its micro-thrusters"
+ },
+ "vr_release_2": {
+  "file": "hulkbuster/vr_release_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "a module is released from the bay and fires its micro-thrusters"
+ },
+ "vr_release_3": {
+  "file": "hulkbuster/vr_release_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "a module is released from the bay and fires its micro-thrusters"
+ },
+ "vr_part_launch": {
+  "file": "hulkbuster/vr_part_launch",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Veronica fires a replacement part out of the chute"
+ },
+ "vr_clamp_lock": {
+  "file": "hulkbuster/vr_clamp_lock",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "bay clamps lock"
+ },
+ "vr_ascend": {
+  "file": "hulkbuster/vr_ascend",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Veronica climbs away"
+ },
+ "hb_step_heavy": {
+  "variants": [
+   "hb_step_heavy_1",
+   "hb_step_heavy_2",
+   "hb_step_heavy_3",
+   "hb_step_heavy_4"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Hulkbuster footstep: Jurek's armour step slowed + slammed door + concrete thump + metal groan (random variant)"
+ },
+ "hb_step_run": {
+  "variants": [
+   "hb_step_run_1",
+   "hb_step_run_2"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Hulkbuster running step (lighter, quicker) (random variant)"
+ },
+ "vr_release": {
+  "variants": [
+   "vr_release_1",
+   "vr_release_2",
+   "vr_release_3"
+  ],
+  "loop": false,
+  "gain": 1.0,
+  "desc": "a module is released from the bay and fires its micro-thrusters (random variant)"
+ }
+}

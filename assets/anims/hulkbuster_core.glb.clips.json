@@ -1,0 +1,836 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "idle",
+   "frames": 121,
+   "fps": 30,
+   "loop": true,
+   "duration": 4.0,
+   "events": [
+    {
+     "t": 0.05,
+     "sfx": "hb_hydraulic_breath",
+     "at": "piv_chest",
+     "gain": 0.5
+    },
+    {
+     "t": 2.05,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_neck",
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "name": "walk",
+   "frames": 49,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.6,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "hb_step_heavy",
+     "vfx": "dust",
+     "at": "piv_toeR",
+     "cue": "camshake",
+     "strength": 0.55
+    },
+    {
+     "t": 0.992,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_kneeR",
+     "gain": 0.35
+    },
+    {
+     "t": 0.82,
+     "sfx": "hb_step_heavy",
+     "vfx": "dust",
+     "at": "piv_toeL",
+     "cue": "camshake",
+     "strength": 0.55
+    },
+    {
+     "t": 0.192,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_kneeL",
+     "gain": 0.35
+    }
+   ],
+   "speed_mps": 1.187,
+   "stride_m": 0.95
+  },
+  {
+   "name": "run",
+   "frames": 31,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.0,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "hb_step_run",
+     "vfx": "dust",
+     "at": "piv_toeR",
+     "cue": "camshake",
+     "strength": 0.8
+    },
+    {
+     "t": 0.44,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_kneeR",
+     "gain": 0.35
+    },
+    {
+     "t": 0.52,
+     "sfx": "hb_step_run",
+     "vfx": "dust",
+     "at": "piv_toeL",
+     "cue": "camshake",
+     "strength": 0.8
+    },
+    {
+     "t": 0.94,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_kneeL",
+     "gain": 0.35
+    }
+   ],
+   "speed_mps": 3.0,
+   "stride_m": 1.5
+  },
+  {
+   "name": "turn",
+   "frames": 43,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.4,
+   "events": [
+    {
+     "t": 0.15,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_hips",
+     "gain": 0.6
+    },
+    {
+     "t": 0.6,
+     "sfx": "hb_step_heavy",
+     "vfx": "dust",
+     "at": "piv_toeL",
+     "cue": "camshake",
+     "strength": 0.4
+    },
+    {
+     "t": 1.08,
+     "sfx": "hb_step_heavy",
+     "vfx": "dust",
+     "at": "piv_toeR",
+     "cue": "camshake",
+     "strength": 0.4
+    }
+   ],
+   "root_motion": true,
+   "turn_deg": 90.0
+  },
+  {
+   "name": "turn_R",
+   "frames": 43,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.4,
+   "events": [
+    {
+     "t": 0.15,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_hips",
+     "gain": 0.6
+    },
+    {
+     "t": 0.6,
+     "sfx": "hb_step_heavy",
+     "vfx": "dust",
+     "at": "piv_toeR",
+     "cue": "camshake",
+     "strength": 0.4
+    },
+    {
+     "t": 1.08,
+     "sfx": "hb_step_heavy",
+     "vfx": "dust",
+     "at": "piv_toeL",
+     "cue": "camshake",
+     "strength": 0.4
+    }
+   ],
+   "root_motion": true,
+   "turn_deg": -90.0
+  },
+  {
+   "name": "jump",
+   "frames": 38,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.2333333333333334,
+   "events": [
+    {
+     "t": 0.12,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_hips"
+    },
+    {
+     "t": 0.43,
+     "sfx": "hb_rocket_burst",
+     "at": "piv_hips"
+    },
+    {
+     "t": 0.45,
+     "vfx": "thruster_on",
+     "at": "piv_thrusterL"
+    },
+    {
+     "t": 0.45,
+     "vfx": "thruster_on",
+     "at": "piv_thrusterR"
+    },
+    {
+     "t": 0.55,
+     "sfx": "hb_step_heavy",
+     "vfx": "dust",
+     "at": "piv_root",
+     "cue": "camshake",
+     "strength": 0.6
+    },
+    {
+     "t": 1.0,
+     "vfx": "thruster_off",
+     "at": "piv_thrusterL"
+    },
+    {
+     "t": 1.0,
+     "vfx": "thruster_off",
+     "at": "piv_thrusterR"
+    }
+   ],
+   "root_motion": true,
+   "apex_m": 1.9
+  },
+  {
+   "name": "land",
+   "frames": 37,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.2,
+   "events": [
+    {
+     "t": 0.2931,
+     "sfx": "hb_land",
+     "vfx": "dust",
+     "at": "piv_root",
+     "cue": "camshake",
+     "strength": 0.8
+    },
+    {
+     "t": 0.7431,
+     "sfx": "hb_hydraulic_hiss",
+     "at": "piv_hips",
+     "gain": 0.6
+    }
+   ],
+   "root_motion": true,
+   "fall_from_m": 1.3,
+   "impact_t": 0.293
+  },
+  {
+   "name": "land_heavy",
+   "frames": 58,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.9,
+   "events": [
+    {
+     "t": 0.3323,
+     "sfx": "hb_land_heavy",
+     "vfx": "ground_crack",
+     "at": "piv_root",
+     "cue": "camshake",
+     "strength": 1.0
+    },
+    {
+     "t": 0.3323,
+     "vfx": "dust",
+     "at": "piv_wristR"
+    },
+    {
+     "t": 0.3523,
+     "vfx": "dust",
+     "at": "piv_toeL"
+    },
+    {
+     "t": 1.1323,
+     "sfx": "hb_hydraulic_hiss",
+     "at": "piv_kneeR"
+    },
+    {
+     "t": 1.2323,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_hips"
+    }
+   ],
+   "root_motion": true,
+   "fall_from_m": 3.2,
+   "impact_t": 0.332
+  },
+  {
+   "name": "fly_takeoff",
+   "frames": 70,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.3,
+   "events": [
+    {
+     "t": 0.3,
+     "sfx": "hb_rocket_ignite",
+     "at": "piv_hips"
+    },
+    {
+     "t": 0.32,
+     "vfx": "thruster_on",
+     "at": "piv_thrusterL"
+    },
+    {
+     "t": 0.32,
+     "vfx": "thruster_on",
+     "at": "piv_thrusterR"
+    },
+    {
+     "t": 0.32,
+     "vfx": "thruster_on",
+     "at": "piv_thruster_backL"
+    },
+    {
+     "t": 0.32,
+     "vfx": "thruster_on",
+     "at": "piv_thruster_backR"
+    },
+    {
+     "t": 0.55,
+     "vfx": "dust",
+     "at": "piv_root",
+     "cue": "camshake",
+     "strength": 0.7
+    },
+    {
+     "t": 0.9,
+     "sfx": "hb_rocket_loop",
+     "at": "piv_hips",
+     "loop": true
+    }
+   ],
+   "root_motion": true
+  },
+  {
+   "name": "hover",
+   "frames": 91,
+   "fps": 30,
+   "loop": true,
+   "duration": 3.0,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "hb_rocket_loop",
+     "at": "piv_hips",
+     "loop": true
+    },
+    {
+     "t": 0.93,
+     "sfx": "hb_rocket_burst",
+     "at": "piv_hips",
+     "gain": 0.5
+    },
+    {
+     "t": 2.43,
+     "sfx": "hb_rocket_burst",
+     "at": "piv_hips",
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "name": "fly",
+   "frames": 73,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.4,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "hb_rocket_loop",
+     "at": "piv_hips",
+     "loop": true
+    },
+    {
+     "t": 0.0,
+     "vfx": "thruster_on",
+     "at": "piv_thruster_backL"
+    },
+    {
+     "t": 0.0,
+     "vfx": "thruster_on",
+     "at": "piv_thruster_backR"
+    },
+    {
+     "t": 0.744,
+     "sfx": "hb_rocket_burst",
+     "at": "piv_hips",
+     "gain": 0.6
+    },
+    {
+     "t": 1.944,
+     "sfx": "hb_rocket_burst",
+     "at": "piv_hips",
+     "gain": 0.6
+    }
+   ],
+   "lean_deg": 58
+  },
+  {
+   "name": "fly_strafe_L",
+   "frames": 73,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.4,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "hb_rocket_loop",
+     "at": "piv_hips",
+     "loop": true
+    },
+    {
+     "t": 0.1,
+     "sfx": "hb_flap",
+     "at": "piv_flap_hipL",
+     "gain": 0.6
+    }
+   ],
+   "bank_deg": 24.0
+  },
+  {
+   "name": "fly_strafe_R",
+   "frames": 73,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.4,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "hb_rocket_loop",
+     "at": "piv_hips",
+     "loop": true
+    },
+    {
+     "t": 0.1,
+     "sfx": "hb_flap",
+     "at": "piv_flap_hipR",
+     "gain": 0.6
+    }
+   ],
+   "bank_deg": -24.0
+  },
+  {
+   "name": "fly_brake",
+   "frames": 52,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.7,
+   "events": [
+    {
+     "t": 0.05,
+     "sfx": "hb_rocket_burst",
+     "at": "piv_hips"
+    },
+    {
+     "t": 0.08,
+     "sfx": "hb_flap",
+     "at": "piv_chest"
+    },
+    {
+     "t": 0.15,
+     "vfx": "repulsor_fire",
+     "at": "piv_palmL"
+    },
+    {
+     "t": 0.15,
+     "vfx": "repulsor_fire",
+     "at": "piv_palmR"
+    },
+    {
+     "t": 0.2,
+     "cue": "camshake",
+     "strength": 0.5
+    }
+   ]
+  },
+  {
+   "name": "punch_R",
+   "frames": 35,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.1333333333333333,
+   "events": [
+    {
+     "t": 0.05,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_shoulderR",
+     "gain": 0.7
+    },
+    {
+     "t": 0.3,
+     "sfx": "hb_swing_heavy",
+     "at": "piv_wristR"
+    },
+    {
+     "t": 0.42,
+     "sfx": "hb_piston_fire",
+     "vfx": "smoke_puff",
+     "at": "piv_elbowR",
+     "cue": "camshake",
+     "strength": 0.6,
+     "hit": true
+    },
+    {
+     "t": 0.42,
+     "vfx": "sparks",
+     "at": "piv_wristR"
+    },
+    {
+     "t": 0.7,
+     "sfx": "hb_hydraulic_hiss",
+     "at": "piv_elbowR",
+     "gain": 0.6
+    }
+   ],
+   "hit_t": 0.42,
+   "ram_m": 0.24
+  },
+  {
+   "name": "punch_L",
+   "frames": 35,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.1333333333333333,
+   "events": [
+    {
+     "t": 0.05,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_shoulderL",
+     "gain": 0.7
+    },
+    {
+     "t": 0.3,
+     "sfx": "hb_swing_heavy",
+     "at": "piv_wristL"
+    },
+    {
+     "t": 0.42,
+     "sfx": "hb_piston_fire",
+     "vfx": "smoke_puff",
+     "at": "piv_elbowL",
+     "cue": "camshake",
+     "strength": 0.6,
+     "hit": true
+    },
+    {
+     "t": 0.42,
+     "vfx": "sparks",
+     "at": "piv_wristL"
+    },
+    {
+     "t": 0.7,
+     "sfx": "hb_hydraulic_hiss",
+     "at": "piv_elbowL",
+     "gain": 0.6
+    }
+   ],
+   "hit_t": 0.42,
+   "ram_m": 0.24
+  },
+  {
+   "name": "mega_repulsor",
+   "frames": 82,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.7,
+   "events": [
+    {
+     "t": 0.05,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_shoulderR",
+     "gain": 0.6
+    },
+    {
+     "t": 0.4,
+     "sfx": "hb_mega_charge",
+     "at": "piv_palmR"
+    },
+    {
+     "t": 0.4,
+     "vfx": "repulsor_charge",
+     "at": "piv_palmR",
+     "big": true,
+     "dur": 0.95
+    },
+    {
+     "t": 1.35,
+     "vfx": "mega_beam",
+     "at": "piv_palmR",
+     "dur": 0.7,
+     "two_hand": false
+    },
+    {
+     "t": 1.35,
+     "sfx": "hb_mega_blast",
+     "at": "piv_palmR",
+     "cue": "camshake",
+     "strength": 0.8
+    },
+    {
+     "t": 2.05,
+     "sfx": "hb_hydraulic_hiss",
+     "at": "piv_elbowR",
+     "gain": 0.6
+    }
+   ],
+   "charge": [
+    0.4,
+    1.35
+   ],
+   "fire": [
+    1.35,
+    2.05
+   ],
+   "hands": "R"
+  },
+  {
+   "name": "mega_repulsor_2h",
+   "frames": 94,
+   "fps": 30,
+   "loop": false,
+   "duration": 3.1,
+   "events": [
+    {
+     "t": 0.05,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_shoulderR",
+     "gain": 0.6
+    },
+    {
+     "t": 0.45,
+     "sfx": "hb_mega_charge",
+     "at": "piv_palmR"
+    },
+    {
+     "t": 0.45,
+     "vfx": "repulsor_charge",
+     "at": "piv_palmL",
+     "big": true,
+     "dur": 1.2
+    },
+    {
+     "t": 1.65,
+     "vfx": "mega_beam",
+     "at": "piv_palmL",
+     "dur": 0.85,
+     "two_hand": true
+    },
+    {
+     "t": 0.45,
+     "vfx": "repulsor_charge",
+     "at": "piv_palmR",
+     "big": true,
+     "dur": 1.2
+    },
+    {
+     "t": 1.65,
+     "vfx": "mega_beam",
+     "at": "piv_palmR",
+     "dur": 0.85,
+     "two_hand": true
+    },
+    {
+     "t": 1.65,
+     "sfx": "hb_mega_blast",
+     "at": "piv_palmR",
+     "cue": "camshake",
+     "strength": 1.0
+    },
+    {
+     "t": 2.5,
+     "sfx": "hb_hydraulic_hiss",
+     "at": "piv_elbowR",
+     "gain": 0.6
+    }
+   ],
+   "charge": [
+    0.45,
+    1.65
+   ],
+   "fire": [
+    1.65,
+    2.5
+   ],
+   "hands": "LR"
+  },
+  {
+   "name": "unibeam",
+   "frames": 82,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.7,
+   "events": [
+    {
+     "t": 0.35,
+     "sfx": "hb_unibeam_charge",
+     "at": "piv_reactor"
+    },
+    {
+     "t": 0.35,
+     "vfx": "repulsor_charge",
+     "at": "piv_reactor",
+     "big": true,
+     "dur": 0.85
+    },
+    {
+     "t": 1.2,
+     "sfx": "hb_unibeam_blast",
+     "vfx": "unibeam",
+     "at": "piv_reactor",
+     "cue": "camshake",
+     "strength": 0.9,
+     "dur": 0.8
+    }
+   ],
+   "charge": [
+    0.35,
+    1.2
+   ],
+   "fire": [
+    1.2,
+    2.0
+   ]
+  },
+  {
+   "name": "block",
+   "frames": 46,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.5,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_shoulderR",
+     "gain": 0.8
+    },
+    {
+     "t": 0.55,
+     "sfx": "hb_block_impact",
+     "vfx": "sparks",
+     "at": "piv_wristL",
+     "cue": "camshake",
+     "strength": 0.7
+    }
+   ],
+   "hold": [
+    0.2,
+    1.05
+   ],
+   "impact_t": 0.55
+  },
+  {
+   "name": "mask_open",
+   "frames": 34,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.1,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "hb_faceplate",
+     "at": "piv_head"
+    }
+   ]
+  },
+  {
+   "name": "mask_close",
+   "frames": 34,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.1,
+   "events": [
+    {
+     "t": 0.1,
+     "sfx": "hb_faceplate",
+     "at": "piv_head"
+    },
+    {
+     "t": 1.0,
+     "sfx": "hb_clamp",
+     "at": "piv_head",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "name": "cockpit_open",
+   "frames": 61,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.0,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "hb_hydraulic_hiss",
+     "at": "piv_chest"
+    },
+    {
+     "t": 0.3,
+     "sfx": "hb_faceplate",
+     "at": "piv_head"
+    },
+    {
+     "t": 0.55,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_chest"
+    }
+   ]
+  },
+  {
+   "name": "cockpit_close",
+   "frames": 61,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.0,
+   "events": [
+    {
+     "t": 0.1,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_chest"
+    },
+    {
+     "t": 1.45,
+     "sfx": "hb_clamp_heavy",
+     "at": "piv_chest",
+     "cue": "camshake",
+     "strength": 0.2
+    },
+    {
+     "t": 1.85,
+     "sfx": "hb_clamp",
+     "at": "piv_head"
+    }
+   ]
+  }
+ ]
+}

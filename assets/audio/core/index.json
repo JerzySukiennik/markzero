@@ -1,0 +1,133 @@
+{
+ "repulsor_fire_1": {
+  "file": "core/repulsor_fire_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "palm repulsor shot (Jurek's recording + low body layer)"
+ },
+ "repulsor_fire_2": {
+  "file": "core/repulsor_fire_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "palm repulsor shot (Jurek's recording + low body layer)"
+ },
+ "repulsor_fire_3": {
+  "file": "core/repulsor_fire_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "palm repulsor shot (Jurek's recording + low body layer)"
+ },
+ "repulsor_fire_4": {
+  "file": "core/repulsor_fire_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "palm repulsor shot (Jurek's recording + low body layer)"
+ },
+ "repulsor_fire_5": {
+  "file": "core/repulsor_fire_5",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "palm repulsor shot (Jurek's recording + low body layer)"
+ },
+ "repulsor_fire_6": {
+  "file": "core/repulsor_fire_6",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "palm repulsor shot (Jurek's recording + low body layer)"
+ },
+ "repulsor_fire": {
+  "variants": [
+   "repulsor_fire_1",
+   "repulsor_fire_2",
+   "repulsor_fire_3",
+   "repulsor_fire_4",
+   "repulsor_fire_5",
+   "repulsor_fire_6"
+  ],
+  "desc": "random pick of the six repulsor shots; engines should also jitter pitch \u00b14%"
+ },
+ "repulsor_fire_big": {
+  "file": "core/repulsor_fire_big",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "charged blast: charge whine then a heavy discharge (0.55 s in)"
+ },
+ "repulsor_charge": {
+  "file": "core/repulsor_charge",
+  "loop": false,
+  "gain": 0.9,
+  "desc": "charge-up hum, 1.7 s; stop it when the shot fires"
+ },
+ "repulsor_impact": {
+  "file": "core/repulsor_impact",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "repulsor bolt hitting a surface"
+ },
+ "repulsor_impact_big": {
+  "file": "core/repulsor_impact_big",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "charged blast / unibeam impact with debris"
+ },
+ "thruster_idle": {
+  "file": "core/thruster_idle",
+  "loop": true,
+  "loopStart": 0.03,
+  "loopEnd": 3.17,
+  "gain": 0.8,
+  "desc": "turbojet idle bed (loop)"
+ },
+ "thruster_mid": {
+  "file": "core/thruster_mid",
+  "loop": true,
+  "loopStart": 0.03,
+  "loopEnd": 3.17,
+  "gain": 0.8,
+  "desc": "turbojet working roar (loop)"
+ },
+ "thruster_hot": {
+  "file": "core/thruster_hot",
+  "loop": true,
+  "loopStart": 0.03,
+  "loopEnd": 3.17,
+  "gain": 0.8,
+  "desc": "near-field nozzle scream, high thrust (loop)"
+ },
+ "thruster_sub": {
+  "file": "core/thruster_sub",
+  "loop": true,
+  "loopStart": 0.03,
+  "gain": 0.8,
+  "desc": "sub rumble under the jets (loop)"
+ },
+ "thruster_whine": {
+  "file": "core/thruster_whine",
+  "loop": true,
+  "loopStart": 0.03,
+  "loopEnd": 3.17,
+  "gain": 0.8,
+  "desc": "compressor whine ladder (loop)"
+ },
+ "wind_low": {
+  "file": "core/wind_low",
+  "loop": true,
+  "loopStart": 0.03,
+  "gain": 0.8,
+  "desc": "airflow at low speed (loop)"
+ },
+ "wind_high": {
+  "file": "core/wind_high",
+  "loop": true,
+  "loopStart": 0.03,
+  "gain": 0.8,
+  "desc": "airflow at high speed (loop)"
+ },
+ "wind_gust": {
+  "file": "core/wind_gust",
+  "loop": true,
+  "loopStart": 0.03,
+  "gain": 0.8,
+  "desc": "gusting wind, altitude (loop)"
+ }
+}

@@ -1,0 +1,1020 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "idle",
+   "frames": 121,
+   "fps": 30,
+   "loop": true,
+   "duration": 4.0,
+   "events": []
+  },
+  {
+   "name": "idle_fists",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [],
+   "stance": "brawler guard"
+  },
+  {
+   "name": "idle_pistol",
+   "frames": 91,
+   "fps": 30,
+   "loop": true,
+   "duration": 3.0,
+   "events": []
+  },
+  {
+   "name": "idle_rifle",
+   "frames": 91,
+   "fps": 30,
+   "loop": true,
+   "duration": 3.0,
+   "events": []
+  },
+  {
+   "name": "idle_rpg",
+   "frames": 91,
+   "fps": 30,
+   "loop": true,
+   "duration": 3.0,
+   "events": []
+  },
+  {
+   "name": "idle_knife",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": []
+  },
+  {
+   "name": "walk",
+   "frames": 34,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.1,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_step",
+     "at": "piv_toeL",
+     "cue": "step"
+    },
+    {
+     "t": 0.55,
+     "sfx": "en_step",
+     "at": "piv_toeR",
+     "cue": "step"
+    }
+   ],
+   "speed_mps": 1.4
+  },
+  {
+   "name": "run",
+   "frames": 21,
+   "fps": 30,
+   "loop": true,
+   "duration": 0.66,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_step",
+     "at": "piv_toeL",
+     "cue": "step"
+    },
+    {
+     "t": 0.33,
+     "sfx": "en_step",
+     "at": "piv_toeR",
+     "cue": "step"
+    }
+   ],
+   "speed_mps": 5.4
+  },
+  {
+   "name": "strafe_L",
+   "frames": 28,
+   "fps": 30,
+   "loop": true,
+   "duration": 0.9,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_step",
+     "at": "piv_toeL",
+     "cue": "step"
+    },
+    {
+     "t": 0.45,
+     "sfx": "en_step",
+     "at": "piv_toeR",
+     "cue": "step"
+    }
+   ],
+   "speed_mps": 1.6
+  },
+  {
+   "name": "strafe_R",
+   "frames": 28,
+   "fps": 30,
+   "loop": true,
+   "duration": 0.9,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_step",
+     "at": "piv_toeL",
+     "cue": "step"
+    },
+    {
+     "t": 0.45,
+     "sfx": "en_step",
+     "at": "piv_toeR",
+     "cue": "step"
+    }
+   ],
+   "speed_mps": 1.6
+  },
+  {
+   "name": "alert",
+   "frames": 73,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.4,
+   "events": [
+    {
+     "t": 0.05,
+     "sfx": "en_alert",
+     "at": "piv_head",
+     "cue": "bark"
+    }
+   ]
+  },
+  {
+   "name": "look_around",
+   "frames": 121,
+   "fps": 30,
+   "loop": true,
+   "duration": 4.0,
+   "events": []
+  },
+  {
+   "name": "cover_enter",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.35,
+     "sfx": "en_cloth",
+     "at": "piv_hips"
+    },
+    {
+     "t": 0.55,
+     "sfx": "en_step",
+     "at": "piv_toeR"
+    }
+   ]
+  },
+  {
+   "name": "cover_idle",
+   "frames": 91,
+   "fps": 30,
+   "loop": true,
+   "duration": 3.0,
+   "events": []
+  },
+  {
+   "name": "pistol_aim",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": []
+  },
+  {
+   "name": "pistol_shoot",
+   "frames": 19,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.6,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "en_pistol_shot",
+     "vfx": "muzzle_pistol",
+     "at": "muzzle",
+     "cue": "fire"
+    },
+    {
+     "t": 0.05,
+     "vfx": "shell_eject",
+     "at": "ejector"
+    },
+    {
+     "t": 0.45,
+     "sfx": "en_shell_drop",
+     "at": "piv_toeR",
+     "gain": 0.4
+    }
+   ],
+   "fire_t": 0.02
+  },
+  {
+   "name": "pistol_reload",
+   "frames": 67,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.2,
+   "events": [
+    {
+     "t": 0.35,
+     "sfx": "en_pistol_mag_out",
+     "at": "piv_gripR",
+     "vfx": "mag_drop"
+    },
+    {
+     "t": 1.05,
+     "sfx": "en_pistol_mag_in",
+     "at": "piv_gripR"
+    },
+    {
+     "t": 1.5,
+     "sfx": "en_pistol_slide",
+     "at": "piv_gripR"
+    }
+   ]
+  },
+  {
+   "name": "rifle_aim",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": []
+  },
+  {
+   "name": "rifle_burst",
+   "frames": 28,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.9,
+   "events": [
+    {
+     "t": 0.01,
+     "sfx": "en_rifle_shot",
+     "vfx": "muzzle_rifle",
+     "at": "muzzle",
+     "cue": "fire"
+    },
+    {
+     "t": 0.03,
+     "vfx": "shell_eject",
+     "at": "ejector"
+    },
+    {
+     "t": 0.11,
+     "sfx": "en_rifle_shot",
+     "vfx": "muzzle_rifle",
+     "at": "muzzle",
+     "cue": "fire"
+    },
+    {
+     "t": 0.13,
+     "vfx": "shell_eject",
+     "at": "ejector"
+    },
+    {
+     "t": 0.21,
+     "sfx": "en_rifle_shot",
+     "vfx": "muzzle_rifle",
+     "at": "muzzle",
+     "cue": "fire"
+    },
+    {
+     "t": 0.23,
+     "vfx": "shell_eject",
+     "at": "ejector"
+    },
+    {
+     "t": 0.31,
+     "sfx": "en_rifle_shot",
+     "vfx": "muzzle_rifle",
+     "at": "muzzle",
+     "cue": "fire"
+    },
+    {
+     "t": 0.33,
+     "vfx": "shell_eject",
+     "at": "ejector"
+    },
+    {
+     "t": 0.6,
+     "sfx": "en_shell_drop",
+     "at": "piv_toeR",
+     "gain": 0.5
+    }
+   ],
+   "shots": 4,
+   "fire_t": [
+    0.01,
+    0.11,
+    0.21000000000000002,
+    0.31
+   ]
+  },
+  {
+   "name": "rifle_reload",
+   "frames": 85,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.8,
+   "events": [
+    {
+     "t": 0.7,
+     "sfx": "en_rifle_mag_out",
+     "at": "piv_wristL",
+     "vfx": "mag_drop"
+    },
+    {
+     "t": 1.6,
+     "sfx": "en_rifle_mag_in",
+     "at": "piv_gripR"
+    },
+    {
+     "t": 2.1,
+     "sfx": "en_rifle_bolt",
+     "at": "piv_gripR"
+    }
+   ]
+  },
+  {
+   "name": "rpg_shoulder",
+   "frames": 37,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.2,
+   "events": [
+    {
+     "t": 0.15,
+     "sfx": "en_cloth",
+     "at": "piv_chest"
+    },
+    {
+     "t": 0.85,
+     "sfx": "en_rpg_handle",
+     "at": "piv_gripR"
+    }
+   ]
+  },
+  {
+   "name": "rpg_aim",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": []
+  },
+  {
+   "name": "rpg_fire",
+   "frames": 43,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.4,
+   "events": [
+    {
+     "t": 0.1,
+     "sfx": "en_rpg_click",
+     "at": "piv_gripR"
+    },
+    {
+     "t": 0.12,
+     "sfx": "en_rpg_launch",
+     "vfx": "rpg_fire",
+     "at": "muzzle",
+     "cue": "fire"
+    },
+    {
+     "t": 0.12,
+     "vfx": "rpg_backblast",
+     "at": "rear"
+    }
+   ],
+   "fire_t": 0.12,
+   "hide_rocket_t": 0.12
+  },
+  {
+   "name": "rpg_reload",
+   "frames": 97,
+   "fps": 30,
+   "loop": false,
+   "duration": 3.2,
+   "events": [
+    {
+     "t": 1.0,
+     "sfx": "en_cloth",
+     "at": "piv_chest"
+    },
+    {
+     "t": 1.4,
+     "cue": "rocket_in_hand",
+     "at": "piv_wristL"
+    },
+    {
+     "t": 1.9,
+     "sfx": "en_rpg_load",
+     "at": "muzzle",
+     "cue": "rocket_attach"
+    },
+    {
+     "t": 2.2,
+     "sfx": "en_rpg_handle",
+     "at": "muzzle"
+    }
+   ],
+   "rocket_in_hand": [
+    1.4,
+    1.9
+   ],
+   "rocket_attach_t": 1.9
+  },
+  {
+   "name": "punch_combo",
+   "frames": 52,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.7,
+   "events": [
+    {
+     "t": 0.18,
+     "sfx": "en_swish",
+     "at": "piv_wristL"
+    },
+    {
+     "t": 0.26,
+     "cue": "hit",
+     "at": "piv_wristL",
+     "damage_frac": 0.3
+    },
+    {
+     "t": 0.52,
+     "sfx": "en_swish",
+     "at": "piv_wristR"
+    },
+    {
+     "t": 0.55,
+     "sfx": "en_grunt",
+     "at": "piv_head",
+     "gain": 0.6
+    },
+    {
+     "t": 0.62,
+     "cue": "hit",
+     "at": "piv_wristR",
+     "damage_frac": 0.35
+    },
+    {
+     "t": 0.92,
+     "sfx": "en_swish",
+     "at": "piv_wristL"
+    },
+    {
+     "t": 1.02,
+     "cue": "hit",
+     "at": "piv_wristL",
+     "damage_frac": 0.35
+    }
+   ],
+   "hits": [
+    0.26,
+    0.62,
+    1.02
+   ]
+  },
+  {
+   "name": "knife_slash",
+   "frames": 29,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.95,
+   "events": [
+    {
+     "t": 0.3,
+     "sfx": "en_grunt",
+     "at": "piv_head",
+     "gain": 0.5
+    },
+    {
+     "t": 0.36,
+     "sfx": "en_knife_swish",
+     "at": "muzzle",
+     "vfx": "blade_trail"
+    },
+    {
+     "t": 0.42,
+     "cue": "hit",
+     "at": "muzzle"
+    }
+   ],
+   "hit_t": 0.42
+  },
+  {
+   "name": "knife_stab",
+   "frames": 27,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.85,
+   "events": [
+    {
+     "t": 0.3,
+     "sfx": "en_knife_swish",
+     "at": "muzzle"
+    },
+    {
+     "t": 0.32,
+     "sfx": "en_grunt",
+     "at": "piv_head",
+     "gain": 0.5
+    },
+    {
+     "t": 0.33,
+     "sfx": "en_step",
+     "at": "piv_toeL"
+    },
+    {
+     "t": 0.38,
+     "cue": "hit",
+     "at": "muzzle"
+    }
+   ],
+   "hit_t": 0.38,
+   "root_motion": false
+  },
+  {
+   "name": "bat_swing",
+   "frames": 37,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.2,
+   "events": [
+    {
+     "t": 0.4,
+     "sfx": "en_step",
+     "at": "piv_toeL"
+    },
+    {
+     "t": 0.5,
+     "sfx": "en_bat_swish",
+     "at": "muzzle"
+    },
+    {
+     "t": 0.58,
+     "cue": "hit",
+     "at": "muzzle"
+    }
+   ],
+   "hit_t": 0.58
+  },
+  {
+   "name": "brute_ground_pound",
+   "frames": 58,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.9,
+   "events": [
+    {
+     "t": 0.3,
+     "sfx": "en_brute_roar",
+     "at": "piv_head"
+    },
+    {
+     "t": 0.86,
+     "sfx": "en_ground_pound",
+     "vfx": "ground_crack",
+     "at": "piv_root",
+     "cue": "camshake",
+     "strength": 0.9
+    }
+   ],
+   "hit_t": 0.86,
+   "radius_m": 4.0
+  },
+  {
+   "name": "brute_charge",
+   "frames": 23,
+   "fps": 30,
+   "loop": true,
+   "duration": 0.72,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_step",
+     "at": "piv_toeL",
+     "cue": "step"
+    },
+    {
+     "t": 0.0,
+     "sfx": "en_brute_breath",
+     "at": "piv_head",
+     "gain": 0.6
+    },
+    {
+     "t": 0.36,
+     "sfx": "en_step",
+     "at": "piv_toeR",
+     "cue": "step"
+    }
+   ],
+   "speed_mps": 6.0
+  },
+  {
+   "name": "brute_grab",
+   "frames": 67,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.2,
+   "events": [
+    {
+     "t": 0.3,
+     "sfx": "en_brute_grunt",
+     "at": "piv_head"
+    },
+    {
+     "t": 0.5,
+     "cue": "grab",
+     "at": "piv_wristR"
+    },
+    {
+     "t": 1.45,
+     "sfx": "en_brute_roar",
+     "at": "piv_head",
+     "gain": 0.7
+    },
+    {
+     "t": 1.48,
+     "cue": "throw",
+     "at": "piv_wristR",
+     "sfx": "en_bat_swish"
+    }
+   ],
+   "grab_t": 0.5,
+   "throw_t": 1.48,
+   "carry_node": "piv_wristR"
+  },
+  {
+   "name": "hit_front",
+   "frames": 23,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.75,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_hit_body",
+     "at": "piv_chest"
+    },
+    {
+     "t": 0.03,
+     "sfx": "en_pain",
+     "at": "piv_head"
+    }
+   ]
+  },
+  {
+   "name": "hit_back",
+   "frames": 23,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.75,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_hit_body",
+     "at": "piv_chest"
+    },
+    {
+     "t": 0.03,
+     "sfx": "en_pain",
+     "at": "piv_head"
+    }
+   ]
+  },
+  {
+   "name": "hit_left",
+   "frames": 23,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.75,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_hit_body",
+     "at": "piv_chest"
+    },
+    {
+     "t": 0.03,
+     "sfx": "en_pain",
+     "at": "piv_head"
+    }
+   ]
+  },
+  {
+   "name": "hit_right",
+   "frames": 23,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.75,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_hit_body",
+     "at": "piv_chest"
+    },
+    {
+     "t": 0.03,
+     "sfx": "en_pain",
+     "at": "piv_head"
+    }
+   ]
+  },
+  {
+   "name": "stagger",
+   "frames": 46,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.5,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_pain",
+     "at": "piv_head"
+    },
+    {
+     "t": 0.35,
+     "sfx": "en_step",
+     "at": "piv_toeR"
+    },
+    {
+     "t": 0.62,
+     "sfx": "en_step",
+     "at": "piv_toeL"
+    },
+    {
+     "t": 0.9,
+     "sfx": "en_step",
+     "at": "piv_toeR"
+    }
+   ],
+   "root_motion": false,
+   "note": "travel is on piv_hips (0.6 m back)"
+  },
+  {
+   "name": "knockdown",
+   "frames": 40,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.3,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_pain",
+     "at": "piv_head"
+    },
+    {
+     "t": 0.62,
+     "sfx": "en_body_fall",
+     "at": "piv_hips",
+     "vfx": "dust",
+     "cue": "land"
+    }
+   ],
+   "root_motion": true,
+   "ends": "lying on back, 1.35 m behind"
+  },
+  {
+   "name": "getup",
+   "frames": 70,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.3,
+   "events": [
+    {
+     "t": 0.5,
+     "sfx": "en_cloth",
+     "at": "piv_hips"
+    },
+    {
+     "t": 1.1,
+     "sfx": "en_step",
+     "at": "piv_toeL"
+    },
+    {
+     "t": 1.3,
+     "sfx": "en_grunt",
+     "at": "piv_head",
+     "gain": 0.5
+    },
+    {
+     "t": 1.9,
+     "sfx": "en_step",
+     "at": "piv_toeR"
+    }
+   ],
+   "root_motion": true,
+   "starts": "knockdown end pose (lying 1.35 m behind origin)"
+  },
+  {
+   "name": "death_back",
+   "frames": 55,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.8,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_death",
+     "at": "piv_head"
+    },
+    {
+     "t": 1.12,
+     "sfx": "en_body_fall",
+     "at": "piv_hips",
+     "vfx": "dust",
+     "cue": "land"
+    }
+   ],
+   "root_motion": true,
+   "ends": "lying"
+  },
+  {
+   "name": "death_front",
+   "frames": 49,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.6,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_death",
+     "at": "piv_head"
+    },
+    {
+     "t": 1.1,
+     "sfx": "en_body_fall",
+     "at": "piv_hips",
+     "vfx": "dust",
+     "cue": "land"
+    }
+   ],
+   "root_motion": true,
+   "ends": "lying"
+  },
+  {
+   "name": "death_spin",
+   "frames": 55,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.8,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_death",
+     "at": "piv_head"
+    },
+    {
+     "t": 1.05,
+     "sfx": "en_body_fall",
+     "at": "piv_hips",
+     "vfx": "dust",
+     "cue": "land"
+    }
+   ],
+   "root_motion": true,
+   "ends": "lying"
+  },
+  {
+   "name": "webbed_wall",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [
+    {
+     "t": 0.1,
+     "sfx": "en_struggle",
+     "at": "piv_head"
+    },
+    {
+     "t": 1.1,
+     "sfx": "en_web_creak",
+     "at": "piv_chest"
+    }
+   ],
+   "wall": "+Z (behind him), back 0.10 m off the root"
+  },
+  {
+   "name": "webbed_floor",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [
+    {
+     "t": 0.3,
+     "sfx": "en_struggle",
+     "at": "piv_head"
+    }
+   ],
+   "root_motion": true,
+   "pose": "lying on back like knockdown's end"
+  },
+  {
+   "name": "thrown",
+   "frames": 16,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.5,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_pain",
+     "at": "piv_head"
+    }
+   ],
+   "root_motion": true,
+   "ragdoll_after": 0.5,
+   "note": "continue with physics from the last frame"
+  },
+  {
+   "name": "surrender_start",
+   "frames": 31,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.0,
+   "events": [
+    {
+     "t": 0.1,
+     "cue": "drop_weapon",
+     "at": "piv_gripR"
+    },
+    {
+     "t": 0.3,
+     "sfx": "en_cloth",
+     "at": "piv_chest"
+    }
+   ]
+  },
+  {
+   "name": "surrender",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": []
+  },
+  {
+   "name": "hold_pistol",
+   "frames": 31,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.0,
+   "events": [],
+   "layer": "upper",
+   "note": "upper-body layer: play on top of walk/run/strafe"
+  },
+  {
+   "name": "hold_rifle",
+   "frames": 31,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.0,
+   "events": [],
+   "layer": "upper",
+   "note": "upper-body layer: play on top of walk/run/strafe"
+  },
+  {
+   "name": "hold_rpg",
+   "frames": 31,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.0,
+   "events": [],
+   "layer": "upper",
+   "note": "upper-body layer: play on top of walk/run/strafe"
+  },
+  {
+   "name": "hold_knife",
+   "frames": 31,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.0,
+   "events": [],
+   "layer": "upper",
+   "note": "upper-body layer: play on top of walk/run/strafe"
+  }
+ ]
+}

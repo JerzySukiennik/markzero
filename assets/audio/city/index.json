@@ -1,0 +1,98 @@
+{
+ "city_traffic": {
+  "file": "city/city_traffic",
+  "loop": true,
+  "gain": 1.0,
+  "desc": "street-level traffic + pedestrians bed (loop 42 s) \u2014 play near the ground, fade with altitude"
+ },
+ "city_rumble_far": {
+  "file": "city/city_rumble_far",
+  "loop": true,
+  "gain": 1.0,
+  "desc": "distant city rumble heard from rooftops / flight height (loop 60 s, low-passed)"
+ },
+ "city_wind_high": {
+  "file": "city/city_wind_high",
+  "loop": true,
+  "gain": 1.0,
+  "desc": "wind at height (rooftops, skyscraper tops, flying slowly) (loop 12 s)"
+ },
+ "city_harbour": {
+  "file": "city/city_harbour",
+  "loop": true,
+  "gain": 1.0,
+  "desc": "harbour water lapping on piers and the seawall (loop 56 s)"
+ },
+ "city_siren_police": {
+  "file": "city/city_siren_police",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "distant police siren pass with street reflections (one-shot 11 s)"
+ },
+ "city_siren_fire": {
+  "file": "city/city_siren_fire",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "distant fire engine siren (one-shot 12 s)"
+ },
+ "city_siren_us": {
+  "file": "city/city_siren_us",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "American wail/yelp police siren (one-shot 12 s)"
+ },
+ "city_foghorn": {
+  "file": "city/city_foghorn",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "ship foghorn across the river (one-shot 9 s)"
+ },
+ "city_window_unlatch": {
+  "file": "city/city_window_unlatch",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "window handle turned open (metal latch release)"
+ },
+ "city_window_open": {
+  "file": "city/city_window_open",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "casement leaves swinging out (hinge + frame release, light creak)"
+ },
+ "city_window_close": {
+  "file": "city/city_window_close",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "casement leaves pulled shut against the frame"
+ },
+ "city_window_latch": {
+  "file": "city/city_window_latch",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "window handle turned shut (latch engages)"
+ },
+ "villa_bay_door": {
+  "file": "city/villa_bay_door",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "hangar door panels motoring into their wall pockets (3.6 s, clip bay_open/bay_close t=0)"
+ },
+ "villa_bay_door_thud": {
+  "file": "city/villa_bay_door_thud",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "hangar door panels closing against each other (heavy thud)"
+ },
+ "villa_hum": {
+  "file": "city/villa_hum",
+  "loop": true,
+  "gain": 1.0,
+  "desc": "villa interior hum: HVAC + faint electronics (loop 12 s)"
+ },
+ "villa_workshop": {
+  "file": "city/villa_workshop",
+  "loop": true,
+  "gain": 1.0,
+  "desc": "workshop ambience: air handling + server/UPS whine (loop 24 s)"
+ }
+}

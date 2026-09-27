@@ -1,0 +1,196 @@
+{
+ "cl_faceplate_close": {
+  "file": "classics/cl_faceplate_close",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Mk II/III faceplate closing: slide flow + pressure hiss + latch + seat"
+ },
+ "cl_faceplate_open": {
+  "file": "classics/cl_faceplate_open",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Mk II/III faceplate unlock + lift"
+ },
+ "cl_mk1_visor": {
+  "file": "classics/cl_mk1_visor",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Mk I welded visor slamming (scrap clatter + crude latch, no ring)"
+ },
+ "cl_servo_fast": {
+  "file": "classics/cl_servo_fast",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "fast robot-arm sweep (hydraulic rush, no pitch)"
+ },
+ "cl_servo_small": {
+  "file": "classics/cl_servo_small",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "small precise approach (fine hydraulic flow, no pitch)"
+ },
+ "cl_servo_big": {
+  "file": "classics/cl_servo_big",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "big actuator move / arm stows (heavy hydraulics, no pitch)"
+ },
+ "cl_hiss": {
+  "file": "classics/cl_hiss",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "pneumatic release hiss"
+ },
+ "cl_impact_driver": {
+  "file": "classics/cl_impact_driver",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "torque head: ratcheting burst + seat click (no motor pitch)"
+ },
+ "cl_clamp_lock": {
+  "file": "classics/cl_clamp_lock",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "armour piece clamps home (thud + latch, no ring)"
+ },
+ "cl_plate_clank": {
+  "file": "classics/cl_plate_clank",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "plate touches plate (dull, no ring)"
+ },
+ "cl_sparks": {
+  "file": "classics/cl_sparks",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "spark crackle when a bolt seats"
+ },
+ "cl_floor_unlock": {
+  "file": "classics/cl_floor_unlock",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "floor hatches unlock and drop (thud, latch, hiss)"
+ },
+ "cl_floor_open": {
+  "file": "classics/cl_floor_open",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "floor hatches swing down / up (rumble + seat)"
+ },
+ "cl_gantry_rise": {
+  "file": "classics/cl_gantry_rise",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "robot arms rise out of the pit (hydraulic lift, no pitch)"
+ },
+ "cl_reactor_on": {
+  "file": "classics/cl_reactor_on",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "arc reactor housing locks + ring lights up (hum swell)"
+ },
+ "cl_reactor_off": {
+  "file": "classics/cl_reactor_off",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "reactor ring powers down + housing unlocks (suit-off)"
+ },
+ "cl_hud_on": {
+  "file": "classics/cl_hud_on",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "eyes / HUD boot chirp when the faceplate locks"
+ },
+ "cl_hud_off": {
+  "file": "classics/cl_hud_off",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "HUD shuts off (suit-off)"
+ },
+ "cl_mk1_hydraulic": {
+  "file": "classics/cl_mk1_hydraulic",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Mk I clunky hydraulics (knee/elbow pistons)"
+ },
+ "cl_mk1_step": {
+  "file": "classics/cl_mk1_step",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Mk I heavy step \u2014 Jurek's armour step, pitched down + scrap rattle"
+ },
+ "cl_flame_loop": {
+  "file": "classics/cl_flame_loop",
+  "loop": true,
+  "gain": 0.9,
+  "desc": "flamethrower roar (loop)",
+  "loopStart": 0.0,
+  "loopEnd": 2.6
+ },
+ "cl_flame_start": {
+  "file": "classics/cl_flame_start",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "flamethrower valve + ignition whoomp"
+ },
+ "cl_flame_stop": {
+  "file": "classics/cl_flame_stop",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "flamethrower shut-off"
+ },
+ "cl_rocket_launch": {
+  "file": "classics/cl_rocket_launch",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Mk I forearm rocket launch (crude)"
+ },
+ "cl_missile_launch": {
+  "file": "classics/cl_missile_launch",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Mk III forearm mini-missile launch"
+ },
+ "cl_pod_open": {
+  "file": "classics/cl_pod_open",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "forearm pod hatch flips open"
+ },
+ "cl_pod_close": {
+  "file": "classics/cl_pod_close",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "forearm pod hatch shuts"
+ },
+ "cl_hatch_pop": {
+  "file": "classics/cl_hatch_pop",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "flare hatches pop"
+ },
+ "cl_hatch_close": {
+  "file": "classics/cl_hatch_close",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "flare hatches close"
+ },
+ "cl_flare": {
+  "file": "classics/cl_flare",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "countermeasure flare pop + fizz"
+ },
+ "cl_flaps_open": {
+  "file": "classics/cl_flaps_open",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "stabiliser flaps deploy"
+ },
+ "cl_flaps_close": {
+  "file": "classics/cl_flaps_close",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "stabiliser flaps stow"
+ }
+}

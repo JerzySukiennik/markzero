@@ -1,0 +1,1504 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "idle",
+   "frames": 91,
+   "fps": 30,
+   "loop": true,
+   "duration": 3.0,
+   "events": []
+  },
+  {
+   "name": "idle_crouch",
+   "frames": 97,
+   "fps": 30,
+   "loop": true,
+   "duration": 3.2,
+   "events": [],
+   "desc": "loop: low ready crouch, left hand on the ground, scanning",
+   "preview_cam": [
+    [
+     -2.0,
+     1.0,
+     -2.2
+    ],
+    [
+     0,
+     0.45,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "run",
+   "frames": 21,
+   "fps": 30,
+   "loop": true,
+   "duration": 0.6666666666666666,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "sp_step_1",
+     "at": "piv_toeR"
+    },
+    {
+     "t": 0.33,
+     "sfx": "sp_step_2",
+     "at": "piv_toeL"
+    }
+   ],
+   "stride_m": 1.9,
+   "speed_mps": 2.88,
+   "desc": "in-place loop; play at rate = ground_speed / 2.88"
+  },
+  {
+   "name": "sprint",
+   "frames": 17,
+   "fps": 30,
+   "loop": true,
+   "duration": 0.5333333333333333,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "sp_step_1",
+     "at": "piv_toeR"
+    },
+    {
+     "t": 0.27,
+     "sfx": "sp_step_2",
+     "at": "piv_toeL"
+    }
+   ],
+   "stride_m": 2.5,
+   "speed_mps": 4.63,
+   "desc": "in-place loop; play at rate = ground_speed / 4.63"
+  },
+  {
+   "name": "jump",
+   "frames": 22,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.7,
+   "events": [
+    {
+     "t": 0.19,
+     "sfx": "sp_jump",
+     "vfx": "dust",
+     "at": "piv_root"
+    }
+   ],
+   "desc": "anticipation 0-0.13, push 0.13-0.22 (the game should apply the jump impulse at 0.20), tuck in the air; ends in the fall pose",
+   "impulse_at": 0.2
+  },
+  {
+   "name": "fall",
+   "frames": 43,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.4,
+   "events": [],
+   "desc": "loop: falling / apex, skydiver spread (arms wide, one knee up), slow flutter. Blend with air_rise (going up) and air_dive (fast down; the game pitches the root along the velocity).",
+   "gen": 2
+  },
+  {
+   "name": "land",
+   "frames": 39,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.2666666666666666,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "sp_land_hard",
+     "at": "piv_root"
+    },
+    {
+     "t": 0.06,
+     "vfx": "dust",
+     "at": "piv_wristR"
+    },
+    {
+     "t": 0.07,
+     "vfx": "dust",
+     "at": "piv_toeL"
+    }
+   ],
+   "desc": "three-point superhero landing, impact at 0.07, hold, rise by 1.25",
+   "preview_cam": [
+    [
+     -2.2,
+     0.9,
+     -1.9
+    ],
+    [
+     0,
+     0.45,
+     -0.1
+    ]
+   ]
+  },
+  {
+   "name": "swing",
+   "frames": 49,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.6,
+   "events": [
+    {
+     "t": 0.45,
+     "sfx": "sp_swing_whoosh_1",
+     "at": "piv_hips",
+     "gain": 0.8
+    },
+    {
+     "t": 0.5,
+     "sfx": "sp_web_creak_1",
+     "at": "piv_webR",
+     "gain": 0.5
+    }
+   ],
+   "desc": "arc on the right hand, phase-driven from the pendulum angle: 0 catch (back-top, legs trailing), 0.24 drop, 0.48 tuck (bottom), 0.84 kick (upswing), 1.3 top (sitting in the air); 1.3-1.6 loops back. The body hangs from the web hand: COM on the +Y axis below it (root +Y = the rope).",
+   "hand": "R",
+   "gen": 2,
+   "preview_cam": [
+    [
+     -2.6,
+     1.3,
+     -0.8
+    ],
+    [
+     0,
+     1.2,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "swing_L",
+   "frames": 49,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.6,
+   "events": [
+    {
+     "t": 0.45,
+     "sfx": "sp_swing_whoosh_1",
+     "at": "piv_hips",
+     "gain": 0.8
+    },
+    {
+     "t": 0.5,
+     "sfx": "sp_web_creak_1",
+     "at": "piv_webL",
+     "gain": 0.5
+    }
+   ],
+   "desc": "arc on the left hand, phase-driven from the pendulum angle: 0 catch (back-top, legs trailing), 0.24 drop, 0.48 tuck (bottom), 0.84 kick (upswing), 1.3 top (sitting in the air); 1.3-1.6 loops back. The body hangs from the web hand: COM on the +Y axis below it (root +Y = the rope).",
+   "hand": "L",
+   "gen": 2,
+   "preview_cam": [
+    [
+     -2.6,
+     1.3,
+     -0.8
+    ],
+    [
+     0,
+     1.2,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "swing_release",
+   "frames": 31,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.0,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "sp_web_release",
+     "vfx": "web_release",
+     "at": "piv_webR"
+    },
+    {
+     "t": 0.18,
+     "sfx": "sp_whoosh_2",
+     "at": "piv_hips"
+    }
+   ],
+   "desc": "let-go at 0.02, tucked forward flip about the COM (done by 0.62), opens into the fall spread",
+   "gen": 2,
+   "root_motion": false,
+   "preview_cam": [
+    [
+     -3.0,
+     1.2,
+     -0.4
+    ],
+    [
+     0,
+     1.0,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "web_zip",
+   "frames": 29,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.9333333333333333,
+   "events": [
+    {
+     "t": 0.15,
+     "sfx": "sp_thwip_double",
+     "vfx": "web_zip",
+     "at": "piv_webR",
+     "atL": "piv_webL",
+     "atR": "piv_webR"
+    },
+    {
+     "t": 0.26,
+     "sfx": "sp_zip_whoosh",
+     "at": "piv_hips"
+    }
+   ],
+   "desc": "both wrists fire at 0.15 up-forward, the pull starts at 0.26 (apply the zip velocity there), knees come through by 0.95",
+   "pull_at": 0.26,
+   "preview_cam": [
+    [
+     -2.4,
+     1.4,
+     -1.6
+    ],
+    [
+     0,
+     1.0,
+     -0.1
+    ]
+   ]
+  },
+  {
+   "name": "wall_crawl",
+   "frames": 14,
+   "fps": 30,
+   "loop": true,
+   "duration": 0.4333,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "sp_crawl_1",
+     "at": "piv_wristR"
+    },
+    {
+     "t": 0.02,
+     "sfx": "sp_wall_grip",
+     "at": "piv_ankleL",
+     "gain": 0.35
+    },
+    {
+     "t": 0.217,
+     "sfx": "sp_crawl_2",
+     "at": "piv_wristL"
+    },
+    {
+     "t": 0.237,
+     "sfx": "sp_wall_grip",
+     "at": "piv_ankleR",
+     "gain": 0.35
+    }
+   ],
+   "author": "hulkbuster agent (spider-wall-build.py)",
+   "surface": "wall frame: local +Y = wall normal, -Z = up the wall",
+   "stride_m": 1.3,
+   "ref_speed": 3.0,
+   "speed_mps": 3.0,
+   "desc": "loop: MCU spider crawl - prone, pelvis ~0.19 m and chest <=0.28 m off the wall, wide frog knees and elbows, diagonal pairs (L hand + R foot), head up the wall, spine wave; stride 1.3 m/cycle; rate = crawl_speed / 1.3",
+   "preview_cam": [
+    [
+     -2.4,
+     1.8,
+     -0.6
+    ],
+    [
+     0,
+     0.2,
+     -0.3
+    ]
+   ]
+  },
+  {
+   "name": "wall_cling",
+   "frames": 103,
+   "fps": 30,
+   "loop": true,
+   "duration": 3.4,
+   "events": [],
+   "author": "hulkbuster agent (spider-wall-build.py)",
+   "surface": "wall frame: local +Y = wall normal, -Z = up the wall",
+   "desc": "loop: clinging to a wall like a spider - pelvis ~0.18 m off it, all four limbs planted (right hand high, left knee drawn up), breathing, head looking round",
+   "preview_cam": [
+    [
+     -2.4,
+     1.8,
+     -0.6
+    ],
+    [
+     0,
+     0.2,
+     -0.3
+    ]
+   ]
+  },
+  {
+   "name": "wall_run",
+   "frames": 14,
+   "fps": 30,
+   "loop": true,
+   "duration": 0.4333,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "sp_sneaker_1",
+     "at": "piv_toeL"
+    },
+    {
+     "t": 0.217,
+     "sfx": "sp_sneaker_2",
+     "at": "piv_toeR"
+    }
+   ],
+   "author": "hulkbuster agent (spider-wall-build.py)",
+   "surface": "wall frame: local +Y = wall normal, -Z = up the wall",
+   "stride_m": 4.4,
+   "ref_speed": 10.15,
+   "speed_mps": 10.15,
+   "desc": "loop: sprint up the wall - body perpendicular to it, lean 26 deg into the run, flight phase, arms pumping; stride 4.4 m/cycle; rate = speed / 4.4"
+  },
+  {
+   "name": "perch",
+   "frames": 109,
+   "fps": 30,
+   "loop": true,
+   "duration": 3.6,
+   "events": [],
+   "desc": "loop: gargoyle perch on the balls of the feet (a ledge/lamppost top at y=0), forearms between the knees, scanning",
+   "preview_cam": [
+    [
+     -1.8,
+     0.9,
+     -1.8
+    ],
+    [
+     0,
+     0.45,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "web_shoot_R",
+   "frames": 20,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.6333333333333333,
+   "events": [
+    {
+     "t": 0.1,
+     "sfx": "sp_whoosh_1",
+     "at": "piv_wristR",
+     "gain": 0.35
+    },
+    {
+     "t": 0.15,
+     "sfx": "sp_thwip_1",
+     "vfx": "web_shot",
+     "at": "piv_webR",
+     "hand": "R",
+     "sfx_variants": [
+      "sp_thwip_1",
+      "sp_thwip_2",
+      "sp_thwip_3",
+      "sp_thwip_4"
+     ]
+    }
+   ],
+   "layer": "upper",
+   "blend": "override",
+   "preview_cam": [
+    [
+     1.35,
+     1.55,
+     -1.35
+    ],
+    [
+     0.18,
+     1.35,
+     -0.35
+    ]
+   ],
+   "preview_lens": 40,
+   "joints": [
+    "piv_spine",
+    "piv_chest",
+    "piv_neck",
+    "piv_head",
+    "piv_clavicleR",
+    "piv_shoulderR",
+    "piv_elbowR",
+    "piv_wristR",
+    "piv_f_thumb1R",
+    "piv_f_thumb2R",
+    "piv_f_index1R",
+    "piv_f_index2R",
+    "piv_f_middle1R",
+    "piv_f_middle2R",
+    "piv_f_ring1R",
+    "piv_f_ring2R",
+    "piv_f_pinky1R",
+    "piv_f_pinky2R",
+    "piv_clavicleL",
+    "piv_shoulderL",
+    "piv_elbowL",
+    "piv_wristL",
+    "piv_f_thumb1L",
+    "piv_f_thumb2L",
+    "piv_f_index1L",
+    "piv_f_index2L",
+    "piv_f_middle1L",
+    "piv_f_middle2L",
+    "piv_f_ring1L",
+    "piv_f_ring2L",
+    "piv_f_pinky1L",
+    "piv_f_pinky2L"
+   ],
+   "fire_at": 0.15,
+   "emitter": "piv_webR",
+   "desc": "thwip from the right wrist: cock, snap, recoil"
+  },
+  {
+   "name": "web_shoot_L",
+   "frames": 20,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.6333333333333333,
+   "events": [
+    {
+     "t": 0.1,
+     "sfx": "sp_whoosh_1",
+     "at": "piv_wristL",
+     "gain": 0.35
+    },
+    {
+     "t": 0.15,
+     "sfx": "sp_thwip_3",
+     "vfx": "web_shot",
+     "at": "piv_webL",
+     "hand": "L",
+     "sfx_variants": [
+      "sp_thwip_1",
+      "sp_thwip_2",
+      "sp_thwip_3",
+      "sp_thwip_4"
+     ]
+    }
+   ],
+   "layer": "upper",
+   "blend": "override",
+   "preview_cam": [
+    [
+     -1.35,
+     1.55,
+     -1.35
+    ],
+    [
+     -0.18,
+     1.35,
+     -0.35
+    ]
+   ],
+   "preview_lens": 40,
+   "joints": [
+    "piv_spine",
+    "piv_chest",
+    "piv_neck",
+    "piv_head",
+    "piv_clavicleL",
+    "piv_shoulderL",
+    "piv_elbowL",
+    "piv_wristL",
+    "piv_f_thumb1L",
+    "piv_f_thumb2L",
+    "piv_f_index1L",
+    "piv_f_index2L",
+    "piv_f_middle1L",
+    "piv_f_middle2L",
+    "piv_f_ring1L",
+    "piv_f_ring2L",
+    "piv_f_pinky1L",
+    "piv_f_pinky2L",
+    "piv_clavicleR",
+    "piv_shoulderR",
+    "piv_elbowR",
+    "piv_wristR",
+    "piv_f_thumb1R",
+    "piv_f_thumb2R",
+    "piv_f_index1R",
+    "piv_f_index2R",
+    "piv_f_middle1R",
+    "piv_f_middle2R",
+    "piv_f_ring1R",
+    "piv_f_ring2R",
+    "piv_f_pinky1R",
+    "piv_f_pinky2R"
+   ],
+   "fire_at": 0.15,
+   "emitter": "piv_webL",
+   "desc": "thwip from the left wrist: cock, snap, recoil"
+  },
+  {
+   "name": "web_shoot_both",
+   "frames": 21,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.6666666666666666,
+   "events": [
+    {
+     "t": 0.16,
+     "sfx": "sp_thwip_double",
+     "vfx": "web_shot",
+     "at": "piv_webL",
+     "hand": "L"
+    },
+    {
+     "t": 0.16,
+     "vfx": "web_shot",
+     "at": "piv_webR",
+     "hand": "R"
+    }
+   ],
+   "layer": "upper",
+   "blend": "override",
+   "joints": [
+    "piv_spine",
+    "piv_chest",
+    "piv_neck",
+    "piv_head",
+    "piv_clavicleL",
+    "piv_shoulderL",
+    "piv_elbowL",
+    "piv_wristL",
+    "piv_f_thumb1L",
+    "piv_f_thumb2L",
+    "piv_f_index1L",
+    "piv_f_index2L",
+    "piv_f_middle1L",
+    "piv_f_middle2L",
+    "piv_f_ring1L",
+    "piv_f_ring2L",
+    "piv_f_pinky1L",
+    "piv_f_pinky2L",
+    "piv_clavicleR",
+    "piv_shoulderR",
+    "piv_elbowR",
+    "piv_wristR",
+    "piv_f_thumb1R",
+    "piv_f_thumb2R",
+    "piv_f_index1R",
+    "piv_f_index2R",
+    "piv_f_middle1R",
+    "piv_f_middle2R",
+    "piv_f_ring1R",
+    "piv_f_ring2R",
+    "piv_f_pinky1R",
+    "piv_f_pinky2R"
+   ],
+   "fire_at": 0.16,
+   "desc": "both wrists at once (web zip / double shot)"
+  },
+  {
+   "name": "web_pull",
+   "frames": 31,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.0,
+   "events": [
+    {
+     "t": 0.13,
+     "sfx": "sp_thwip_2",
+     "vfx": "web_line",
+     "at": "piv_webR",
+     "hand": "R"
+    },
+    {
+     "t": 0.42,
+     "sfx": "sp_web_pull",
+     "vfx": "web_pull",
+     "at": "piv_webR",
+     "hit": true
+    }
+   ],
+   "desc": "thwip at 0.13 (line to the target), fist closes on the line, YANK at 0.42 (apply the pull impulse to the enemy there)",
+   "pull_at": 0.42,
+   "preview_cam": [
+    [
+     -2.3,
+     1.3,
+     -1.4
+    ],
+    [
+     0,
+     1.0,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "punch_combo",
+   "frames": 43,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.4,
+   "events": [
+    {
+     "t": 0.08,
+     "sfx": "sp_punch_1",
+     "at": "piv_wristL",
+     "hit": true
+    },
+    {
+     "t": 0.34,
+     "sfx": "sp_punch_2",
+     "at": "piv_wristR",
+     "hit": true
+    },
+    {
+     "t": 0.72,
+     "sfx": "sp_punch_1",
+     "at": "piv_wristL",
+     "hit": true,
+     "rate": 0.9
+    },
+    {
+     "t": 0.26,
+     "sfx": "sp_whoosh_1",
+     "at": "piv_wristR",
+     "gain": 0.5
+    },
+    {
+     "t": 0.62,
+     "sfx": "sp_whoosh_2",
+     "at": "piv_wristL",
+     "gain": 0.5
+    }
+   ],
+   "desc": "gen 2: jab 0.08 (step in), cross 0.34 (heel pivot, big turn), hook 0.72 (coil + whip), guard by 1.4",
+   "hits": [
+    0.08,
+    0.34,
+    0.72
+   ],
+   "gen": 2,
+   "preview_cam": [
+    [
+     -1.9,
+     1.4,
+     -2.2
+    ],
+    [
+     0,
+     1.1,
+     -0.2
+    ]
+   ]
+  },
+  {
+   "name": "kick",
+   "frames": 31,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.0,
+   "events": [
+    {
+     "t": 0.16,
+     "sfx": "sp_jump",
+     "at": "piv_root",
+     "gain": 0.6
+    },
+    {
+     "t": 0.24,
+     "sfx": "sp_whoosh_3",
+     "at": "piv_ankleR"
+    },
+    {
+     "t": 0.32,
+     "sfx": "sp_kick",
+     "at": "piv_toeR",
+     "hit": true
+    },
+    {
+     "t": 0.64,
+     "sfx": "sp_land_light",
+     "at": "piv_root"
+    }
+   ],
+   "desc": "gen 2: jumping spin roundhouse (right): load 0.10, airborne 0.16, the leg crosses the front at the hit 0.32, lands 0.64",
+   "hits": [
+    0.32
+   ],
+   "gen": 2,
+   "root_rotation": "spin -360 about Y (character up) with a 0.34 m hop; no net travel",
+   "preview_cam": [
+    [
+     -2.6,
+     1.3,
+     -1.0
+    ],
+    [
+     0,
+     1.0,
+     -0.3
+    ]
+   ]
+  },
+  {
+   "name": "dodge_flip",
+   "frames": 29,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.9333333333333333,
+   "events": [
+    {
+     "t": 0.17,
+     "sfx": "sp_jump",
+     "at": "piv_root"
+    },
+    {
+     "t": 0.3,
+     "sfx": "sp_whoosh_2",
+     "at": "piv_hips"
+    },
+    {
+     "t": 0.73,
+     "sfx": "sp_land_light",
+     "vfx": "dust",
+     "at": "piv_root"
+    }
+   ],
+   "desc": "back-flip dodge: push 0.17, full tucked somersault about the centre of mass with a 0.62 m jump arc (piv_root), land 0.73. The game moves the body back; the arc and rotation are in the clip.",
+   "root_motion": true,
+   "preview_cam": [
+    [
+     -3.0,
+     1.3,
+     -0.3
+    ],
+    [
+     0,
+     1.1,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "window_open",
+   "frames": 43,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.4,
+   "events": [
+    {
+     "t": 0.3,
+     "sfx": "sp_cloth_1",
+     "at": "piv_shoulderR",
+     "gain": 0.5
+    },
+    {
+     "t": 0.47,
+     "sfx": "sp_step_1",
+     "at": "piv_toeR",
+     "gain": 0.6
+    },
+    {
+     "t": 0.62,
+     "sfx": "sp_whoosh_1",
+     "at": "piv_wristR",
+     "gain": 0.35
+    },
+    {
+     "t": 1.2,
+     "sfx": "sp_step_3",
+     "at": "piv_toeR",
+     "gain": 0.5
+    }
+   ],
+   "desc": "WIN-A open: right hand on the handle by 0.35, turns it 90 deg 0.35-0.55, steps in and shoves both leaves (R 0.60, L 0.68), follow-through, steps back. Play in sync with window_a.glb 'window_open'; avatar root at (0,-0.45,+0.50) in window space, facing -Z.",
+   "window": "WIN-A",
+   "sync": "window_a.glb:window_open",
+   "preview_cam": [
+    [
+     -1.9,
+     1.35,
+     0.9
+    ],
+    [
+     0,
+     1.0,
+     -0.4
+    ]
+   ]
+  },
+  {
+   "name": "window_close",
+   "frames": 37,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.2,
+   "events": [
+    {
+     "t": 0.05,
+     "sfx": "sp_step_2",
+     "at": "piv_toeR",
+     "gain": 0.5
+    },
+    {
+     "t": 0.24,
+     "sfx": "sp_cloth_2",
+     "at": "piv_chest",
+     "gain": 0.5
+    },
+    {
+     "t": 1.12,
+     "sfx": "sp_step_4",
+     "at": "piv_toeR",
+     "gain": 0.5
+    }
+   ],
+   "desc": "WIN-A close from the inside: steps in and leans out over the sill, grabs both open leaves (0.25), pulls them shut (left leads, shut by 0.85), turns the handle back 0.86-1.04, steps back.",
+   "window": "WIN-A",
+   "sync": "window_a.glb:window_close",
+   "preview_cam": [
+    [
+     -1.9,
+     1.35,
+     0.9
+    ],
+    [
+     0,
+     1.0,
+     -0.4
+    ]
+   ]
+  },
+  {
+   "name": "window_climb_out",
+   "frames": 40,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.3,
+   "events": [
+    {
+     "t": 0.26,
+     "sfx": "sp_sill_step",
+     "at": "piv_toeR"
+    },
+    {
+     "t": 0.5,
+     "sfx": "sp_sill_step",
+     "at": "piv_toeL",
+     "gain": 0.7
+    },
+    {
+     "t": 0.3,
+     "sfx": "sp_wall_grip",
+     "at": "piv_wristR",
+     "gain": 0.5
+    },
+    {
+     "t": 0.8,
+     "sfx": "sp_jump",
+     "at": "piv_root"
+    },
+    {
+     "t": 0.84,
+     "sfx": "sp_whoosh_2",
+     "at": "piv_hips"
+    }
+   ],
+   "desc": "WIN-A climb out: right foot onto the sill 0.28, hands on the jambs, crouch on the sill 0.52, load, spring out 0.80, airborne 1.5 m outside the glass at 1.30 (root z = -2.0, y = 0.75). Chain into 'fall' or a web shot.",
+   "root_motion": true,
+   "window": "WIN-A",
+   "takeoff_at": 0.8,
+   "preview_cam": [
+    [
+     -2.8,
+     1.4,
+     0.2
+    ],
+    [
+     0,
+     1.0,
+     -0.9
+    ]
+   ]
+  },
+  {
+   "name": "window_climb_in",
+   "frames": 40,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.3,
+   "events": [
+    {
+     "t": 0.35,
+     "sfx": "sp_land_light",
+     "at": "piv_root"
+    },
+    {
+     "t": 0.36,
+     "sfx": "sp_wall_grip",
+     "at": "piv_wristR",
+     "gain": 0.6
+    },
+    {
+     "t": 0.88,
+     "sfx": "sp_step_1",
+     "at": "piv_toeR"
+    },
+    {
+     "t": 1.16,
+     "sfx": "sp_step_2",
+     "at": "piv_toeL"
+    }
+   ],
+   "desc": "WIN-A climb in: airborne 1.5 m outside (root z = -2.0), lands crouched on the sill 0.36 with both hands on the jambs, rises, steps down into the room (R 0.90, L 1.18), ends standing at the window_open spot (root 0,0,0).",
+   "root_motion": true,
+   "window": "WIN-A",
+   "land_at": 0.36,
+   "preview_cam": [
+    [
+     -2.8,
+     1.4,
+     0.2
+    ],
+    [
+     0,
+     1.0,
+     -0.9
+    ]
+   ]
+  },
+  {
+   "name": "web_yank_throw",
+   "frames": 82,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.7,
+   "events": [
+    {
+     "t": 0.28,
+     "sfx": "sp_whoosh_1",
+     "at": "piv_wristR",
+     "gain": 0.4
+    },
+    {
+     "t": 0.3,
+     "sfx": "sp_thwip_1",
+     "vfx": "web_line",
+     "at": "piv_webR",
+     "hand": "R",
+     "to_node": "prop_obj",
+     "sfx_variants": [
+      "sp_thwip_1",
+      "sp_thwip_2",
+      "sp_thwip_3",
+      "sp_thwip_4"
+     ]
+    },
+    {
+     "t": 0.4,
+     "sfx": "sp_web_attach_1",
+     "at": "prop_obj",
+     "cue": "web_attach",
+     "node": "prop_obj"
+    },
+    {
+     "t": 0.66,
+     "sfx": "sp_web_pull",
+     "at": "piv_webR",
+     "cue": "yank",
+     "node": "prop_obj"
+    },
+    {
+     "t": 0.98,
+     "sfx": "sp_web_creak_1",
+     "at": "piv_webR"
+    },
+    {
+     "t": 1.18,
+     "sfx": "sp_swing_whoosh_1",
+     "at": "prop_obj"
+    },
+    {
+     "t": 1.58,
+     "sfx": "sp_swing_whoosh_2",
+     "at": "prop_obj"
+    },
+    {
+     "t": 1.78,
+     "sfx": "sp_web_release",
+     "vfx": "web_release",
+     "at": "piv_webR",
+     "cue": "release",
+     "node": "prop_obj",
+     "velocity": [
+      0.0,
+      2.5,
+      -20.5
+     ]
+    },
+    {
+     "t": 1.83,
+     "sfx": "sp_whoosh_2",
+     "at": "piv_wristR"
+    }
+   ],
+   "author": "hulkbuster agent (spider-throws-build.py)",
+   "desc": "thwip at 0.30 onto an object on the ground 6 m ahead (prop_obj), attach 0.40, YANK 0.66, hammer-throw it round the body (front->left->back->right, radius 1.6->2.4 m), release 1.78 flying -Z; feet step round",
+   "props": {
+    "prop_obj": "the thrown object's centre, character space; the object follows it from web_attach to release"
+   },
+   "attach_at": 0.4,
+   "yank_at": 0.66,
+   "release_at": 1.78,
+   "preview_cam": [
+    [
+     4.8,
+     2.6,
+     -4.2
+    ],
+    [
+     0,
+     1.0,
+     -1.5
+    ]
+   ]
+  },
+  {
+   "name": "rpg_catch_return",
+   "frames": 76,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.5,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "en_rpg_flight",
+     "at": "prop_rocket",
+     "loop": true,
+     "gain": 0.8
+    },
+    {
+     "t": 0.26,
+     "sfx": "sp_whoosh_1",
+     "at": "piv_wristR",
+     "gain": 0.4
+    },
+    {
+     "t": 0.28,
+     "sfx": "sp_thwip_2",
+     "vfx": "web_line",
+     "at": "piv_webR",
+     "hand": "R",
+     "to_node": "prop_rocket"
+    },
+    {
+     "t": 0.34,
+     "sfx": "sp_web_attach_2",
+     "at": "prop_rocket",
+     "cue": "rocket_caught",
+     "node": "prop_rocket"
+    },
+    {
+     "t": 0.95,
+     "sfx": "sp_web_creak_2",
+     "at": "piv_webR"
+    },
+    {
+     "t": 1.1,
+     "sfx": "sp_swing_whoosh_1",
+     "at": "prop_rocket"
+    },
+    {
+     "t": 1.419,
+     "sfx": "sp_web_release",
+     "vfx": "web_release",
+     "at": "piv_webR",
+     "cue": "rocket_release",
+     "node": "prop_rocket",
+     "velocity": [
+      0.0,
+      0.0,
+      -24.0
+     ]
+    }
+   ],
+   "author": "hulkbuster agent (spider-throws-build.py)",
+   "desc": "an RPG rocket comes in at 24 m/s past his front-left; thwip 0.28, the web catches it at 0.34, it keeps flying until 1.00 then whips round behind him on the line (radius 3.2 m) and is released at 1.42 flying back -Z at 24 m/s",
+   "props": {
+    "prop_rocket": "rocket position + orientation (local -Z = flight direction), character space"
+   },
+   "catch_at": 0.34,
+   "release_at": 1.419,
+   "rocket_speed": 24.0,
+   "engine": "until rocket_caught the game's own rocket flies; from rocket_caught to rocket_release put the live rocket on prop_rocket (its world transform); at rocket_release hand it back to physics with `velocity` (character space -> world). Retarget: rotate the character to face the incoming rocket first.",
+   "preview_cam": [
+    [
+     6.0,
+     3.6,
+     4.5
+    ],
+    [
+     0,
+     1.2,
+     -2.0
+    ]
+   ]
+  },
+  {
+   "name": "web_heavy_throw",
+   "frames": 91,
+   "fps": 30,
+   "loop": false,
+   "duration": 3.0,
+   "events": [
+    {
+     "t": 0.26,
+     "sfx": "sp_thwip_double",
+     "vfx": "web_line",
+     "at": "piv_webR",
+     "hand": "R",
+     "to_node": "prop_heavy"
+    },
+    {
+     "t": 0.26,
+     "vfx": "web_line",
+     "at": "piv_webL",
+     "hand": "L",
+     "to_node": "prop_heavy"
+    },
+    {
+     "t": 0.36,
+     "sfx": "sp_web_attach_1",
+     "at": "prop_heavy",
+     "cue": "web_attach",
+     "node": "prop_heavy"
+    },
+    {
+     "t": 0.55,
+     "sfx": "sp_web_pull",
+     "at": "piv_webR",
+     "cue": "lift",
+     "node": "prop_heavy"
+    },
+    {
+     "t": 0.6000000000000001,
+     "sfx": "sp_jump",
+     "at": "piv_hips",
+     "gain": 0.6
+    },
+    {
+     "t": 1.0999999999999999,
+     "sfx": "sp_web_creak_1",
+     "at": "piv_webR"
+    },
+    {
+     "t": 1.5,
+     "sfx": "sp_web_tension_loop",
+     "at": "piv_webR",
+     "gain": 0.5
+    },
+    {
+     "t": 1.72,
+     "sfx": "sp_web_release",
+     "vfx": "web_release",
+     "at": "piv_webR",
+     "cue": "release",
+     "node": "prop_heavy"
+    },
+    {
+     "t": 1.74,
+     "sfx": "sp_swing_whoosh_2",
+     "at": "prop_heavy"
+    },
+    {
+     "t": 2.05,
+     "cue": "impact",
+     "node": "prop_heavy",
+     "at": "prop_heavy",
+     "sfx": "en_ground_pound",
+     "vfx": "dust",
+     "strength": 0.8
+    }
+   ],
+   "author": "hulkbuster agent (spider-throws-build.py)",
+   "desc": "both wrists web a heavy object 5.5 m ahead (0.26), attach 0.36, HEAVE 0.55 \u2014 it arcs up and over to hang above his head (apex 1.20), he arches back (1.50) and hurls it two-handed overhead: release 1.72, impact 11 m ahead at 2.05",
+   "props": {
+    "prop_heavy": "the heavy object's centre + tumble, character space"
+   },
+   "attach_at": 0.36,
+   "lift_at": 0.55,
+   "release_at": 1.72,
+   "impact_at": 2.05,
+   "preview_cam": [
+    [
+     5.5,
+     2.8,
+     -2.0
+    ],
+    [
+     0,
+     1.6,
+     -3.0
+    ]
+   ]
+  },
+  {
+   "name": "wall_run_fast",
+   "frames": 13,
+   "fps": 30,
+   "loop": true,
+   "duration": 0.4,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "sp_sneaker_1",
+     "at": "piv_toeL"
+    },
+    {
+     "t": 0.2,
+     "sfx": "sp_sneaker_2",
+     "at": "piv_toeR"
+    }
+   ],
+   "author": "hulkbuster agent (spider-wall-build.py)",
+   "surface": "wall frame: local +Y = wall normal, -Z = up the wall",
+   "stride_m": 4.8,
+   "ref_speed": 12.0,
+   "speed_mps": 12.0,
+   "desc": "loop: sprint up the wall - body perpendicular to it, lean 30 deg into the run, flight phase, arms pumping; stride 4.8 m/cycle; rate = speed / 4.8"
+  },
+  {
+   "name": "air_rise",
+   "frames": 37,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.2,
+   "events": [],
+   "desc": "loop: going up after a release or a launch - stretched leap, lead knee high, reaching up-ahead",
+   "gen": 2
+  },
+  {
+   "name": "air_dive",
+   "frames": 28,
+   "fps": 30,
+   "loop": true,
+   "duration": 0.9,
+   "events": [],
+   "desc": "loop: the dive, streamlined (arms swept back, legs together); authored upright, the game pitches the root head-first along the velocity",
+   "gen": 2
+  },
+  {
+   "name": "release_corkscrew",
+   "frames": 34,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.1,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "sp_web_release",
+     "at": "piv_webR"
+    },
+    {
+     "t": 0.2,
+     "sfx": "sp_whoosh_3",
+     "at": "piv_hips"
+    },
+    {
+     "t": 0.5,
+     "sfx": "sp_whoosh_1",
+     "at": "piv_hips",
+     "gain": 0.7
+    }
+   ],
+   "desc": "release trick: pitch to horizontal and a full corkscrew (barrel roll about the body axis, streamlined), open into the spread by 0.9",
+   "gen": 2,
+   "root_motion": false
+  },
+  {
+   "name": "release_spread",
+   "frames": 29,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.9333333333333333,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "sp_web_release",
+     "at": "piv_webR"
+    },
+    {
+     "t": 0.12,
+     "sfx": "sp_cloth_1",
+     "at": "piv_chest",
+     "gain": 0.6
+    }
+   ],
+   "desc": "release trick: spread-eagle star (arms and legs wide, chest open), held, then the fall spread",
+   "gen": 2
+  },
+  {
+   "name": "land_roll",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.03,
+     "sfx": "sp_land_light",
+     "at": "piv_root"
+    },
+    {
+     "t": 0.2,
+     "sfx": "sp_cloth_2",
+     "at": "piv_chest",
+     "gain": 0.7
+    },
+    {
+     "t": 0.52,
+     "sfx": "sp_step_2",
+     "at": "piv_toeR"
+    }
+   ],
+   "desc": "landing roll at speed: absorb 0.07, tucked forward roll about (0,0.52,-0.25) 0.10-0.55, feet under at 0.55, run lean by 0.8; no net travel",
+   "gen": 2,
+   "root_motion": false,
+   "preview_cam": [
+    [
+     -2.6,
+     1.0,
+     -0.6
+    ],
+    [
+     0,
+     0.6,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "uppercut",
+   "frames": 28,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.9,
+   "events": [
+    {
+     "t": 0.12,
+     "sfx": "sp_whoosh_3",
+     "at": "piv_wristR"
+    },
+    {
+     "t": 0.2,
+     "sfx": "sp_punch_2",
+     "at": "piv_wristR",
+     "hit": true,
+     "rate": 0.85
+    },
+    {
+     "t": 0.6,
+     "sfx": "sp_land_light",
+     "at": "piv_root"
+    }
+   ],
+   "desc": "launcher: sink 0.10, rising right uppercut hit 0.20 (off the ground), tuck, land in guard 0.6",
+   "hits": [
+    0.2
+   ],
+   "gen": 2,
+   "preview_cam": [
+    [
+     -2.4,
+     1.3,
+     -1.2
+    ],
+    [
+     0,
+     1.1,
+     -0.2
+    ]
+   ]
+  },
+  {
+   "name": "dodge_side_R",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.1,
+     "sfx": "sp_jump",
+     "at": "piv_root",
+     "gain": 0.6
+    },
+    {
+     "t": 0.22,
+     "sfx": "sp_whoosh_2",
+     "at": "piv_hips"
+    },
+    {
+     "t": 0.56,
+     "sfx": "sp_land_light",
+     "at": "piv_root"
+    }
+   ],
+   "desc": "aerial side dodge to his right: load 0.08, full roll about the forward axis 0.12-0.52 with a 0.55 m hop, land 0.56 facing the same way; no net travel",
+   "gen": 2,
+   "root_motion": false
+  },
+  {
+   "name": "dodge_side_L",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.1,
+     "sfx": "sp_jump",
+     "at": "piv_root",
+     "gain": 0.6
+    },
+    {
+     "t": 0.22,
+     "sfx": "sp_whoosh_2",
+     "at": "piv_hips"
+    },
+    {
+     "t": 0.56,
+     "sfx": "sp_land_light",
+     "at": "piv_root"
+    }
+   ],
+   "desc": "aerial side dodge to his left: load 0.08, full roll about the forward axis 0.12-0.52 with a 0.55 m hop, land 0.56 facing the same way; no net travel",
+   "gen": 2,
+   "root_motion": false
+  }
+ ]
+}

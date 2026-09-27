@@ -1,0 +1,374 @@
+{
+ "sp_thwip_1": {
+  "file": "spider/sp_thwip_1",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Web shot, one hand (reference level): finger-snap crack, pump-spray pfft, descending air-whistle zip."
+ },
+ "sp_thwip_2": {
+  "file": "spider/sp_thwip_2",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Web shot variant: whip-tip crack, air-duster hiss, brighter two-tone zip (+1.3 st)."
+ },
+ "sp_thwip_3": {
+  "file": "spider/sp_thwip_3",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Web shot variant: twig-snap crack, pneumatic-nailer air, darker glide, more body (-1.3 st)."
+ },
+ "sp_thwip_4": {
+  "file": "spider/sp_thwip_4",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Web shot variant: air-rifle crack, deodorant-spray hiss, highest and fastest zip glide."
+ },
+ "sp_thwip_double": {
+  "file": "spider/sp_thwip_double",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Both hands at once: two different thwips 16 ms apart, spread L/R, plus a low pressure thump."
+ },
+ "sp_thwip_swing": {
+  "file": "spider/sp_thwip_swing",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Swing-line shot: a thwip followed by the line paying out (\"thwip-zzzp\"), 0.55 s."
+ },
+ "sp_web_splat_1": {
+  "file": "spider/sp_web_splat_1",
+  "loop": false,
+  "gain": 0.8,
+  "desc": "Web glob splatting on a wall: wet slap + sticky fibre crackle."
+ },
+ "sp_web_splat_2": {
+  "file": "spider/sp_web_splat_2",
+  "loop": false,
+  "gain": 0.8,
+  "desc": "Web splat variant: slime slap, pitched up, drier."
+ },
+ "sp_web_splat_3": {
+  "file": "spider/sp_web_splat_3",
+  "loop": false,
+  "gain": 0.8,
+  "desc": "Web splat variant: heavier squish, pitched down."
+ },
+ "sp_web_hit_body": {
+  "file": "spider/sp_web_hit_body",
+  "loop": false,
+  "gain": 0.95,
+  "desc": "Web glob hitting an enemy: body thud + wet slap."
+ },
+ "sp_web_attach_1": {
+  "file": "spider/sp_web_attach_1",
+  "loop": false,
+  "gain": 0.75,
+  "desc": "Swing line anchoring on a building: taut tchk + tiny string twang."
+ },
+ "sp_web_attach_2": {
+  "file": "spider/sp_web_attach_2",
+  "loop": false,
+  "gain": 0.75,
+  "desc": "Line anchor variant, lower twang."
+ },
+ "sp_web_release": {
+  "file": "spider/sp_web_release",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "Letting go of a line: twang + air fizz."
+ },
+ "sp_web_snap": {
+  "file": "spider/sp_web_snap",
+  "loop": false,
+  "gain": 0.9,
+  "desc": "A web line breaking: sharp snap + whip recoil."
+ },
+ "sp_zip_whoosh": {
+  "file": "spider/sp_zip_whoosh",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Web-zip: rising whoosh pulled along the line, ending in a small thump (0.85 s)."
+ },
+ "sp_web_pull": {
+  "file": "spider/sp_web_pull",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Yanking an enemy with a web: taut snap + short whoosh."
+ },
+ "sp_web_creak_1": {
+  "file": "spider/sp_web_creak_1",
+  "loop": false,
+  "gain": 0.55,
+  "desc": "Line creak under load (bottom of a swing arc)."
+ },
+ "sp_web_creak_2": {
+  "file": "spider/sp_web_creak_2",
+  "loop": false,
+  "gain": 0.55,
+  "desc": "Line creak variant: tight metal-wire gate creak, pitched up."
+ },
+ "sp_web_tension_loop": {
+  "file": "spider/sp_web_tension_loop",
+  "loop": true,
+  "gain": 0.35,
+  "desc": "Line tension creak loop (seamless, 2.4 s)."
+ },
+ "sp_swing_whoosh_1": {
+  "file": "spider/sp_swing_whoosh_1",
+  "loop": false,
+  "gain": 0.8,
+  "desc": "Air rushing past through the bottom of a swing arc (1.3 s swell)."
+ },
+ "sp_swing_whoosh_2": {
+  "file": "spider/sp_swing_whoosh_2",
+  "loop": false,
+  "gain": 0.8,
+  "desc": "Swing whoosh variant, cloth-heavy."
+ },
+ "sp_wind_loop": {
+  "file": "spider/sp_wind_loop",
+  "loop": true,
+  "gain": 0.45,
+  "desc": "High-speed wind loop for swinging/falling (seamless, 4 s)."
+ },
+ "sp_nano_flow": {
+  "file": "spider/sp_nano_flow",
+  "loop": false,
+  "gain": 0.8,
+  "desc": "Nanotech flowing over the body: fine metallic granular shimmer (2.8 s)."
+ },
+ "sp_nano_seal": {
+  "file": "spider/sp_nano_seal",
+  "loop": false,
+  "gain": 0.8,
+  "desc": "Suit complete: tight metallic click-chirp lock."
+ },
+ "sp_nano_mask_open": {
+  "file": "spider/sp_nano_mask_open",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "Mask receding into the collar: granular slide down."
+ },
+ "sp_nano_mask_close": {
+  "file": "spider/sp_nano_mask_close",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "Mask flowing up over the head, ends in a soft seal click."
+ },
+ "sp_lens_focus": {
+  "file": "spider/sp_lens_focus",
+  "loop": false,
+  "gain": 0.6,
+  "desc": "Eye lenses adjusting: tiny iris click-whirr."
+ },
+ "sp_leg_deploy": {
+  "file": "spider/sp_leg_deploy",
+  "loop": false,
+  "gain": 0.9,
+  "desc": "Four mechanical legs extending: servo whirr + telescoping ratchet + lock (0.85 s)."
+ },
+ "sp_leg_stow": {
+  "file": "spider/sp_leg_stow",
+  "loop": false,
+  "gain": 0.9,
+  "desc": "Legs retracting: falling servo + ratchet + latch."
+ },
+ "sp_leg_step_1": {
+  "file": "spider/sp_leg_step_1",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "A metal leg tip planting on concrete: sharp clack."
+ },
+ "sp_leg_step_2": {
+  "file": "spider/sp_leg_step_2",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "A metal leg tip planting on concrete: sharp clack."
+ },
+ "sp_leg_step_3": {
+  "file": "spider/sp_leg_step_3",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "A metal leg tip planting on concrete: sharp clack."
+ },
+ "sp_leg_servo_1": {
+  "file": "spider/sp_leg_servo_1",
+  "loop": false,
+  "gain": 0.5,
+  "desc": "Short servo move of a leg joint."
+ },
+ "sp_leg_servo_2": {
+  "file": "spider/sp_leg_servo_2",
+  "loop": false,
+  "gain": 0.5,
+  "desc": "Short servo move of a leg joint."
+ },
+ "sp_leg_servo_3": {
+  "file": "spider/sp_leg_servo_3",
+  "loop": false,
+  "gain": 0.5,
+  "desc": "Short servo move of a leg joint."
+ },
+ "sp_leg_strike": {
+  "file": "spider/sp_leg_strike",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "A leg stabbing forward: blade whoosh + metallic impact."
+ },
+ "sp_step_1": {
+  "file": "spider/sp_step_1",
+  "loop": false,
+  "gain": 0.55,
+  "desc": "Spider-Man footstep in the suit: light rubbery sneaker on concrete."
+ },
+ "sp_step_2": {
+  "file": "spider/sp_step_2",
+  "loop": false,
+  "gain": 0.55,
+  "desc": "Spider-Man footstep in the suit: light rubbery sneaker on concrete."
+ },
+ "sp_step_3": {
+  "file": "spider/sp_step_3",
+  "loop": false,
+  "gain": 0.55,
+  "desc": "Spider-Man footstep in the suit: light rubbery sneaker on concrete."
+ },
+ "sp_step_4": {
+  "file": "spider/sp_step_4",
+  "loop": false,
+  "gain": 0.55,
+  "desc": "Spider-Man footstep in the suit: light rubbery sneaker on concrete."
+ },
+ "sp_land_light": {
+  "file": "spider/sp_land_light",
+  "loop": false,
+  "gain": 0.8,
+  "desc": "Light landing on the balls of the feet."
+ },
+ "sp_land_hard": {
+  "file": "spider/sp_land_hard",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Three-point superhero landing: heavy thump + gritty scuff + faint suit rattle."
+ },
+ "sp_jump": {
+  "file": "spider/sp_jump",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "Jump push-off: sneaker scuff + suit whoosh."
+ },
+ "sp_punch_1": {
+  "file": "spider/sp_punch_1",
+  "loop": false,
+  "gain": 0.95,
+  "desc": "Punch: whoosh + impact on a body."
+ },
+ "sp_punch_2": {
+  "file": "spider/sp_punch_2",
+  "loop": false,
+  "gain": 0.95,
+  "desc": "Punch: whoosh + impact on a body."
+ },
+ "sp_kick": {
+  "file": "spider/sp_kick",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "Kick: big whoosh + heavy body impact."
+ },
+ "sp_whoosh_1": {
+  "file": "spider/sp_whoosh_1",
+  "loop": false,
+  "gain": 0.6,
+  "desc": "Body/limb whoosh (dodges, flips, spins)."
+ },
+ "sp_whoosh_2": {
+  "file": "spider/sp_whoosh_2",
+  "loop": false,
+  "gain": 0.6,
+  "desc": "Body/limb whoosh (dodges, flips, spins)."
+ },
+ "sp_whoosh_3": {
+  "file": "spider/sp_whoosh_3",
+  "loop": false,
+  "gain": 0.6,
+  "desc": "Body/limb whoosh (dodges, flips, spins)."
+ },
+ "sp_wall_grip": {
+  "file": "spider/sp_wall_grip",
+  "loop": false,
+  "gain": 0.5,
+  "desc": "Hands/feet sticking to a wall: soft grippy tk."
+ },
+ "sp_crawl_1": {
+  "file": "spider/sp_crawl_1",
+  "loop": false,
+  "gain": 0.45,
+  "desc": "Crawl pad tap on brick."
+ },
+ "sp_crawl_2": {
+  "file": "spider/sp_crawl_2",
+  "loop": false,
+  "gain": 0.45,
+  "desc": "Crawl pad tap on brick."
+ },
+ "sp_cloth_1": {
+  "file": "spider/sp_cloth_1",
+  "loop": false,
+  "gain": 0.5,
+  "desc": "Peter's hoodie/flannel cloth rustle."
+ },
+ "sp_cloth_2": {
+  "file": "spider/sp_cloth_2",
+  "loop": false,
+  "gain": 0.5,
+  "desc": "Peter's hoodie/flannel cloth rustle."
+ },
+ "sp_sneaker_1": {
+  "file": "spider/sp_sneaker_1",
+  "loop": false,
+  "gain": 0.55,
+  "desc": "Peter's sneaker step."
+ },
+ "sp_sneaker_2": {
+  "file": "spider/sp_sneaker_2",
+  "loop": false,
+  "gain": 0.55,
+  "desc": "Peter's sneaker step."
+ },
+ "sp_sneaker_3": {
+  "file": "spider/sp_sneaker_3",
+  "loop": false,
+  "gain": 0.55,
+  "desc": "Peter's sneaker step."
+ },
+ "sp_sneaker_4": {
+  "file": "spider/sp_sneaker_4",
+  "loop": false,
+  "gain": 0.55,
+  "desc": "Peter's sneaker step."
+ },
+ "sp_window_handle": {
+  "file": "spider/sp_window_handle",
+  "loop": false,
+  "gain": 0.6,
+  "desc": "Lever window handle turned 90 degrees: click/latch."
+ },
+ "sp_window_push": {
+  "file": "spider/sp_window_push",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "Casement pushed open: hinge creak + frame knock."
+ },
+ "sp_window_close": {
+  "file": "spider/sp_window_close",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "Casement pulled shut + latch."
+ },
+ "sp_sill_step": {
+  "file": "spider/sp_sill_step",
+  "loop": false,
+  "gain": 0.6,
+  "desc": "Foot on a stone window sill."
+ }
+}

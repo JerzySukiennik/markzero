@@ -1,0 +1,75 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "hb_assemble",
+   "frames": 301,
+   "fps": 30,
+   "loop": false,
+   "duration": 10.0,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "hb_rocket_burst",
+     "at": "piv_root",
+     "gain": 0.5
+    },
+    {
+     "t": 0.0,
+     "vfx": "thruster_on",
+     "at": "piv_thrusterL"
+    },
+    {
+     "t": 0.0,
+     "vfx": "thruster_on",
+     "at": "piv_thrusterR"
+    },
+    {
+     "t": 2.1,
+     "sfx": "hb_rocket_burst",
+     "at": "piv_root",
+     "gain": 0.6
+    },
+    {
+     "t": 3.3,
+     "vfx": "thruster_off",
+     "at": "piv_thrusterL"
+    },
+    {
+     "t": 3.3,
+     "vfx": "thruster_off",
+     "at": "piv_thrusterR"
+    },
+    {
+     "t": 3.3,
+     "sfx": "hb_servo_heavy",
+     "at": "piv_wristR",
+     "gain": 0.4
+    }
+   ],
+   "root_motion": true,
+   "space": "deploy",
+   "sync": [
+    "veronica.deploy_all",
+    "hulkbuster.assemble"
+   ],
+   "attach": {
+    "node": "piv_pilot",
+    "from_t": 3.0,
+    "note": "after from_t the root equals hulkbuster piv_pilot's world transform"
+   }
+  },
+  {
+   "name": "hb_pilot",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [],
+   "attach": {
+    "node": "piv_pilot"
+   },
+   "note": "parent to hulkbuster piv_pilot, identity local"
+  }
+ ]
+}
