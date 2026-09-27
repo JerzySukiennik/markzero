@@ -1,0 +1,82 @@
+{
+ "kind": "brute",
+ "default": "A",
+ "height_m": 2.05,
+ "variants": {
+  "A": {
+   "show": [
+    "brute_hair"
+   ],
+   "hide": [
+    "brute_balaclava"
+   ],
+   "colors": {
+    "mat_top": [
+     0.03,
+     0.03,
+     0.035
+    ],
+    "mat_pants": [
+     0.18,
+     0.18,
+     0.18
+    ],
+    "mat_shoes": [
+     0.04,
+     0.035,
+     0.03
+    ],
+    "mat_gloves": [
+     0.035,
+     0.035,
+     0.035
+    ],
+    "mat_skin": [
+     0.24,
+     0.14,
+     0.09
+    ]
+   }
+  },
+  "B": {
+   "show": [
+    "brute_balaclava"
+   ],
+   "hide": [
+    "brute_hair"
+   ],
+   "colors": {
+    "mat_top": [
+     0.4,
+     0.4,
+     0.38
+    ],
+    "mat_pants": [
+     0.06,
+     0.07,
+     0.05
+    ],
+    "mat_shoes": [
+     0.03,
+     0.03,
+     0.03
+    ],
+    "mat_gloves": [
+     0.03,
+     0.03,
+     0.03
+    ],
+    "mat_balaclava": [
+     0.03,
+     0.03,
+     0.03
+    ],
+    "mat_skin": [
+     0.055,
+     0.033,
+     0.022
+    ]
+   }
+  }
+ }
+}

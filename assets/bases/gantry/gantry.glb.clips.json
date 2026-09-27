@@ -1,0 +1,1893 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "suitup_gantry_mk1",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [
+    {
+     "t": 2.35,
+     "sfx": "cl_floor_unlock",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 2.53,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 2.55,
+     "sfx": "cl_gantry_rise",
+     "at": "arm_FL_a2"
+    },
+    {
+     "t": 3.45,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FL_a3"
+    },
+    {
+     "t": 4.95,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FR_a3"
+    },
+    {
+     "t": 5.0,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip",
+     "piece": "bootL"
+    },
+    {
+     "t": 5.08,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 5.45,
+     "sfx": "cl_hiss",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 6.5,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FR_tip",
+     "piece": "bootR"
+    },
+    {
+     "t": 6.55,
+     "sfx": "cl_servo_fast",
+     "at": "arm_BL_a3"
+    },
+    {
+     "t": 6.58,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 6.95,
+     "sfx": "cl_hiss",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 8.1,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip",
+     "piece": "legfrontL"
+    },
+    {
+     "t": 8.1,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_BL_tip",
+     "piece": "legbackL"
+    },
+    {
+     "t": 8.18,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 8.18,
+     "vfx": "sparks",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 8.55,
+     "sfx": "cl_hiss",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 8.55,
+     "sfx": "cl_hiss",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 9.6,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FR_tip",
+     "piece": "legfrontR"
+    },
+    {
+     "t": 9.6,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_BR_tip",
+     "piece": "legbackR"
+    },
+    {
+     "t": 9.68,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 9.68,
+     "vfx": "sparks",
+     "at": "arm_BR_tip"
+    },
+    {
+     "t": 10.05,
+     "sfx": "cl_hiss",
+     "at": "arm_BR_tip"
+    },
+    {
+     "t": 11.2,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip",
+     "piece": "pelvisfront"
+    },
+    {
+     "t": 11.2,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_BL_tip",
+     "piece": "pelvisback"
+    },
+    {
+     "t": 11.28,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 11.28,
+     "vfx": "sparks",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 12.35,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFR_a3"
+    },
+    {
+     "t": 13.0,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBL_tip",
+     "piece": "torsoback"
+    },
+    {
+     "t": 13.08,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 13.3,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 13.9,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFR_tip",
+     "piece": "torsofront"
+    },
+    {
+     "t": 13.98,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 14.35,
+     "sfx": "cl_hiss",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 15.4,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFL_tip",
+     "piece": "sleeveL"
+    },
+    {
+     "t": 15.48,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 15.8,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBR_tip",
+     "piece": "sleeveR"
+    },
+    {
+     "t": 15.88,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 16.25,
+     "sfx": "cl_hiss",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 16.95,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFL_a3"
+    },
+    {
+     "t": 17.35,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBR_a3"
+    },
+    {
+     "t": 18.5,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFL_tip",
+     "piece": "gauntletL"
+    },
+    {
+     "t": 18.58,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 18.9,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBR_tip",
+     "piece": "gauntletR"
+    },
+    {
+     "t": 18.98,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 19.7,
+     "sfx": "cl_servo_big",
+     "at": "arm_CFL_a2"
+    },
+    {
+     "t": 19.85,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBL_a3"
+    },
+    {
+     "t": 20.05,
+     "sfx": "cl_servo_big",
+     "at": "arm_CBR_a2"
+    },
+    {
+     "t": 21.25,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFR_a3"
+    },
+    {
+     "t": 21.4,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBL_tip",
+     "piece": "helmet"
+    },
+    {
+     "t": 21.48,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 21.85,
+     "sfx": "cl_hiss",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 22.45,
+     "sfx": "cl_servo_big",
+     "at": "arm_CBL_a2"
+    },
+    {
+     "t": 22.8,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFR_tip",
+     "piece": "faceplate"
+    },
+    {
+     "t": 22.88,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 23.25,
+     "sfx": "cl_hiss",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 23.85,
+     "sfx": "cl_servo_big",
+     "at": "arm_CFR_a2"
+    }
+   ],
+   "pairs_with": "assets/suits/mk1/mk1.glb:suitup_gantry"
+  },
+  {
+   "name": "suitoff_gantry_mk1",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [
+    {
+     "t": 0.65,
+     "sfx": "cl_servo_big",
+     "at": "arm_CFR_a2"
+    },
+    {
+     "t": 2.05,
+     "sfx": "cl_servo_big",
+     "at": "arm_CBL_a2"
+    },
+    {
+     "t": 2.2,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 2.75,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 3.6,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 3.65,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFR_a3"
+    },
+    {
+     "t": 4.15,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 4.45,
+     "sfx": "cl_servo_big",
+     "at": "arm_CBR_a2"
+    },
+    {
+     "t": 4.8,
+     "sfx": "cl_servo_big",
+     "at": "arm_CFL_a2"
+    },
+    {
+     "t": 5.05,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBL_a3"
+    },
+    {
+     "t": 6.1,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 6.5,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 6.65,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 7.05,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 7.55,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBR_a3"
+    },
+    {
+     "t": 7.95,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFL_a3"
+    },
+    {
+     "t": 9.2,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 9.6,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 9.75,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 10.15,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 10.65,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBR_a3"
+    },
+    {
+     "t": 11.05,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFL_a3"
+    },
+    {
+     "t": 11.1,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 11.35,
+     "sfx": "cl_clamp_lock",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 11.65,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 11.9,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 12.0,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 12.55,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 13.8,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 13.8,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 14.35,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 15.25,
+     "sfx": "cl_servo_fast",
+     "at": "arm_BL_a3"
+    },
+    {
+     "t": 15.4,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 15.4,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_BR_tip"
+    },
+    {
+     "t": 15.95,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 16.85,
+     "sfx": "cl_servo_fast",
+     "at": "arm_BR_a3"
+    },
+    {
+     "t": 16.9,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 16.9,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 17.45,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 18.35,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FL_a3"
+    },
+    {
+     "t": 18.35,
+     "sfx": "cl_servo_fast",
+     "at": "arm_BL_a3"
+    },
+    {
+     "t": 18.5,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 19.0,
+     "sfx": "cl_hiss",
+     "at": "arm_FR_tip",
+     "piece": "bootR"
+    },
+    {
+     "t": 19.05,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 19.95,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FR_a3"
+    },
+    {
+     "t": 20.0,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 20.5,
+     "sfx": "cl_hiss",
+     "at": "arm_FL_tip",
+     "piece": "bootL"
+    },
+    {
+     "t": 20.55,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 20.85,
+     "sfx": "cl_gantry_rise",
+     "at": "arm_FR_a2"
+    },
+    {
+     "t": 21.45,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FL_a3"
+    },
+    {
+     "t": 22.35,
+     "sfx": "cl_gantry_rise",
+     "at": "arm_FL_a2"
+    },
+    {
+     "t": 22.67,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 23.15,
+     "sfx": "cl_floor_unlock",
+     "at": "sp3_floor"
+    }
+   ],
+   "pairs_with": "assets/suits/mk1/mk1.glb:suitoff_gantry"
+  },
+  {
+   "name": "suitup_gantry_mk2",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [
+    {
+     "t": 2.35,
+     "sfx": "cl_floor_unlock",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 2.53,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 2.55,
+     "sfx": "cl_gantry_rise",
+     "at": "arm_FL_a2"
+    },
+    {
+     "t": 3.45,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FL_a3"
+    },
+    {
+     "t": 4.95,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FR_a3"
+    },
+    {
+     "t": 5.0,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip",
+     "piece": "bootL"
+    },
+    {
+     "t": 5.08,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 5.45,
+     "sfx": "cl_hiss",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 6.5,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FR_tip",
+     "piece": "bootR"
+    },
+    {
+     "t": 6.55,
+     "sfx": "cl_servo_fast",
+     "at": "arm_BL_a3"
+    },
+    {
+     "t": 6.58,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 6.95,
+     "sfx": "cl_hiss",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 8.1,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip",
+     "piece": "legfrontL"
+    },
+    {
+     "t": 8.1,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_BL_tip",
+     "piece": "legbackL"
+    },
+    {
+     "t": 8.18,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 8.18,
+     "vfx": "sparks",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 8.55,
+     "sfx": "cl_hiss",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 8.55,
+     "sfx": "cl_hiss",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 9.6,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FR_tip",
+     "piece": "legfrontR"
+    },
+    {
+     "t": 9.6,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_BR_tip",
+     "piece": "legbackR"
+    },
+    {
+     "t": 9.68,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 9.68,
+     "vfx": "sparks",
+     "at": "arm_BR_tip"
+    },
+    {
+     "t": 10.05,
+     "sfx": "cl_hiss",
+     "at": "arm_BR_tip"
+    },
+    {
+     "t": 11.2,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip",
+     "piece": "pelvisfront"
+    },
+    {
+     "t": 11.2,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_BL_tip",
+     "piece": "pelvisback"
+    },
+    {
+     "t": 11.28,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 11.28,
+     "vfx": "sparks",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 12.35,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFR_a3"
+    },
+    {
+     "t": 13.0,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBL_tip",
+     "piece": "torsoback"
+    },
+    {
+     "t": 13.08,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 13.3,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 13.9,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFR_tip",
+     "piece": "torsofront"
+    },
+    {
+     "t": 13.98,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 14.35,
+     "sfx": "cl_hiss",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 15.4,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFL_tip",
+     "piece": "sleeveL"
+    },
+    {
+     "t": 15.48,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 15.8,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBR_tip",
+     "piece": "sleeveR"
+    },
+    {
+     "t": 15.88,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 16.25,
+     "sfx": "cl_hiss",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 16.95,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFL_a3"
+    },
+    {
+     "t": 17.35,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBR_a3"
+    },
+    {
+     "t": 18.5,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFL_tip",
+     "piece": "gauntletL"
+    },
+    {
+     "t": 18.58,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 18.9,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBR_tip",
+     "piece": "gauntletR"
+    },
+    {
+     "t": 18.98,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 19.7,
+     "sfx": "cl_servo_big",
+     "at": "arm_CFL_a2"
+    },
+    {
+     "t": 19.85,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBL_a3"
+    },
+    {
+     "t": 20.05,
+     "sfx": "cl_servo_big",
+     "at": "arm_CBR_a2"
+    },
+    {
+     "t": 21.25,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFR_a3"
+    },
+    {
+     "t": 21.4,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBL_tip",
+     "piece": "helmet"
+    },
+    {
+     "t": 21.48,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 21.85,
+     "sfx": "cl_hiss",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 22.45,
+     "sfx": "cl_servo_big",
+     "at": "arm_CBL_a2"
+    },
+    {
+     "t": 22.8,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFR_tip",
+     "piece": "faceplate"
+    },
+    {
+     "t": 22.88,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 23.25,
+     "sfx": "cl_hiss",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 23.85,
+     "sfx": "cl_servo_big",
+     "at": "arm_CFR_a2"
+    }
+   ],
+   "pairs_with": "assets/suits/mk2/mk2.glb:suitup_gantry"
+  },
+  {
+   "name": "suitoff_gantry_mk2",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [
+    {
+     "t": 0.65,
+     "sfx": "cl_servo_big",
+     "at": "arm_CFR_a2"
+    },
+    {
+     "t": 2.05,
+     "sfx": "cl_servo_big",
+     "at": "arm_CBL_a2"
+    },
+    {
+     "t": 2.2,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 2.75,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 3.6,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 3.65,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFR_a3"
+    },
+    {
+     "t": 4.15,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 4.45,
+     "sfx": "cl_servo_big",
+     "at": "arm_CBR_a2"
+    },
+    {
+     "t": 4.8,
+     "sfx": "cl_servo_big",
+     "at": "arm_CFL_a2"
+    },
+    {
+     "t": 5.05,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBL_a3"
+    },
+    {
+     "t": 6.1,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 6.5,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 6.65,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 7.05,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 7.55,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBR_a3"
+    },
+    {
+     "t": 7.95,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFL_a3"
+    },
+    {
+     "t": 9.2,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 9.6,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 9.75,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 10.15,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 10.65,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBR_a3"
+    },
+    {
+     "t": 11.05,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFL_a3"
+    },
+    {
+     "t": 11.1,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 11.35,
+     "sfx": "cl_clamp_lock",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 11.65,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 11.9,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 12.0,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 12.55,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 13.8,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 13.8,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 14.35,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 15.25,
+     "sfx": "cl_servo_fast",
+     "at": "arm_BL_a3"
+    },
+    {
+     "t": 15.4,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 15.4,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_BR_tip"
+    },
+    {
+     "t": 15.95,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 16.85,
+     "sfx": "cl_servo_fast",
+     "at": "arm_BR_a3"
+    },
+    {
+     "t": 16.9,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 16.9,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 17.45,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 18.35,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FL_a3"
+    },
+    {
+     "t": 18.35,
+     "sfx": "cl_servo_fast",
+     "at": "arm_BL_a3"
+    },
+    {
+     "t": 18.5,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 19.0,
+     "sfx": "cl_hiss",
+     "at": "arm_FR_tip",
+     "piece": "bootR"
+    },
+    {
+     "t": 19.05,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 19.95,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FR_a3"
+    },
+    {
+     "t": 20.0,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 20.5,
+     "sfx": "cl_hiss",
+     "at": "arm_FL_tip",
+     "piece": "bootL"
+    },
+    {
+     "t": 20.55,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 20.85,
+     "sfx": "cl_gantry_rise",
+     "at": "arm_FR_a2"
+    },
+    {
+     "t": 21.45,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FL_a3"
+    },
+    {
+     "t": 22.35,
+     "sfx": "cl_gantry_rise",
+     "at": "arm_FL_a2"
+    },
+    {
+     "t": 22.67,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 23.15,
+     "sfx": "cl_floor_unlock",
+     "at": "sp3_floor"
+    }
+   ],
+   "pairs_with": "assets/suits/mk2/mk2.glb:suitoff_gantry"
+  },
+  {
+   "name": "suitup_gantry_mk3",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [
+    {
+     "t": 2.35,
+     "sfx": "cl_floor_unlock",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 2.53,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 2.55,
+     "sfx": "cl_gantry_rise",
+     "at": "arm_FL_a2"
+    },
+    {
+     "t": 3.45,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FL_a3"
+    },
+    {
+     "t": 4.95,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FR_a3"
+    },
+    {
+     "t": 5.0,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip",
+     "piece": "bootL"
+    },
+    {
+     "t": 5.08,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 5.45,
+     "sfx": "cl_hiss",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 6.5,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FR_tip",
+     "piece": "bootR"
+    },
+    {
+     "t": 6.55,
+     "sfx": "cl_servo_fast",
+     "at": "arm_BL_a3"
+    },
+    {
+     "t": 6.58,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 6.95,
+     "sfx": "cl_hiss",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 8.1,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip",
+     "piece": "legfrontL"
+    },
+    {
+     "t": 8.1,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_BL_tip",
+     "piece": "legbackL"
+    },
+    {
+     "t": 8.18,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 8.18,
+     "vfx": "sparks",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 8.55,
+     "sfx": "cl_hiss",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 8.55,
+     "sfx": "cl_hiss",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 9.6,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FR_tip",
+     "piece": "legfrontR"
+    },
+    {
+     "t": 9.6,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_BR_tip",
+     "piece": "legbackR"
+    },
+    {
+     "t": 9.68,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 9.68,
+     "vfx": "sparks",
+     "at": "arm_BR_tip"
+    },
+    {
+     "t": 10.05,
+     "sfx": "cl_hiss",
+     "at": "arm_BR_tip"
+    },
+    {
+     "t": 11.2,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip",
+     "piece": "pelvisfront"
+    },
+    {
+     "t": 11.2,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_BL_tip",
+     "piece": "pelvisback"
+    },
+    {
+     "t": 11.28,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 11.28,
+     "vfx": "sparks",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 12.35,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFR_a3"
+    },
+    {
+     "t": 13.0,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBL_tip",
+     "piece": "torsoback"
+    },
+    {
+     "t": 13.08,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 13.3,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 13.9,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFR_tip",
+     "piece": "torsofront"
+    },
+    {
+     "t": 13.98,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 14.35,
+     "sfx": "cl_hiss",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 15.4,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFL_tip",
+     "piece": "sleeveL"
+    },
+    {
+     "t": 15.48,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 15.8,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBR_tip",
+     "piece": "sleeveR"
+    },
+    {
+     "t": 15.88,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 16.25,
+     "sfx": "cl_hiss",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 16.95,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFL_a3"
+    },
+    {
+     "t": 17.35,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBR_a3"
+    },
+    {
+     "t": 18.5,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFL_tip",
+     "piece": "gauntletL"
+    },
+    {
+     "t": 18.58,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 18.9,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBR_tip",
+     "piece": "gauntletR"
+    },
+    {
+     "t": 18.98,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 19.7,
+     "sfx": "cl_servo_big",
+     "at": "arm_CFL_a2"
+    },
+    {
+     "t": 19.85,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBL_a3"
+    },
+    {
+     "t": 20.05,
+     "sfx": "cl_servo_big",
+     "at": "arm_CBR_a2"
+    },
+    {
+     "t": 21.25,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFR_a3"
+    },
+    {
+     "t": 21.4,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBL_tip",
+     "piece": "helmet"
+    },
+    {
+     "t": 21.48,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 21.85,
+     "sfx": "cl_hiss",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 22.45,
+     "sfx": "cl_servo_big",
+     "at": "arm_CBL_a2"
+    },
+    {
+     "t": 22.8,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFR_tip",
+     "piece": "faceplate"
+    },
+    {
+     "t": 22.88,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 23.25,
+     "sfx": "cl_hiss",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 23.85,
+     "sfx": "cl_servo_big",
+     "at": "arm_CFR_a2"
+    }
+   ],
+   "pairs_with": "assets/suits/mk3/mk3.glb:suitup_gantry"
+  },
+  {
+   "name": "suitoff_gantry_mk3",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [
+    {
+     "t": 0.65,
+     "sfx": "cl_servo_big",
+     "at": "arm_CFR_a2"
+    },
+    {
+     "t": 2.05,
+     "sfx": "cl_servo_big",
+     "at": "arm_CBL_a2"
+    },
+    {
+     "t": 2.2,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 2.75,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 3.6,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 3.65,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFR_a3"
+    },
+    {
+     "t": 4.15,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 4.45,
+     "sfx": "cl_servo_big",
+     "at": "arm_CBR_a2"
+    },
+    {
+     "t": 4.8,
+     "sfx": "cl_servo_big",
+     "at": "arm_CFL_a2"
+    },
+    {
+     "t": 5.05,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBL_a3"
+    },
+    {
+     "t": 6.1,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 6.5,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 6.65,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 7.05,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 7.55,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBR_a3"
+    },
+    {
+     "t": 7.95,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFL_a3"
+    },
+    {
+     "t": 9.2,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 9.6,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 9.75,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBR_tip"
+    },
+    {
+     "t": 10.15,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFL_tip"
+    },
+    {
+     "t": 10.65,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CBR_a3"
+    },
+    {
+     "t": 11.05,
+     "sfx": "cl_servo_fast",
+     "at": "arm_CFL_a3"
+    },
+    {
+     "t": 11.1,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 11.35,
+     "sfx": "cl_clamp_lock",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 11.65,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CFR_tip"
+    },
+    {
+     "t": 11.9,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 12.0,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 12.55,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_CBL_tip"
+    },
+    {
+     "t": 13.8,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 13.8,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 14.35,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 15.25,
+     "sfx": "cl_servo_fast",
+     "at": "arm_BL_a3"
+    },
+    {
+     "t": 15.4,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 15.4,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_BR_tip"
+    },
+    {
+     "t": 15.95,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 16.85,
+     "sfx": "cl_servo_fast",
+     "at": "arm_BR_a3"
+    },
+    {
+     "t": 16.9,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 16.9,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_BL_tip"
+    },
+    {
+     "t": 17.45,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 18.35,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FL_a3"
+    },
+    {
+     "t": 18.35,
+     "sfx": "cl_servo_fast",
+     "at": "arm_BL_a3"
+    },
+    {
+     "t": 18.5,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 19.0,
+     "sfx": "cl_hiss",
+     "at": "arm_FR_tip",
+     "piece": "bootR"
+    },
+    {
+     "t": 19.05,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FR_tip"
+    },
+    {
+     "t": 19.95,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FR_a3"
+    },
+    {
+     "t": 20.0,
+     "sfx": "cl_impact_driver",
+     "vfx": "sparks",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 20.5,
+     "sfx": "cl_hiss",
+     "at": "arm_FL_tip",
+     "piece": "bootL"
+    },
+    {
+     "t": 20.55,
+     "sfx": "cl_clamp_lock",
+     "at": "arm_FL_tip"
+    },
+    {
+     "t": 20.85,
+     "sfx": "cl_gantry_rise",
+     "at": "arm_FR_a2"
+    },
+    {
+     "t": 21.45,
+     "sfx": "cl_servo_fast",
+     "at": "arm_FL_a3"
+    },
+    {
+     "t": 22.35,
+     "sfx": "cl_gantry_rise",
+     "at": "arm_FL_a2"
+    },
+    {
+     "t": 22.67,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 23.15,
+     "sfx": "cl_floor_unlock",
+     "at": "sp3_floor"
+    }
+   ],
+   "pairs_with": "assets/suits/mk3/mk3.glb:suitoff_gantry"
+  },
+  {
+   "name": "gantry_idle",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": []
+  },
+  {
+   "name": "gantry_open_close",
+   "frames": 121,
+   "fps": 30,
+   "loop": false,
+   "duration": 4.0,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "cl_floor_unlock",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 0.18,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 2.0,
+     "sfx": "cl_floor_open",
+     "at": "sp3_floor"
+    },
+    {
+     "t": 2.85,
+     "sfx": "cl_clamp_lock",
+     "at": "sp3_floor"
+    }
+   ]
+  }
+ ]
+}

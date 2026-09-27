@@ -1,0 +1,38 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "bay_open",
+   "frames": 109,
+   "fps": 30,
+   "loop": false,
+   "duration": 3.6,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "villa_bay_door",
+     "at": "bay_door_L"
+    }
+   ]
+  },
+  {
+   "name": "bay_close",
+   "frames": 109,
+   "fps": 30,
+   "loop": false,
+   "duration": 3.6,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "villa_bay_door",
+     "at": "bay_door_L"
+    },
+    {
+     "t": 2.6,
+     "sfx": "villa_bay_door_thud",
+     "at": "bay_door_L"
+    }
+   ]
+  }
+ ]
+}

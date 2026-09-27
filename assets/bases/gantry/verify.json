@@ -1,0 +1,18 @@
+{
+ "nodes": 573,
+ "clips": [
+  "suitup_gantry_mk1",
+  "suitoff_gantry_mk1",
+  "suitup_gantry_mk2",
+  "suitoff_gantry_mk2",
+  "suitup_gantry_mk3",
+  "suitoff_gantry_mk3",
+  "gantry_idle",
+  "gantry_open_close"
+ ],
+ "triangles": 48423,
+ "size_mb": 10.2,
+ "missing_nodes": [],
+ "missing_clips": [],
+ "extensionsRequired": []
+}

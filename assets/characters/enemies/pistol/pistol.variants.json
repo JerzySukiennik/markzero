@@ -1,0 +1,98 @@
+{
+ "kind": "pistol",
+ "default": "A",
+ "height_m": 1.8,
+ "variants": {
+  "A": {
+   "show": [
+    "pistol_cap",
+    "pistol_cap_visor"
+   ],
+   "hide": [
+    "pistol_bandana",
+    "pistol_beanie",
+    "pistol_beanie_cuff"
+   ],
+   "colors": {
+    "mat_top": [
+     0.1,
+     0.045,
+     0.02
+    ],
+    "mat_pants": [
+     0.035,
+     0.05,
+     0.1
+    ],
+    "mat_shoes": [
+     0.04,
+     0.035,
+     0.03
+    ],
+    "mat_gloves": [
+     0.03,
+     0.03,
+     0.03
+    ],
+    "mat_cap": [
+     0.08,
+     0.09,
+     0.12
+    ],
+    "mat_skin": [
+     0.12,
+     0.068,
+     0.043
+    ]
+   }
+  },
+  "B": {
+   "show": [
+    "pistol_bandana",
+    "pistol_beanie",
+    "pistol_beanie_cuff"
+   ],
+   "hide": [
+    "pistol_cap",
+    "pistol_cap_visor"
+   ],
+   "colors": {
+    "mat_top": [
+     0.03,
+     0.03,
+     0.03
+    ],
+    "mat_pants": [
+     0.18,
+     0.18,
+     0.19
+    ],
+    "mat_shoes": [
+     0.05,
+     0.05,
+     0.05
+    ],
+    "mat_gloves": [
+     0.03,
+     0.03,
+     0.03
+    ],
+    "mat_beanie": [
+     0.2,
+     0.2,
+     0.21
+    ],
+    "mat_bandana": [
+     0.05,
+     0.05,
+     0.05
+    ],
+    "mat_skin": [
+     0.34,
+     0.2,
+     0.14
+    ]
+   }
+  }
+ }
+}

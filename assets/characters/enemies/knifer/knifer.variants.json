@@ -1,0 +1,86 @@
+{
+ "kind": "knifer",
+ "default": "A",
+ "height_m": 1.8,
+ "variants": {
+  "A": {
+   "show": [
+    "knifer_balaclava"
+   ],
+   "hide": [
+    "knifer_bandana",
+    "knifer_cap_back",
+    "knifer_cap_back_visor"
+   ],
+   "colors": {
+    "mat_top": [
+     0.03,
+     0.03,
+     0.035
+    ],
+    "mat_pants": [
+     0.14,
+     0.15,
+     0.09
+    ],
+    "mat_shoes": [
+     0.05,
+     0.04,
+     0.03
+    ],
+    "mat_balaclava": [
+     0.025,
+     0.025,
+     0.028
+    ],
+    "mat_skin": [
+     0.24,
+     0.14,
+     0.09
+    ]
+   }
+  },
+  "B": {
+   "show": [
+    "knifer_bandana",
+    "knifer_cap_back",
+    "knifer_cap_back_visor"
+   ],
+   "hide": [
+    "knifer_balaclava"
+   ],
+   "colors": {
+    "mat_top": [
+     0.22,
+     0.035,
+     0.04
+    ],
+    "mat_pants": [
+     0.2,
+     0.2,
+     0.2
+    ],
+    "mat_shoes": [
+     0.18,
+     0.12,
+     0.07
+    ],
+    "mat_cap": [
+     0.05,
+     0.05,
+     0.06
+    ],
+    "mat_bandana": [
+     0.03,
+     0.04,
+     0.1
+    ],
+    "mat_skin": [
+     0.34,
+     0.2,
+     0.14
+    ]
+   }
+  }
+ }
+}
