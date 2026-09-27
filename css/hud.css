@@ -1,0 +1,79 @@
+/* In-game HUD — see web/js/ui/screens/hud.js. Ink: text (numbers) · dim (structure) · faint (ticks);
+   accent = live values; danger = damage only. No minimap. */
+.hud { --hud-op: 1; opacity: var(--hud-op); }
+/* story:hud {visible:false} (cutscenes, suit-ups): everything goes, with a short fade; the hint bar too */
+.hud.story-off { opacity: 0 !important; transition: opacity 250ms var(--ease); }
+.hud.in:not(.story-off) { opacity: var(--hud-op); transition: opacity 350ms var(--ease); }   /* .screen.in would force 1 */
+html.story-nohud[data-screen="hud"] #hints { opacity: 0; }
+/* one soft dark halo under every line and number keeps the hairlines readable over a noon sky
+   (single filter on the SVG root; the lines themselves stay thin) */
+.hud-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 5px rgba(0, 0, 0, 0.35)); }
+.hud-svg * { vector-effect: non-scaling-stroke; }
+.hud-svg .faint { stroke: color-mix(in srgb, var(--mz-text) 45%, transparent); stroke-width: 1.2; fill: none; }
+.hud-svg .dim { stroke: color-mix(in srgb, var(--mz-text) 80%, transparent); stroke-width: 1.4; fill: none; }
+.hud-svg .val { stroke: var(--mz-accent); stroke-width: 2.4; fill: none; }
+.hud-svg .val.thick { stroke-width: 4; }
+.hud-svg .acc-l { stroke: var(--mz-accent); stroke-width: 1.8; fill: none; }
+.hud-svg .dot { fill: var(--mz-accent); }
+.hud-svg .wedge { stroke: var(--mz-danger); stroke-width: 7; fill: none; }
+.hud-svg text { fill: var(--mz-text); font-family: var(--ui-font); font-weight: 500; letter-spacing: 0.06em;
+  paint-order: stroke; stroke: rgba(0, 0, 0, 0.5); stroke-width: 3px; stroke-linejoin: round; }
+.hud-svg .t-xl { font-size: 52px; font-weight: 500; letter-spacing: 0; }
+.hud-svg .t-m { font-size: 20px; font-weight: 600; }
+.hud-svg .t-s { font-size: 16px; fill: color-mix(in srgb, var(--mz-text) 85%, transparent); }
+.hud-hp-bar { filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.7)); }
+.hud-svg .acc-t, .hud-svg .state-t { fill: var(--mz-accent); }
+.hud[data-hero="spiderman"] .im-only { display: none; }
+.hud.boost .hud-svg .val { stroke: var(--mz-glow); }
+.hud.hit .hud-svg { animation: hudhit 240ms ease-out; }
+@keyframes hudhit { 0% { opacity: 0.55; } 100% { opacity: 1; } }
+
+.hud-html { position: absolute; inset: 0; pointer-events: none; text-shadow: 0 0 4px rgba(0, 0, 0, 0.7); }
+.hud-hp { position: absolute; left: var(--gutter); bottom: calc(var(--u) * 2.6); }
+.hud-hp-bar { display: flex; gap: 3px; }
+.hud-hp-bar i { width: calc(var(--u) * 1.1); height: 5px; background: color-mix(in srgb, var(--mz-text) 18%, transparent); }
+.hud-hp-bar i.on { background: var(--mz-text); }
+.hud-hp-t { margin-top: calc(var(--u) * 0.5); font: 600 calc(var(--t) * 1) / 1 var(--ui-font); letter-spacing: 0.06em; text-transform: uppercase; color: var(--mz-danger); }
+.hud-hp.low .hud-hp-bar i.on { background: var(--mz-danger); animation: blink 0.5s steps(2) infinite; }
+.hud-partner { position: absolute; right: var(--gutter); top: calc(var(--u) * 2.4); text-align: right; padding-right: calc(var(--u) * 0.7); border-right: 3px solid var(--pa, var(--mz-accent)); }
+.hud-partner:empty { display: none; }
+.hud-partner b { display: block; font: 600 calc(var(--t) * 1.2) / 1 var(--ui-font); letter-spacing: 0.04em; text-transform: uppercase; }
+.hud-partner em { font: 500 calc(var(--t) * 1) / 1.4 var(--ui-font); font-style: normal; color: var(--mz-dim); }
+.hud-prompts { position: absolute; right: var(--gutter); bottom: calc(var(--u) * 2.6); display: flex; flex-direction: column; align-items: flex-end; gap: calc(var(--u) * 0.6); }
+.hud-prompts .hp { display: flex; align-items: center; gap: calc(var(--u) * 0.6); font: 500 calc(var(--t) * 1) / 1 var(--ui-font); letter-spacing: 0.04em; text-transform: uppercase; color: var(--mz-text); }
+/* waypoint in the world: a flat diamond pin + distance; pinned to the edge when off-screen */
+.hud-wp { position: absolute; left: 0; top: 0; display: none; }
+.hud-wp.on { display: block; }
+.hud-wp i { position: absolute; left: -11px; top: -11px; width: 22px; height: 22px; border: 2.5px solid var(--mz-accent); background: color-mix(in srgb, var(--mz-accent) 25%, transparent); transform: rotate(45deg); }
+.hud-wp b { position: absolute; left: 50%; top: 18px; transform: translateX(-50%); white-space: nowrap; font: 600 calc(var(--t) * 0.95) / 1 var(--ui-font); letter-spacing: 0.04em; color: var(--mz-accent); }
+.hud-wp.edge i { opacity: 0.8; transform: rotate(45deg) scale(0.8); }
+
+/* mission: the objective top-left (Spider-Man style), pins in the world for story markers */
+.hud-obj { position: absolute; left: var(--gutter); top: calc(var(--u) * 2.4); display: grid; gap: calc(var(--u) * 0.35); max-width: calc(var(--u) * 26); opacity: 0; transform: translateY(-6px); transition: opacity 300ms var(--ease), transform 300ms var(--ease); }
+.hud-obj.on { opacity: 1; transform: none; }
+.hud-obj b { font: 600 calc(var(--t) * 1) / 1 var(--ui-font); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mz-accent); }
+.hud-obj b:empty { display: none; }
+.hud-obj span { font: 600 calc(var(--t) * 1.35) / 1.2 var(--ui-font); letter-spacing: 0.02em; color: var(--mz-text); }
+.hud-pins { position: absolute; inset: 0; }
+.hud-pin { position: absolute; left: 0; top: 0; }
+.hud-pin i { position: absolute; left: -13px; top: -13px; width: 26px; height: 26px; border-radius: 50%; border: 2.5px solid var(--mz-accent); background: color-mix(in srgb, var(--mz-bg) 60%, transparent); }
+.hud-pin.main i { background: var(--mz-accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--mz-accent) 25%, transparent); }
+.hud-pin.main i::after { content: ''; position: absolute; left: 50%; top: 50%; width: 8px; height: 8px; margin: -4px; background: var(--mz-bg); transform: rotate(45deg); }
+.hud-pin b { position: absolute; left: 50%; top: 20px; transform: translateX(-50%); white-space: nowrap; font: 600 calc(var(--t) * 0.95) / 1 var(--ui-font); color: var(--mz-text); }
+.hud-pin.edge i { transform: scale(0.8); }
+
+/* ============================================================ SUIT WHEEL (hold D-pad ↓) */
+.suitwheel { --R: calc(var(--u) * 15); }
+.sw-scrim { position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--mz-bg) 72%, transparent) 0, color-mix(in srgb, var(--mz-bg) 45%, transparent) 60%, transparent 100%); }
+.sw-ring { position: absolute; left: 50%; top: 50%; width: 0; height: 0; }
+.sw-ring::before { content: ''; position: absolute; left: calc(var(--R) * -1); top: calc(var(--R) * -1); width: calc(var(--R) * 2); height: calc(var(--R) * 2); border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--mz-text) 18%, transparent); }
+.sw-item { position: absolute; left: 0; top: 0; transform: translate(calc(var(--x) * var(--R) - 50%), calc(var(--y) * var(--R) - 50%)); white-space: nowrap;
+  padding: calc(var(--u) * 0.4) calc(var(--u) * 0.8); font: 600 calc(var(--t) * 1.5) / 1 var(--ui-font); letter-spacing: 0.04em; text-transform: uppercase; color: var(--mz-dim);
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8); transition: color 140ms var(--ease), transform 200ms var(--ease); }
+.sw-item.on { color: var(--mz-accent); transform: translate(calc(var(--x) * var(--R) * 1.08 - 50%), calc(var(--y) * var(--R) * 1.08 - 50%)) scale(1.18); }
+.sw-item.cur span::after { content: ''; display: block; height: 2px; margin-top: 4px; background: currentColor; opacity: 0.6; }
+.sw-item.locked { opacity: 0.4; }
+.sw-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: grid; justify-items: center; gap: calc(var(--u) * 0.4); text-align: center; width: calc(var(--R) * 1.4); }
+.sw-center b { font: 600 calc(var(--t) * 2.6) / 0.95 var(--ui-font); letter-spacing: 0.02em; text-transform: uppercase; color: var(--mz-text); text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); }
+.sw-center span { font: 500 calc(var(--t) * 1.1) / 1.25 var(--ui-font); color: var(--mz-dim); text-shadow: 0 0 6px rgba(0, 0, 0, 0.9); }

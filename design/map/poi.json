@@ -1,0 +1,258 @@
+{
+ "version": 1,
+ "axes": "world metres, glTF: +X east, north = -Z. row 0 = north edge (zmin), col 0 = west edge (xmin)",
+ "items": [
+  {
+   "id": "villa",
+   "name": "Stark villa",
+   "kind": "base",
+   "x": 1444.0,
+   "z": 1723.0,
+   "y": 31.0,
+   "icon": "base_ironman",
+   "priority": 0,
+   "hero": "ironman",
+   "desc": "Tony's cliffside villa on the headland; hangar door faces the skyline"
+  },
+  {
+   "id": "sp3",
+   "name": "SP-3 suit-up platform",
+   "kind": "suitup",
+   "x": 1450.8,
+   "z": 1724.7,
+   "y": 24.0,
+   "icon": "suitup",
+   "priority": 1,
+   "hero": "ironman",
+   "desc": "Workshop pit under the villa (Mk I-III gantry)"
+  },
+  {
+   "id": "villa_pad",
+   "name": "Villa landing pad",
+   "kind": "pad",
+   "x": 1454.4,
+   "z": 1697.8,
+   "y": 31.0,
+   "icon": "pad",
+   "priority": 2,
+   "hero": "ironman",
+   "desc": "Mk 42 summon / Veronica drop"
+  },
+  {
+   "id": "spawn_ironman",
+   "name": "Iron Man spawn",
+   "kind": "spawn",
+   "x": 1449.0,
+   "z": 1719.6,
+   "y": 24.0,
+   "icon": "spawn",
+   "priority": 3,
+   "hero": "ironman"
+  },
+  {
+   "id": "apartment",
+   "name": "Parker apartment",
+   "kind": "base",
+   "x": -573.0,
+   "z": 662.5,
+   "y": 25.3,
+   "icon": "base_spider",
+   "priority": 0,
+   "hero": "spider",
+   "desc": "Top floor of B0818, Queens-style walk-up in the Village"
+  },
+  {
+   "id": "spawn_spider",
+   "name": "Spider-Man spawn",
+   "kind": "spawn",
+   "x": -566.1,
+   "z": 652.2,
+   "y": 20.2,
+   "icon": "spawn",
+   "priority": 3,
+   "hero": "spider"
+  },
+  {
+   "id": "lm_row3",
+   "name": "Billionaires' Row \u2014 330 m",
+   "kind": "landmark",
+   "x": -276.0,
+   "z": -760.0,
+   "y": 330.0,
+   "icon": "landmark",
+   "priority": 1
+  },
+  {
+   "id": "lm_freedom",
+   "name": "Freedom Tower",
+   "kind": "landmark",
+   "x": -240.0,
+   "z": 1400.0,
+   "y": 410.0,
+   "icon": "landmark",
+   "priority": 1
+  },
+  {
+   "id": "lm_row2",
+   "name": "Billionaires' Row \u2014 391 m",
+   "kind": "landmark",
+   "x": -26.0,
+   "z": -760.0,
+   "y": 391.0,
+   "icon": "landmark",
+   "priority": 1
+  },
+  {
+   "id": "lm_empire",
+   "name": "Empire State",
+   "kind": "landmark",
+   "x": -0.0,
+   "z": 120.0,
+   "y": 318.0,
+   "icon": "landmark",
+   "priority": 1
+  },
+  {
+   "id": "lm_row1",
+   "name": "Billionaires' Row \u2014 426 m",
+   "kind": "landmark",
+   "x": 206.0,
+   "z": -760.0,
+   "y": 426.0,
+   "icon": "landmark",
+   "priority": 1
+  },
+  {
+   "id": "lm_chrysler",
+   "name": "Chrysler",
+   "kind": "landmark",
+   "x": 314.0,
+   "z": -360.0,
+   "y": 238.0,
+   "icon": "landmark",
+   "priority": 1
+  },
+  {
+   "id": "park",
+   "name": "Central Park",
+   "kind": "area",
+   "x": 120,
+   "z": -1120,
+   "y": 0,
+   "icon": "label",
+   "priority": 1
+  },
+  {
+   "id": "lake",
+   "name": "The Reservoir",
+   "kind": "area",
+   "x": 150,
+   "z": -1230,
+   "y": 0,
+   "icon": "label",
+   "priority": 3
+  },
+  {
+   "id": "bridge",
+   "name": "East River bridge",
+   "kind": "landmark",
+   "x": 1110.0,
+   "z": 1000.0,
+   "y": 36.0,
+   "icon": "landmark",
+   "priority": 2
+  },
+  {
+   "id": "piers",
+   "name": "Hudson piers",
+   "kind": "area",
+   "x": -880,
+   "z": -300,
+   "y": 0,
+   "icon": "label",
+   "priority": 3
+  },
+  {
+   "id": "d_uptown",
+   "name": "UPTOWN",
+   "kind": "district",
+   "x": -13.9,
+   "z": -1554.0,
+   "y": 0,
+   "icon": "label",
+   "priority": 2
+  },
+  {
+   "id": "d_parkside",
+   "name": "PARKSIDE",
+   "kind": "district",
+   "x": -42.3,
+   "z": -1123.9,
+   "y": 0,
+   "icon": "label",
+   "priority": 2
+  },
+  {
+   "id": "d_row",
+   "name": "THE ROW",
+   "kind": "district",
+   "x": -27.2,
+   "z": -755.3,
+   "y": 0,
+   "icon": "label",
+   "priority": 2
+  },
+  {
+   "id": "d_midtown",
+   "name": "MIDTOWN",
+   "kind": "district",
+   "x": -33.5,
+   "z": -111.3,
+   "y": 0,
+   "icon": "label",
+   "priority": 2
+  },
+  {
+   "id": "d_village",
+   "name": "THE VILLAGE",
+   "kind": "district",
+   "x": -4.5,
+   "z": 806.1,
+   "y": 0,
+   "icon": "label",
+   "priority": 2
+  },
+  {
+   "id": "d_downtown",
+   "name": "DOWNTOWN",
+   "kind": "district",
+   "x": 46.2,
+   "z": 1367.0,
+   "y": 0,
+   "icon": "label",
+   "priority": 2
+  },
+  {
+   "id": "d_headland",
+   "name": "HEADLAND",
+   "kind": "district",
+   "x": 1900,
+   "z": 1750,
+   "y": 0,
+   "icon": "label",
+   "priority": 3
+  }
+ ],
+ "icons": {
+  "base_ironman": "square ring + inner dot, accent, pulse 1800 ms",
+  "base_spider": "same shape, accent",
+  "suitup": "small diamond, glow",
+  "pad": "open circle, dim",
+  "spawn": "hidden on map (debug only)",
+  "landmark": "2x2 glow dots + label on zoom >= 2",
+  "label": "text only, dim, letter-spaced",
+  "player": "chevron in hero colour (self = accent, co-op partner = glow), heading-aligned",
+  "objective": "hollow square pulsing 1.0 -> 1.6x, accent",
+  "enemy": "danger triangle, blinks 4 Hz"
+ }
+}

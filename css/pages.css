@@ -1,0 +1,62 @@
+/* ============================================================ LOADING — the city builds with the progress */
+.loading .ld-who { position: absolute; left: var(--gutter); top: 11vh; display: grid; gap: calc(var(--u) * 0.3); }
+.ld-who b { font: 600 calc(var(--t) * 4.2) / 0.9 var(--ui-font); letter-spacing: 0.02em; text-transform: uppercase; }
+.ld-who span { font: 500 calc(var(--t) * 1.6) / 1 var(--ui-font); letter-spacing: 0.04em; text-transform: uppercase; color: var(--mz-accent); }
+.loading .ld-bottom { position: absolute; left: var(--gutter); right: var(--gutter); bottom: calc(var(--u) * 4); }
+.ld-pct { font: 300 calc(var(--t) * 5) / 1 var(--ui-font); color: var(--mz-text); font-variant-numeric: tabular-nums; margin-bottom: calc(var(--u) * 0.8); }
+.ld-pct::after { content: '%'; font-size: 0.4em; margin-left: 0.15em; color: var(--mz-dim); }
+.ld-bar { position: relative; height: 3px; background: color-mix(in srgb, var(--mz-text) 12%, transparent); overflow: hidden; }
+.ld-bar i { position: absolute; inset: 0; background: var(--mz-accent); transform-origin: 0 50%; transform: scaleX(0); }
+.ld-tip { margin-top: calc(var(--u) * 1.4); display: flex; align-items: center; gap: calc(var(--u) * 0.5); font: 500 calc(var(--t) * 1.2) / 1.3 var(--ui-font); color: var(--mz-dim); }
+
+/* ============================================================ PAUSE — over the running game */
+.pause .pz-scrim { position: absolute; inset: 0; background: linear-gradient(90deg, color-mix(in srgb, var(--mz-bg) 90%, transparent) 0%, color-mix(in srgb, var(--mz-bg) 60%, transparent) 50%, color-mix(in srgb, var(--mz-bg) 30%, transparent));
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.pause .pz-left { position: absolute; left: calc(var(--gutter) - var(--u) * 1.1); top: 11vh; width: calc(var(--u) * 26); }
+.pause .pz-title { margin: 0 0 calc(var(--u) * 2.4) calc(var(--u) * 1.1); font: 600 calc(var(--t) * 4.2) / 0.9 var(--ui-font); letter-spacing: 0.02em; text-transform: uppercase; }
+.pz-menu { display: flex; flex-direction: column; gap: calc(var(--u) * 0.15); }
+.pause .pz-right { position: absolute; right: var(--gutter); top: 12vh; width: calc(var(--u) * 18); display: flex; flex-direction: column; gap: calc(var(--u) * 1.2); }
+.pz-room { font: 500 calc(var(--t) * 1) / 1 var(--ui-font); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mz-dim); }
+.pz-room b { font-family: var(--ui-mono); font-weight: 600; color: var(--mz-text); letter-spacing: 0.12em; margin-left: 0.4em; }
+.pz-p { display: grid; gap: 4px; padding-left: calc(var(--u) * 0.8); border-left: 3px solid var(--pa, var(--mz-accent)); }
+.pz-p b { font: 600 calc(var(--t) * 1.4) / 1 var(--ui-font); letter-spacing: 0.04em; text-transform: uppercase; }
+.pz-p span { font: 500 calc(var(--t) * 1) / 1.2 var(--ui-font); color: var(--mz-dim); }
+
+/* ============================================================ SETTINGS / CONTROLS / HAPTICS — list pages */
+.pg-title { position: absolute; left: var(--gutter); top: 9vh; font: 600 calc(var(--t) * 3.4) / 0.9 var(--ui-font); letter-spacing: 0.02em; text-transform: uppercase; }
+.pg-list { position: absolute; left: calc(var(--gutter) - var(--u) * 1.1); top: calc(9vh + var(--u) * 5.4); bottom: calc(var(--u) * 6); width: calc(var(--u) * 40); overflow-y: auto; scrollbar-width: none;
+  padding-bottom: calc(var(--u) * 4); -webkit-mask: linear-gradient(to bottom, #000 88%, transparent); mask: linear-gradient(to bottom, #000 88%, transparent); }
+.pg-list::-webkit-scrollbar { display: none; }
+.row { display: flex; align-items: center; gap: calc(var(--u) * 1.2); padding-top: calc(var(--u) * 0.55); padding-bottom: calc(var(--u) * 0.55); }
+.row-k { flex: 1; font: 600 calc(var(--t) * 1.3) / 1.1 var(--ui-font); letter-spacing: 0.03em; text-transform: uppercase; }
+.row-v { font: 500 calc(var(--t) * 1.1) / 1 var(--ui-font); color: var(--mz-dim); min-width: calc(var(--u) * 4); text-align: right; font-variant-numeric: tabular-nums; }
+.row.focus .row-v { color: var(--mz-text); }
+.row-bar { position: relative; width: calc(var(--u) * 9); height: 3px; background: color-mix(in srgb, var(--mz-text) 15%, transparent); }
+.row-bar i { position: absolute; inset: 0; background: var(--mz-dim); transform-origin: 0 50%; transition: transform 140ms var(--ease); }
+.row.focus .row-bar i { background: var(--mz-accent); }
+.row-c { display: flex; align-items: center; gap: calc(var(--u) * 0.8); }
+.row-c b { font: 600 calc(var(--t) * 1.3) / 1 var(--ui-font); color: transparent; }
+.row.focus .row-c b { color: var(--mz-accent); }
+.row-go { font: 600 calc(var(--t) * 1.4) / 1 var(--ui-font); color: var(--mz-dim); }
+.row-h { margin: calc(var(--u) * 1.6) 0 calc(var(--u) * 0.3) calc(var(--u) * 1.1); font: 600 calc(var(--t) * 0.95) / 1 var(--ui-font); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mz-accent); }
+.pg-tabs { position: absolute; left: calc(var(--gutter) - var(--u) * 1.1); top: 9vh; display: flex; align-items: center; gap: calc(var(--u) * 0.4); }
+.ctl-row .ctl-g { width: calc(var(--u) * 2.6); display: inline-flex; justify-content: center; }
+.ctl-row .ctl-g .glyph { width: calc(var(--u) * 1.8); height: calc(var(--u) * 1.8); }
+.ctl-lock { font: 500 calc(var(--t) * 0.9) / 1 var(--ui-font); letter-spacing: 0.06em; text-transform: uppercase; color: var(--mz-dim); }
+.ctl-note { position: absolute; right: var(--gutter); top: 40vh; width: calc(var(--u) * 24); font: 500 calc(var(--t) * 1.3) / 1.35 var(--ui-font); color: var(--mz-dim); }
+.ctl-capture { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: calc(var(--u) * 0.8); background: color-mix(in srgb, var(--mz-bg) 82%, transparent);
+  opacity: 0; pointer-events: none; transition: opacity 160ms var(--ease); }
+.ctl-capture.on { opacity: 1; }
+.ctl-capture b { font: 600 calc(var(--t) * 3) / 1 var(--ui-font); text-transform: uppercase; }
+.ctl-capture span { font: 500 calc(var(--t) * 1.4) / 1 var(--ui-font); color: var(--mz-accent); }
+.hp-sub { position: absolute; left: var(--gutter); top: calc(9vh + var(--u) * 3.6); font: 500 calc(var(--t) * 1.1) / 1 var(--ui-font); color: var(--mz-dim); }
+.haptics .pg-list { top: calc(9vh + var(--u) * 6.4); width: calc(var(--u) * 30); }
+.row.playing .row-k { color: var(--mz-accent); }
+.hp-view { position: absolute; right: var(--gutter); top: 34vh; width: calc(var(--u) * 30); display: grid; gap: calc(var(--u) * 0.6); }
+.hp-view b { font: 600 calc(var(--t) * 2.2) / 1 var(--ui-font); text-transform: uppercase; }
+.hp-view > span { font: 500 calc(var(--t) * 1.2) / 1.3 var(--ui-font); color: var(--mz-dim); min-height: 2.6em; }
+.hp-tl svg { width: 100%; display: block; margin-top: calc(var(--u) * 1); }
+.hp-tl .ax { stroke: color-mix(in srgb, var(--mz-text) 30%, transparent); }
+.hp-tl .st { fill: var(--mz-accent); } .hp-tl .wk { fill: color-mix(in srgb, var(--mz-accent) 45%, transparent); } .hp-tl .tr { fill: var(--mz-glow); }
+.hp-tl.go svg { animation: pulse 300ms var(--ease); }
+.hp-leg { display: flex; justify-content: space-between; margin-top: calc(var(--u) * 0.5); font: 500 calc(var(--t) * 0.95) / 1 var(--ui-font); color: var(--mz-dim); }

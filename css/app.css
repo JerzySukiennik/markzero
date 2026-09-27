@@ -1,0 +1,97 @@
+/* Mark Zero V3 — UI base. Colours come ONLY from the suit theme vars (--mz-*, design/themes.css), so
+   every element re-tints when the suit changes (the vars are @property-registered and cross-fade).
+   Direction after Jurek's first pad session: minimalism — few elements, big confident type, calm negative
+   space, one accent colour, the 3D content as the hero, motion only where it means something.
+   Layout unit --u (19.2 px at 1080p); type unit --t = --u × the accessibility text scale. */
+@import url(ui.css);
+@import url(screens.css);
+@import url(hud.css);
+@import url(rooms.css);
+@import url(pages.css);
+@import url(map.css);
+@import url(sizes.css);
+@font-face { font-family: 'Barlow C'; src: url(/v3assets/ui/fonts/BarlowCondensed-Light.ttf); font-weight: 300; }
+@font-face { font-family: 'Barlow C'; src: url(/v3assets/ui/fonts/BarlowCondensed-Medium.ttf); font-weight: 500; }
+@font-face { font-family: 'Barlow C'; src: url(/v3assets/ui/fonts/BarlowCondensed-SemiBold.ttf); font-weight: 600; }
+@font-face { font-family: 'JB Mono'; src: url(/v3assets/ui/fonts/JetBrainsMono-VF.ttf); font-weight: 100 800; }
+
+:root {
+  --ui-font: 'Barlow C', 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --ui-mono: 'JB Mono', ui-monospace, Menlo, monospace;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --u: min(1vw, 1.78vh);            /* one layout unit, 19.2 px at 1080p */
+  --t: calc(var(--u) * var(--text-scale, 1));
+  --gutter: calc(var(--u) * 4.4);   /* outer margin: 84 px at 1080p (title-safe) */
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: var(--mz-bg); color: var(--mz-text);
+  font: 500 calc(var(--t) * 1.0) / 1.3 var(--ui-font); -webkit-font-smoothing: antialiased; cursor: none; user-select: none; }
+#gl { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+#ui { position: fixed; inset: 0; pointer-events: none; }
+#ui > .screen { position: absolute; inset: 0; }
+
+/* ---------- screen transitions: a fade and a short rise (never a hard cut, never a light show) */
+.screen { opacity: 0; transform: translateY(calc(var(--u) * 0.6)); transition: opacity 360ms var(--ease), transform 460ms var(--ease); }
+.screen.in { opacity: 1; transform: none; }
+.screen.out { opacity: 0; transform: translateY(calc(var(--u) * -0.4)); transition-duration: 220ms; }
+.screen .stag { opacity: 0; transform: translateY(calc(var(--u) * 0.5)); transition: opacity 360ms var(--ease), transform 460ms var(--ease); transition-delay: calc(var(--i, 0) * 50ms + 80ms); }
+.screen.in .stag { opacity: 1; transform: none; }
+
+/* ---------- typography */
+.h-xl { font: 600 calc(var(--t) * 5.6) / 0.9 var(--ui-font); letter-spacing: 0.02em; text-transform: uppercase; }
+.h-l  { font: 600 calc(var(--t) * 2.8) / 1 var(--ui-font); letter-spacing: 0.02em; text-transform: uppercase; }
+.h-m  { font: 600 calc(var(--t) * 1.5) / 1.05 var(--ui-font); letter-spacing: 0.04em; text-transform: uppercase; }
+.lab  { font: 500 calc(var(--t) * 0.85) / 1.3 var(--ui-font); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mz-dim); }
+.mono { font-family: var(--ui-mono); }
+.acc  { color: var(--mz-accent); }
+
+/* ---------- focusable rows: dim at rest, full text + a thin accent bar when focused. No glow. */
+.item { position: relative; pointer-events: auto; padding: calc(var(--u) * 0.5) calc(var(--u) * 1.1); color: var(--mz-dim);
+  transition: color 160ms var(--ease), transform 240ms var(--ease), background 200ms var(--ease); }
+.item .k { font: 600 calc(var(--t) * 1.6) / 1.05 var(--ui-font); letter-spacing: 0.04em; text-transform: uppercase; }
+.item .s { display: block; margin-top: calc(var(--u) * 0.2); font: 500 calc(var(--t) * 0.95) / 1.3 var(--ui-font); letter-spacing: 0.02em; color: var(--mz-dim);
+  opacity: 0; max-height: 0; transition: opacity 220ms var(--ease), max-height 280ms var(--ease); }
+.item::before { content: ''; position: absolute; left: 0; top: 22%; bottom: 22%; width: 3px; background: var(--mz-accent); transform: scaleY(0); transition: transform 220ms var(--ease); }
+.item.focus { color: var(--mz-text); transform: translateX(calc(var(--u) * 0.4)); }
+.item.focus::before { transform: scaleY(1); }
+.item.focus .s { opacity: 1; max-height: 3em; }
+.item.disabled { opacity: 0.4; }
+.item.pulse { animation: pulse 260ms var(--ease); }
+@keyframes pulse { 0% { opacity: 0.55; } 100% { opacity: 1; } }
+.item.shake, .shake { animation: shake 280ms linear; }
+@keyframes shake { 20%,60% { transform: translateX(-6px); } 40%,80% { transform: translateX(6px); } }
+
+/* box focus (cards, tiles): a single 2 px accent outline */
+.tile { position: relative; pointer-events: auto; transition: transform 240ms var(--ease); }
+.tile > .ring { position: absolute; inset: -3px; pointer-events: none; border: 2px solid var(--mz-accent); opacity: 0; transition: opacity 160ms var(--ease); }
+.tile.focus > .ring { opacity: 1; }
+.tile.focus { transform: translateY(-2px); }
+
+/* ---------- hint bar (generated from live bindings; only actions that work on this screen) */
+#hints { position: fixed; left: var(--gutter); right: var(--gutter); bottom: calc(var(--u) * 2.2); display: flex; gap: calc(var(--u) * 2.4);
+  font: 500 calc(var(--t) * 0.9) / 1 var(--ui-font); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mz-dim); pointer-events: none; transition: opacity 300ms var(--ease); }
+#hints .h { display: flex; align-items: center; gap: calc(var(--u) * 0.55); }
+.glyph { display: inline-block; width: calc(var(--u) * 1.5); height: calc(var(--u) * 1.5); vertical-align: middle; flex: none; color: var(--mz-text); }
+.glyph svg { width: 100%; height: 100%; display: block; overflow: visible; }
+
+/* ---------- overlay the snapshot shipped: the scanline + grain layers are off; a faint vignette stays */
+#fx { position: fixed; inset: 0; pointer-events: none; }
+#fx i { position: absolute; inset: 0; }
+#fx .scan, #fx .grain { display: none; }
+#fx .vig { background: radial-gradient(ellipse at 50% 50%, transparent 60%, rgba(0,0,0,0.35) 100%); }
+
+#toast { position: fixed; left: 50%; top: calc(var(--u) * 7); transform: translate(-50%, -12px); opacity: 0; padding: calc(var(--u) * 0.55) calc(var(--u) * 1.2);
+  font: 500 calc(var(--t) * 0.95) / 1 var(--ui-font); letter-spacing: 0.06em; text-transform: uppercase; color: var(--mz-text);
+  background: color-mix(in srgb, var(--mz-bg) 88%, transparent); border-bottom: 2px solid var(--mz-accent); transition: opacity 220ms var(--ease), transform 300ms var(--ease); pointer-events: none; }
+#toast.on { opacity: 1; transform: translate(-50%, 0); }
+#toast.err { border-bottom-color: var(--mz-danger); }
+
+#boot { position: fixed; inset: 0; display: grid; place-content: center; text-align: center; background: var(--mz-bg); transition: opacity 500ms var(--ease); z-index: 10; }
+#boot b { font: 600 calc(var(--t) * 3) / 1 var(--ui-font); letter-spacing: 0.3em; color: var(--mz-text); }
+#boot span { display: none; }
+#boot.gone { opacity: 0; pointer-events: none; }
+@keyframes blink { 50% { opacity: 0.3; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+.dot { display: inline-block; width: 0.55em; height: 0.55em; background: var(--mz-accent); margin-right: 0.5em; vertical-align: 0.05em; }
+.suitchip { display: none; }   /* decorative — removed with the minimalism pass */

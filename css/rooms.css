@@ -1,0 +1,56 @@
+/* ============================================================ CO-OP (rooms) */
+.rooms .rm-head { position: absolute; left: var(--gutter); top: 9vh; }
+.rm-title { font: 600 calc(var(--t) * 4.2) / 0.9 var(--ui-font); letter-spacing: 0.02em; text-transform: uppercase; }
+.rm-you { margin-top: calc(var(--u) * 0.6); font: 500 calc(var(--t) * 1.3) / 1 var(--ui-font); letter-spacing: 0.04em; text-transform: uppercase; color: var(--mz-accent); }
+.rooms .rm-actions { position: absolute; left: calc(var(--gutter) - var(--u) * 1.1); top: 34vh; width: calc(var(--u) * 26); display: flex; flex-direction: column; gap: calc(var(--u) * 0.2); }
+.rooms .rm-open { position: absolute; left: 50%; right: var(--gutter); top: 34vh; }
+.rm-open-t { font: 600 calc(var(--t) * 1.2) / 1 var(--ui-font); letter-spacing: 0.06em; text-transform: uppercase; color: var(--mz-dim); margin-bottom: calc(var(--u) * 1.2); }
+.rm-list { display: flex; flex-direction: column; gap: calc(var(--u) * 0.8); }
+.rm-room { display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; column-gap: calc(var(--u) * 1.4); padding: calc(var(--u) * 0.9) calc(var(--u) * 1.2);
+  background: color-mix(in srgb, var(--mz-text) 5%, transparent); }
+.rm-code { font: 600 calc(var(--t) * 2) / 1 var(--ui-mono); letter-spacing: 0.1em; color: var(--mz-text); }
+.rm-host { font: 600 calc(var(--t) * 1.4) / 1 var(--ui-font); letter-spacing: 0.04em; text-transform: uppercase; }
+.rm-free { font: 500 calc(var(--t) * 1.05) / 1 var(--ui-font); color: var(--mz-accent); }
+.rm-empty { font: 500 calc(var(--t) * 1.2) / 1.35 var(--ui-font); color: var(--mz-dim); max-width: calc(var(--u) * 28); }
+.rm-empty:empty { display: none; }
+
+/* ============================================================ ROOM CODE ENTRY */
+.codes .cd-box { position: absolute; left: 50%; top: 44%; transform: translate(-50%, -50%); display: grid; justify-items: center; gap: calc(var(--u) * 1.6); }
+.cd-title { font: 600 calc(var(--t) * 2.4) / 1 var(--ui-font); letter-spacing: 0.03em; text-transform: uppercase; }
+.cd-slots { display: flex; gap: calc(var(--u) * 1.2); }
+.cd-slot { width: calc(var(--u) * 6.2); height: calc(var(--u) * 8); display: grid; place-items: center; border-bottom: 3px solid color-mix(in srgb, var(--mz-text) 25%, transparent); transition: border-color 160ms var(--ease); }
+.cd-slot b { font: 600 calc(var(--t) * 5) / 1 var(--ui-mono); color: var(--mz-dim); transition: color 160ms var(--ease); }
+.cd-slot.on { border-color: var(--mz-accent); } .cd-slot.on b { color: var(--mz-text); }
+.cd-slot.bump b { animation: bump 200ms var(--ease); }
+@keyframes bump { 0% { transform: translateY(-12%); opacity: 0.6; } 100% { transform: none; opacity: 1; } }
+.cd-msg { min-height: 1.3em; font: 500 calc(var(--t) * 1.2) / 1.3 var(--ui-font); color: var(--mz-dim); }
+.cd-msg.err { color: var(--mz-danger); }
+
+/* ============================================================ ROOM */
+.room .ro-top { position: absolute; left: 0; right: 0; top: 6vh; display: grid; justify-items: center; gap: calc(var(--u) * 0.4); }
+.ro-code-s { font: 500 calc(var(--t) * 1.1) / 1 var(--ui-font); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mz-dim); }
+.ro-code { display: flex; gap: calc(var(--u) * 0.4); font: 600 calc(var(--t) * 4.6) / 1 var(--ui-mono); letter-spacing: 0.08em; color: var(--mz-text); }
+.ro-code span { animation: codein 500ms var(--ease) both; animation-delay: calc(var(--i) * 70ms + 100ms); }
+@keyframes codein { 0% { opacity: 0; transform: translateY(30%); } 100% { opacity: 1; transform: none; } }
+.room .ro-slots { position: absolute; left: var(--gutter); right: var(--gutter); top: 24vh; bottom: 18vh; display: grid; grid-template-columns: 1fr 1fr; gap: calc(var(--u) * 2.5); }
+.ro-slot { position: relative; overflow: hidden; background: color-mix(in srgb, var(--mz-text) 4%, transparent); transition: box-shadow 250ms var(--ease); }
+.ro-slot.ready { box-shadow: inset 0 -4px 0 var(--sa); }
+.ro-slot.pop { animation: pulse 400ms var(--ease); }
+.ro-stage { position: absolute; inset: 0; }
+.ro-info { position: absolute; left: calc(var(--u) * 1.6); right: calc(var(--u) * 1.6); bottom: calc(var(--u) * 1.4); }
+.ro-pname { font: 600 calc(var(--t) * 2.2) / 1 var(--ui-font); letter-spacing: 0.03em; text-transform: uppercase; }
+.ro-slot.me .ro-pname::after { content: ' · you'; color: var(--mz-dim); font-weight: 500; font-size: 0.6em; letter-spacing: 0.04em; }
+.ro-suit { margin-top: calc(var(--u) * 0.35); font: 500 calc(var(--t) * 1.2) / 1.25 var(--ui-font); color: var(--mz-dim); }
+.ro-ready { position: absolute; right: 0; bottom: 0; font: 600 calc(var(--t) * 1.4) / 1 var(--ui-font); letter-spacing: 0.06em; text-transform: uppercase; color: var(--sa); }
+.ro-info.wait .ro-pname { color: var(--mz-dim); }
+.room .ro-acts { position: absolute; left: 0; right: 0; bottom: calc(var(--u) * 5.6); display: flex; justify-content: center; gap: calc(var(--u) * 1.4); }
+.ro-btn { min-width: calc(var(--u) * 10); text-align: center; }
+.ro-btn .k { font-size: calc(var(--t) * 1.5); }
+.ro-btn.on { color: var(--mz-accent); }
+.room .ro-btn::before { left: 18%; right: 18%; top: auto; bottom: 0; width: auto; height: 3px; transform: scaleX(0); }
+.room .ro-btn.focus { transform: none; } .room .ro-btn.focus::before { transform: scaleX(1); }
+.ro-countdown { position: absolute; inset: 0; display: grid; place-items: center; background: color-mix(in srgb, var(--mz-bg) 60%, transparent); opacity: 0; pointer-events: none; transition: opacity 200ms var(--ease); }
+.ro-countdown.on { opacity: 1; }
+.ro-countdown b { font: 600 calc(var(--t) * 12) / 1 var(--ui-font); color: var(--mz-text); }
+.ro-countdown b.tick { animation: tick 800ms var(--ease); }
+@keyframes tick { 0% { transform: scale(1.3); opacity: 0; } 25% { opacity: 1; } 100% { transform: scale(0.95); opacity: 0.9; } }

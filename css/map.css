@@ -1,0 +1,26 @@
+/* ============================================================ MAP — the dot city, flat standing icons, a cursor */
+.mapscr.wait { visibility: hidden; }
+.mp-icons { position: absolute; inset: 0; overflow: hidden; }
+.mp-ic { position: absolute; left: 0; top: 0; --ic: var(--mz-text); will-change: transform; transition: opacity 200ms; }
+.mp-ic .stem { position: absolute; left: -0.5px; top: 0; width: 1px; background: linear-gradient(to bottom, color-mix(in srgb, var(--ic) 80%, transparent), color-mix(in srgb, var(--ic) 10%, transparent)); }
+.mp-ic .badge { position: absolute; left: calc(var(--u) * -1.15); top: calc(var(--u) * -2.3); width: calc(var(--u) * 2.3); height: calc(var(--u) * 2.3); border-radius: 50%;
+  display: grid; place-items: center; background: color-mix(in srgb, var(--mz-bg) 88%, transparent); border: 2px solid var(--ic); color: var(--ic); transition: transform 180ms var(--ease); }
+.mp-ic .badge svg { width: 62%; height: 62%; }
+.mp-ic.small .badge { left: calc(var(--u) * -0.8); top: calc(var(--u) * -1.6); width: calc(var(--u) * 1.6); height: calc(var(--u) * 1.6); border-width: 1.5px; color: var(--mz-dim); border-color: color-mix(in srgb, var(--mz-text) 45%, transparent); }
+.mp-ic.small .stem { background: linear-gradient(to bottom, color-mix(in srgb, var(--mz-text) 40%, transparent), transparent); }
+.mp-ic.you .badge { background: var(--ic); color: var(--mz-bg); }
+/* story: main mission = the biggest badge, filled; objectives = outlined */
+.mp-ic.m-main .badge { left: calc(var(--u) * -1.5); top: calc(var(--u) * -3); width: calc(var(--u) * 3); height: calc(var(--u) * 3); background: var(--ic); color: var(--mz-bg); border-color: var(--mz-text); }
+.mp-ic.m-main em { left: calc(var(--u) * 2); top: calc(var(--u) * -2.3); }
+.mp-ic.sel .badge { transform: scale(1.25); }
+.mp-ic em { position: absolute; left: calc(var(--u) * 1.6); top: calc(var(--u) * -1.9); white-space: nowrap; font: 600 calc(var(--t) * 1.1) / 1 var(--ui-font); font-style: normal; letter-spacing: 0.04em; text-transform: uppercase; color: var(--mz-text); text-shadow: 0 0 6px #000; }
+.mp-ic.small em { left: calc(var(--u) * 1.2); top: calc(var(--u) * -1.4); }
+.mp-cursor { position: absolute; left: 50%; top: 50%; width: 0; height: 0; }
+.mp-cursor i { position: absolute; left: calc(var(--u) * -1.1); top: calc(var(--u) * -1.1); width: calc(var(--u) * 2.2); height: calc(var(--u) * 2.2); border-radius: 50%; border: 2px solid color-mix(in srgb, var(--mz-text) 80%, transparent); }
+.mp-cursor::after { content: ''; position: absolute; left: -2px; top: -2px; width: 4px; height: 4px; border-radius: 50%; background: var(--mz-text); }
+.mp-info { position: absolute; left: var(--gutter); top: 9vh; display: grid; gap: calc(var(--u) * 0.4); }
+.mp-info b { font: 600 calc(var(--t) * 2.8) / 1 var(--ui-font); letter-spacing: 0.02em; text-transform: uppercase; }
+.mp-info span { font: 500 calc(var(--t) * 1.2) / 1.2 var(--ui-font); color: var(--mz-dim); }
+.mp-north { position: absolute; right: var(--gutter); top: 9vh; width: calc(var(--u) * 2.4); height: calc(var(--u) * 2.4); display: grid; place-items: center; }
+.mp-north svg { width: 60%; fill: var(--mz-accent); }
+.mp-north span { position: absolute; top: calc(var(--u) * -1.3); font: 600 calc(var(--t) * 0.9) / 1 var(--ui-font); color: var(--mz-dim); }

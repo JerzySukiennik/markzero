@@ -1,0 +1,103 @@
+{
+ "_doc": "Intro trailer timing, seconds on the MUSIC clock (volatile_reaction.ogg: 153.82 BPM, beat 0.390 s, grid phase 0.209 s; the drop = beat 76 = 29.854 s). Cuts sit on measured onsets (tests/intro/beats.py), the wordmark on the downbeat 16 bars after the drop. Menu loop = beat 76 .. beat 248 (43 bars): the break at ~95 s leads straight back into the drop.",
+ "music": {
+  "file": "/v3assets/audio/music/volatile_reaction.ogg",
+  "gain": 0.9,
+  "loopStart": 29.854,
+  "loopEnd": 96.946,
+  "menuLoopFrom": 29.854,
+  "bpm": 153.82,
+  "beat0": 0.209
+ },
+ "bpm": 153.82,
+ "hour": 19.1,
+ "titles": [
+  {
+   "at": 0.42,
+   "dur": 2.2,
+   "text": "GZOWO LABS",
+   "sub": "presents"
+  },
+  {
+   "at": 2.74,
+   "dur": 2.5,
+   "text": "A GSP GAME",
+   "sub": ""
+  }
+ ],
+ "shots": [
+  {
+   "id": "tether_wide",
+   "at": 5.46,
+   "slow": 0.35
+  },
+  {
+   "id": "tether_close",
+   "at": 12.61,
+   "slow": 0.3
+  },
+  {
+   "id": "nano_mk85",
+   "at": 17.07,
+   "slow": 1.0
+  },
+  {
+   "id": "summon_mk42",
+   "at": 21.71,
+   "slow": 1.0
+  },
+  {
+   "id": "swing_towers",
+   "at": 26.17,
+   "slow": 1.0
+  },
+  {
+   "id": "repulsor",
+   "at": 29.49,
+   "slow": 1.0
+  },
+  {
+   "id": "veronica_drop",
+   "at": 31.95,
+   "slow": 1.0
+  },
+  {
+   "id": "cut_boost",
+   "at": 36.99,
+   "slow": 1.0
+  },
+  {
+   "id": "cut_zip",
+   "at": 40.68,
+   "slow": 1.0
+  },
+  {
+   "id": "cut_repulsor",
+   "at": 42.03,
+   "slow": 0.6
+  },
+  {
+   "id": "cut_tether",
+   "at": 46.86,
+   "slow": 0.5
+  },
+  {
+   "id": "cut_land",
+   "at": 48.23,
+   "slow": 1.0
+  },
+  {
+   "id": "cut_zip#2",
+   "at": 50.55,
+   "slow": 1.0
+  },
+  {
+   "id": "finale",
+   "at": 51.9,
+   "slow": 0.25
+  }
+ ],
+ "wordmark": 54.818,
+ "start": 56.77,
+ "end": 60.0
+}

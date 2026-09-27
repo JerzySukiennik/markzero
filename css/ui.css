@@ -1,0 +1,54 @@
+/* UI framework layer: cursor, transitions juice (wipe + chromatic fringe), hint bar, net dots, a11y hooks. */
+html.mouse, html.mouse body { cursor: default; }
+html.mouse [data-f] { cursor: pointer; }
+
+/* stacked screens */
+#ui > .screen.under { filter: blur(3px) brightness(0.55); transition: filter 400ms var(--ease), opacity 400ms var(--ease); }
+#ui > .screen.under-hidden { opacity: 0 !important; pointer-events: none; transition: opacity 250ms var(--ease); visibility: hidden; transition: opacity 250ms var(--ease), visibility 0s 250ms; }
+#ui > .screen.under-hidden.instant { transition: none !important; }
+
+/* transition wipe: a thin light sheet sweeps down + a scan flash (never a hard cut) */
+.wipe { position: fixed; inset: 0; pointer-events: none; z-index: 20; overflow: hidden; }
+.wipe i { position: absolute; left: 0; right: 0; height: 22vh; top: -24vh;
+  background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--mz-accent) 10%, transparent) 70%, color-mix(in srgb, var(--mz-glow) 55%, transparent) 99%, transparent);
+  mix-blend-mode: screen; opacity: 0; }
+.wipe b { position: absolute; inset: 0; background: color-mix(in srgb, var(--mz-accent) 6%, transparent); opacity: 0; }
+.wipe.go i { animation: wipe 520ms var(--ease) forwards; }
+.wipe.go b { animation: wipeflash 360ms ease-out forwards; }
+@keyframes wipe { 0% { top: -24vh; opacity: 1; } 100% { top: 104vh; opacity: 0.6; } }
+@keyframes wipeflash { 0% { opacity: 1; } 100% { opacity: 0; } }
+body.chroma #ui > .screen.in:not(.under) { animation: chroma 380ms ease-out; }
+@keyframes chroma {
+  0% { filter: drop-shadow(3px 0 0 rgba(255, 30, 70, 0.55)) drop-shadow(-3px 0 0 rgba(0, 230, 255, 0.55)); }
+  100% { filter: drop-shadow(0 0 0 rgba(255, 30, 70, 0)) drop-shadow(0 0 0 rgba(0, 230, 255, 0)); }
+}
+[data-motion="reduced"] .wipe, [data-motion="reduced"] body.chroma #ui > .screen { animation: none !important; }
+[data-motion="reduced"] .screen, [data-motion="reduced"] .screen .stag { transition-duration: 1ms !important; transform: none !important; }
+[data-fx="off"] #fx { display: none; }
+
+/* hint bar */
+#hints { z-index: 5; align-items: center; }
+#hints.hide { opacity: 0; }
+#hints .h { transition: opacity 200ms; }
+#hints .h.dim { opacity: 0.45; }
+#hints .h.right { margin-left: auto; }
+#hints .h + .h.right ~ .h.right { margin-left: 0; }
+.gw { display: inline-flex; vertical-align: middle; gap: calc(var(--u) * 0.2); }
+.glyph.unbound { display: inline-grid; place-items: center; border: 1px dashed var(--mz-dim); border-radius: 50%; font: 600 calc(var(--t) * 0.7) var(--ui-mono); color: var(--mz-dim); }
+
+/* status dots */
+.t-net .dot { margin-right: 0.9em; }
+.dot.online { background: #45e08a; box-shadow: 0 0 8px #45e08a; }
+.dot.connecting { background: var(--mz-accent); animation: blink 0.8s steps(2) infinite; }
+.dot.offline { background: var(--mz-dim); box-shadow: none; }
+
+#toast { z-index: 30; }
+/* the story layer's world prompts/markers belong to the game view only — never over the map, pause,
+   settings or the suit wheel (html[data-screen] = the UI's top screen) */
+html:not([data-screen="hud"]) #story { visibility: hidden; }
+.stub { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: var(--mz-dim); }
+
+/* colour-vision variants: danger stays distinguishable from every accent (blue-ish alarm for protan/deutan) */
+[data-cvd="protan"], [data-cvd="deutan"] { --mz-danger: #3D8BFF !important; --mz-onDanger: #020814 !important; }
+[data-cvd="tritan"] { --mz-danger: #FF2D8A !important; }
+[data-cvd="mono"] #gl { filter: grayscale(1); }

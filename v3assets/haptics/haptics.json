@@ -1,0 +1,5040 @@
+{
+ "version": 1,
+ "generated_by": "v3/design/tools/haptics.py",
+ "format": {
+  "step": "{t: ms from start, dur: ms, strong: 0..1 low-freq motor, weak: 0..1 high-freq motor, left/right: 0..1 Xbox trigger motors (optional)}",
+  "min_step_ms": 16
+ },
+ "intensity": {
+  "master": {
+   "default": 0.8,
+   "range": "0..1 (settings slider, 0 = off)"
+  },
+  "category": {
+   "ui": 0.6,
+   "suit": 0.9,
+   "suitup": 0.9,
+   "combat": 1.0,
+   "damage": 1.0,
+   "movement": 0.8,
+   "spider": 0.9,
+   "world": 0.8
+  },
+  "note": "final = step value * category * master, clamped 0..1. Priority when two effects overlap: damage > combat > suitup > movement > spider > world > suit > ui > continuous; a higher priority effect replaces the running one, the continuous layer resumes after it ends.",
+  "cooldown_ms": {
+   "ui_tick": 40,
+   "repulsor_shot": 60,
+   "hit_light": 80,
+   "web_thwip": 50
+  }
+ },
+ "patterns": {
+  "ui_tick": {
+   "cat": "ui",
+   "desc": "focus move / slider step \u2014 a single crisp tick",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 24,
+     "strong": 0,
+     "weak": 0.2
+    }
+   ],
+   "dur": 24,
+   "sound": "ui_focus_*"
+  },
+  "ui_confirm": {
+   "cat": "ui",
+   "desc": "confirm \u2014 tick + short body",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 16,
+     "strong": 0.22,
+     "weak": 0.5
+    },
+    {
+     "t": 16,
+     "dur": 16,
+     "strong": 0.1,
+     "weak": 0.25
+    },
+    {
+     "t": 32,
+     "dur": 16,
+     "strong": 0.047,
+     "weak": 0.118
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.022,
+     "weak": 0.056
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.011,
+     "weak": 0.026
+    }
+   ],
+   "dur": 80,
+   "sound": "ui_confirm"
+  },
+  "ui_back": {
+   "cat": "ui",
+   "desc": "back \u2014 one soft tick",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 20,
+     "strong": 0,
+     "weak": 0.28
+    }
+   ],
+   "dur": 20,
+   "sound": "ui_back"
+  },
+  "ui_error": {
+   "cat": "ui",
+   "desc": "error \u2014 two dull knocks",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 40,
+     "strong": 0.45,
+     "weak": 0.1
+    },
+    {
+     "t": 90,
+     "dur": 40,
+     "strong": 0.4,
+     "weak": 0.1
+    }
+   ],
+   "dur": 130,
+   "sound": "ui_error"
+  },
+  "ui_tab": {
+   "cat": "ui",
+   "desc": "tab switch \u2014 slide + click",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 16,
+     "strong": 0.0,
+     "weak": 0.05
+    },
+    {
+     "t": 16,
+     "dur": 16,
+     "strong": 0.0,
+     "weak": 0.135
+    },
+    {
+     "t": 32,
+     "dur": 16,
+     "strong": 0.0,
+     "weak": 0.22
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.15,
+     "weak": 0.4
+    }
+   ],
+   "dur": 64,
+   "sound": "ui_tab"
+  },
+  "ui_panel_open": {
+   "cat": "ui",
+   "desc": "panel slides in, latches",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 16,
+     "strong": 0.0,
+     "weak": 0.04
+    },
+    {
+     "t": 16,
+     "dur": 16,
+     "strong": 0.0,
+     "weak": 0.068
+    },
+    {
+     "t": 32,
+     "dur": 16,
+     "strong": 0.0,
+     "weak": 0.096
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.0,
+     "weak": 0.124
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.0,
+     "weak": 0.152
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.0,
+     "weak": 0.18
+    },
+    {
+     "t": 160,
+     "dur": 24,
+     "strong": 0.2,
+     "weak": 0.35
+    }
+   ],
+   "dur": 184,
+   "sound": "ui_panel_open"
+  },
+  "ui_room_created": {
+   "cat": "ui",
+   "desc": "room opened \u2014 clamp + swelling bloom",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 32,
+     "strong": 0.6,
+     "weak": 0.5
+    },
+    {
+     "t": 60,
+     "dur": 16,
+     "strong": 0.05,
+     "weak": 0.1
+    },
+    {
+     "t": 76,
+     "dur": 16,
+     "strong": 0.067,
+     "weak": 0.122
+    },
+    {
+     "t": 92,
+     "dur": 16,
+     "strong": 0.083,
+     "weak": 0.144
+    },
+    {
+     "t": 108,
+     "dur": 16,
+     "strong": 0.1,
+     "weak": 0.167
+    },
+    {
+     "t": 124,
+     "dur": 16,
+     "strong": 0.117,
+     "weak": 0.189
+    },
+    {
+     "t": 140,
+     "dur": 16,
+     "strong": 0.133,
+     "weak": 0.211
+    },
+    {
+     "t": 156,
+     "dur": 16,
+     "strong": 0.15,
+     "weak": 0.233
+    },
+    {
+     "t": 172,
+     "dur": 16,
+     "strong": 0.167,
+     "weak": 0.256
+    },
+    {
+     "t": 188,
+     "dur": 16,
+     "strong": 0.183,
+     "weak": 0.278
+    },
+    {
+     "t": 204,
+     "dur": 16,
+     "strong": 0.2,
+     "weak": 0.3
+    },
+    {
+     "t": 220,
+     "dur": 16,
+     "strong": 0.2,
+     "weak": 0.3
+    },
+    {
+     "t": 236,
+     "dur": 16,
+     "strong": 0.177,
+     "weak": 0.266
+    },
+    {
+     "t": 252,
+     "dur": 16,
+     "strong": 0.157,
+     "weak": 0.236
+    },
+    {
+     "t": 268,
+     "dur": 16,
+     "strong": 0.14,
+     "weak": 0.209
+    },
+    {
+     "t": 284,
+     "dur": 16,
+     "strong": 0.124,
+     "weak": 0.186
+    },
+    {
+     "t": 300,
+     "dur": 16,
+     "strong": 0.11,
+     "weak": 0.165
+    },
+    {
+     "t": 316,
+     "dur": 16,
+     "strong": 0.097,
+     "weak": 0.146
+    },
+    {
+     "t": 332,
+     "dur": 16,
+     "strong": 0.086,
+     "weak": 0.13
+    },
+    {
+     "t": 348,
+     "dur": 16,
+     "strong": 0.077,
+     "weak": 0.115
+    },
+    {
+     "t": 364,
+     "dur": 16,
+     "strong": 0.068,
+     "weak": 0.102
+    },
+    {
+     "t": 380,
+     "dur": 16,
+     "strong": 0.06,
+     "weak": 0.09
+    },
+    {
+     "t": 396,
+     "dur": 16,
+     "strong": 0.053,
+     "weak": 0.08
+    },
+    {
+     "t": 412,
+     "dur": 16,
+     "strong": 0.047,
+     "weak": 0.071
+    },
+    {
+     "t": 428,
+     "dur": 16,
+     "strong": 0.042,
+     "weak": 0.063
+    },
+    {
+     "t": 444,
+     "dur": 16,
+     "strong": 0.037,
+     "weak": 0.056
+    },
+    {
+     "t": 460,
+     "dur": 16,
+     "strong": 0.033,
+     "weak": 0.05
+    },
+    {
+     "t": 476,
+     "dur": 16,
+     "strong": 0.029,
+     "weak": 0.044
+    },
+    {
+     "t": 492,
+     "dur": 16,
+     "strong": 0.026,
+     "weak": 0.039
+    },
+    {
+     "t": 508,
+     "dur": 16,
+     "strong": 0.023,
+     "weak": 0.035
+    },
+    {
+     "t": 524,
+     "dur": 16,
+     "strong": 0.02,
+     "weak": 0.031
+    },
+    {
+     "t": 540,
+     "dur": 16,
+     "strong": 0.018,
+     "weak": 0.027
+    },
+    {
+     "t": 556,
+     "dur": 16,
+     "strong": 0.016,
+     "weak": 0.024
+    },
+    {
+     "t": 572,
+     "dur": 16,
+     "strong": 0.014,
+     "weak": 0.021
+    },
+    {
+     "t": 588,
+     "dur": 16,
+     "strong": 0.013,
+     "weak": 0.019
+    },
+    {
+     "t": 604,
+     "dur": 16,
+     "strong": 0.011,
+     "weak": 0.017
+    }
+   ],
+   "dur": 620,
+   "sound": "ui_room_created"
+  },
+  "ui_player_joined": {
+   "cat": "ui",
+   "desc": "player joined \u2014 two rising taps",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 24,
+     "strong": 0.1,
+     "weak": 0.3
+    },
+    {
+     "t": 110,
+     "dur": 24,
+     "strong": 0.15,
+     "weak": 0.5
+    }
+   ],
+   "dur": 134,
+   "sound": "ui_player_joined"
+  },
+  "ui_player_left": {
+   "cat": "ui",
+   "desc": "player left \u2014 two falling taps",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 24,
+     "strong": 0.12,
+     "weak": 0.4
+    },
+    {
+     "t": 120,
+     "dur": 24,
+     "strong": 0.08,
+     "weak": 0.22
+    }
+   ],
+   "dur": 144,
+   "sound": "ui_player_left"
+  },
+  "ui_ready": {
+   "cat": "ui",
+   "desc": "ready \u2014 clamp",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 30,
+     "strong": 0.5,
+     "weak": 0.55
+    },
+    {
+     "t": 30,
+     "dur": 16,
+     "strong": 0.2,
+     "weak": 0.2
+    },
+    {
+     "t": 46,
+     "dur": 16,
+     "strong": 0.11,
+     "weak": 0.11
+    },
+    {
+     "t": 62,
+     "dur": 16,
+     "strong": 0.06,
+     "weak": 0.06
+    },
+    {
+     "t": 78,
+     "dur": 16,
+     "strong": 0.033,
+     "weak": 0.033
+    },
+    {
+     "t": 94,
+     "dur": 16,
+     "strong": 0.018,
+     "weak": 0.018
+    }
+   ],
+   "dur": 110,
+   "sound": "ui_ready"
+  },
+  "ui_countdown": {
+   "cat": "ui",
+   "desc": "countdown tick (3, 2, 1)",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 40,
+     "strong": 0.18,
+     "weak": 0.4
+    }
+   ],
+   "dur": 40,
+   "sound": "ui_countdown_3/2/1"
+  },
+  "ui_countdown_go": {
+   "cat": "ui",
+   "desc": "GO \u2014 the one big UI thump",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 60,
+     "strong": 0.85,
+     "weak": 1.0
+    },
+    {
+     "t": 60,
+     "dur": 16,
+     "strong": 0.6,
+     "weak": 0.5
+    },
+    {
+     "t": 76,
+     "dur": 16,
+     "strong": 0.534,
+     "weak": 0.445
+    },
+    {
+     "t": 92,
+     "dur": 16,
+     "strong": 0.475,
+     "weak": 0.396
+    },
+    {
+     "t": 108,
+     "dur": 16,
+     "strong": 0.423,
+     "weak": 0.352
+    },
+    {
+     "t": 124,
+     "dur": 16,
+     "strong": 0.376,
+     "weak": 0.314
+    },
+    {
+     "t": 140,
+     "dur": 16,
+     "strong": 0.335,
+     "weak": 0.279
+    },
+    {
+     "t": 156,
+     "dur": 16,
+     "strong": 0.298,
+     "weak": 0.248
+    },
+    {
+     "t": 172,
+     "dur": 16,
+     "strong": 0.265,
+     "weak": 0.221
+    },
+    {
+     "t": 188,
+     "dur": 16,
+     "strong": 0.236,
+     "weak": 0.197
+    },
+    {
+     "t": 204,
+     "dur": 16,
+     "strong": 0.21,
+     "weak": 0.175
+    },
+    {
+     "t": 220,
+     "dur": 16,
+     "strong": 0.187,
+     "weak": 0.156
+    },
+    {
+     "t": 236,
+     "dur": 16,
+     "strong": 0.166,
+     "weak": 0.139
+    },
+    {
+     "t": 252,
+     "dur": 16,
+     "strong": 0.148,
+     "weak": 0.123
+    },
+    {
+     "t": 268,
+     "dur": 16,
+     "strong": 0.132,
+     "weak": 0.11
+    },
+    {
+     "t": 284,
+     "dur": 16,
+     "strong": 0.117,
+     "weak": 0.098
+    },
+    {
+     "t": 300,
+     "dur": 16,
+     "strong": 0.104,
+     "weak": 0.087
+    },
+    {
+     "t": 316,
+     "dur": 16,
+     "strong": 0.093,
+     "weak": 0.077
+    },
+    {
+     "t": 332,
+     "dur": 16,
+     "strong": 0.083,
+     "weak": 0.069
+    },
+    {
+     "t": 348,
+     "dur": 16,
+     "strong": 0.073,
+     "weak": 0.061
+    },
+    {
+     "t": 364,
+     "dur": 16,
+     "strong": 0.065,
+     "weak": 0.054
+    },
+    {
+     "t": 380,
+     "dur": 16,
+     "strong": 0.058,
+     "weak": 0.048
+    },
+    {
+     "t": 396,
+     "dur": 16,
+     "strong": 0.052,
+     "weak": 0.043
+    },
+    {
+     "t": 412,
+     "dur": 16,
+     "strong": 0.046,
+     "weak": 0.038
+    },
+    {
+     "t": 428,
+     "dur": 16,
+     "strong": 0.041,
+     "weak": 0.034
+    },
+    {
+     "t": 444,
+     "dur": 16,
+     "strong": 0.036,
+     "weak": 0.03
+    },
+    {
+     "t": 460,
+     "dur": 16,
+     "strong": 0.032,
+     "weak": 0.027
+    },
+    {
+     "t": 476,
+     "dur": 16,
+     "strong": 0.029,
+     "weak": 0.024
+    },
+    {
+     "t": 492,
+     "dur": 16,
+     "strong": 0.026,
+     "weak": 0.021
+    },
+    {
+     "t": 508,
+     "dur": 16,
+     "strong": 0.023,
+     "weak": 0.019
+    },
+    {
+     "t": 524,
+     "dur": 16,
+     "strong": 0.02,
+     "weak": 0.017
+    }
+   ],
+   "dur": 540,
+   "sound": "ui_countdown_go"
+  },
+  "ui_map_open": {
+   "cat": "ui",
+   "desc": "map rise-reveal ripple (matches the 1000 ms ring)",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 16,
+     "strong": 0.0,
+     "weak": 0.05
+    },
+    {
+     "t": 16,
+     "dur": 16,
+     "strong": 0.004,
+     "weak": 0.063
+    },
+    {
+     "t": 32,
+     "dur": 16,
+     "strong": 0.008,
+     "weak": 0.076
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.013,
+     "weak": 0.089
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.017,
+     "weak": 0.103
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.021,
+     "weak": 0.116
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.025,
+     "weak": 0.129
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.029,
+     "weak": 0.142
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.034,
+     "weak": 0.155
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.038,
+     "weak": 0.168
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.042,
+     "weak": 0.182
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.046,
+     "weak": 0.195
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.051,
+     "weak": 0.208
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.055,
+     "weak": 0.221
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.059,
+     "weak": 0.234
+    },
+    {
+     "t": 240,
+     "dur": 16,
+     "strong": 0.063,
+     "weak": 0.247
+    },
+    {
+     "t": 256,
+     "dur": 16,
+     "strong": 0.067,
+     "weak": 0.261
+    },
+    {
+     "t": 272,
+     "dur": 16,
+     "strong": 0.072,
+     "weak": 0.274
+    },
+    {
+     "t": 288,
+     "dur": 16,
+     "strong": 0.076,
+     "weak": 0.287
+    },
+    {
+     "t": 304,
+     "dur": 16,
+     "strong": 0.08,
+     "weak": 0.3
+    },
+    {
+     "t": 320,
+     "dur": 16,
+     "strong": 0.08,
+     "weak": 0.3
+    },
+    {
+     "t": 336,
+     "dur": 16,
+     "strong": 0.069,
+     "weak": 0.258
+    },
+    {
+     "t": 352,
+     "dur": 16,
+     "strong": 0.059,
+     "weak": 0.222
+    },
+    {
+     "t": 368,
+     "dur": 16,
+     "strong": 0.051,
+     "weak": 0.191
+    },
+    {
+     "t": 384,
+     "dur": 16,
+     "strong": 0.044,
+     "weak": 0.165
+    },
+    {
+     "t": 400,
+     "dur": 16,
+     "strong": 0.038,
+     "weak": 0.142
+    },
+    {
+     "t": 416,
+     "dur": 16,
+     "strong": 0.033,
+     "weak": 0.122
+    },
+    {
+     "t": 432,
+     "dur": 16,
+     "strong": 0.028,
+     "weak": 0.105
+    },
+    {
+     "t": 448,
+     "dur": 16,
+     "strong": 0.024,
+     "weak": 0.09
+    },
+    {
+     "t": 464,
+     "dur": 16,
+     "strong": 0.021,
+     "weak": 0.078
+    },
+    {
+     "t": 480,
+     "dur": 16,
+     "strong": 0.018,
+     "weak": 0.067
+    },
+    {
+     "t": 496,
+     "dur": 16,
+     "strong": 0.015,
+     "weak": 0.058
+    },
+    {
+     "t": 512,
+     "dur": 16,
+     "strong": 0.013,
+     "weak": 0.05
+    },
+    {
+     "t": 528,
+     "dur": 16,
+     "strong": 0.011,
+     "weak": 0.043
+    },
+    {
+     "t": 544,
+     "dur": 16,
+     "strong": 0.01,
+     "weak": 0.037
+    },
+    {
+     "t": 560,
+     "dur": 16,
+     "strong": 0.008,
+     "weak": 0.032
+    },
+    {
+     "t": 576,
+     "dur": 16,
+     "strong": 0.007,
+     "weak": 0.027
+    },
+    {
+     "t": 592,
+     "dur": 16,
+     "strong": 0.006,
+     "weak": 0.023
+    },
+    {
+     "t": 608,
+     "dur": 16,
+     "strong": 0.005,
+     "weak": 0.02
+    },
+    {
+     "t": 624,
+     "dur": 16,
+     "strong": 0.005,
+     "weak": 0.017
+    }
+   ],
+   "dur": 640,
+   "sound": "ui_map_open"
+  },
+  "ui_map_ping": {
+   "cat": "ui",
+   "desc": "map ping + two echoes",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 20,
+     "strong": 0.0,
+     "weak": 0.5
+    },
+    {
+     "t": 220,
+     "dur": 16,
+     "strong": 0,
+     "weak": 0.25
+    },
+    {
+     "t": 440,
+     "dur": 16,
+     "strong": 0,
+     "weak": 0.12
+    }
+   ],
+   "dur": 456,
+   "sound": "ui_map_ping"
+  },
+  "ui_suit_change": {
+   "cat": "ui",
+   "desc": "palette wave on suit change (layer under the suit's own stinger haptic)",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 16,
+     "strong": 0.0,
+     "weak": 0.1
+    },
+    {
+     "t": 16,
+     "dur": 16,
+     "strong": 0.011,
+     "weak": 0.125
+    },
+    {
+     "t": 32,
+     "dur": 16,
+     "strong": 0.021,
+     "weak": 0.15
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.032,
+     "weak": 0.175
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.043,
+     "weak": 0.2
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.054,
+     "weak": 0.225
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.064,
+     "weak": 0.25
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.075,
+     "weak": 0.275
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.086,
+     "weak": 0.3
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.096,
+     "weak": 0.325
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.107,
+     "weak": 0.35
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.118,
+     "weak": 0.375
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.129,
+     "weak": 0.4
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.139,
+     "weak": 0.425
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.15,
+     "weak": 0.45
+    },
+    {
+     "t": 240,
+     "dur": 16,
+     "strong": 0.15,
+     "weak": 0.45
+    },
+    {
+     "t": 256,
+     "dur": 16,
+     "strong": 0.133,
+     "weak": 0.399
+    },
+    {
+     "t": 272,
+     "dur": 16,
+     "strong": 0.118,
+     "weak": 0.354
+    },
+    {
+     "t": 288,
+     "dur": 16,
+     "strong": 0.105,
+     "weak": 0.314
+    },
+    {
+     "t": 304,
+     "dur": 16,
+     "strong": 0.093,
+     "weak": 0.278
+    },
+    {
+     "t": 320,
+     "dur": 16,
+     "strong": 0.082,
+     "weak": 0.247
+    },
+    {
+     "t": 336,
+     "dur": 16,
+     "strong": 0.073,
+     "weak": 0.219
+    },
+    {
+     "t": 352,
+     "dur": 16,
+     "strong": 0.065,
+     "weak": 0.194
+    },
+    {
+     "t": 368,
+     "dur": 16,
+     "strong": 0.057,
+     "weak": 0.172
+    },
+    {
+     "t": 384,
+     "dur": 16,
+     "strong": 0.051,
+     "weak": 0.153
+    },
+    {
+     "t": 400,
+     "dur": 16,
+     "strong": 0.045,
+     "weak": 0.136
+    },
+    {
+     "t": 416,
+     "dur": 16,
+     "strong": 0.04,
+     "weak": 0.12
+    },
+    {
+     "t": 432,
+     "dur": 16,
+     "strong": 0.036,
+     "weak": 0.107
+    },
+    {
+     "t": 448,
+     "dur": 16,
+     "strong": 0.032,
+     "weak": 0.095
+    },
+    {
+     "t": 464,
+     "dur": 16,
+     "strong": 0.028,
+     "weak": 0.084
+    },
+    {
+     "t": 480,
+     "dur": 16,
+     "strong": 0.025,
+     "weak": 0.074
+    },
+    {
+     "t": 496,
+     "dur": 16,
+     "strong": 0.022,
+     "weak": 0.066
+    },
+    {
+     "t": 512,
+     "dur": 16,
+     "strong": 0.02,
+     "weak": 0.059
+    },
+    {
+     "t": 528,
+     "dur": 16,
+     "strong": 0.017,
+     "weak": 0.052
+    },
+    {
+     "t": 544,
+     "dur": 16,
+     "strong": 0.015,
+     "weak": 0.046
+    },
+    {
+     "t": 560,
+     "dur": 16,
+     "strong": 0.014,
+     "weak": 0.041
+    },
+    {
+     "t": 576,
+     "dur": 16,
+     "strong": 0.012,
+     "weak": 0.036
+    },
+    {
+     "t": 592,
+     "dur": 16,
+     "strong": 0.011,
+     "weak": 0.032
+    },
+    {
+     "t": 608,
+     "dur": 16,
+     "strong": 0.009,
+     "weak": 0.028
+    },
+    {
+     "t": 624,
+     "dur": 16,
+     "strong": 0.008,
+     "weak": 0.025
+    }
+   ],
+   "dur": 640,
+   "sound": "ui_retint_wave"
+  },
+  "suit_mk1": {
+   "cat": "suit",
+   "desc": "Mk I \u2014 clunky hydraulic, two heavy clanks",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 60,
+     "strong": 0.6,
+     "weak": 0.15
+    },
+    {
+     "t": 250,
+     "dur": 70,
+     "strong": 0.8,
+     "weak": 0.3
+    },
+    {
+     "t": 320,
+     "dur": 16,
+     "strong": 0.3,
+     "weak": 0.1
+    },
+    {
+     "t": 336,
+     "dur": 16,
+     "strong": 0.234,
+     "weak": 0.078
+    },
+    {
+     "t": 352,
+     "dur": 16,
+     "strong": 0.182,
+     "weak": 0.061
+    },
+    {
+     "t": 368,
+     "dur": 16,
+     "strong": 0.142,
+     "weak": 0.047
+    },
+    {
+     "t": 384,
+     "dur": 16,
+     "strong": 0.11,
+     "weak": 0.037
+    },
+    {
+     "t": 400,
+     "dur": 16,
+     "strong": 0.086,
+     "weak": 0.029
+    },
+    {
+     "t": 416,
+     "dur": 16,
+     "strong": 0.067,
+     "weak": 0.022
+    },
+    {
+     "t": 432,
+     "dur": 16,
+     "strong": 0.052,
+     "weak": 0.017
+    },
+    {
+     "t": 448,
+     "dur": 16,
+     "strong": 0.041,
+     "weak": 0.014
+    },
+    {
+     "t": 464,
+     "dur": 16,
+     "strong": 0.032,
+     "weak": 0.011
+    },
+    {
+     "t": 480,
+     "dur": 16,
+     "strong": 0.025,
+     "weak": 0.008
+    },
+    {
+     "t": 496,
+     "dur": 16,
+     "strong": 0.019,
+     "weak": 0.006
+    }
+   ],
+   "dur": 512,
+   "sound": "ui_suit_mk1"
+  },
+  "suit_mk2": {
+   "cat": "suit",
+   "desc": "Mk II \u2014 quick servo buzz + crisp clamp",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 16,
+     "strong": 0.0,
+     "weak": 0.2
+    },
+    {
+     "t": 16,
+     "dur": 16,
+     "strong": 0.006,
+     "weak": 0.222
+    },
+    {
+     "t": 32,
+     "dur": 16,
+     "strong": 0.011,
+     "weak": 0.244
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.017,
+     "weak": 0.267
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.022,
+     "weak": 0.289
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.028,
+     "weak": 0.311
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.033,
+     "weak": 0.333
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.039,
+     "weak": 0.356
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.044,
+     "weak": 0.378
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.05,
+     "weak": 0.4
+    },
+    {
+     "t": 200,
+     "dur": 30,
+     "strong": 0.45,
+     "weak": 0.7
+    }
+   ],
+   "dur": 230,
+   "sound": "ui_suit_mk2"
+  },
+  "suit_mk3": {
+   "cat": "suit",
+   "desc": "Mk III \u2014 faceplate slam",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 50,
+     "strong": 0.9,
+     "weak": 0.7
+    },
+    {
+     "t": 50,
+     "dur": 16,
+     "strong": 0.4,
+     "weak": 0.3
+    },
+    {
+     "t": 66,
+     "dur": 16,
+     "strong": 0.339,
+     "weak": 0.254
+    },
+    {
+     "t": 82,
+     "dur": 16,
+     "strong": 0.287,
+     "weak": 0.215
+    },
+    {
+     "t": 98,
+     "dur": 16,
+     "strong": 0.243,
+     "weak": 0.182
+    },
+    {
+     "t": 114,
+     "dur": 16,
+     "strong": 0.205,
+     "weak": 0.154
+    },
+    {
+     "t": 130,
+     "dur": 16,
+     "strong": 0.174,
+     "weak": 0.13
+    },
+    {
+     "t": 146,
+     "dur": 16,
+     "strong": 0.147,
+     "weak": 0.11
+    },
+    {
+     "t": 162,
+     "dur": 16,
+     "strong": 0.125,
+     "weak": 0.093
+    },
+    {
+     "t": 178,
+     "dur": 16,
+     "strong": 0.105,
+     "weak": 0.079
+    },
+    {
+     "t": 194,
+     "dur": 16,
+     "strong": 0.089,
+     "weak": 0.067
+    },
+    {
+     "t": 210,
+     "dur": 16,
+     "strong": 0.076,
+     "weak": 0.057
+    },
+    {
+     "t": 226,
+     "dur": 16,
+     "strong": 0.064,
+     "weak": 0.048
+    },
+    {
+     "t": 242,
+     "dur": 16,
+     "strong": 0.054,
+     "weak": 0.041
+    },
+    {
+     "t": 258,
+     "dur": 16,
+     "strong": 0.046,
+     "weak": 0.034
+    },
+    {
+     "t": 274,
+     "dur": 16,
+     "strong": 0.039,
+     "weak": 0.029
+    },
+    {
+     "t": 290,
+     "dur": 16,
+     "strong": 0.033,
+     "weak": 0.025
+    },
+    {
+     "t": 306,
+     "dur": 16,
+     "strong": 0.028,
+     "weak": 0.021
+    },
+    {
+     "t": 322,
+     "dur": 16,
+     "strong": 0.024,
+     "weak": 0.018
+    }
+   ],
+   "dur": 338,
+   "sound": "ui_suit_mk3"
+  },
+  "suit_mk42": {
+   "cat": "suit",
+   "desc": "Mk 42 \u2014 machine-gun plate clamps",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 24,
+     "strong": 0.35,
+     "weak": 0.5
+    },
+    {
+     "t": 90,
+     "dur": 24,
+     "strong": 0.4,
+     "weak": 0.5
+    },
+    {
+     "t": 180,
+     "dur": 24,
+     "strong": 0.45,
+     "weak": 0.5
+    },
+    {
+     "t": 270,
+     "dur": 24,
+     "strong": 0.5,
+     "weak": 0.5
+    },
+    {
+     "t": 360,
+     "dur": 24,
+     "strong": 0.55,
+     "weak": 0.5
+    },
+    {
+     "t": 450,
+     "dur": 50,
+     "strong": 0.8,
+     "weak": 0.8
+    }
+   ],
+   "dur": 500,
+   "sound": "ui_suit_mk42"
+  },
+  "suit_mk85": {
+   "cat": "suit",
+   "desc": "Mk 85 \u2014 nano flow swell then lock",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 16,
+     "strong": 0.0,
+     "weak": 0.05
+    },
+    {
+     "t": 16,
+     "dur": 16,
+     "strong": 0.005,
+     "weak": 0.065
+    },
+    {
+     "t": 32,
+     "dur": 16,
+     "strong": 0.01,
+     "weak": 0.08
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.015,
+     "weak": 0.095
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.02,
+     "weak": 0.11
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.025,
+     "weak": 0.125
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.03,
+     "weak": 0.14
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.035,
+     "weak": 0.155
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.04,
+     "weak": 0.17
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.045,
+     "weak": 0.185
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.05,
+     "weak": 0.2
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.055,
+     "weak": 0.215
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.06,
+     "weak": 0.23
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.065,
+     "weak": 0.245
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.07,
+     "weak": 0.26
+    },
+    {
+     "t": 240,
+     "dur": 16,
+     "strong": 0.075,
+     "weak": 0.275
+    },
+    {
+     "t": 256,
+     "dur": 16,
+     "strong": 0.08,
+     "weak": 0.29
+    },
+    {
+     "t": 272,
+     "dur": 16,
+     "strong": 0.085,
+     "weak": 0.305
+    },
+    {
+     "t": 288,
+     "dur": 16,
+     "strong": 0.09,
+     "weak": 0.32
+    },
+    {
+     "t": 304,
+     "dur": 16,
+     "strong": 0.095,
+     "weak": 0.335
+    },
+    {
+     "t": 320,
+     "dur": 16,
+     "strong": 0.1,
+     "weak": 0.35
+    },
+    {
+     "t": 550,
+     "dur": 40,
+     "strong": 0.5,
+     "weak": 0.7
+    },
+    {
+     "t": 590,
+     "dur": 16,
+     "strong": 0.2,
+     "weak": 0.3
+    },
+    {
+     "t": 606,
+     "dur": 16,
+     "strong": 0.164,
+     "weak": 0.246
+    },
+    {
+     "t": 622,
+     "dur": 16,
+     "strong": 0.134,
+     "weak": 0.201
+    },
+    {
+     "t": 638,
+     "dur": 16,
+     "strong": 0.11,
+     "weak": 0.165
+    },
+    {
+     "t": 654,
+     "dur": 16,
+     "strong": 0.09,
+     "weak": 0.135
+    },
+    {
+     "t": 670,
+     "dur": 16,
+     "strong": 0.074,
+     "weak": 0.11
+    },
+    {
+     "t": 686,
+     "dur": 16,
+     "strong": 0.06,
+     "weak": 0.09
+    },
+    {
+     "t": 702,
+     "dur": 16,
+     "strong": 0.049,
+     "weak": 0.074
+    },
+    {
+     "t": 718,
+     "dur": 16,
+     "strong": 0.04,
+     "weak": 0.061
+    },
+    {
+     "t": 734,
+     "dur": 16,
+     "strong": 0.033,
+     "weak": 0.05
+    },
+    {
+     "t": 750,
+     "dur": 16,
+     "strong": 0.027,
+     "weak": 0.041
+    },
+    {
+     "t": 766,
+     "dur": 16,
+     "strong": 0.022,
+     "weak": 0.033
+    },
+    {
+     "t": 782,
+     "dur": 16,
+     "strong": 0.018,
+     "weak": 0.027
+    },
+    {
+     "t": 798,
+     "dur": 16,
+     "strong": 0.015,
+     "weak": 0.022
+    },
+    {
+     "t": 814,
+     "dur": 16,
+     "strong": 0.012,
+     "weak": 0.018
+    }
+   ],
+   "dur": 830,
+   "sound": "ui_suit_mk85"
+  },
+  "suit_hulkbuster": {
+   "cat": "suit",
+   "desc": "Hulkbuster \u2014 heavy clamp then a giant step",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 80,
+     "strong": 0.9,
+     "weak": 0.4
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.4,
+     "weak": 0.1
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.312,
+     "weak": 0.078
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.243,
+     "weak": 0.061
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.189,
+     "weak": 0.047
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.147,
+     "weak": 0.037
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.115,
+     "weak": 0.029
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.089,
+     "weak": 0.022
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.07,
+     "weak": 0.017
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.054,
+     "weak": 0.014
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.042,
+     "weak": 0.011
+    },
+    {
+     "t": 240,
+     "dur": 16,
+     "strong": 0.033,
+     "weak": 0.008
+    },
+    {
+     "t": 256,
+     "dur": 16,
+     "strong": 0.026,
+     "weak": 0.006
+    },
+    {
+     "t": 350,
+     "dur": 100,
+     "strong": 1.0,
+     "weak": 0.5
+    },
+    {
+     "t": 450,
+     "dur": 16,
+     "strong": 0.4,
+     "weak": 0.1
+    },
+    {
+     "t": 466,
+     "dur": 16,
+     "strong": 0.339,
+     "weak": 0.085
+    },
+    {
+     "t": 482,
+     "dur": 16,
+     "strong": 0.287,
+     "weak": 0.072
+    },
+    {
+     "t": 498,
+     "dur": 16,
+     "strong": 0.243,
+     "weak": 0.061
+    },
+    {
+     "t": 514,
+     "dur": 16,
+     "strong": 0.205,
+     "weak": 0.051
+    },
+    {
+     "t": 530,
+     "dur": 16,
+     "strong": 0.174,
+     "weak": 0.043
+    },
+    {
+     "t": 546,
+     "dur": 16,
+     "strong": 0.147,
+     "weak": 0.037
+    },
+    {
+     "t": 562,
+     "dur": 16,
+     "strong": 0.125,
+     "weak": 0.031
+    },
+    {
+     "t": 578,
+     "dur": 16,
+     "strong": 0.105,
+     "weak": 0.026
+    },
+    {
+     "t": 594,
+     "dur": 16,
+     "strong": 0.089,
+     "weak": 0.022
+    },
+    {
+     "t": 610,
+     "dur": 16,
+     "strong": 0.076,
+     "weak": 0.019
+    },
+    {
+     "t": 626,
+     "dur": 16,
+     "strong": 0.064,
+     "weak": 0.016
+    },
+    {
+     "t": 642,
+     "dur": 16,
+     "strong": 0.054,
+     "weak": 0.014
+    },
+    {
+     "t": 658,
+     "dur": 16,
+     "strong": 0.046,
+     "weak": 0.011
+    },
+    {
+     "t": 674,
+     "dur": 16,
+     "strong": 0.039,
+     "weak": 0.01
+    },
+    {
+     "t": 690,
+     "dur": 16,
+     "strong": 0.033,
+     "weak": 0.008
+    },
+    {
+     "t": 706,
+     "dur": 16,
+     "strong": 0.028,
+     "weak": 0.007
+    },
+    {
+     "t": 722,
+     "dur": 16,
+     "strong": 0.024,
+     "weak": 0.006
+    }
+   ],
+   "dur": 738,
+   "sound": "ui_suit_hulkbuster"
+  },
+  "suit_ironspider": {
+   "cat": "suit",
+   "desc": "Iron Spider \u2014 nano seal + four quick leg ticks",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 40,
+     "strong": 0.2,
+     "weak": 0.5
+    },
+    {
+     "t": 150,
+     "dur": 16,
+     "strong": 0.05,
+     "weak": 0.4
+    },
+    {
+     "t": 210,
+     "dur": 16,
+     "strong": 0.05,
+     "weak": 0.4
+    },
+    {
+     "t": 270,
+     "dur": 16,
+     "strong": 0.05,
+     "weak": 0.4
+    },
+    {
+     "t": 330,
+     "dur": 16,
+     "strong": 0.05,
+     "weak": 0.4
+    },
+    {
+     "t": 560,
+     "dur": 20,
+     "strong": 0.0,
+     "weak": 0.3
+    }
+   ],
+   "dur": 580,
+   "sound": "ui_suit_ironspider"
+  },
+  "suit_peter": {
+   "cat": "suit",
+   "desc": "Peter \u2014 thwip + sneaker landing",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 20,
+     "strong": 0,
+     "weak": 0.55
+    },
+    {
+     "t": 220,
+     "dur": 40,
+     "strong": 0.3,
+     "weak": 0.2
+    }
+   ],
+   "dur": 260,
+   "sound": "ui_suit_peter"
+  },
+  "repulsor_shot": {
+   "cat": "combat",
+   "desc": "repulsor shot \u2014 snap + recoil (right trigger kick)",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 32,
+     "strong": 0.35,
+     "weak": 0.9,
+     "right": 0.6
+    },
+    {
+     "t": 32,
+     "dur": 16,
+     "strong": 0.2,
+     "weak": 0.35,
+     "right": 0.3
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.11,
+     "weak": 0.192,
+     "right": 0.165
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.06,
+     "weak": 0.105,
+     "right": 0.09
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.033,
+     "weak": 0.058,
+     "right": 0.05
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.018,
+     "weak": 0.032,
+     "right": 0.027
+    }
+   ],
+   "dur": 112,
+   "sound": "core/repulsor_fire_*"
+  },
+  "repulsor_charged": {
+   "cat": "combat",
+   "desc": "charged blast release \u2014 heavy (charge-up is continuous 'charge')",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 64,
+     "strong": 1.0,
+     "weak": 1.0,
+     "right": 1.0
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.8,
+     "weak": 0.6,
+     "right": 0.6
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.707,
+     "weak": 0.531,
+     "right": 0.531
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.625,
+     "weak": 0.469,
+     "right": 0.469
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.553,
+     "weak": 0.415,
+     "right": 0.415
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.489,
+     "weak": 0.367,
+     "right": 0.367
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.432,
+     "weak": 0.324,
+     "right": 0.324
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.382,
+     "weak": 0.287,
+     "right": 0.287
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.338,
+     "weak": 0.254,
+     "right": 0.254
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.299,
+     "weak": 0.224,
+     "right": 0.224
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.264,
+     "weak": 0.198,
+     "right": 0.198
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.234,
+     "weak": 0.175,
+     "right": 0.175
+    },
+    {
+     "t": 240,
+     "dur": 16,
+     "strong": 0.207,
+     "weak": 0.155,
+     "right": 0.155
+    },
+    {
+     "t": 256,
+     "dur": 16,
+     "strong": 0.183,
+     "weak": 0.137,
+     "right": 0.137
+    },
+    {
+     "t": 272,
+     "dur": 16,
+     "strong": 0.162,
+     "weak": 0.121,
+     "right": 0.121
+    },
+    {
+     "t": 288,
+     "dur": 16,
+     "strong": 0.143,
+     "weak": 0.107,
+     "right": 0.107
+    },
+    {
+     "t": 304,
+     "dur": 16,
+     "strong": 0.126,
+     "weak": 0.095,
+     "right": 0.095
+    },
+    {
+     "t": 320,
+     "dur": 16,
+     "strong": 0.112,
+     "weak": 0.084,
+     "right": 0.084
+    },
+    {
+     "t": 336,
+     "dur": 16,
+     "strong": 0.099,
+     "weak": 0.074,
+     "right": 0.074
+    },
+    {
+     "t": 352,
+     "dur": 16,
+     "strong": 0.087,
+     "weak": 0.065,
+     "right": 0.065
+    },
+    {
+     "t": 368,
+     "dur": 16,
+     "strong": 0.077,
+     "weak": 0.058,
+     "right": 0.058
+    },
+    {
+     "t": 384,
+     "dur": 16,
+     "strong": 0.068,
+     "weak": 0.051,
+     "right": 0.051
+    },
+    {
+     "t": 400,
+     "dur": 16,
+     "strong": 0.06,
+     "weak": 0.045,
+     "right": 0.045
+    },
+    {
+     "t": 416,
+     "dur": 16,
+     "strong": 0.053,
+     "weak": 0.04,
+     "right": 0.04
+    },
+    {
+     "t": 432,
+     "dur": 16,
+     "strong": 0.047,
+     "weak": 0.035,
+     "right": 0.035
+    },
+    {
+     "t": 448,
+     "dur": 16,
+     "strong": 0.042,
+     "weak": 0.031,
+     "right": 0.031
+    },
+    {
+     "t": 464,
+     "dur": 16,
+     "strong": 0.037,
+     "weak": 0.028,
+     "right": 0.028
+    }
+   ],
+   "dur": 480,
+   "sound": "core/repulsor_fire_big"
+  },
+  "unibeam": {
+   "cat": "combat",
+   "desc": "unibeam fire \u2014 sustained burn 0.8 s with flutter",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 32,
+     "strong": 0.55,
+     "weak": 0.7
+    },
+    {
+     "t": 32,
+     "dur": 32,
+     "strong": 0.65,
+     "weak": 0.6
+    },
+    {
+     "t": 64,
+     "dur": 32,
+     "strong": 0.55,
+     "weak": 0.7
+    },
+    {
+     "t": 96,
+     "dur": 32,
+     "strong": 0.65,
+     "weak": 0.6
+    },
+    {
+     "t": 128,
+     "dur": 32,
+     "strong": 0.55,
+     "weak": 0.7
+    },
+    {
+     "t": 160,
+     "dur": 32,
+     "strong": 0.65,
+     "weak": 0.6
+    },
+    {
+     "t": 192,
+     "dur": 32,
+     "strong": 0.55,
+     "weak": 0.7
+    },
+    {
+     "t": 224,
+     "dur": 32,
+     "strong": 0.65,
+     "weak": 0.6
+    },
+    {
+     "t": 256,
+     "dur": 32,
+     "strong": 0.55,
+     "weak": 0.7
+    },
+    {
+     "t": 288,
+     "dur": 32,
+     "strong": 0.65,
+     "weak": 0.6
+    },
+    {
+     "t": 320,
+     "dur": 32,
+     "strong": 0.55,
+     "weak": 0.7
+    },
+    {
+     "t": 352,
+     "dur": 32,
+     "strong": 0.65,
+     "weak": 0.6
+    },
+    {
+     "t": 384,
+     "dur": 32,
+     "strong": 0.55,
+     "weak": 0.7
+    },
+    {
+     "t": 416,
+     "dur": 32,
+     "strong": 0.65,
+     "weak": 0.6
+    },
+    {
+     "t": 448,
+     "dur": 32,
+     "strong": 0.55,
+     "weak": 0.7
+    },
+    {
+     "t": 480,
+     "dur": 32,
+     "strong": 0.65,
+     "weak": 0.6
+    },
+    {
+     "t": 512,
+     "dur": 32,
+     "strong": 0.55,
+     "weak": 0.7
+    },
+    {
+     "t": 544,
+     "dur": 32,
+     "strong": 0.65,
+     "weak": 0.6
+    },
+    {
+     "t": 576,
+     "dur": 32,
+     "strong": 0.55,
+     "weak": 0.7
+    },
+    {
+     "t": 608,
+     "dur": 32,
+     "strong": 0.65,
+     "weak": 0.6
+    },
+    {
+     "t": 640,
+     "dur": 32,
+     "strong": 0.55,
+     "weak": 0.7
+    },
+    {
+     "t": 672,
+     "dur": 32,
+     "strong": 0.65,
+     "weak": 0.6
+    },
+    {
+     "t": 704,
+     "dur": 32,
+     "strong": 0.55,
+     "weak": 0.7
+    },
+    {
+     "t": 736,
+     "dur": 32,
+     "strong": 0.65,
+     "weak": 0.6
+    },
+    {
+     "t": 768,
+     "dur": 32,
+     "strong": 0.55,
+     "weak": 0.7
+    },
+    {
+     "t": 800,
+     "dur": 16,
+     "strong": 0.5,
+     "weak": 0.6
+    },
+    {
+     "t": 816,
+     "dur": 16,
+     "strong": 0.389,
+     "weak": 0.467
+    },
+    {
+     "t": 832,
+     "dur": 16,
+     "strong": 0.303,
+     "weak": 0.364
+    },
+    {
+     "t": 848,
+     "dur": 16,
+     "strong": 0.236,
+     "weak": 0.283
+    },
+    {
+     "t": 864,
+     "dur": 16,
+     "strong": 0.184,
+     "weak": 0.221
+    },
+    {
+     "t": 880,
+     "dur": 16,
+     "strong": 0.143,
+     "weak": 0.172
+    },
+    {
+     "t": 896,
+     "dur": 16,
+     "strong": 0.112,
+     "weak": 0.134
+    },
+    {
+     "t": 912,
+     "dur": 16,
+     "strong": 0.087,
+     "weak": 0.104
+    },
+    {
+     "t": 928,
+     "dur": 16,
+     "strong": 0.068,
+     "weak": 0.081
+    },
+    {
+     "t": 944,
+     "dur": 16,
+     "strong": 0.053,
+     "weak": 0.063
+    },
+    {
+     "t": 960,
+     "dur": 16,
+     "strong": 0.041,
+     "weak": 0.049
+    },
+    {
+     "t": 976,
+     "dur": 16,
+     "strong": 0.032,
+     "weak": 0.038
+    }
+   ],
+   "dur": 992,
+   "sound": "mk85/im_unibeam_fire"
+  },
+  "boost": {
+   "cat": "movement",
+   "desc": "boost kick \u2014 thump, then pressure fading",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 48,
+     "strong": 0.7,
+     "weak": 0.9,
+     "left": 0.4,
+     "right": 0.4
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.45,
+     "weak": 0.4,
+     "left": 0.2,
+     "right": 0.2
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.402,
+     "weak": 0.357,
+     "left": 0.179,
+     "right": 0.179
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.359,
+     "weak": 0.319,
+     "left": 0.159,
+     "right": 0.159
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.32,
+     "weak": 0.284,
+     "left": 0.142,
+     "right": 0.142
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.286,
+     "weak": 0.254,
+     "left": 0.127,
+     "right": 0.127
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.255,
+     "weak": 0.227,
+     "left": 0.113,
+     "right": 0.113
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.228,
+     "weak": 0.202,
+     "left": 0.101,
+     "right": 0.101
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.203,
+     "weak": 0.181,
+     "left": 0.09,
+     "right": 0.09
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.181,
+     "weak": 0.161,
+     "left": 0.081,
+     "right": 0.081
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.162,
+     "weak": 0.144,
+     "left": 0.072,
+     "right": 0.072
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.144,
+     "weak": 0.128,
+     "left": 0.064,
+     "right": 0.064
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.129,
+     "weak": 0.115,
+     "left": 0.057,
+     "right": 0.057
+    },
+    {
+     "t": 240,
+     "dur": 16,
+     "strong": 0.115,
+     "weak": 0.102,
+     "left": 0.051,
+     "right": 0.051
+    },
+    {
+     "t": 256,
+     "dur": 16,
+     "strong": 0.103,
+     "weak": 0.091,
+     "left": 0.046,
+     "right": 0.046
+    },
+    {
+     "t": 272,
+     "dur": 16,
+     "strong": 0.092,
+     "weak": 0.081,
+     "left": 0.041,
+     "right": 0.041
+    },
+    {
+     "t": 288,
+     "dur": 16,
+     "strong": 0.082,
+     "weak": 0.073,
+     "left": 0.036,
+     "right": 0.036
+    },
+    {
+     "t": 304,
+     "dur": 16,
+     "strong": 0.073,
+     "weak": 0.065,
+     "left": 0.032,
+     "right": 0.032
+    },
+    {
+     "t": 320,
+     "dur": 16,
+     "strong": 0.065,
+     "weak": 0.058,
+     "left": 0.029,
+     "right": 0.029
+    },
+    {
+     "t": 336,
+     "dur": 16,
+     "strong": 0.058,
+     "weak": 0.052,
+     "left": 0.026,
+     "right": 0.026
+    },
+    {
+     "t": 352,
+     "dur": 16,
+     "strong": 0.052,
+     "weak": 0.046,
+     "left": 0.023,
+     "right": 0.023
+    },
+    {
+     "t": 368,
+     "dur": 16,
+     "strong": 0.046,
+     "weak": 0.041,
+     "left": 0.021,
+     "right": 0.021
+    },
+    {
+     "t": 384,
+     "dur": 16,
+     "strong": 0.041,
+     "weak": 0.037,
+     "left": 0.018,
+     "right": 0.018
+    }
+   ],
+   "dur": 400,
+   "sound": "mk85/im_boost"
+  },
+  "brake": {
+   "cat": "movement",
+   "desc": "air brake \u2014 pressure pulse that eases off (the flight model brakes in 0.85 s)",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 16,
+     "strong": 0.2,
+     "weak": 0.2
+    },
+    {
+     "t": 16,
+     "dur": 16,
+     "strong": 0.288,
+     "weak": 0.237
+    },
+    {
+     "t": 32,
+     "dur": 16,
+     "strong": 0.375,
+     "weak": 0.275
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.463,
+     "weak": 0.312
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.55,
+     "weak": 0.35
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.55,
+     "weak": 0.35
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.518,
+     "weak": 0.33
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.488,
+     "weak": 0.311
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.46,
+     "weak": 0.293
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.434,
+     "weak": 0.276
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.409,
+     "weak": 0.26
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.385,
+     "weak": 0.245
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.363,
+     "weak": 0.231
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.342,
+     "weak": 0.218
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.322,
+     "weak": 0.205
+    },
+    {
+     "t": 240,
+     "dur": 16,
+     "strong": 0.303,
+     "weak": 0.193
+    },
+    {
+     "t": 256,
+     "dur": 16,
+     "strong": 0.286,
+     "weak": 0.182
+    },
+    {
+     "t": 272,
+     "dur": 16,
+     "strong": 0.269,
+     "weak": 0.171
+    },
+    {
+     "t": 288,
+     "dur": 16,
+     "strong": 0.254,
+     "weak": 0.162
+    },
+    {
+     "t": 304,
+     "dur": 16,
+     "strong": 0.239,
+     "weak": 0.152
+    },
+    {
+     "t": 320,
+     "dur": 16,
+     "strong": 0.225,
+     "weak": 0.143
+    },
+    {
+     "t": 336,
+     "dur": 16,
+     "strong": 0.212,
+     "weak": 0.135
+    },
+    {
+     "t": 352,
+     "dur": 16,
+     "strong": 0.2,
+     "weak": 0.127
+    },
+    {
+     "t": 368,
+     "dur": 16,
+     "strong": 0.189,
+     "weak": 0.12
+    },
+    {
+     "t": 384,
+     "dur": 16,
+     "strong": 0.178,
+     "weak": 0.113
+    },
+    {
+     "t": 400,
+     "dur": 16,
+     "strong": 0.167,
+     "weak": 0.107
+    },
+    {
+     "t": 416,
+     "dur": 16,
+     "strong": 0.158,
+     "weak": 0.1
+    },
+    {
+     "t": 432,
+     "dur": 16,
+     "strong": 0.149,
+     "weak": 0.095
+    },
+    {
+     "t": 448,
+     "dur": 16,
+     "strong": 0.14,
+     "weak": 0.089
+    },
+    {
+     "t": 464,
+     "dur": 16,
+     "strong": 0.132,
+     "weak": 0.084
+    },
+    {
+     "t": 480,
+     "dur": 16,
+     "strong": 0.124,
+     "weak": 0.079
+    },
+    {
+     "t": 496,
+     "dur": 16,
+     "strong": 0.117,
+     "weak": 0.075
+    },
+    {
+     "t": 512,
+     "dur": 16,
+     "strong": 0.11,
+     "weak": 0.07
+    },
+    {
+     "t": 528,
+     "dur": 16,
+     "strong": 0.104,
+     "weak": 0.066
+    },
+    {
+     "t": 544,
+     "dur": 16,
+     "strong": 0.098,
+     "weak": 0.062
+    },
+    {
+     "t": 560,
+     "dur": 16,
+     "strong": 0.092,
+     "weak": 0.059
+    },
+    {
+     "t": 576,
+     "dur": 16,
+     "strong": 0.087,
+     "weak": 0.055
+    },
+    {
+     "t": 592,
+     "dur": 16,
+     "strong": 0.082,
+     "weak": 0.052
+    },
+    {
+     "t": 608,
+     "dur": 16,
+     "strong": 0.077,
+     "weak": 0.049
+    },
+    {
+     "t": 624,
+     "dur": 16,
+     "strong": 0.073,
+     "weak": 0.046
+    },
+    {
+     "t": 640,
+     "dur": 16,
+     "strong": 0.069,
+     "weak": 0.044
+    },
+    {
+     "t": 656,
+     "dur": 16,
+     "strong": 0.065,
+     "weak": 0.041
+    }
+   ],
+   "dur": 672,
+   "sound": "mk85/im_brake"
+  },
+  "takeoff": {
+   "cat": "movement",
+   "desc": "take-off burst",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 48,
+     "strong": 0.6,
+     "weak": 0.8
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.4,
+     "weak": 0.5
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.362,
+     "weak": 0.452
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.327,
+     "weak": 0.409
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.296,
+     "weak": 0.37
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.268,
+     "weak": 0.335
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.243,
+     "weak": 0.303
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.22,
+     "weak": 0.274
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.199,
+     "weak": 0.248
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.18,
+     "weak": 0.225
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.163,
+     "weak": 0.203
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.147,
+     "weak": 0.184
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.133,
+     "weak": 0.166
+    },
+    {
+     "t": 240,
+     "dur": 16,
+     "strong": 0.12,
+     "weak": 0.151
+    },
+    {
+     "t": 256,
+     "dur": 16,
+     "strong": 0.109,
+     "weak": 0.136
+    },
+    {
+     "t": 272,
+     "dur": 16,
+     "strong": 0.099,
+     "weak": 0.123
+    },
+    {
+     "t": 288,
+     "dur": 16,
+     "strong": 0.089,
+     "weak": 0.112
+    },
+    {
+     "t": 304,
+     "dur": 16,
+     "strong": 0.081,
+     "weak": 0.101
+    },
+    {
+     "t": 320,
+     "dur": 16,
+     "strong": 0.073,
+     "weak": 0.091
+    },
+    {
+     "t": 336,
+     "dur": 16,
+     "strong": 0.066,
+     "weak": 0.083
+    },
+    {
+     "t": 352,
+     "dur": 16,
+     "strong": 0.06,
+     "weak": 0.075
+    },
+    {
+     "t": 368,
+     "dur": 16,
+     "strong": 0.054,
+     "weak": 0.068
+    },
+    {
+     "t": 384,
+     "dur": 16,
+     "strong": 0.049,
+     "weak": 0.061
+    },
+    {
+     "t": 400,
+     "dur": 16,
+     "strong": 0.044,
+     "weak": 0.055
+    },
+    {
+     "t": 416,
+     "dur": 16,
+     "strong": 0.04,
+     "weak": 0.05
+    },
+    {
+     "t": 432,
+     "dur": 16,
+     "strong": 0.036,
+     "weak": 0.045
+    }
+   ],
+   "dur": 448,
+   "sound": "mk85/im_takeoff"
+  },
+  "land_soft": {
+   "cat": "movement",
+   "desc": "landing under 6 m/s",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 32,
+     "strong": 0.25,
+     "weak": 0.275
+    },
+    {
+     "t": 32,
+     "dur": 16,
+     "strong": 0.175,
+     "weak": 0.1
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.114,
+     "weak": 0.065
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.074,
+     "weak": 0.042
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.048,
+     "weak": 0.028
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.032,
+     "weak": 0.018
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.021,
+     "weak": 0.012
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.013,
+     "weak": 0.008
+    }
+   ],
+   "dur": 144,
+   "sound": "mk85/im_land_*"
+  },
+  "land_medium": {
+   "cat": "movement",
+   "desc": "landing 6-15 m/s",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 48,
+     "strong": 0.5,
+     "weak": 0.55
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.35,
+     "weak": 0.2
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.273,
+     "weak": 0.156
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.212,
+     "weak": 0.121
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.165,
+     "weak": 0.094
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.129,
+     "weak": 0.074
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.1,
+     "weak": 0.057
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.078,
+     "weak": 0.045
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.061,
+     "weak": 0.035
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.047,
+     "weak": 0.027
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.037,
+     "weak": 0.021
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.029,
+     "weak": 0.016
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.022,
+     "weak": 0.013
+    }
+   ],
+   "dur": 240,
+   "sound": "mk85/im_land_*"
+  },
+  "land_hard": {
+   "cat": "movement",
+   "desc": "landing 15-30 m/s",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 64,
+     "strong": 0.8,
+     "weak": 0.88
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.56,
+     "weak": 0.32
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.482,
+     "weak": 0.275
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.415,
+     "weak": 0.237
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.357,
+     "weak": 0.204
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.307,
+     "weak": 0.176
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.265,
+     "weak": 0.151
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.228,
+     "weak": 0.13
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.196,
+     "weak": 0.112
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.169,
+     "weak": 0.096
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.145,
+     "weak": 0.083
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.125,
+     "weak": 0.071
+    },
+    {
+     "t": 240,
+     "dur": 16,
+     "strong": 0.108,
+     "weak": 0.061
+    },
+    {
+     "t": 256,
+     "dur": 16,
+     "strong": 0.093,
+     "weak": 0.053
+    },
+    {
+     "t": 272,
+     "dur": 16,
+     "strong": 0.08,
+     "weak": 0.046
+    },
+    {
+     "t": 288,
+     "dur": 16,
+     "strong": 0.069,
+     "weak": 0.039
+    },
+    {
+     "t": 304,
+     "dur": 16,
+     "strong": 0.059,
+     "weak": 0.034
+    },
+    {
+     "t": 320,
+     "dur": 16,
+     "strong": 0.051,
+     "weak": 0.029
+    },
+    {
+     "t": 336,
+     "dur": 16,
+     "strong": 0.044,
+     "weak": 0.025
+    },
+    {
+     "t": 352,
+     "dur": 16,
+     "strong": 0.038,
+     "weak": 0.022
+    },
+    {
+     "t": 368,
+     "dur": 16,
+     "strong": 0.032,
+     "weak": 0.019
+    }
+   ],
+   "dur": 384,
+   "sound": "mk85/im_land_*"
+  },
+  "land_hero": {
+   "cat": "movement",
+   "desc": "landing superhero landing / > 30 m/s",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 80,
+     "strong": 1.0,
+     "weak": 1
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.7,
+     "weak": 0.4
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.637,
+     "weak": 0.364
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.58,
+     "weak": 0.332
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.528,
+     "weak": 0.302
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.481,
+     "weak": 0.275
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.438,
+     "weak": 0.25
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.399,
+     "weak": 0.228
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.363,
+     "weak": 0.208
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.331,
+     "weak": 0.189
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.301,
+     "weak": 0.172
+    },
+    {
+     "t": 240,
+     "dur": 16,
+     "strong": 0.274,
+     "weak": 0.157
+    },
+    {
+     "t": 256,
+     "dur": 16,
+     "strong": 0.25,
+     "weak": 0.143
+    },
+    {
+     "t": 272,
+     "dur": 16,
+     "strong": 0.227,
+     "weak": 0.13
+    },
+    {
+     "t": 288,
+     "dur": 16,
+     "strong": 0.207,
+     "weak": 0.118
+    },
+    {
+     "t": 304,
+     "dur": 16,
+     "strong": 0.188,
+     "weak": 0.108
+    },
+    {
+     "t": 320,
+     "dur": 16,
+     "strong": 0.172,
+     "weak": 0.098
+    },
+    {
+     "t": 336,
+     "dur": 16,
+     "strong": 0.156,
+     "weak": 0.089
+    },
+    {
+     "t": 352,
+     "dur": 16,
+     "strong": 0.142,
+     "weak": 0.081
+    },
+    {
+     "t": 368,
+     "dur": 16,
+     "strong": 0.129,
+     "weak": 0.074
+    },
+    {
+     "t": 384,
+     "dur": 16,
+     "strong": 0.118,
+     "weak": 0.067
+    },
+    {
+     "t": 400,
+     "dur": 16,
+     "strong": 0.107,
+     "weak": 0.061
+    },
+    {
+     "t": 416,
+     "dur": 16,
+     "strong": 0.098,
+     "weak": 0.056
+    },
+    {
+     "t": 432,
+     "dur": 16,
+     "strong": 0.089,
+     "weak": 0.051
+    },
+    {
+     "t": 448,
+     "dur": 16,
+     "strong": 0.081,
+     "weak": 0.046
+    },
+    {
+     "t": 464,
+     "dur": 16,
+     "strong": 0.074,
+     "weak": 0.042
+    },
+    {
+     "t": 480,
+     "dur": 16,
+     "strong": 0.067,
+     "weak": 0.038
+    },
+    {
+     "t": 496,
+     "dur": 16,
+     "strong": 0.061,
+     "weak": 0.035
+    },
+    {
+     "t": 512,
+     "dur": 16,
+     "strong": 0.056,
+     "weak": 0.032
+    },
+    {
+     "t": 528,
+     "dur": 16,
+     "strong": 0.051,
+     "weak": 0.029
+    },
+    {
+     "t": 544,
+     "dur": 16,
+     "strong": 0.046,
+     "weak": 0.026
+    },
+    {
+     "t": 560,
+     "dur": 16,
+     "strong": 0.042,
+     "weak": 0.024
+    },
+    {
+     "t": 576,
+     "dur": 16,
+     "strong": 0.038,
+     "weak": 0.022
+    }
+   ],
+   "dur": 592,
+   "sound": "mk85/im_land_*"
+  },
+  "hit_light": {
+   "cat": "damage",
+   "desc": "taking a light hit (bullet) \u2014 use left/right trigger for the side it came from",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 32,
+     "strong": 0.25,
+     "weak": 0.6,
+     "left": 0.35
+    }
+   ],
+   "dur": 32,
+   "sound": "enemies/en_impact_metal"
+  },
+  "hit_heavy": {
+   "cat": "damage",
+   "desc": "taking a heavy hit (RPG / brute) \u2014 side via trigger",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 64,
+     "strong": 1.0,
+     "weak": 0.8,
+     "left": 0.8
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.6,
+     "weak": 0.4,
+     "left": 0.4
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.527,
+     "weak": 0.351,
+     "left": 0.351
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.462,
+     "weak": 0.308,
+     "left": 0.308
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.406,
+     "weak": 0.27,
+     "left": 0.27
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.356,
+     "weak": 0.237,
+     "left": 0.237
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.313,
+     "weak": 0.208,
+     "left": 0.208
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.274,
+     "weak": 0.183,
+     "left": 0.183
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.241,
+     "weak": 0.161,
+     "left": 0.161
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.211,
+     "weak": 0.141,
+     "left": 0.141
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.185,
+     "weak": 0.124,
+     "left": 0.124
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.163,
+     "weak": 0.109,
+     "left": 0.109
+    },
+    {
+     "t": 240,
+     "dur": 16,
+     "strong": 0.143,
+     "weak": 0.095,
+     "left": 0.095
+    },
+    {
+     "t": 256,
+     "dur": 16,
+     "strong": 0.125,
+     "weak": 0.084,
+     "left": 0.084
+    },
+    {
+     "t": 272,
+     "dur": 16,
+     "strong": 0.11,
+     "weak": 0.073,
+     "left": 0.073
+    },
+    {
+     "t": 288,
+     "dur": 16,
+     "strong": 0.097,
+     "weak": 0.064,
+     "left": 0.064
+    },
+    {
+     "t": 304,
+     "dur": 16,
+     "strong": 0.085,
+     "weak": 0.057,
+     "left": 0.057
+    },
+    {
+     "t": 320,
+     "dur": 16,
+     "strong": 0.074,
+     "weak": 0.05,
+     "left": 0.05
+    },
+    {
+     "t": 336,
+     "dur": 16,
+     "strong": 0.065,
+     "weak": 0.044,
+     "left": 0.044
+    },
+    {
+     "t": 352,
+     "dur": 16,
+     "strong": 0.057,
+     "weak": 0.038,
+     "left": 0.038
+    },
+    {
+     "t": 368,
+     "dur": 16,
+     "strong": 0.05,
+     "weak": 0.034,
+     "left": 0.034
+    },
+    {
+     "t": 384,
+     "dur": 16,
+     "strong": 0.044,
+     "weak": 0.029,
+     "left": 0.029
+    },
+    {
+     "t": 400,
+     "dur": 16,
+     "strong": 0.039,
+     "weak": 0.026,
+     "left": 0.026
+    },
+    {
+     "t": 416,
+     "dur": 16,
+     "strong": 0.034,
+     "weak": 0.023,
+     "left": 0.023
+    }
+   ],
+   "dur": 432,
+   "sound": "enemies/en_explosion"
+  },
+  "explosion_near": {
+   "cat": "world",
+   "desc": "explosion < 40 m",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 96,
+     "strong": 1.0,
+     "weak": 1.0
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.8,
+     "weak": 0.5
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.746,
+     "weak": 0.466
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.696,
+     "weak": 0.435
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.649,
+     "weak": 0.406
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.605,
+     "weak": 0.378
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.564,
+     "weak": 0.353
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.526,
+     "weak": 0.329
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.491,
+     "weak": 0.307
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.458,
+     "weak": 0.286
+    },
+    {
+     "t": 240,
+     "dur": 16,
+     "strong": 0.427,
+     "weak": 0.267
+    },
+    {
+     "t": 256,
+     "dur": 16,
+     "strong": 0.398,
+     "weak": 0.249
+    },
+    {
+     "t": 272,
+     "dur": 16,
+     "strong": 0.371,
+     "weak": 0.232
+    },
+    {
+     "t": 288,
+     "dur": 16,
+     "strong": 0.346,
+     "weak": 0.216
+    },
+    {
+     "t": 304,
+     "dur": 16,
+     "strong": 0.323,
+     "weak": 0.202
+    },
+    {
+     "t": 320,
+     "dur": 16,
+     "strong": 0.301,
+     "weak": 0.188
+    },
+    {
+     "t": 336,
+     "dur": 16,
+     "strong": 0.281,
+     "weak": 0.176
+    },
+    {
+     "t": 352,
+     "dur": 16,
+     "strong": 0.262,
+     "weak": 0.164
+    },
+    {
+     "t": 368,
+     "dur": 16,
+     "strong": 0.244,
+     "weak": 0.153
+    },
+    {
+     "t": 384,
+     "dur": 16,
+     "strong": 0.228,
+     "weak": 0.142
+    },
+    {
+     "t": 400,
+     "dur": 16,
+     "strong": 0.213,
+     "weak": 0.133
+    },
+    {
+     "t": 416,
+     "dur": 16,
+     "strong": 0.198,
+     "weak": 0.124
+    },
+    {
+     "t": 432,
+     "dur": 16,
+     "strong": 0.185,
+     "weak": 0.116
+    },
+    {
+     "t": 448,
+     "dur": 16,
+     "strong": 0.172,
+     "weak": 0.108
+    },
+    {
+     "t": 464,
+     "dur": 16,
+     "strong": 0.161,
+     "weak": 0.1
+    },
+    {
+     "t": 480,
+     "dur": 16,
+     "strong": 0.15,
+     "weak": 0.094
+    },
+    {
+     "t": 496,
+     "dur": 16,
+     "strong": 0.14,
+     "weak": 0.087
+    },
+    {
+     "t": 512,
+     "dur": 16,
+     "strong": 0.13,
+     "weak": 0.082
+    },
+    {
+     "t": 528,
+     "dur": 16,
+     "strong": 0.122,
+     "weak": 0.076
+    },
+    {
+     "t": 544,
+     "dur": 16,
+     "strong": 0.113,
+     "weak": 0.071
+    },
+    {
+     "t": 560,
+     "dur": 16,
+     "strong": 0.106,
+     "weak": 0.066
+    },
+    {
+     "t": 576,
+     "dur": 16,
+     "strong": 0.099,
+     "weak": 0.062
+    },
+    {
+     "t": 592,
+     "dur": 16,
+     "strong": 0.092,
+     "weak": 0.058
+    },
+    {
+     "t": 608,
+     "dur": 16,
+     "strong": 0.086,
+     "weak": 0.054
+    },
+    {
+     "t": 624,
+     "dur": 16,
+     "strong": 0.08,
+     "weak": 0.05
+    },
+    {
+     "t": 640,
+     "dur": 16,
+     "strong": 0.075,
+     "weak": 0.047
+    },
+    {
+     "t": 656,
+     "dur": 16,
+     "strong": 0.07,
+     "weak": 0.043
+    },
+    {
+     "t": 672,
+     "dur": 16,
+     "strong": 0.065,
+     "weak": 0.041
+    },
+    {
+     "t": 688,
+     "dur": 16,
+     "strong": 0.061,
+     "weak": 0.038
+    },
+    {
+     "t": 704,
+     "dur": 16,
+     "strong": 0.056,
+     "weak": 0.035
+    },
+    {
+     "t": 720,
+     "dur": 16,
+     "strong": 0.053,
+     "weak": 0.033
+    },
+    {
+     "t": 736,
+     "dur": 16,
+     "strong": 0.049,
+     "weak": 0.031
+    },
+    {
+     "t": 752,
+     "dur": 16,
+     "strong": 0.046,
+     "weak": 0.029
+    },
+    {
+     "t": 768,
+     "dur": 16,
+     "strong": 0.043,
+     "weak": 0.027
+    }
+   ],
+   "dur": 784,
+   "sound": "enemies/en_explosion"
+  },
+  "explosion_far": {
+   "cat": "world",
+   "desc": "explosion 40-300 m \u2014 delayed by distance / 340 m/s, low motor only",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 64,
+     "strong": 0.35,
+     "weak": 0.05
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.25,
+     "weak": 0.0
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.222,
+     "weak": 0.0
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.197,
+     "weak": 0.0
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.174,
+     "weak": 0.0
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.155,
+     "weak": 0.0
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.137,
+     "weak": 0.0
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.122,
+     "weak": 0.0
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.108,
+     "weak": 0.0
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.096,
+     "weak": 0.0
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.085,
+     "weak": 0.0
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.075,
+     "weak": 0.0
+    },
+    {
+     "t": 240,
+     "dur": 16,
+     "strong": 0.067,
+     "weak": 0.0
+    },
+    {
+     "t": 256,
+     "dur": 16,
+     "strong": 0.059,
+     "weak": 0.0
+    },
+    {
+     "t": 272,
+     "dur": 16,
+     "strong": 0.053,
+     "weak": 0.0
+    },
+    {
+     "t": 288,
+     "dur": 16,
+     "strong": 0.047,
+     "weak": 0.0
+    },
+    {
+     "t": 304,
+     "dur": 16,
+     "strong": 0.041,
+     "weak": 0.0
+    },
+    {
+     "t": 320,
+     "dur": 16,
+     "strong": 0.037,
+     "weak": 0.0
+    },
+    {
+     "t": 336,
+     "dur": 16,
+     "strong": 0.033,
+     "weak": 0.0
+    },
+    {
+     "t": 352,
+     "dur": 16,
+     "strong": 0.029,
+     "weak": 0.0
+    },
+    {
+     "t": 368,
+     "dur": 16,
+     "strong": 0.026,
+     "weak": 0.0
+    },
+    {
+     "t": 384,
+     "dur": 16,
+     "strong": 0.023,
+     "weak": 0.0
+    },
+    {
+     "t": 400,
+     "dur": 16,
+     "strong": 0.02,
+     "weak": 0.0
+    },
+    {
+     "t": 416,
+     "dur": 16,
+     "strong": 0.018,
+     "weak": 0.0
+    },
+    {
+     "t": 432,
+     "dur": 16,
+     "strong": 0.016,
+     "weak": 0.0
+    },
+    {
+     "t": 448,
+     "dur": 16,
+     "strong": 0.014,
+     "weak": 0.0
+    }
+   ],
+   "dur": 464,
+   "sound": "enemies/en_explosion (LP)"
+  },
+  "suit_clamp": {
+   "cat": "suitup",
+   "desc": "one armour piece clamps home",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 24,
+     "strong": 0.45,
+     "weak": 0.6
+    },
+    {
+     "t": 24,
+     "dur": 16,
+     "strong": 0.2,
+     "weak": 0.15
+    },
+    {
+     "t": 40,
+     "dur": 16,
+     "strong": 0.094,
+     "weak": 0.071
+    },
+    {
+     "t": 56,
+     "dur": 16,
+     "strong": 0.045,
+     "weak": 0.033
+    },
+    {
+     "t": 72,
+     "dur": 16,
+     "strong": 0.021,
+     "weak": 0.016
+    }
+   ],
+   "dur": 88,
+   "sound": "classics/cl_clamp_lock"
+  },
+  "suit_clamp_big": {
+   "cat": "suitup",
+   "desc": "chest / helmet clamp",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 40,
+     "strong": 0.8,
+     "weak": 0.8
+    },
+    {
+     "t": 40,
+     "dur": 16,
+     "strong": 0.4,
+     "weak": 0.3
+    },
+    {
+     "t": 56,
+     "dur": 16,
+     "strong": 0.296,
+     "weak": 0.222
+    },
+    {
+     "t": 72,
+     "dur": 16,
+     "strong": 0.22,
+     "weak": 0.165
+    },
+    {
+     "t": 88,
+     "dur": 16,
+     "strong": 0.163,
+     "weak": 0.122
+    },
+    {
+     "t": 104,
+     "dur": 16,
+     "strong": 0.12,
+     "weak": 0.09
+    },
+    {
+     "t": 120,
+     "dur": 16,
+     "strong": 0.089,
+     "weak": 0.067
+    },
+    {
+     "t": 136,
+     "dur": 16,
+     "strong": 0.066,
+     "weak": 0.05
+    },
+    {
+     "t": 152,
+     "dur": 16,
+     "strong": 0.049,
+     "weak": 0.037
+    },
+    {
+     "t": 168,
+     "dur": 16,
+     "strong": 0.036,
+     "weak": 0.027
+    },
+    {
+     "t": 184,
+     "dur": 16,
+     "strong": 0.027,
+     "weak": 0.02
+    }
+   ],
+   "dur": 200,
+   "sound": "mk42/mk42_lock_big_*"
+  },
+  "nano_flow": {
+   "cat": "suitup",
+   "desc": "nanotech spreading over the body \u2014 granular swell (1.2 s)",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 32,
+     "strong": 0.03,
+     "weak": 0.12
+    },
+    {
+     "t": 32,
+     "dur": 32,
+     "strong": 0.032,
+     "weak": 0.124
+    },
+    {
+     "t": 64,
+     "dur": 32,
+     "strong": 0.034,
+     "weak": 0.131
+    },
+    {
+     "t": 96,
+     "dur": 32,
+     "strong": 0.036,
+     "weak": 0.129
+    },
+    {
+     "t": 128,
+     "dur": 32,
+     "strong": 0.038,
+     "weak": 0.137
+    },
+    {
+     "t": 160,
+     "dur": 32,
+     "strong": 0.041,
+     "weak": 0.146
+    },
+    {
+     "t": 192,
+     "dur": 32,
+     "strong": 0.043,
+     "weak": 0.139
+    },
+    {
+     "t": 224,
+     "dur": 32,
+     "strong": 0.045,
+     "weak": 0.149
+    },
+    {
+     "t": 256,
+     "dur": 32,
+     "strong": 0.047,
+     "weak": 0.162
+    },
+    {
+     "t": 288,
+     "dur": 32,
+     "strong": 0.049,
+     "weak": 0.148
+    },
+    {
+     "t": 320,
+     "dur": 32,
+     "strong": 0.051,
+     "weak": 0.162
+    },
+    {
+     "t": 352,
+     "dur": 32,
+     "strong": 0.053,
+     "weak": 0.178
+    },
+    {
+     "t": 384,
+     "dur": 32,
+     "strong": 0.055,
+     "weak": 0.158
+    },
+    {
+     "t": 416,
+     "dur": 32,
+     "strong": 0.057,
+     "weak": 0.175
+    },
+    {
+     "t": 448,
+     "dur": 32,
+     "strong": 0.059,
+     "weak": 0.194
+    },
+    {
+     "t": 480,
+     "dur": 32,
+     "strong": 0.062,
+     "weak": 0.167
+    },
+    {
+     "t": 512,
+     "dur": 32,
+     "strong": 0.064,
+     "weak": 0.187
+    },
+    {
+     "t": 544,
+     "dur": 32,
+     "strong": 0.066,
+     "weak": 0.209
+    },
+    {
+     "t": 576,
+     "dur": 32,
+     "strong": 0.068,
+     "weak": 0.177
+    },
+    {
+     "t": 608,
+     "dur": 32,
+     "strong": 0.07,
+     "weak": 0.2
+    },
+    {
+     "t": 640,
+     "dur": 32,
+     "strong": 0.072,
+     "weak": 0.225
+    },
+    {
+     "t": 672,
+     "dur": 32,
+     "strong": 0.074,
+     "weak": 0.186
+    },
+    {
+     "t": 704,
+     "dur": 32,
+     "strong": 0.076,
+     "weak": 0.213
+    },
+    {
+     "t": 736,
+     "dur": 32,
+     "strong": 0.078,
+     "weak": 0.241
+    },
+    {
+     "t": 768,
+     "dur": 32,
+     "strong": 0.081,
+     "weak": 0.196
+    },
+    {
+     "t": 800,
+     "dur": 32,
+     "strong": 0.083,
+     "weak": 0.225
+    },
+    {
+     "t": 832,
+     "dur": 32,
+     "strong": 0.085,
+     "weak": 0.257
+    },
+    {
+     "t": 864,
+     "dur": 32,
+     "strong": 0.087,
+     "weak": 0.205
+    },
+    {
+     "t": 896,
+     "dur": 32,
+     "strong": 0.089,
+     "weak": 0.238
+    },
+    {
+     "t": 928,
+     "dur": 32,
+     "strong": 0.091,
+     "weak": 0.273
+    },
+    {
+     "t": 960,
+     "dur": 32,
+     "strong": 0.093,
+     "weak": 0.215
+    },
+    {
+     "t": 992,
+     "dur": 32,
+     "strong": 0.095,
+     "weak": 0.251
+    },
+    {
+     "t": 1024,
+     "dur": 32,
+     "strong": 0.097,
+     "weak": 0.288
+    },
+    {
+     "t": 1056,
+     "dur": 32,
+     "strong": 0.099,
+     "weak": 0.224
+    },
+    {
+     "t": 1088,
+     "dur": 32,
+     "strong": 0.102,
+     "weak": 0.263
+    },
+    {
+     "t": 1120,
+     "dur": 32,
+     "strong": 0.104,
+     "weak": 0.304
+    },
+    {
+     "t": 1152,
+     "dur": 32,
+     "strong": 0.106,
+     "weak": 0.234
+    },
+    {
+     "t": 1184,
+     "dur": 32,
+     "strong": 0.108,
+     "weak": 0.276
+    }
+   ],
+   "dur": 1216,
+   "sound": "mk85/mk85_nano_flow"
+  },
+  "hb_step": {
+   "cat": "movement",
+   "desc": "Hulkbuster step \u2014 the floor-shaker",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 90,
+     "strong": 1.0,
+     "weak": 0.55
+    },
+    {
+     "t": 90,
+     "dur": 16,
+     "strong": 0.45,
+     "weak": 0.1
+    },
+    {
+     "t": 106,
+     "dur": 16,
+     "strong": 0.373,
+     "weak": 0.083
+    },
+    {
+     "t": 122,
+     "dur": 16,
+     "strong": 0.309,
+     "weak": 0.069
+    },
+    {
+     "t": 138,
+     "dur": 16,
+     "strong": 0.256,
+     "weak": 0.057
+    },
+    {
+     "t": 154,
+     "dur": 16,
+     "strong": 0.213,
+     "weak": 0.047
+    },
+    {
+     "t": 170,
+     "dur": 16,
+     "strong": 0.176,
+     "weak": 0.039
+    },
+    {
+     "t": 186,
+     "dur": 16,
+     "strong": 0.146,
+     "weak": 0.032
+    },
+    {
+     "t": 202,
+     "dur": 16,
+     "strong": 0.121,
+     "weak": 0.027
+    },
+    {
+     "t": 218,
+     "dur": 16,
+     "strong": 0.1,
+     "weak": 0.022
+    },
+    {
+     "t": 234,
+     "dur": 16,
+     "strong": 0.083,
+     "weak": 0.018
+    },
+    {
+     "t": 250,
+     "dur": 16,
+     "strong": 0.069,
+     "weak": 0.015
+    },
+    {
+     "t": 266,
+     "dur": 16,
+     "strong": 0.057,
+     "weak": 0.013
+    },
+    {
+     "t": 282,
+     "dur": 16,
+     "strong": 0.047,
+     "weak": 0.011
+    },
+    {
+     "t": 298,
+     "dur": 16,
+     "strong": 0.039,
+     "weak": 0.009
+    },
+    {
+     "t": 314,
+     "dur": 16,
+     "strong": 0.033,
+     "weak": 0.007
+    },
+    {
+     "t": 330,
+     "dur": 16,
+     "strong": 0.027,
+     "weak": 0.006
+    }
+   ],
+   "dur": 346,
+   "sound": "hulkbuster/hb_step_heavy_*"
+  },
+  "web_thwip": {
+   "cat": "spider",
+   "desc": "web shot \u2014 thin crisp flick (weak motor only)",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 20,
+     "strong": 0,
+     "weak": 0.55
+    },
+    {
+     "t": 20,
+     "dur": 16,
+     "strong": 0,
+     "weak": 0.2
+    }
+   ],
+   "dur": 36,
+   "sound": "spider/sp_thwip_*"
+  },
+  "web_attach": {
+   "cat": "spider",
+   "desc": "web attaches \u2014 the line goes taut",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 32,
+     "strong": 0.4,
+     "weak": 0.6
+    },
+    {
+     "t": 32,
+     "dur": 16,
+     "strong": 0.15,
+     "weak": 0.2
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.091,
+     "weak": 0.121
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.055,
+     "weak": 0.074
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.033,
+     "weak": 0.045
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.02,
+     "weak": 0.027
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.012,
+     "weak": 0.016
+    }
+   ],
+   "dur": 128,
+   "sound": "spider/sp_web_attach_*"
+  },
+  "web_release": {
+   "cat": "spider",
+   "desc": "web released \u2014 a light unload",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 24,
+     "strong": 0.0,
+     "weak": 0.4
+    },
+    {
+     "t": 24,
+     "dur": 32,
+     "strong": 0.1,
+     "weak": 0.1
+    }
+   ],
+   "dur": 56,
+   "sound": "spider/sp_web_release"
+  },
+  "web_zip": {
+   "cat": "spider",
+   "desc": "web zip \u2014 rising pull",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 16,
+     "strong": 0.05,
+     "weak": 0.1
+    },
+    {
+     "t": 16,
+     "dur": 16,
+     "strong": 0.071,
+     "weak": 0.136
+    },
+    {
+     "t": 32,
+     "dur": 16,
+     "strong": 0.093,
+     "weak": 0.171
+    },
+    {
+     "t": 48,
+     "dur": 16,
+     "strong": 0.114,
+     "weak": 0.207
+    },
+    {
+     "t": 64,
+     "dur": 16,
+     "strong": 0.136,
+     "weak": 0.243
+    },
+    {
+     "t": 80,
+     "dur": 16,
+     "strong": 0.157,
+     "weak": 0.279
+    },
+    {
+     "t": 96,
+     "dur": 16,
+     "strong": 0.179,
+     "weak": 0.314
+    },
+    {
+     "t": 112,
+     "dur": 16,
+     "strong": 0.2,
+     "weak": 0.35
+    },
+    {
+     "t": 128,
+     "dur": 16,
+     "strong": 0.221,
+     "weak": 0.386
+    },
+    {
+     "t": 144,
+     "dur": 16,
+     "strong": 0.243,
+     "weak": 0.421
+    },
+    {
+     "t": 160,
+     "dur": 16,
+     "strong": 0.264,
+     "weak": 0.457
+    },
+    {
+     "t": 176,
+     "dur": 16,
+     "strong": 0.286,
+     "weak": 0.493
+    },
+    {
+     "t": 192,
+     "dur": 16,
+     "strong": 0.307,
+     "weak": 0.529
+    },
+    {
+     "t": 208,
+     "dur": 16,
+     "strong": 0.329,
+     "weak": 0.564
+    },
+    {
+     "t": 224,
+     "dur": 16,
+     "strong": 0.35,
+     "weak": 0.6
+    },
+    {
+     "t": 240,
+     "dur": 24,
+     "strong": 0.5,
+     "weak": 0.7
+    }
+   ],
+   "dur": 264,
+   "sound": "spider/sp_zip_whoosh"
+  },
+  "spider_land": {
+   "cat": "movement",
+   "desc": "Spidey landing (light, springy)",
+   "steps": [
+    {
+     "t": 0,
+     "dur": 24,
+     "strong": 0.2,
+     "weak": 0.5
+    },
+    {
+     "t": 24,
+     "dur": 16,
+     "strong": 0.1,
+     "weak": 0.2
+    },
+    {
+     "t": 40,
+     "dur": 16,
+     "strong": 0.061,
+     "weak": 0.121
+    },
+    {
+     "t": 56,
+     "dur": 16,
+     "strong": 0.037,
+     "weak": 0.074
+    },
+    {
+     "t": 72,
+     "dur": 16,
+     "strong": 0.022,
+     "weak": 0.045
+    },
+    {
+     "t": 88,
+     "dur": 16,
+     "strong": 0.014,
+     "weak": 0.027
+    },
+    {
+     "t": 104,
+     "dur": 16,
+     "strong": 0.008,
+     "weak": 0.016
+    }
+   ],
+   "dur": 120,
+   "sound": "spider/sp_land_light"
+  }
+ },
+ "continuous": {
+  "thruster_hum": {
+   "cat": "movement",
+   "sound": "core/thruster_*",
+   "desc": "Iron Man thrusters. NOT a constant buzz: the hum follows throttle CHANGES and fades out when throttle is steady (attention decay), so hovering is silent in the hands.",
+   "params": {
+    "throttle": "0..1",
+    "dThrottle": "|d throttle / dt| per second"
+   },
+   "formula": {
+    "level": "L = 0.06 + 0.22 * throttle",
+    "activity": "A += (min(1, dThrottle * 2) - A) * (1 - exp(-dt / 0.08)) ; A decays to a floor of 0.15 over 800 ms steady",
+    "strong": "0.6 * L * A",
+    "weak": "L * A * (0.85 + 0.15 * sin(2*pi*11*t))",
+    "cap": "strong <= 0.25, weak <= 0.35",
+    "update": "every 50 ms (one 60 ms playEffect / start_joy_vibration block)"
+   },
+   "levels": [
+    {
+     "throttle": 0.0,
+     "strong": 0.036,
+     "weak": 0.06
+    },
+    {
+     "throttle": 0.25,
+     "strong": 0.069,
+     "weak": 0.115
+    },
+    {
+     "throttle": 0.5,
+     "strong": 0.102,
+     "weak": 0.17
+    },
+    {
+     "throttle": 0.75,
+     "strong": 0.135,
+     "weak": 0.225
+    },
+    {
+     "throttle": 1.0,
+     "strong": 0.168,
+     "weak": 0.28
+    }
+   ]
+  },
+  "charge": {
+   "cat": "combat",
+   "sound": "core/repulsor_charge",
+   "desc": "Repulsor / unibeam charge-up: weak motor ramps with charge, a tick at 50 % and a lock pulse at 100 %.",
+   "params": {
+    "charge": "0..1"
+   },
+   "formula": {
+    "weak": "0.08 + 0.4 * charge^2",
+    "strong": "0.25 * charge^3",
+    "events": "at charge 0.5 play ui_tick; at 1.0 play suit_clamp, then hold weak 0.3 with 6 Hz flutter"
+   }
+  },
+  "web_tension": {
+   "cat": "spider",
+   "sound": "spider/sp_web_tension_loop + sp_web_creak_*",
+   "desc": "Swinging / tether tension: creaks, not a buzz \u2014 short pulses at a rate that rises with tension.",
+   "params": {
+    "tension": "0..1 (rope force / max)"
+   },
+   "formula": {
+    "pulse": "every 1 / (2 + 10 * tension) s play {dur 24, strong 0.15 * tension, weak 0.15 + 0.35 * tension}",
+    "peak": "at the bottom of a swing arc (max tension) add web_attach at 60 % gain"
+   }
+  }
+ }
+}

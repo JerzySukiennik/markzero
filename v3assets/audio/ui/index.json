@@ -1,0 +1,290 @@
+{
+ "ui_focus_1": {
+  "file": "ui/ui_focus_1",
+  "loop": false,
+  "gain": 0.55,
+  "desc": "focus moved to the next item (round-robin 1-3)",
+  "dur_ms": 94,
+  "bus": "ui"
+ },
+ "ui_focus_2": {
+  "file": "ui/ui_focus_2",
+  "loop": false,
+  "gain": 0.55,
+  "desc": "focus moved to the next item (round-robin 1-3)",
+  "dur_ms": 94,
+  "bus": "ui"
+ },
+ "ui_focus_3": {
+  "file": "ui/ui_focus_3",
+  "loop": false,
+  "gain": 0.55,
+  "desc": "focus moved to the next item (round-robin 1-3)",
+  "dur_ms": 94,
+  "bus": "ui"
+ },
+ "ui_slider_tick_1": {
+  "file": "ui/ui_slider_tick_1",
+  "loop": false,
+  "gain": 0.4,
+  "desc": "slider step (1-3 = low/mid/high end of the range)",
+  "dur_ms": 34,
+  "bus": "ui"
+ },
+ "ui_slider_tick_2": {
+  "file": "ui/ui_slider_tick_2",
+  "loop": false,
+  "gain": 0.4,
+  "desc": "slider step (1-3 = low/mid/high end of the range)",
+  "dur_ms": 30,
+  "bus": "ui"
+ },
+ "ui_slider_tick_3": {
+  "file": "ui/ui_slider_tick_3",
+  "loop": false,
+  "gain": 0.4,
+  "desc": "slider step (1-3 = low/mid/high end of the range)",
+  "dur_ms": 26,
+  "bus": "ui"
+ },
+ "ui_confirm": {
+  "file": "ui/ui_confirm",
+  "loop": false,
+  "gain": 0.8,
+  "desc": "confirm / select (cross or A)",
+  "dur_ms": 987,
+  "bus": "ui"
+ },
+ "ui_back": {
+  "file": "ui/ui_back",
+  "loop": false,
+  "gain": 0.65,
+  "desc": "back / cancel (circle or B)",
+  "dur_ms": 824,
+  "bus": "ui"
+ },
+ "ui_error": {
+  "file": "ui/ui_error",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "invalid action / cannot select (pairs with danger colour)",
+  "dur_ms": 319,
+  "bus": "ui"
+ },
+ "ui_tab": {
+  "file": "ui/ui_tab",
+  "loop": false,
+  "gain": 0.6,
+  "desc": "tab / shoulder-button page switch (L1/R1)",
+  "dur_ms": 199,
+  "bus": "ui"
+ },
+ "ui_panel_open": {
+  "file": "ui/ui_panel_open",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "panel / menu opens (holo slide-in)",
+  "dur_ms": 1213,
+  "bus": "ui"
+ },
+ "ui_panel_close": {
+  "file": "ui/ui_panel_close",
+  "loop": false,
+  "gain": 0.65,
+  "desc": "panel / menu closes",
+  "dur_ms": 1036,
+  "bus": "ui"
+ },
+ "ui_room_created": {
+  "file": "ui/ui_room_created",
+  "loop": false,
+  "gain": 0.9,
+  "desc": "room opened / hosted \u2014 a small ceremony",
+  "dur_ms": 2688,
+  "bus": "ui"
+ },
+ "ui_player_joined": {
+  "file": "ui/ui_player_joined",
+  "loop": false,
+  "gain": 0.75,
+  "desc": "a player joined the room (rising third)",
+  "dur_ms": 1440,
+  "bus": "ui"
+ },
+ "ui_player_left": {
+  "file": "ui/ui_player_left",
+  "loop": false,
+  "gain": 0.6,
+  "desc": "a player left the room (falling third, darker)",
+  "dur_ms": 1409,
+  "bus": "ui"
+ },
+ "ui_ready": {
+  "file": "ui/ui_ready",
+  "loop": false,
+  "gain": 0.75,
+  "desc": "player toggled READY",
+  "dur_ms": 981,
+  "bus": "ui"
+ },
+ "ui_unready": {
+  "file": "ui/ui_unready",
+  "loop": false,
+  "gain": 0.6,
+  "desc": "player un-readied",
+  "dur_ms": 462,
+  "bus": "ui"
+ },
+ "ui_countdown_3": {
+  "file": "ui/ui_countdown_3",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "match start countdown tick 3",
+  "dur_ms": 280,
+  "bus": "ui"
+ },
+ "ui_countdown_2": {
+  "file": "ui/ui_countdown_2",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "match start countdown tick 2",
+  "dur_ms": 280,
+  "bus": "ui"
+ },
+ "ui_countdown_1": {
+  "file": "ui/ui_countdown_1",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "match start countdown tick 1",
+  "dur_ms": 280,
+  "bus": "ui"
+ },
+ "ui_countdown_go": {
+  "file": "ui/ui_countdown_go",
+  "loop": false,
+  "gain": 1.0,
+  "desc": "match start \u2014 GO",
+  "dur_ms": 3014,
+  "bus": "ui"
+ },
+ "ui_map_zoom_in": {
+  "file": "ui/ui_map_zoom_in",
+  "loop": false,
+  "gain": 0.5,
+  "desc": "map zoom step in (R2)",
+  "dur_ms": 215,
+  "bus": "ui"
+ },
+ "ui_map_zoom_out": {
+  "file": "ui/ui_map_zoom_out",
+  "loop": false,
+  "gain": 0.5,
+  "desc": "map zoom step out (L2)",
+  "dur_ms": 173,
+  "bus": "ui"
+ },
+ "ui_map_ping": {
+  "file": "ui/ui_map_ping",
+  "loop": false,
+  "gain": 0.85,
+  "desc": "map ping / mark (square) \u2014 sonar with two echoes",
+  "dur_ms": 3290,
+  "bus": "ui"
+ },
+ "ui_map_open": {
+  "file": "ui/ui_map_open",
+  "loop": false,
+  "gain": 0.8,
+  "desc": "full map opens \u2014 pairs with the rise-reveal (starts at t=0, bell lands at 120 ms)",
+  "dur_ms": 2253,
+  "bus": "ui"
+ },
+ "ui_map_close": {
+  "file": "ui/ui_map_close",
+  "loop": false,
+  "gain": 0.65,
+  "desc": "full map closes",
+  "dur_ms": 517,
+  "bus": "ui"
+ },
+ "ui_retint_wave": {
+  "file": "ui/ui_retint_wave",
+  "loop": false,
+  "gain": 0.7,
+  "desc": "palette wave sweeping the UI on suit change (layer under the suit stinger)",
+  "dur_ms": 2899,
+  "bus": "ui"
+ },
+ "ui_scan_sweep": {
+  "file": "ui/ui_scan_sweep",
+  "loop": false,
+  "gain": 0.35,
+  "desc": "map / HUD scan sweep passing (quiet one-shot; retrigger with each sweep)",
+  "dur_ms": 895,
+  "bus": "ui"
+ },
+ "ui_suit_mk1": {
+  "file": "ui/ui_suit_mk1",
+  "loop": false,
+  "gain": 0.9,
+  "desc": "suit select stinger \u2014 raw steel: hydraulic + plate clank + ember flame",
+  "dur_ms": 2254,
+  "bus": "ui"
+ },
+ "ui_suit_mk2": {
+  "file": "ui/ui_suit_mk2",
+  "loop": false,
+  "gain": 0.9,
+  "desc": "suit select stinger \u2014 brushed silver + ice: fast servo + clamp + high icy bell/bowl",
+  "dur_ms": 2135,
+  "bus": "ui"
+ },
+ "ui_suit_mk3": {
+  "file": "ui/ui_suit_mk3",
+  "loop": false,
+  "gain": 0.9,
+  "desc": "suit select stinger \u2014 hot-rod: faceplate slam + clamp + thruster whine tail",
+  "dur_ms": 2337,
+  "bus": "ui"
+ },
+ "ui_suit_mk42": {
+  "file": "ui/ui_suit_mk42",
+  "loop": false,
+  "gain": 0.9,
+  "desc": "suit select stinger \u2014 plates clamping in a burst + suit-ready chime",
+  "dur_ms": 2207,
+  "bus": "ui"
+ },
+ "ui_suit_mk85": {
+  "file": "ui/ui_suit_mk85",
+  "loop": false,
+  "gain": 0.9,
+  "desc": "suit select stinger \u2014 nanotech: flow -> crystallise -> lock + cyan shimmer",
+  "dur_ms": 2310,
+  "bus": "ui"
+ },
+ "ui_suit_hulkbuster": {
+  "file": "ui/ui_suit_hulkbuster",
+  "loop": false,
+  "gain": 0.9,
+  "desc": "suit select stinger \u2014 heavy clamp + a giant step + hydraulic hiss",
+  "dur_ms": 2253,
+  "bus": "ui"
+ },
+ "ui_suit_ironspider": {
+  "file": "ui/ui_suit_ironspider",
+  "loop": false,
+  "gain": 0.9,
+  "desc": "suit select stinger \u2014 nano seal + spider legs deploy + lens focus",
+  "dur_ms": 2204,
+  "bus": "ui"
+ },
+ "ui_suit_peter": {
+  "file": "ui/ui_suit_peter",
+  "loop": false,
+  "gain": 0.9,
+  "desc": "suit select stinger \u2014 web thwip + sneaker landing + cloth (no metal: out of suit)",
+  "dur_ms": 2276,
+  "bus": "ui"
+ }
+}

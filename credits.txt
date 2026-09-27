@@ -1,0 +1,721 @@
+MARK ZERO - CREDITS
+===================
+
+Made by Jurek (Gzowo Space Program), with AI help.
+
+A free, non-commercial fan game. Not affiliated with, endorsed or sponsored by Marvel, Disney or
+Sony. Iron Man, Spider-Man and all related characters and names are trademarks of Marvel.
+
+
+MUSIC (CC BY 4.0 - https://creativecommons.org/licenses/by/4.0/)
+-----
+"Volatile Reaction" - Kevin MacLeod (incompetech.com)
+    Licensed under Creative Commons: By Attribution 4.0 License
+"Epic Hero" - migfus20 (opengameart.org)
+    Licensed under Creative Commons: By Attribution 4.0 License
+
+
+SOUND EFFECTS - attribution required
+-------------
+Gravity Sound (Wikimedia Commons) - CC BY 4.0
+    metal hits, latches, servo scrapes, winds, punches, charging, chimes and many more
+Work With Sounds / Museum of Technology, Stockholm; recordings by Torsten Nilsson (Wikimedia Commons) - CC BY 4.0
+    Saab J35D Draken turbojet (thrusters), sandblasting, sirens, foghorn, harbour, theatre stage
+Michel Baradari (submitted by qubodup, opengameart.org) - CC BY 3.0
+    "11 male human pain/death sounds"
+HaelDB (opengameart.org) - OGA-BY 3.0
+    "Male Grunt/Yelling sounds"
+reemax (opengameart.org) - CC BY 3.0
+
+Also used, no attribution required (credited with thanks): Kenney (CC0), rubberduck (CC0),
+Freesound CC0 contributors, OpenGameArt CC0 contributors, and Jurek's own recordings.
+
+
+TEXTURES, CODE, FONTS
+---------------------
+City surface textures: ambientCG (CC0) - https://ambientcg.com
+Water normal maps: three.js examples (MIT, (c) three.js authors)
+Engine: three.js r186 (MIT) - https://threejs.org
+Server: Node.js (MIT) and the ws library (MIT)
+Fonts: Barlow Condensed and JetBrains Mono (SIL Open Font License 1.1)
+3D suits, characters, city, animations: made for Mark Zero.
+
+
+FULL PER-FILE CREDITS
+---------------------
+Every sound with its source URL, author and licence, as recorded by the people who made the
+sound banks:
+
+
+---------------------------------------------------------------- v3assets/audio/music/CREDITS.md
+
+# Music credits (both tracks are CC BY 4.0 — attribution required, shown in the game's credits)
+
+| file | track | author | licence | source | used for |
+|---|---|---|---|---|---|
+| `volatile_reaction.ogg` | "Volatile Reaction" | Kevin MacLeod (incompetech.com) | CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/ | https://incompetech.com/music/royalty-free/ | intro trailer + menu loop |
+| `epic_hero_trailer.ogg` | "Epic Hero" (Track 34, trailer_4) | migfus20 | CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/ | https://opengameart.org/content/epic-hero-epic-orchestra | Spider-Man theme (Jurek: "epic trailer for Spider-Man") |
+
+Credit lines (verbatim for the credits screen):
+- "Volatile Reaction" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License
+- "Epic Hero" by migfus20 (opengameart.org) — Licensed under Creative Commons: By Attribution 4.0 License
+
+Changes: re-encoded from the downloaded MP3s to Ogg Vorbis (oggenc -q 6) after EBU R128 loudness normalisation
+(ffmpeg loudnorm I=-16 LUFS, TP=-1.5 dB); no edits to the music. Loop points (menu) are set in playback only:
+`web/js/intro/timeline.json`. Downloaded 2026-09-26 by the orchestrator with Jurek's approval (SOURCES.txt).
+
+
+---------------------------------------------------------------- v3assets/audio/ui/CREDITS-ui.md
+
+# UI sound pack — credits
+
+Every file in `v3/assets/audio/ui/` is built by `v3/design/tools/build_ui_audio.py` from **real recordings only** (no oscillators): layered, varispeeded, filtered, with a small convolution plate made of filtered noise. Delivered as `.ogg` (oggenc -q 6) + `.mp3` (192k), 44.1 kHz stereo, each normalised to max-momentary −16 LUFS (400 ms K-weighted) and capped at −1.5 dBFS peak; the per-sound mix level is `gain` in `index.json` (bus `ui`).
+
+## Licences in use
+
+* **CC0 1.0 / Public domain** — no attribution required (credited anyway).
+* **CC BY 4.0** — inherited through reused NEXT bank layers; attribution below is required in the game credits.
+
+## A. Recordings fetched for this pack (Wikimedia Commons) — code `C:` in the recipes
+
+| source | author | licence | used as |
+|---|---|---|---|
+| [Clickick switch.ogg](https://commons.wikimedia.org/wiki/File%3AClickick_switch.ogg) | stephan | Public domain | switch clicks (back, thump) |
+| [Dipswitch on off.ogg](https://commons.wikimedia.org/wiki/File%3ADipswitch_on_off.ogg) | stephan | Public domain | muted knocks (error) |
+| [Mechanical tack.ogg](https://commons.wikimedia.org/wiki/File%3AMechanical_tack.ogg) | stephan | Public domain | slide + latch (tab, panels) |
+| [Computer mouse single click.ogg](https://commons.wikimedia.org/wiki/File%3AComputer_mouse_single_click.ogg) | Darklanlan | CC0 | click body (confirm, joined) |
+| [415061 gsb1039 clock-chime-tubebells-handbells-vibes.wav](https://commons.wikimedia.org/wiki/File%3A415061_gsb1039_clock-chime-tubebells-handbells-vibes.wav) | gsb1039 | CC0 | tubular-bell strikes, varispeeded x2-x10 (the 'sparkle' of every sound) |
+| [SingingBowl1.ogg](https://commons.wikimedia.org/wiki/File%3ASingingBowl1.ogg) | BambooBeast | Public domain | bowl bloom/shimmer (room, map, error beating) |
+| [SingingBowl2.ogg](https://commons.wikimedia.org/wiki/File%3ASingingBowl2.ogg) | BambooBeast | Public domain | bowl shimmer (panels, retint, glowing suits) |
+| [Wine glass.ogg](https://commons.wikimedia.org/wiki/File%3AWine_glass.ogg) | hugh | Public domain | downloaded, auditioned, NOT used (too quiet/noisy) |
+| [Tuning-fork-440Hz.ogg](https://commons.wikimedia.org/wiki/File%3ATuning-fork-440Hz.ogg) | jmuehlhans | CC0 | pure tone (countdown, ping, scan) |
+| [Auslösegeräusch SLR Serienaufnahme mit AF Schärfepriorität.ogg](https://commons.wikimedia.org/wiki/File%3AAusl%C3%B6seger%C3%A4usch_SLR_Serienaufnahme_mit_AF_Sch%C3%A4rfepriorit%C3%A4t.ogg) | Smial (talk) | CC0 | camera-shutter micro clicks (focus, ticks, zoom, ping) |
+
+## B. Layers reused from the vetted NEXT banks — code `N:` in the recipes
+
+Taken as-is from `next/assets/audio/<area>/<id>.ogg`; their original sources, authors and cuts are logged row by row in the bank credits (`next/assets/audio/{classics,core,mk42,mk85,hulkbuster,spider}/CREDITS-*.md`, which in turn point at `Projects/MarkZero/audio/CREDITS.md` and Jurek's own recordings). Used here: `cl_servo_small, cl_mk1_hydraulic, cl_plate_clank, cl_flame_start, cl_servo_fast, cl_clamp_lock, cl_faceplate_close, thruster_whine, mk42_whoosh_1, mk42_whoosh_2, mk42_whoosh_big_1, mk42_lock_1, mk42_lock_2, mk42_lock_big_1, mk42_lock_big_2, mk42_suit_ready, im_thruster_burst, mk85_nano_flow, mk85_nano_crystallise, mk85_nano_lock, hb_clamp_heavy, hb_step_heavy_1, hb_hydraulic_hiss, sp_nano_seal, sp_leg_deploy, sp_lens_focus, sp_thwip_1, sp_sneaker_1, sp_cloth_1`.
+
+**Required attribution inherited through those layers (CC BY 4.0):** Gravity Sound (Wikimedia Commons — latch/lock, metal hits, servo scrapes, 'Complete' chime); Work With Sounds / Torsten Nilsson (Saab J35D Draken, sandblasting — thruster whine); plus the other CC BY 4.0 rows listed in `CREDITS-mk85.md` for `im_thruster_burst` and `mk85_nano_flow`. Everything else in those banks used here is CC0 / public domain or Jurek's own recordings.
+
+## C. Per-sound recipes
+
+| id | ms | gain | what | recipe |
+|---|---|---|---|---|
+| `ui_focus_1` | 94 | 0.55 | focus moved to the next item (round-robin 1-3) | C:SLR shutter click #1 HP1.8k + C:tubular bell strike 0 x8 speed, 90 ms, -13 dB |
+| `ui_focus_2` | 94 | 0.55 | focus moved to the next item (round-robin 1-3) | C:SLR shutter click #4 HP1.8k + C:tubular bell strike 1 x8 speed, 90 ms, -13 dB |
+| `ui_focus_3` | 94 | 0.55 | focus moved to the next item (round-robin 1-3) | C:SLR shutter click #7 HP1.8k + C:tubular bell strike 2 x8 speed, 90 ms, -13 dB |
+| `ui_slider_tick_1` | 34 | 0.4 | slider step (1-3 = low/mid/high end of the range) | C:SLR click #9 HP3k, varispeed x1.00 |
+| `ui_slider_tick_2` | 30 | 0.4 | slider step (1-3 = low/mid/high end of the range) | C:SLR click #10 HP3k, varispeed x1.12 |
+| `ui_slider_tick_3` | 26 | 0.4 | slider step (1-3 = low/mid/high end of the range) | C:SLR click #11 HP3k, varispeed x1.26 |
+| `ui_confirm` | 987 | 0.8 | confirm / select (cross or A) | C:mouse click + C:switch x0.45 LP900 (thump) + C:bell x4 450 ms + C:bell x8 250 ms, 0.25 s plate |
+| `ui_back` | 824 | 0.65 | back / cancel (circle or B) | C:SLR click reversed LP6k (air) + C:switch #2 + C:bell x3 280 ms, 0.2 s plate |
+| `ui_error` | 319 | 0.7 | invalid action / cannot select (pairs with danger colour) | C:dipswitch x0.6 + x0.55 LP2k (two knocks 85 ms apart) + C:singing bowls 1 & 2 detuned 6 % (beating) |
+| `ui_tab` | 199 | 0.6 | tab / shoulder-button page switch (L1/R1) | C:mechanical tack x1.35 HP400 + C:bell x8 80 ms |
+| `ui_panel_open` | 1213 | 0.7 | panel / menu opens (holo slide-in) | N:mk42_whoosh_1 0.35-0.8 s HP500 + N:cl_servo_small x1.5 + C:tack latch + C:bowl 2 x2 + C:bell x8 |
+| `ui_panel_close` | 1036 | 0.65 | panel / menu closes | N:mk42_whoosh_1 reversed + N:cl_servo_small x1.2 + C:tack latch x0.8 LP5k |
+| `ui_room_created` | 2688 | 0.9 | room opened / hosted — a small ceremony | N:mk42_lock_big_1 + C:bell x2 1.4 s + C:bell x3 1.0 s + C:bowl 1 x2 + C:bell x8, 0.6 s plate |
+| `ui_player_joined` | 1440 | 0.75 | a player joined the room (rising third) | C:mouse click + C:bell x4 then x5.04 (+4 st) 110 ms apart + C:bell x10 |
+| `ui_player_left` | 1409 | 0.6 | a player left the room (falling third, darker) | C:bell x5.04 then x4, LP 4k / 3k, 120 ms apart |
+| `ui_ready` | 981 | 0.75 | player toggled READY | N:mk42_lock_1 (clamp click + ring + thump) + C:bell x6 350 ms |
+| `ui_unready` | 462 | 0.6 | player un-readied | N:mk42_lock_2 x0.85 LP4k |
+| `ui_countdown_3` | 280 | 0.7 | match start countdown tick 3 | C:SLR click + C:tuning fork x2 (880 Hz) 280 ms |
+| `ui_countdown_2` | 280 | 0.7 | match start countdown tick 2 | C:SLR click + C:tuning fork x2 (880 Hz) 280 ms |
+| `ui_countdown_1` | 280 | 0.7 | match start countdown tick 1 | C:SLR click + C:tuning fork x2 (880 Hz) 280 ms |
+| `ui_countdown_go` | 3014 | 1.0 | match start — GO | N:mk42_lock_big_2 + N:im_thruster_burst + C:fork x3 (1320 Hz) + C:bell x2 + N:mk42_whoosh_big_1, 0.7 s plate |
+| `ui_map_zoom_in` | 215 | 0.5 | map zoom step in (R2) | N:sp_lens_focus x1.25 + C:SLR click + C:bell x9 |
+| `ui_map_zoom_out` | 173 | 0.5 | map zoom step out (L2) | N:sp_lens_focus reversed x0.9 + C:SLR click |
+| `ui_map_ping` | 3290 | 0.85 | map ping / mark (square) — sonar with two echoes | C:SLR click + C:tuning fork x3 (1320 Hz) 700 ms + C:bell x6, echoes at 220/440 ms LP 5k/3k, 0.8 s plate |
+| `ui_map_open` | 2253 | 0.8 | full map opens — pairs with the rise-reveal (starts at t=0, bell lands at 120 ms) | N:mk42_whoosh_2 + C:bowl 1 x3 + C:bell x4 + C:SLR click, 0.5 s plate |
+| `ui_map_close` | 517 | 0.65 | full map closes | N:mk42_whoosh_2 reversed + C:switch |
+| `ui_retint_wave` | 2899 | 0.7 | palette wave sweeping the UI on suit change (layer under the suit stinger) | N:mk42_whoosh_big_1 + C:bowl 2 x4 + C:bell x8, 0.6 s plate |
+| `ui_scan_sweep` | 895 | 0.35 | map / HUD scan sweep passing (quiet one-shot; retrigger with each sweep) | N:mk42_whoosh_1 band-passed 3.5k + C:fork x4 faint |
+| `ui_suit_mk1` | 2254 | 0.9 | suit select stinger — raw steel: hydraulic + plate clank + ember flame | N:cl_mk1_hydraulic + N:cl_plate_clank + N:cl_flame_start + C:bell x1.80 tail |
+| `ui_suit_mk2` | 2135 | 0.9 | suit select stinger — brushed silver + ice: fast servo + clamp + high icy bell/bowl | N:cl_servo_fast + N:cl_clamp_lock + C:bell x6.00 tail + C:bowl 2 shimmer |
+| `ui_suit_mk3` | 2337 | 0.9 | suit select stinger — hot-rod: faceplate slam + clamp + thruster whine tail | N:cl_faceplate_close + N:cl_clamp_lock + N:thruster_whine + C:bell x3.00 tail |
+| `ui_suit_mk42` | 2207 | 0.9 | suit select stinger — plates clamping in a burst + suit-ready chime | N:mk42_lock_1 + N:mk42_lock_2 + N:mk42_lock_big_1 + N:mk42_suit_ready + C:bell x4.00 tail |
+| `ui_suit_mk85` | 2310 | 0.9 | suit select stinger — nanotech: flow -> crystallise -> lock + cyan shimmer | N:mk85_nano_flow + N:mk85_nano_crystallise + N:mk85_nano_lock + C:bell x5.04 tail + C:bowl 2 shimmer |
+| `ui_suit_hulkbuster` | 2253 | 0.9 | suit select stinger — heavy clamp + a giant step + hydraulic hiss | N:hb_clamp_heavy + N:hb_step_heavy_1 + N:hb_hydraulic_hiss + C:bell x1.50 tail |
+| `ui_suit_ironspider` | 2204 | 0.9 | suit select stinger — nano seal + spider legs deploy + lens focus | N:sp_nano_seal + N:sp_leg_deploy + N:sp_lens_focus + C:bell x4.50 tail + C:bowl 2 shimmer |
+| `ui_suit_peter` | 2276 | 0.9 | suit select stinger — web thwip + sneaker landing + cloth (no metal: out of suit) | N:sp_thwip_1 + N:sp_sneaker_1 + N:sp_cloth_1 + C:bell x6.00 tail |
+
+Rebuild: `python3 v3/design/tools/audio_fetch.py && python3 v3/design/tools/build_ui_audio.py` (raw downloads cached in `v3/design/tools/_cache/`, git-ignored). Analysis sheets (waveform + log spectrogram of every output): `v3/docs/design/ui_audio_sheet_{1,2}.png`.
+
+
+---------------------------------------------------------------- assets/audio/city/CREDITS-city.md
+
+# Audio credits — city / apartment / villa
+
+All real recordings, cut and processed by `next/blender/city/audio/build_audio.py` (loops crossfaded seamless, loudnorm). No synthesis.
+
+| id | what | source file | author | licence |
+|---|---|---|---|---|
+| `city_traffic` | street-level traffic + pedestrians bed (loop 42 s) — play near the ground, fade with altitude | [Sunday in the city street noise1.ogg](https://commons.wikimedia.org/wiki/File:Sunday_in_the_city_street_noise1.ogg) | cori | Public domain |
+| `city_traffic` | street-level traffic + pedestrians bed (loop 42 s) — play near the ground, fade with altitude | [Sunday in the city street noise3.ogg](https://commons.wikimedia.org/wiki/File:Sunday_in_the_city_street_noise3.ogg) | cori | Public domain |
+| `city_rumble_far` | distant city rumble heard from rooftops / flight height (loop 60 s, low-passed) | [Urban Street on a Rainy Afternoon.flac](https://commons.wikimedia.org/wiki/File:Urban_Street_on_a_Rainy_Afternoon.flac) | Extemporalist | CC0 1.0 |
+| `city_wind_high` | wind at height (rooftops, skyscraper tops, flying slowly) (loop 12 s) | [Wind outside atmosphere (Gravity Sound).wav](https://commons.wikimedia.org/wiki/File:Wind_outside_atmosphere_(Gravity_Sound).wav) | Gravity Sound | CC BY 4.0 |
+| `city_wind_high` | wind at height (rooftops, skyscraper tops, flying slowly) (loop 12 s) | [Windy day (Gravity Sound).wav](https://commons.wikimedia.org/wiki/File:Windy_day_(Gravity_Sound).wav) | Gravity Sound | CC BY 4.0 |
+| `city_harbour` | harbour water lapping on piers and the seawall (loop 56 s) | [WWS Smallwaves.ogg](https://commons.wikimedia.org/wiki/File:WWS_Smallwaves.ogg) | Work With Sounds / Museum of Technology | CC BY 4.0 |
+| `city_siren_police` | distant police siren pass with street reflections (one-shot 11 s) | [WWS Policevansirenoutsideofthevehicle.ogg](https://commons.wikimedia.org/wiki/File:WWS_Policevansirenoutsideofthevehicle.ogg) | Work With Sounds | CC BY 4.0 |
+| `city_siren_fire` | distant fire engine siren (one-shot 12 s) | [WWS Fireenginesiren.ogg](https://commons.wikimedia.org/wiki/File:WWS_Fireenginesiren.ogg) | Work With Sounds | CC BY 4.0 |
+| `city_siren_us` | American wail/yelp police siren (one-shot 12 s) | [American police siren i.ogg](https://commons.wikimedia.org/wiki/File:American_police_siren_i.ogg) | lezer | Public domain |
+| `city_foghorn` | ship foghorn across the river (one-shot 9 s) | [WWS Foghorn.ogg](https://commons.wikimedia.org/wiki/File:WWS_Foghorn.ogg) | Work With Sounds | CC BY 4.0 |
+| `city_window_unlatch` | window handle turned open (metal latch release) | [Lock (Gravity Sound).wav](https://commons.wikimedia.org/wiki/File:Lock_(Gravity_Sound).wav) | Gravity Sound | CC BY 4.0 |
+| `city_window_open` | casement leaves swinging out (hinge + frame release, light creak) | [Open closet door (Gravity Sound).wav](https://commons.wikimedia.org/wiki/File:Open_closet_door_(Gravity_Sound).wav) | Gravity Sound | CC BY 4.0 |
+| `city_window_open` | casement leaves swinging out (hinge + frame release, light creak) | [Open squeaky door (Gravity Sound).wav](https://commons.wikimedia.org/wiki/File:Open_squeaky_door_(Gravity_Sound).wav) | Gravity Sound | CC BY 4.0 |
+| `city_window_close` | casement leaves pulled shut against the frame | [Close door (Gravity Sound).wav](https://commons.wikimedia.org/wiki/File:Close_door_(Gravity_Sound).wav) | Gravity Sound | CC BY 4.0 |
+| `city_window_latch` | window handle turned shut (latch engages) | [Lock (Gravity Sound).wav](https://commons.wikimedia.org/wiki/File:Lock_(Gravity_Sound).wav) | Gravity Sound | CC BY 4.0 |
+| `villa_bay_door` | hangar door panels motoring into their wall pockets (3.6 s, clip bay_open/bay_close t=0) | [WWS REVOLVING THEATRE STAGE underneath.ogg](https://commons.wikimedia.org/wiki/File:WWS_REVOLVINGTHEATRESTAGEunderneath.ogg) | Work With Sounds | CC BY 4.0 |
+| `villa_bay_door_thud` | hangar door panels closing against each other (heavy thud) | [MarkZero bank metal_heavy.mp3 (from Slam closet door (Gravity Sound).wav)](https://commons.wikimedia.org/wiki/File:Slam_closet_door_(Gravity_Sound).wav) | Gravity Sound | CC BY 4.0 |
+| `villa_hum` | villa interior hum: HVAC + faint electronics (loop 12 s) | [Air conditioner hum (Gravity Sound).wav](https://commons.wikimedia.org/wiki/File:Air_conditioner_hum_(Gravity_Sound).wav) | Gravity Sound | CC BY 4.0 |
+| `villa_hum` | villa interior hum: HVAC + faint electronics (loop 12 s) | [WWS UPS uninterruptible power supply.ogg](https://commons.wikimedia.org/wiki/File:WWS_UPS8211uninterruptiblepowersupply.ogg) | Work With Sounds | CC BY 4.0 |
+| `villa_workshop` | workshop ambience: air handling + server/UPS whine (loop 24 s) | [MarkZero bank room_workshop.mp3 (from Air vent (Gravity Sound).wav)](https://commons.wikimedia.org/wiki/File:Air_vent_(Gravity_Sound).wav) | Gravity Sound | CC BY 4.0 |
+| `villa_workshop` | workshop ambience: air handling + server/UPS whine (loop 24 s) | [WWS UPS uninterruptible power supply.ogg](https://commons.wikimedia.org/wiki/File:WWS_UPS8211uninterruptiblepowersupply.ogg) | Work With Sounds | CC BY 4.0 |
+
+
+---------------------------------------------------------------- assets/audio/classics/CREDITS-classics.md
+
+# Classics sound credits
+
+Every file is cut/layered/processed from recordings already vetted for
+redistribution in this project (no synthesis, no new downloads). Built by
+`next/blender/classics/audio-build.py` (44.1 kHz mono, loudnorm I=-16 LUFS, TP -1.5).
+
+Sources: **U** = Jurek's own recordings (`Projects/MarkZero/audio/user-provided/`); **B** = the MarkZero bank (`Projects/MarkZero/audio/sfx/`, licences + original URLs in its CREDITS.md: Gravity Sound CC BY 4.0, rubberduck CC0, Work With Sounds CC BY 4.0 …); **K** = Kenney CC0 (`game/assets/audio/`, see its CREDITS.md).
+
+| id | what | cut from |
+|---|---|---|
+| `cl_faceplate_close` | Mk II/III faceplate closing: slide flow + pressure hiss + latch + seat | B nano_flow band 500-3500 + B thruster_hot hiss + B latch @0.95x + B concrete_c lowpass |
+| `cl_faceplate_open` | Mk II/III faceplate unlock + lift | B latch @1.25x + B thruster_hot hiss + B nano_flow |
+| `cl_mk1_visor` | Mk I welded visor slamming (scrap clatter + crude latch, no ring) | B metal_debris @0.8x + B latch @0.75x + B concrete_b lowpass 900 Hz |
+| `cl_servo_fast` | fast robot-arm sweep (hydraulic rush, no pitch) | B thruster_mid 0.3-0.85 s band 150-1800 Hz + B rubble_b 0-0.5 s lowpass 400 Hz |
+| `cl_servo_small` | small precise approach (fine hydraulic flow, no pitch) | B nano_flow 0.5-0.85 s band 400-3000 Hz |
+| `cl_servo_big` | big actuator move / arm stows (heavy hydraulics, no pitch) | B thruster_mid lowpass 900 + B rubble_b lowpass 350 + B concrete_b lowpass 800 |
+| `cl_hiss` | pneumatic release hiss | B thruster_hot (sandblasting nozzle) 0.6-1.6 s, highpass 1.4 kHz, exponential decay |
+| `cl_impact_driver` | torque head: ratcheting burst + seat click (no motor pitch) | B metal_debris @1.2x band 400-6000 Hz with 24 Hz tremolo (ratchet) + B latch @0.9x |
+| `cl_clamp_lock` | armour piece clamps home (thud + latch, no ring) | B latch @0.85x + B concrete_c lowpass 900 Hz + B metal_debris 0-0.15 s |
+| `cl_plate_clank` | plate touches plate (dull, no ring) | B concrete_c + B latch @1.1x |
+| `cl_sparks` | spark crackle when a bolt seats | B metal_debris @1.4x, highpass 2.5 kHz |
+| `cl_floor_unlock` | floor hatches unlock and drop (thud, latch, hiss) | B latch @0.8x + B concrete_b lowpass 700 + B metal_debris lowpass 2.5k + hiss |
+| `cl_floor_open` | floor hatches swing down / up (rumble + seat) | B rubble_b lowpass 600 + B concrete_a lowpass 1.5k + hiss |
+| `cl_gantry_rise` | robot arms rise out of the pit (hydraulic lift, no pitch) | B thruster_mid 0-1.6 s lowpass 700 + B rubble_b lowpass 300 |
+| `cl_reactor_on` | arc reactor housing locks + ring lights up (hum swell) | B latch @0.9x + B reactor 0-1.6 s + B repulsor_charge @0.8x lowpassed |
+| `cl_reactor_off` | reactor ring powers down + housing unlocks (suit-off) | B reactor reversed + B latch @0.85x |
+| `cl_hud_on` | eyes / HUD boot chirp when the faceplate locks | B hud_confirm + B hud_scan 0-0.8 s + B servo_fine @1.4x |
+| `cl_hud_off` | HUD shuts off (suit-off) | B hud_click + B hud_tick @0.8x |
+| `cl_mk1_hydraulic` | Mk I clunky hydraulics (knee/elbow pistons) | B servo_grind @0.65x + hiss tail |
+| `cl_mk1_step` | Mk I heavy step — Jurek's armour step, pitched down + scrap rattle | U steps/step-03 @0.82x + B clank_scrap @0.8x + B servo_grind |
+| `cl_flame_loop` | flamethrower roar (loop) | B thruster_hot @0.78x lowpass 6.5 kHz + B thruster_sub, crossfade-looped |
+| `cl_flame_start` | flamethrower valve + ignition whoomp | B latch + K boost @0.8x + head of cl_flame_loop |
+| `cl_flame_stop` | flamethrower shut-off | tail of cl_flame_loop + B latch @0.85x |
+| `cl_rocket_launch` | Mk I forearm rocket launch (crude) | K rpg_launch @0.85x + B clank_scrap |
+| `cl_missile_launch` | Mk III forearm mini-missile launch | K rpg_launch + B thruster_whine @1.3x |
+| `cl_pod_open` | forearm pod hatch flips open | B latch @1.2x + B servo_fine @1.3x |
+| `cl_pod_close` | forearm pod hatch shuts | B servo_fine @1.3x + B latch |
+| `cl_hatch_pop` | flare hatches pop | B latch @1.4x + hiss |
+| `cl_hatch_close` | flare hatches close | B latch @1.1x |
+| `cl_flare` | countermeasure flare pop + fizz | K rpg_launch head @1.6x + B thruster_hot @1.5x highpass |
+| `cl_flaps_open` | stabiliser flaps deploy | B servo_fast @1.25x |
+| `cl_flaps_close` | stabiliser flaps stow | B servo_fast @1.2x + B clank_light @1.3x |
+
+
+---------------------------------------------------------------- assets/audio/core/CREDITS-core.md
+
+# Core sounds (orchestrator) — credits
+
+| id | built from | source | licence |
+|---|---|---|---|
+| `repulsor_fire_1..6` | Jurek's own repulsor recordings `MarkZero/audio/user-provided/repulsor/repulsor-0N.mp3`, silence-trimmed, 1.0 s, plus a 150 Hz low-passed body layer from Kenney `explosion_low.ogg`, loudness −14 LUFS | Jurek (user-provided) + [Kenney Sci-fi Sounds](https://kenney.nl/assets/sci-fi-sounds) | Jurek's + CC0 |
+| `repulsor_fire_big` | Jurek's `repulsor-charged.mp3` + Kenney `explosion.ogg` (220 Hz low-pass, delayed 0.52 s to land on the discharge) | Jurek + Kenney | Jurek's + CC0 |
+| `repulsor_charge` | Gravity Sound "Charging 1" + "Charging 2" layered | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Charging_1_%28Gravity_Sound%29.wav) | CC BY 4.0 (Gravity Sound) |
+| `repulsor_impact` | rubberduck "75 CC0 breaking/falling/hit" hit + Kenney `explosion_low` | [OpenGameArt](https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx) + Kenney | CC0 |
+| `repulsor_impact_big` | Kenney `explosion.ogg` + rubberduck concrete debris | Kenney + OpenGameArt | CC0 |
+| `thruster_idle/mid/whine` | Saab J35D Draken turbojet, start and taxi, recorded on the apron | [Work With Sounds / Torsten Nilsson](https://commons.wikimedia.org/wiki/File:WWS_SaabJ35DDrakenstartengineandtaxiing.ogg) | CC BY 4.0 |
+| `thruster_hot` | sandblasting a ship hull, next to the nozzle | [Work With Sounds](https://commons.wikimedia.org/wiki/File:WWS_Sandblastingashiphull.ogg) | CC BY 4.0 |
+| `thruster_sub` | underwater/space engine rumble | [qubodup, OpenGameArt](https://opengameart.org/content/underwater-or-space-engine-rumble) | CC0 |
+| `wind_low/high/gust` | Gravity Sound "Windy day", "Fan", "Wind outside atmosphere" | Wikimedia Commons | CC BY 4.0 |
+
+All re-cut from the vetted bank of the browser build (`Projects/MarkZero/audio`, see its CREDITS.md
+for the auditioning notes), loudness-normalised with ffmpeg `loudnorm`, encoded Vorbis q6 (oggenc) + MP3 192k.
+
+
+---------------------------------------------------------------- assets/audio/enemies/CREDITS-enemies.md
+
+# Audio credits — enemies (`assets/audio/enemies/`)
+
+Every file is a layered / pitched / filtered mix of **real recordings**; nothing is synthesised.
+Regenerate: `python3 next/blender/enemies/enaudio.py` (exact recipe per id — sources, pitch ratios, trims,
+gains, filters — in that script; the mixer is `blender/hulkbuster/hbaudio.py`). All outputs 44.1 kHz,
+`loudnorm I=-16 TP=-1.5`, .ogg (oggenc q6) + .mp3 (192k). `en_rpg_flight` is a seamless loop.
+
+## Sources
+
+**Attribution required in the game credits:** Michel Baradari (CC-BY 3.0) and HaelDB (OGA-BY 3.0) — see the voice rows.
+
+
+| source (path in this repo tree) | original | author | licence |
+|---|---|---|---|
+| `next/blender/enemies/_cache/voices/player/` (`michelbaradari-human.7z`) | 11 male human pain/death sounds — opengameart.org/content/11-male-human-paindeath-sounds | Michel Baradari (submitted by qubodup) | **CC-BY 3.0** |
+| `next/blender/enemies/_cache/voices/yelling/` (`yelling sounds.zip`) | Male Grunt/Yelling sounds — opengameart.org/content/male-gruntyelling-sounds | HaelDB | CC0 / **OGA-BY 3.0** |
+| `next/blender/enemies/_cache/voices/death pain grunts.wav` | grunts of male death and pain — opengameart.org/content/grunts-male-death-and-pain | thebardofblasphemy | CC0 |
+| `next/blender/enemies/_cache/Prepared SFX Library/` (`Prepared SFX Library.7z`, 194 MB, downloaded 2026-09-25 with Jurek's approval) | The Free Firearm Sound Library — opengameart.org/content/the-free-firearm-sound-library — 96 kHz stereo field recordings. Used: Walther PPQ `X_39P` (near) / `X_31P` (mid), Colt 1911 `A_42P` / `A_34P`, Bersa .380 `F_47P` / `F_41P`, AK-47 `C_28P` / `C_31P`, Norinco SKS `U_14P` / `U_19P` | Ben Jaszczak, Brian Nelson, Kevin Heras, Matthew Nanney | CC0 |
+| `Voxel World/Audio (od jurka)/Shotgun/Shotgun reload+Shoot.mp3` | shotgun pump actions (used for the pistol slide / rifle bolt) | Jurek (provided by him) | owned |
+| `Voxel World/assets/audio/explosion_huge.ogg` | Chunky Explosion — opengameart.org/content/chunky-explosion | Joth | CC0 |
+| `Voxel World/assets/audio/explosion_0/1.ogg`, `explosion_small_0/1.ogg` | opengameart.org/content/explosions-4 | EZduzziteh | CC0 |
+| `Voxel World/assets/audio/explosion_small_2.ogg` | bang_08 — opengameart.org/content/25-cc0-bang-firework-sfx | rubberduck | CC0 |
+| `Voxel World/assets/audio/explosion_rumble.ogg` | Muffled Distant Explosion — opengameart.org/content/muffled-distant-explosion | NenadSimic | CC0 |
+| `Voxel World/assets/audio/rocket_launch.ogg` | launch.wav — opengameart.org/content/rocket-launch | qubodup | CC0 |
+| `Voxel World/assets/audio/swing_0..4.ogg` | Swishes Sound Pack — opengameart.org/content/swishes-sound-pack | artisticdude | CC0 |
+| `Voxel World/assets/audio/footstep_concrete_0..5.ogg` | Fantozzi's Footsteps (Stone) — opengameart.org/content/fantozzis-footsteps-grasssand-stone | Fantozzi | CC0 |
+| `Voxel World/assets/audio/bounce_clink_0/1.ogg`, `thud_1.ogg` | 75 CC0 breaking/falling/hit sfx; 100 CC0 metal and wood SFX (opengameart) | rubberduck | CC0 |
+| `next/blender/spider/_cache/audio_raw/kenney/k_impact/` | Impact Sounds — kenney.nl/assets/impact-sounds | Kenney | CC0 |
+| `next/blender/spider/_cache/audio_raw/kenney/k_rpg/` | RPG Audio — kenney.nl/assets/rpg-audio (cloth, metal clicks/latches, knife slices, creaks) | Kenney | CC0 |
+| `game/assets/audio/rpg_launch.ogg`, `body_drop.ogg` | Kenney Sci-fi / Impact packs | Kenney | CC0 |
+| `MarkZero/audio/sfx/thruster_hot`, `thruster_mid` | WWS Sandblasting / Saab J35D Draken (Wikimedia Commons) | Work With Sounds / Torsten Nilsson | CC BY 4.0 |
+| `MarkZero/audio/sfx/concrete_a/c`, `rubble_b`, `glass_debris`, `wind_gust` | see `MarkZero/audio/CREDITS.md` | rubberduck (CC0) / Gravity Sound (CC BY 4.0) | CC0 / CC BY 4.0 |
+
+## What is what
+- Guns (real recordings, 2026-09-25 rebuild): single shots are cut out of the Free Firearm Sound Library by
+  `next/blender/enemies/enshots.py` (onset detection, each shot keeps its own natural tail until the next shot).
+  - `en_pistol_shot_1..6` — close: PPQ ×3, 1911 ×2, Bersa ×1; each = the near recording + the same gun's mid-distance
+    recording as body (−6 dB) + diffuse street reflections (28 decaying taps, low-passed, −8 dB), light limiting,
+    peak −1.5 dBFS, index gain 1.5. `en_pistol_shot_far_1..5` — the mid recordings, low-passed (air absorption) with a
+    longer reflection tail, peak −4 dBFS.
+  - `en_rifle_shot_1..6` — close: AK-47 ×4, SKS ×2 (same 7.62x39 cartridge), built the same way, peak −1 dBFS.
+    `en_rifle_shot_far_1..4` — AK/SKS mid recordings, distant treatment.
+  - Variant sets: `en_pistol_shot`, `en_pistol_shot_far`, `en_rifle_shot`, `en_rifle_shot_far`. Gunshots are
+    peak-normalised (not loudnorm'd, which would flatten the transient).
+  - Reloads: the library has gunshots only (no handling), so `en_pistol_mag_out/in`, `en_rifle_mag_out/in`,
+    `en_rpg_*` stay Kenney metal clicks/latches and `en_pistol_slide` / `en_rifle_bolt` stay Jurek's pump recording.
+  - `en_shell_drop_1..3`, `en_rpg_launch/flight`, `en_explosion`, `en_bullet_flyby`, `en_impact_concrete/metal` unchanged.
+- Melee: `en_swish_1..4`, `en_knife_swish/hit`, `en_bat_swish/hit`, `en_punch_hit_1..3`, `en_hit_body`, `en_ground_pound`.
+- Body: `en_step_1..6`, `en_cloth_1..4`, `en_body_fall`, `en_web_creak`.
+- Voice (rebuilt 2026-09-26 from real non-verbal recordings; the old countdown-based files stay in
+  `next/blender/enemies/_cache/_rejected_voice/`). Every take was transcribed with whisper (ggml-small, en) and anything
+  that is a word was thrown out (`1yell3` "NOOO", `3yell15` / dpg take 7 "HELLO!", Baradari `paino` = the pack's "ouch",
+  plus burps, coughs, sneezes, gagging, "baby cooing", "gibberish"). Spectrograms: `voices_spectrograms.png`.
+  - `en_grunt_1..6` — short effort grunts: HaelDB `3grunt1`, `3grunt3`, `3grunt4`, `3grunt5`, `1yell6`, `2yell9`.
+  - `en_pain_1..6` — sharp hit sounds: Baradari `pain1`, `pain2`, `pain4`, `pain5`, `painh`; HaelDB `1yell8` (yelp).
+  - `en_death_1..6` — death groans: Baradari `die1`, `die2`, `deathh`; thebardofblasphemy takes 9, 12, 14.
+  - `en_alert_1..3` — startled "huh?!" / gasp: HaelDB `1yell9`, `1yell10`, `3yell4`.
+  - `en_struggle` — HaelDB `2yell2` + `2yell7` growls + `3grunt4`, with Kenney cloth.
+  - `en_brute_roar` (HaelDB `2yell4` yell ×0.76 + `2yell11` growl ×0.82 + low rumble), `en_brute_grunt` (`3grunt1` ×0.74 +
+    `2yell10` ×0.8), `en_brute_breath` (`3yell13` growl ×0.82, low-passed).
+  - Processing: leading silence trimmed (cue-accurate), high-pass 90 Hz, gentle compression, loudnorm −16 LUFS.
+
+- Variant sets (random pick): `en_pistol_shot`, `en_rifle_shot`, `en_shell_drop`, `en_swish`, `en_punch_hit`, `en_step`,
+  `en_cloth`, `en_grunt`, `en_pain`, `en_death`.
+
+Banned sources (refused by the build scripts): `suit-up-sequence*.mp3` (film clip with AC/DC "Back in Black") and
+`faceplate-close*.mp3` (same film score). None of the enemy sounds use them.
+
+Known limits: no spoken barks (non-verbal only, by design); reloads are not recorded on real guns (see above).
+
+
+---------------------------------------------------------------- assets/audio/hulkbuster/CREDITS-hulkbuster.md
+
+# Audio credits — Hulkbuster + Veronica (`assets/audio/hulkbuster/`)
+
+Every file here is a **layered, pitch-shifted (tape-style, slower + deeper) and filtered mix of real
+recordings**; nothing is synthesised. Regenerate: `python3 next/blender/hulkbuster/hbaudio.py`
+(the exact recipe of every sound — sources, pitch ratios, gains, trims, filters — is in that script).
+All outputs: 44.1 kHz, `loudnorm I=-16 TP=-1.5`, .ogg (oggenc q6) + .mp3 (192k). Loops
+(`hb_rocket_loop`, `vr_hover_loop`) are cut seamless with an equal-power tail-over-head crossfade.
+
+## Sources used (all already vetted for a free game)
+
+| source file | original | author | licence |
+|---|---|---|---|
+| `MarkZero/audio/user-provided/steps/step-02,03,07,09,11,15.mp3` | armour footsteps | Jurek (own recording) | owned |
+| `MarkZero/audio/user-provided/repulsor/repulsor-01,04,charged.mp3` | repulsor shots/charge | Jurek (own recording) | owned |
+| `MarkZero/audio/sfx/latch` | Lock (Gravity Sound).wav, Wikimedia Commons | Gravity Sound | CC BY 4.0 |
+| `MarkZero/audio/sfx/metal_heavy` | Slam closet door (Gravity Sound).wav | Gravity Sound | CC BY 4.0 |
+| `MarkZero/audio/sfx/metal_b`, `clank_plate`, `metal_c`, `clank_light` | Metal pole hit / Metal Hit (Gravity Sound) | Gravity Sound | CC BY 4.0 |
+| `MarkZero/audio/sfx/servo_heavy`, `servo_fast`, `servo_grind` | Scratching / Rubbing metal door, Mechanical sound (Gravity Sound) | Gravity Sound | CC BY 4.0 |
+| `MarkZero/audio/sfx/thruster_hot` | WWS Sandblastingashiphull.ogg (Commons) | Work With Sounds / Torsten Nilsson | CC BY 4.0 |
+| `MarkZero/audio/sfx/thruster_idle`, `thruster_mid`, `thruster_whine` | WWS SaabJ35DDrakenstartengineandtaxiing.ogg (Commons) | Work With Sounds / Torsten Nilsson | CC BY 4.0 |
+| `MarkZero/audio/sfx/thruster_sub` | opengameart.org/content/underwater-or-space-engine-rumble | qubodup | CC0 |
+| `MarkZero/audio/sfx/wind_low`, `wind_gust` | Windy day / Wind outside atmosphere (Gravity Sound) | Gravity Sound | CC BY 4.0 |
+| `MarkZero/audio/sfx/concrete_a`, `concrete_c`, `metal_debris`, `glass_debris` | opengameart.org/content/75-cc0-breaking-falling-hit-sfx | rubberduck | CC0 |
+| `MarkZero/audio/sfx/rubble_b` | Dropping rocks on ground (Gravity Sound) | Gravity Sound | CC BY 4.0 |
+| `MarkZero/audio/sfx/gravel_land` | Land in Gravel (Gravity Sound).mp3 | Gravity Sound | CC BY 4.0 |
+| `MarkZero/audio/sfx/repulsor_fire_a,b,c`, `repulsor_tail`, `repulsor_charge_big`, `reactor`, `suit_ready` | see `MarkZero/audio/CREDITS.md` (Gravity Sound, Commons) | Gravity Sound | CC BY 4.0 |
+| `game/assets/audio/explosion.ogg`, `explosion_low.ogg`, `boost.ogg`, `hit_metal.ogg`, `swing_whoosh.ogg`, `laser_loop.ogg` | kenney.nl Sci-fi / Impact sounds | Kenney | CC0 |
+
+Full original URLs: `Projects/MarkZero/audio/CREDITS.md` and `Projects/Mark Zero/game/assets/audio/CREDITS.md`.
+
+## What each id is made of (short)
+
+- `hb_step_heavy_1..4` (+ `hb_step_heavy` variant set): Jurek's step ×0.70 + door slam ×0.55 + concrete thump (LP 420 Hz) + faint slowed servo groan.
+- `hb_step_run_1..2`, `hb_land`, `hb_land_heavy` (Kenney low explosion + concrete + rubble + slam).
+- `hb_hydraulic_hiss`, `hb_hydraulic_breath`: sandblaster nozzle, high-passed, short envelopes (+ latch / servo creak).
+- `hb_servo_heavy`, `hb_piston_fire`, `hb_swing_heavy`, `hb_block_impact`, `hb_clamp`, `hb_clamp_heavy`, `hb_flap`.
+- `hb_faceplate` (rebuilt 2026-09-25): servo_fast slide ×0.8 + latch ×0.7 + metal_c clack (MarkZero CC bank).
+
+**Banned sources:** `MarkZero/audio/user-provided/suit-up-sequence*.mp3` (film clip with AC/DC "Back in Black") and
+`faceplate-close*.mp3` (same film score, see `next/docs/progress/gantry-v2/user_recordings_music_check.png`). The
+mixer (`hbaudio.build`) refuses them; the old `hb_faceplate` built on faceplate-close was replaced.
+- `hb_plate_whoosh`, `hb_power_up`, `hb_part_blowoff`.
+- `hb_rocket_ignite`, `hb_rocket_loop` (space-engine rumble ×0.85 + Draken ×0.7 LP + nozzle), `hb_rocket_burst`.
+- `hb_mega_charge`, `hb_mega_blast`, `hb_unibeam_charge`, `hb_unibeam_blast` (Jurek's repulsor recordings, deepened, + Kenney layers).
+- `vr_reentry` (7 s swell), `vr_flip`, `vr_retro`, `vr_hover_loop`, `vr_clamp_release`, `vr_bay_open`, `vr_bay_close`,
+  `vr_release_1..3` (+ `vr_release` variant set), `vr_part_launch`, `vr_clamp_lock`, `vr_ascend`.
+
+
+---------------------------------------------------------------- assets/audio/mk42/CREDITS-mk42.md
+
+# Audio credits — `assets/audio/mk42/` (Mark 42, summon runtime, human locomotion)
+
+Every file here is **layered / processed real recordings** built by
+`next/blender/mk42/audio_build.py` (numpy: cutting, speed/pitch change, doppler sweeps,
+envelopes, layering; ffmpeg: filters + 2-pass `loudnorm I=-16 TP=-1.5 linear`; oggenc q6 +
+libmp3lame 192k). No oscillator synthesis. Rebuild: `python3 next/blender/mk42/audio_build.py`.
+
+No new downloads were made: every source is from banks already vetted for this game.
+
+## Sources
+
+| source file | what it is | origin | author | licence |
+|---|---|---|---|---|
+| ~~`MarkZero/audio/user-provided/suit-up-sequence.mp3`~~ | **REMOVED 2026-09-25** — the recording has AC/DC "Back in Black" under it (copyrighted music). The 9 clicks once cut from it are now built from B `latch.mp3` (rubberduck, CC0) + B `concrete_c.mp3`; `audio_build.py` refuses the file | — | — | — |
+| ~~`MarkZero/audio/user-provided/faceplate-close.mp3`~~ | **REMOVED 2026-09-25** — spectrogram shows the same thin sustained lines as the film clip with music; dropped on doubt. `mk42_faceplate_latch` is now B thruster_hot hiss + B latch + B concrete_c | — | — | — |
+| `clank_plate.mp3`, `metal_a.mp3` | striking a metal pole | [Metal pole hit (Gravity Sound).wav](https://commons.wikimedia.org/wiki/File:Metal_pole_hit_%28Gravity_Sound%29.wav) | Gravity Sound | CC BY 4.0 |
+| `metal_b.mp3` | striking a metal pole | [Metal pole hit 3](https://commons.wikimedia.org/wiki/File:Metal_pole_hit_3_%28Gravity_Sound%29.wav) | Gravity Sound | CC BY 4.0 |
+| `clank_scrap.mp3`, `metal_c.mp3` | striking a metal pole | [Metal pole hit 7](https://commons.wikimedia.org/wiki/File:Metal_pole_hit_7_%28Gravity_Sound%29.wav) | Gravity Sound | CC BY 4.0 |
+| `clank_light.mp3`, `metal_light.mp3` | bright metal strike | [Metal Hit (Gravity Sound).mp3](https://commons.wikimedia.org/wiki/File:Metal_Hit_%28Gravity_Sound%29.mp3) | Gravity Sound | CC BY 4.0 |
+| `latch.mp3` | a lock closing | [Lock (Gravity Sound).wav](https://commons.wikimedia.org/wiki/File:Lock_%28Gravity_Sound%29.wav) | Gravity Sound | CC BY 4.0 |
+| `metal_heavy.mp3` | slamming a closet door | [Slam closet door](https://commons.wikimedia.org/wiki/File:Slam_closet_door_%28Gravity_Sound%29.wav) | Gravity Sound | CC BY 4.0 |
+| `servo_fine.mp3` | sanding a metal slide | [Sand down metal slide](https://commons.wikimedia.org/wiki/File:Sand_down_metal_slide_%28Gravity_Sound%29.wav) | Gravity Sound | CC BY 4.0 |
+| `servo_fast.mp3` | rubbing a metal door | [Rubbing metal door](https://commons.wikimedia.org/wiki/File:Rubbing_metal_door_%28Gravity_Sound%29.wav) | Gravity Sound | CC BY 4.0 |
+| `servo_grind.mp3` | small mechanism running | [Mechanical sound](https://commons.wikimedia.org/wiki/File:Mechanical_sound_%28Gravity_Sound%29.wav) | Gravity Sound | CC BY 4.0 |
+| `plates_swarm.mp3` | sorting metal cutlery | [Sorting cutlery](https://commons.wikimedia.org/wiki/File:Sorting_cutlery_%28Gravity_Sound%29.wav) | Gravity Sound | CC BY 4.0 |
+| `suit_ready.mp3` | task-complete chime | [Complete (Gravity Sound).mp3](https://commons.wikimedia.org/wiki/File:Complete_%28Gravity_Sound%29.mp3) | Gravity Sound | CC BY 4.0 |
+| `wind_gust.mp3` | wind gusting | [Wind outside atmosphere](https://commons.wikimedia.org/wiki/File:Wind_outside_atmosphere_%28Gravity_Sound%29.wav) | Gravity Sound | CC BY 4.0 |
+| `gravel_land.mp3` | landing in gravel | [Land in Gravel](https://commons.wikimedia.org/wiki/File:Land_in_Gravel_%28Gravity_Sound%29.mp3) | Gravity Sound | CC BY 4.0 |
+| `thruster_hot.mp3` | abrasive blasting nozzle, near field | [WWS Sandblastingashiphull.ogg](https://commons.wikimedia.org/wiki/File:WWS_Sandblastingashiphull.ogg) | Work With Sounds / Torsten Nilsson | CC BY 4.0 |
+| `thruster_whine.mp3` | Saab J35D Draken turbojet | [WWS SaabJ35DDrakenstartengineandtaxiing.ogg](https://commons.wikimedia.org/wiki/File:WWS_SaabJ35DDrakenstartengineandtaxiing.ogg) | Work With Sounds / Torsten Nilsson | CC BY 4.0 |
+| `metal_d.mp3`, `metal_debris.mp3`, `rubble_a.mp3` | breaking / falling / hit sounds | [75-cc0-breaking-falling-hit-sfx](https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx) | rubberduck | CC0 1.0 |
+| `game/assets/audio/armour_drop.ogg`, `body_drop.ogg`, `hit_metal.ogg`, `land.ogg`, `step.ogg` | impacts, footsteps | [Kenney Impact Sounds](https://kenney.nl/assets/impact-sounds) | Kenney | CC0 1.0 |
+| `game/assets/audio/explosion.ogg`, `explosion_low.ogg` | explosions | [Kenney Sci-fi Sounds](https://kenney.nl/assets/sci-fi-sounds) | Kenney | CC0 1.0 |
+| `game/assets/audio/swing_whoosh.ogg`, `dodge.ogg` | cloth / air whoosh | [Kenney RPG Audio](https://kenney.nl/assets/rpg-audio) | Kenney | CC0 1.0 |
+
+(`MarkZero/audio/sfx/*` files are themselves cut from the originals listed in
+`Projects/MarkZero/audio/CREDITS.md`, which has the full attribution text.)
+
+## What each id is made of
+
+| id (variants) | recipe |
+|---|---|
+| `mk42_lock` (8) | latch/concrete click + metal ring (pole hits / lock / Kenney metal, pitched ±6–18 %) + low thump (Kenney armour drop, lowpassed, slowed 0.62–0.9) |
+| `mk42_lock_big` (3) | double latch/concrete click + heavy ring (door slam / pole hit, slowed 0.8) + body-drop thump |
+| `mk42_wake` (3) | lock release tick (pitched up) + 0.35 s burst of sandblasting noise, highpassed, fast decay = micro-thruster puff |
+| `mk42_whoosh` (5) | sandblast noise through a doppler speed sweep 0.8→1.45 + Kenney swing whoosh |
+| `mk42_whoosh_big` (2) | Draken turbine whine through a sweep + wind gust |
+| `mk42_servo` (4) | 0.3 s slices of metal-slide / rubbing / mechanism, pitched up + a click |
+| `mk42_faceplate_latch` | pressure hiss (B thruster_hot) + latch (B latch) + dull tick (B concrete_c) — rebuilt 2026-09-25 |
+| `mk42_faceplate_unlatch`, `mk42_faceplate_slide` | lock tick + hiss; metal-slide slice |
+| `mk42_flap_open`, `mk42_flap_close` | rubbing-metal slice + light metal strike / click |
+| `mk42_eject` | Kenney explosion + low explosion + metal debris + cutlery rattle + two latch/concrete clicks |
+| `mk42_plate_hit` (3), `mk42_plate_bounce` (3) | debris / pole-hit / armour drop / rubble; light strikes pitched up with fast decay |
+| `mk42_suit_ready` | Gravity Sound "Complete" chime + click |
+| `human_step` (6), `human_step_run` (4), `human_step_scuff` | Kenney step (pitched), + Kenney land for runs, + gravel for the scuff |
+| `human_land`, `human_jump_push`, `human_cloth`, `human_hit_body` | Kenney land / body drop / step / cloth whoosh layers |
+
+## Full attribution text (CC BY 4.0 items)
+
+Sounds by **Gravity Sound** (<https://www.gravitysound.studio/>, mirrored on Wikimedia Commons)
+and **Work With Sounds / Torsten Nilsson**, licensed CC BY 4.0
+(<https://creativecommons.org/licenses/by/4.0/>), cut, pitched and layered as described above.
+
+
+---------------------------------------------------------------- assets/audio/mk85/CREDITS-mk85.md
+
+# Sound credits — mk85 (Mark 85 + Iron Man library)
+
+Built by `next/blender/mk85/audio-build.py` (layered, pitched, EQ'd, faded, normalised to
+-1.5 dBFS peak / -16 LUFS for sounds >= 0.6 s). No oscillator synthesis.
+
+| source | licence / author | used in |
+|---|---|---|
+| `next/assets/audio/core/repulsor_fire_big.ogg` | core bank (Jurek's repulsor recording) | im_unibeam_fire, mk85_cannon_fire |
+| `next/assets/audio/core/repulsor_charge.ogg` | core bank | im_unibeam_charge, mk85_cannon_charge, mk85_shield_down, mk85_shield_up |
+| `next/assets/audio/core/repulsor_impact.ogg` | core bank | mk85_shield_hit |
+| `next/assets/audio/core/thruster_hot.ogg` | core bank: WWS sandblasting, CC BY 4.0 | im_boost, im_brake, im_jump, im_takeoff, im_thruster_burst, im_thruster_ignite, im_thruster_puff, im_unibeam_fire, mk85_rocket_launch |
+| `next/assets/audio/core/thruster_mid.ogg` | core bank: WWS Saab Draken, CC BY 4.0 | im_thruster_puff |
+| `next/assets/audio/core/thruster_sub.ogg` | core bank: qubodup engine rumble, CC0 | im_brake, im_takeoff, im_thruster_burst, im_thruster_ignite |
+| `next/assets/audio/core/thruster_whine.ogg` | core bank: WWS Saab Draken, CC BY 4.0 | im_thruster_burst, im_thruster_ignite |
+| `next/assets/audio/core/wind_high.ogg` | core bank | im_boost |
+| `game/assets/audio/armour_drop.ogg` | Kenney Impact Sounds, CC0 | im_land_hero |
+| `game/assets/audio/boost.ogg` | Kenney Sci-fi Sounds, CC0 | im_boost, im_takeoff, im_thruster_ignite |
+| `game/assets/audio/explosion_low.ogg` | Kenney Sci-fi Sounds, CC0 | im_boost, im_land_hero, im_takeoff, mk85_cannon_fire, mk85_snap |
+| `game/assets/audio/hit_metal.ogg` | Kenney Impact Sounds, CC0 | im_block_impact, im_punch_impact |
+| `game/assets/audio/knife_draw.ogg` | Kenney RPG Audio, CC0 | mk85_blade_deploy, mk85_blade_retract |
+| `game/assets/audio/land.ogg` | Kenney Impact Sounds, CC0 | im_jump, im_land_hero, im_land_soft, im_step_heavy, im_step_run |
+| `game/assets/audio/laser_loop.ogg` | Kenney Sci-fi Sounds, CC0 | im_unibeam_fire, mk85_blade_hum |
+| `game/assets/audio/punch_big.ogg` | Kenney Impact Sounds, CC0 | im_punch_impact |
+| `game/assets/audio/rpg_launch.ogg` | Kenney Sci-fi Sounds, CC0 | mk85_missile_launch, mk85_rocket_launch |
+| `game/assets/audio/swing_whoosh.ogg` | Kenney RPG Audio, CC0 | im_whoosh_punch, mk85_blade_slash |
+| `../MarkZero/audio/sfx/clank_light.mp3` | MarkZero bank (see MarkZero/audio/CREDITS.md) | im_step_heavy, im_step_run, mk85_nano_tap |
+| `../MarkZero/audio/sfx/clank_plate.mp3` | MarkZero bank | im_land_soft, mk85_cannon_deploy, mk85_wing_deploy |
+| `../MarkZero/audio/sfx/concrete_a.mp3` | rubberduck 75 CC0 hits (OpenGameArt), CC0 | im_land_hero |
+| `../MarkZero/audio/sfx/glass_tiny.mp3` | rubberduck 75 CC0 hits (OpenGameArt), CC0 | mk85_nano_crystallise |
+| `../MarkZero/audio/sfx/gravel_land.mp3` | MarkZero bank | im_land_soft |
+| `../MarkZero/audio/sfx/hud_blip.mp3` | MarkZero bank | mk85_nano_tap |
+| `../MarkZero/audio/sfx/hud_scan.mp3` | MarkZero bank | mk85_nano_flow |
+| `../MarkZero/audio/sfx/latch.mp3` | MarkZero bank | im_flap, mk85_gauntlet_form, mk85_missile_deploy, mk85_nano_helmet, mk85_nano_helmet_open, mk85_nano_lock, mk85_wing_deploy, mk85_wing_retract |
+| `../MarkZero/audio/sfx/metal_a.mp3` | MarkZero bank | im_punch_impact |
+| `../MarkZero/audio/sfx/metal_heavy.mp3` | MarkZero bank | im_block_impact, im_land_hero, im_land_soft |
+| `../MarkZero/audio/sfx/nano_flow.mp3` | Water tap (Gravity Sound), CC BY 4.0 | mk85_blade_deploy, mk85_blade_retract, mk85_cannon_deploy, mk85_cannon_retract, mk85_gauntlet_form, mk85_missile_deploy, mk85_nano_flow, mk85_nano_helmet, mk85_nano_helmet_open, mk85_nano_recede, mk85_shield_up, mk85_wing_deploy, mk85_wing_retract |
+| `../MarkZero/audio/sfx/nano_seal.mp3` | Portal 1 (Gravity Sound), CC BY 4.0 | mk85_nano_crystallise, mk85_nano_helmet_open, mk85_nano_lock, mk85_nano_recede, mk85_nano_tap, mk85_shield_down, mk85_shield_up |
+| `../MarkZero/audio/sfx/plates_swarm.mp3` | MarkZero bank | mk85_cannon_deploy, mk85_nano_flow, mk85_wing_deploy |
+| `../MarkZero/audio/sfx/reactor.mp3` | MarkZero bank | im_unibeam_charge, mk85_gauntlet_form |
+| `../MarkZero/audio/sfx/repulsor_charge_big.mp3` | Charging 2 (Gravity Sound), CC BY 4.0 | im_unibeam_charge, mk85_cannon_charge |
+| `../MarkZero/audio/sfx/repulsor_tail.mp3` | Portal 1 (Gravity Sound), CC BY 4.0 | mk85_cannon_fire, mk85_snap |
+| `../MarkZero/audio/sfx/rubble_b.mp3` | rubberduck 75 CC0 hits (OpenGameArt), CC0 | im_land_hero |
+| `../MarkZero/audio/sfx/servo_fast.mp3` | Rubbing metal door (Gravity Sound), CC BY 4.0 | im_jump, im_servo_short |
+| `../MarkZero/audio/sfx/servo_fine.mp3` | Sand down metal slide (Gravity Sound), CC BY 4.0 | im_flap, im_servo_short, mk85_missile_deploy, mk85_nano_flow, mk85_nano_helmet, mk85_nano_recede |
+| `../MarkZero/audio/sfx/servo_grind.mp3` | Mechanical sound (Gravity Sound), CC BY 4.0 | im_servo_heavy, mk85_cannon_charge |
+| `../MarkZero/audio/sfx/servo_heavy.mp3` | Scratching metal door (Gravity Sound), CC BY 4.0 | im_servo_heavy, mk85_cannon_deploy, mk85_cannon_retract, mk85_wing_deploy, mk85_wing_retract |
+| `../MarkZero/audio/sfx/suit_ready.mp3` | MarkZero bank | mk85_nano_lock |
+| `../MarkZero/audio/sfx/wind_gust.mp3` | Wind outside atmosphere (Gravity Sound), CC BY 4.0 | im_brake, im_takeoff, mk85_snap |
+| `../MarkZero/audio/user-provided/steps/step-02.mp3` | Jurek's own recording (armour steps) | im_step_heavy |
+| `../MarkZero/audio/user-provided/steps/step-03.mp3` | Jurek's own recording (armour steps) | im_step_run |
+| `../MarkZero/audio/user-provided/steps/step-05.mp3` | Jurek's own recording (armour steps) | im_step_heavy |
+| `../MarkZero/audio/user-provided/steps/step-07.mp3` | Jurek's own recording (armour steps) | im_step_run |
+| `../MarkZero/audio/user-provided/steps/step-09.mp3` | Jurek's own recording (armour steps) | im_step_heavy |
+| `../MarkZero/audio/user-provided/steps/step-11.mp3` | Jurek's own recording (armour steps) | im_step_run |
+| `../MarkZero/audio/user-provided/steps/step-13.mp3` | Jurek's own recording (armour steps) | im_step_heavy |
+| `next/blender/mk85/audio_src/Electric_sunrise_Gravity_Sound.wav` | Electric sunrise (Gravity Sound), Wikimedia Commons, CC BY 4.0 — https://commons.wikimedia.org/wiki/File%3AElectric_sunrise_%28Gravity_Sound%29.wav | mk85_shield_hit, mk85_shield_up |
+| `next/blender/mk85/audio_src/Metal_Jingle_Gravity_Sound.mp3` | Metal Jingle (Gravity Sound), Wikimedia Commons, CC BY 4.0 — https://commons.wikimedia.org/wiki/File%3AMetal_Jingle_%28Gravity_Sound%29.mp3 | mk85_gauntlet_form, mk85_nano_crystallise |
+| `next/blender/mk85/audio_src/Metal_Hit_Gravity_Sound.mp3` | Metal Hit (Gravity Sound), Wikimedia Commons, CC BY 4.0 — https://commons.wikimedia.org/wiki/File%3AMetal_Hit_%28Gravity_Sound%29.mp3 | im_block_impact, mk85_shield_hit |
+| `next/blender/mk85/audio_src/Finger_clicks.ogg` | Finger clicks.ogg by cori, Wikimedia Commons, public domain — https://commons.wikimedia.org/wiki/File%3AFinger_clicks.ogg | mk85_snap |
+| `next/blender/mk85/audio_src/Sword_Swipe_Gravity_Sound.mp3` | Sword Swipe (Gravity Sound), Wikimedia Commons, CC BY 4.0 — https://commons.wikimedia.org/wiki/File%3ASword_Swipe_%28Gravity_Sound%29.mp3 | im_whoosh_punch, mk85_blade_slash |
+| `next/blender/mk85/audio_src/Sword_13_Gravity_Sound.mp3` | Sword 13 (Gravity Sound), Wikimedia Commons, CC BY 4.0 — https://commons.wikimedia.org/wiki/File%3ASword_13_%28Gravity_Sound%29.mp3 | mk85_blade_slash |
+| `next/blender/mk85/audio_src/Sword_6_Gravity_Sound.mp3` | Sword 6 (Gravity Sound), Wikimedia Commons, CC BY 4.0 — https://commons.wikimedia.org/wiki/File%3ASword_6_%28Gravity_Sound%29.mp3 | mk85_blade_deploy |
+
+CC BY 4.0 attribution: Gravity Sound (https://www.gravitysound.studio/), via Wikimedia
+Commons; Work With Sounds / Torsten Nilsson (CC BY 4.0). Kenney packs and rubberduck's
+hits are CC0. Jurek's recordings are his own. 'Finger clicks.ogg' (cori) is public domain.
+
+
+---------------------------------------------------------------- assets/audio/spider/CREDITS-spider.md
+
+# Spider-Man (Iron Spider) sound bank -- credits
+
+Every `sp_*` sound in this folder is built by `build_audio.py` (same folder) from the real recordings
+listed below: cut sample-accurately, varispeeded (tape-style resampling, incl. pitch glides), reversed,
+enveloped, EQ'd (incl. a time-varying resonant band swept through recorded noise), compressed and
+layered. No oscillator synthesis anywhere. `python3 build_audio.py --fetch && python3 build_audio.py`
+downloads the sources (re-checking each licence on the source site) and rebuilds the whole bank.
+
+## Licences in use
+
+* **CC0 1.0** (Freesound, OpenGameArt, Kenney) -- no attribution required, credited anyway.
+* **Public domain** -- the PDSounds.org collection mirrored on Wikimedia Commons (`PD-author`). Strictly
+  more permissive than CC0 (no rights reserved at all); listed separately so it is visible.
+* **CC BY 4.0** (Gravity Sound library on Commons) and **CC BY 3.0** (reemax, OpenGameArt) -- attribution
+  required, given below.
+
+No CC BY-SA, no NC, no rips. Freesound material is used only where the sound is CC0 (the HQ preview mp3).
+
+## Sources
+
+| source | author | licence | link | used in |
+|---|---|---|---|---|
+| Finger clicks | cori | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Finger_clicks.ogg> | `sp_thwip_1`, `sp_thwip_3`, `sp_thwip_4`, `sp_thwip_double`, `sp_thwip_swing`, `sp_web_splat_3` |
+| Snapping twig (single) | stephan | CC0 1.0 | <https://commons.wikimedia.org/wiki/File:Snapping_twig_(single).ogg> | `sp_thwip_3`, `sp_thwip_double`, `sp_thwip_swing` |
+| Pumpspray pfft | stephan | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Pumpspray_pfft.ogg> | `sp_thwip_1`, `sp_thwip_double`, `sp_thwip_swing`, `sp_web_release` |
+| Air duster short | stephan | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Air_duster_short.ogg> | `sp_thwip_2` |
+| Deodorant spray (short) | ezwa | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Deodorant_spray_short.ogg> | `sp_thwip_4` |
+| Shhhwwshhhw | ezwa | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Shhhwwshhhw.ogg> | `sp_thwip_1`, `sp_thwip_3`, `sp_thwip_4`, `sp_thwip_double`, `sp_thwip_swing` |
+| Sticky tape | stephan | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Sticky_tape.ogg> | `sp_wall_grip`, `sp_web_splat_1`, `sp_web_splat_2`, `sp_web_splat_3` |
+| Rubber squeaking | stephan | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Rubber_squeaking.ogg> | `sp_crawl_1`, `sp_crawl_2`, `sp_wall_grip` |
+| Deep twang of loose bow string | stephan | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Deep_twang_of_loose_bow_string.ogg> | `sp_web_attach_1`, `sp_web_attach_2`, `sp_web_release` |
+| Tack tack tack | stephan | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Tack_tack_tack.ogg> | `sp_leg_step_1`, `sp_leg_step_2`, `sp_leg_step_3`, `sp_web_attach_1`, `sp_web_splat_1` |
+| Mechanical tack | stephan | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Mechanical_tack.ogg> | `sp_web_attach_2`, `sp_web_splat_2` |
+| Pouring particles like grain | stephan | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Pouring_particles_like_grain.ogg> | `sp_nano_flow`, `sp_nano_mask_close`, `sp_nano_mask_open`, `sp_nano_seal` |
+| Crackling sound of short metal bristles | stephan | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Crackling_sound_of_short_metal_bristles.ogg> | `sp_nano_flow` |
+| Scrubbing with small metal bristled brush | stephan | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Scrubbing_with_small_metal_bristled_brush.ogg> | `sp_nano_mask_close`, `sp_nano_mask_open` |
+| Slish slash a box of nails | stephan | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Slish_slash_a_box_of_nails.ogg> | `sp_nano_flow` |
+| Retractable pen clicking | stilgar | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Retractable_pen_clickin.ogg> | `sp_web_release` |
+| Flapping window opening | ezwa | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Flapping_window_opening.ogg> | `sp_window_push` |
+| Flapping window closing | ezwa | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Flapping_window_closing.ogg> | `sp_window_close` |
+| Door handle creaking | stephan | Public domain (PDSounds.org, PD-author) | <https://commons.wikimedia.org/wiki/File:Door_handle_creaking.ogg> | `sp_window_push` |
+| Punch Flesh | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Punch_Flesh_(Gravity_Sound).mp3> | `sp_punch_1`, `sp_web_hit_body` |
+| Hard Punch Gut | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Hard_Punch_Gut_(Gravity_Sound).mp3> | `sp_kick`, `sp_punch_2` |
+| Sword Swipe | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Sword_Swipe_(Gravity_Sound).mp3> | `sp_leg_strike` |
+| Swipe 3 | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Swipe_3_(Gravity_Sound).mp3> | `sp_whoosh_1` |
+| Slice | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Slice_(Gravity_Sound).mp3> | `sp_leg_strike` |
+| Nails on tile once | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Nails_on_tile_once_(Gravity_Sound).wav> | `sp_leg_step_1` |
+| Nails on tile once 2 | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Nails_on_tile_once_2_(Gravity_Sound).wav> | `sp_leg_step_2` |
+| Nails on tile once 3 | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Nails_on_tile_once_3_(Gravity_Sound).wav> | `sp_leg_step_3` |
+| Sandle on brick 2 | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Sandle_on_brick_2_(Gravity_Sound).wav> | `sp_crawl_1` |
+| Sandle on brick 3 | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Sandle_on_brick_3_(Gravity_Sound).wav> | `sp_crawl_2`, `sp_sill_step` |
+| Lock | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Lock_(Gravity_Sound).wav> | `sp_leg_deploy` |
+| Tight door lock 2 | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Tight_door_lock_2_(Gravity_Sound).wav> | `sp_nano_seal` |
+| Keys shaking | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Keys_shaking_(Gravity_Sound).wav> | `sp_land_hard` |
+| Jump Landing | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Jump_Landing_(Gravity_Sound).mp3> | `sp_land_hard`, `sp_land_light` |
+| Air Rifle | Fission9 | CC0 1.0 | <https://freesound.org/people/Fission9/sounds/466310/> | `sp_thwip_4`, `sp_thwip_double` |
+| air_nailer_single_shot_1.wav | reg7783 | CC0 1.0 | <https://freesound.org/people/reg7783/sounds/131304/> | `sp_thwip_2`, `sp_thwip_3`, `sp_thwip_double` |
+| Fishing Rod Swish Swoosh.wav | Mrthenoronha | CC0 1.0 | <https://freesound.org/people/Mrthenoronha/sounds/371313/> | `sp_thwip_1`, `sp_thwip_2`, `sp_thwip_3`, `sp_thwip_4`, `sp_thwip_double`, `sp_thwip_swing`, `sp_web_snap` |
+| ROPEMvmt_Rope Zip Slow_MP_9.wav | MPierluissi | CC0 1.0 | <https://freesound.org/people/MPierluissi/sounds/527421/> | `sp_thwip_1`, `sp_thwip_2`, `sp_thwip_3`, `sp_thwip_4`, `sp_thwip_double`, `sp_thwip_swing`, `sp_zip_whoosh` |
+| Pen whoosh 1.wav | saturdaysoundguy | CC0 1.0 | <https://freesound.org/people/saturdaysoundguy/sounds/391441/> | `sp_thwip_2`, `sp_thwip_swing` |
+| Rope - Quick snatch | Vrymaa | CC0 1.0 | <https://freesound.org/people/Vrymaa/sounds/802697/> | `sp_web_attach_1`, `sp_web_attach_2`, `sp_web_pull` |
+| Rope - leash - medium - stretched - tighten - whoosh.wav | ValentinPetiteau | CC0 1.0 | <https://freesound.org/people/ValentinPetiteau/sounds/624485/> | `sp_web_pull` |
+| cut rope.wav | zepurple | CC0 1.0 | <https://freesound.org/people/zepurple/sounds/540266/> | `sp_web_snap` |
+| Mooring Rope.wav | Rmutt | CC0 1.0 | <https://freesound.org/people/Rmutt/sounds/145721/> | `sp_web_tension_loop` |
+| Leather - Creak, soft | Vrymaa | CC0 1.0 | <https://freesound.org/people/Vrymaa/sounds/734598/> | `sp_web_creak_1` |
+| Creaking Metal Wire of Wooden Gate | qubodup | CC0 1.0 | <https://freesound.org/people/qubodup/sounds/861827/> | `sp_web_creak_2` |
+| Wet Splat 1.mp3 | nebulasnails | CC0 1.0 | <https://freesound.org/people/nebulasnails/sounds/495118/> | `sp_web_hit_body`, `sp_web_splat_1` |
+| Wet Splat 2.mp3 | nebulasnails | CC0 1.0 | <https://freesound.org/people/nebulasnails/sounds/495117/> | `sp_web_splat_3` |
+| Slime slapping | greenlinker | CC0 1.0 | <https://freesound.org/people/greenlinker/sounds/794272/> | `sp_web_splat_2` |
+| Car Strong Wind Noise.mp3 | FunWithSound | CC0 1.0 | <https://freesound.org/people/FunWithSound/sounds/439242/> | `sp_swing_whoosh_1`, `sp_wind_loop` |
+| Ambiance_Wind_Strong_Warehouse_Loop.wav | Nox_Sound | CC0 1.0 | <https://freesound.org/people/Nox_Sound/sounds/591664/> | `sp_swing_whoosh_2` |
+| Shirt Whoosh 1.wav | saturdaysoundguy | CC0 1.0 | <https://freesound.org/people/saturdaysoundguy/sounds/391448/> | `sp_jump`, `sp_punch_2`, `sp_swing_whoosh_2` |
+| Foley_Whoosh_Clothes.wav | Nox_Sound | CC0 1.0 | <https://freesound.org/people/Nox_Sound/sounds/495390/> | `sp_swing_whoosh_2`, `sp_whoosh_2`, `sp_zip_whoosh` |
+| Swing Woosh | Jofae | CC0 1.0 | <https://freesound.org/people/Jofae/sounds/389590/> | `sp_kick`, `sp_swing_whoosh_1`, `sp_zip_whoosh` |
+| quick woosh | florianreichelt | CC0 1.0 | <https://freesound.org/people/florianreichelt/sounds/683101/> | `sp_punch_1`, `sp_web_pull`, `sp_whoosh_3` |
+| zipper and hoodie clothes rustle.wav | reconsider59 | CC0 1.0 | <https://freesound.org/people/reconsider59/sounds/427211/> | `sp_cloth_1`, `sp_cloth_2` |
+| Metal_Mechanism_Click_Small.wav | LamaMakesMusic | CC0 1.0 | <https://freesound.org/people/LamaMakesMusic/sounds/403587/> | `sp_nano_seal` |
+| Mechanism Activation Sequence | qubodup | CC0 1.0 | <https://freesound.org/people/qubodup/sounds/752067/> | `sp_leg_deploy` |
+| Metallic_Click | BlondPanda | CC0 1.0 | <https://freesound.org/people/BlondPanda/sounds/778444/> | `sp_nano_mask_close` |
+| Ratchet (ratchet2.wav) | sgossner | CC0 1.0 | <https://freesound.org/people/sgossner/sounds/375709/> | `sp_leg_deploy` |
+| Ratchet2.aif | blevesque4 | CC0 1.0 | <https://freesound.org/people/blevesque4/sounds/333611/> | `sp_leg_stow` |
+| Small servo (arduino) | gpag1 | CC0 1.0 | <https://freesound.org/people/gpag1/sounds/520514/> | `sp_leg_servo_1` |
+| Servo 9 | JoontheFloof | CC0 1.0 | <https://freesound.org/people/JoontheFloof/sounds/740247/> | `sp_leg_servo_2` |
+| Servo motor | Burningmonkey | CC0 1.0 | <https://freesound.org/people/Burningmonkey/sounds/322021/> | `sp_leg_deploy`, `sp_leg_servo_3`, `sp_leg_stow` |
+| Camera - Modern Compact (Lens, AF and Shutter) | RealSquink | CC0 1.0 | <https://freesound.org/people/RealSquink/sounds/826117/> | `sp_lens_focus` |
+| footsteps-rubber shoes-concrete-empty warehouse.wav | DrDufus | CC0 1.0 | <https://freesound.org/people/DrDufus/sounds/495475/> | `sp_step_1`, `sp_step_2`, `sp_step_3`, `sp_step_4` |
+| Footsteps stone + sneaker | xkeril | CC0 1.0 | <https://freesound.org/people/xkeril/sounds/677069/> | `sp_sneaker_1`, `sp_sneaker_2`, `sp_sneaker_3`, `sp_sneaker_4` |
+| concrete_10d_startassneakers_onoff.wav | sturmankin | CC0 1.0 | <https://freesound.org/people/sturmankin/sounds/272312/> | `sp_jump`, `sp_sill_step` |
+| window_handle_click.wav | Meklips | CC0 1.0 | <https://freesound.org/people/Meklips/sounds/614248/> | `sp_window_handle` |
+| Closing window handle | cindy_vberkel | CC0 1.0 | <https://freesound.org/people/cindy_vberkel/sounds/823497/> | `sp_window_close` |
+| Whip sound | reemax | CC BY 3.0 | <https://opengameart.org/content/whip-sound> | `sp_thwip_2`, `sp_web_snap` |
+| Impact Sounds | Kenney | CC0 1.0 | <https://kenney.nl/assets/impact-sounds> | `sp_kick`, `sp_land_hard`, `sp_land_light`, `sp_leg_strike`, `sp_web_hit_body`, `sp_zip_whoosh` |
+| Sorting cutlery | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Sorting_cutlery_%28Gravity_Sound%29.wav> | `sp_nano_flow` |
+| Lock | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Lock_%28Gravity_Sound%29.wav> | `sp_leg_stow` |
+| Land in Gravel | Gravity Sound | CC BY 4.0 | <https://commons.wikimedia.org/wiki/File:Land_in_Gravel_%28Gravity_Sound%29.mp3> | `sp_land_hard` |
+
+## How each sound was built
+
+* **`sp_thwip_1`** -- layers: [1] finger snap (Finger clicks) cut to its first ~30 ms, HP 300 Hz; [2] pump-spray "pfft" burst, HP 2.5 kHz, 1 ms attack, ~25 ms decay, varispeed 1.1->0.92; [3a] the same air + a fishing-rod swish (Freesound 371313) through a resonant band gliding 6.5 -> 1.3 kHz; [3b] Shhhwwshhhw air-whistle played with a falling varispeed (2.4x -> 1.0x) = the descending zip; [4] rope-zip (Freesound 527421) sped 2-4x with falling rate; [5] the click slowed and LP 450 Hz for body; bus HP 110 Hz + 2.5:1 compression.  _Sources: Pumpspray pfft, Fishing Rod Swish Swoosh.wav, ROPEMvmt_Rope Zip Slow_MP_9.wav, Shhhwwshhhw, Finger clicks. Level: short-window K-loudness -15.0 (true-peak capped)._
+* **`sp_thwip_2`** -- layers: [1] bull-whip crack tip (OGA whip.wav) cut to its first ~30 ms, HP 300 Hz; [2] air-duster can burst, HP 2.5 kHz, 1 ms attack, ~25 ms decay, varispeed 1.1->0.92; [3a] the same air + a fishing-rod swish (Freesound 371313) through a resonant band gliding 7.5 -> 1.7 kHz; [3b] pen whoosh (Freesound 391441) air-whistle played with a falling varispeed (1.9x -> 0.85x) = the descending zip; [4] rope-zip (Freesound 527421) sped 2-4x with falling rate; [5] the click slowed and LP 450 Hz for body; bus HP 110 Hz + 2.5:1 compression. Whole shot varispeeded x1.08; body from the air-nailer shot.  _Sources: Air duster short, air_nailer_single_shot_1.wav, Pen whoosh 1.wav, Fishing Rod Swish Swoosh.wav, ROPEMvmt_Rope Zip Slow_MP_9.wav, Whip sound. Level: short-window K-loudness -16.0 (true-peak capped)._
+* **`sp_thwip_3`** -- layers: [1] snapping twig (pitched x1.2) cut to its first ~30 ms, HP 300 Hz; [2] pneumatic air-nailer exhaust (Freesound 131304) burst, HP 2.5 kHz, 1 ms attack, ~25 ms decay, varispeed 1.1->0.92; [3a] the same air + a fishing-rod swish (Freesound 371313) through a resonant band gliding 5.6 -> 1.15 kHz; [3b] Shhhwwshhhw air-whistle played with a falling varispeed (2.1x -> 0.85x) = the descending zip; [4] rope-zip (Freesound 527421) sped 2-4x with falling rate; [5] the click slowed and LP 450 Hz for body; bus HP 110 Hz + 2.5:1 compression. Whole shot varispeeded x0.93.  _Sources: air_nailer_single_shot_1.wav, Fishing Rod Swish Swoosh.wav, ROPEMvmt_Rope Zip Slow_MP_9.wav, Shhhwwshhhw, Finger clicks, Snapping twig (single). Level: short-window K-loudness -15.6 (true-peak capped)._
+* **`sp_thwip_4`** -- layers: [1] air-rifle shot (Freesound 466310) cut to its first ~30 ms, HP 300 Hz; [2] deodorant spray burst, HP 2.5 kHz, 1 ms attack, ~25 ms decay, varispeed 1.1->0.92; [3a] the same air + a fishing-rod swish (Freesound 371313) through a resonant band gliding 7 -> 1.5 kHz; [3b] Shhhwwshhhw air-whistle played with a falling varispeed (2.7x -> 1.15x) = the descending zip; [4] rope-zip (Freesound 527421) sped 2-4x with falling rate; [5] the click slowed and LP 450 Hz for body; bus HP 110 Hz + 2.5:1 compression. Whole shot varispeeded x1.03.  _Sources: Deodorant spray (short), Air Rifle, Fishing Rod Swish Swoosh.wav, ROPEMvmt_Rope Zip Slow_MP_9.wav, Shhhwwshhhw, Finger clicks. Level: short-window K-loudness -15.6._
+* **`sp_thwip_double`** -- sp_thwip_1 panned -0.4 + sp_thwip_3 (x0.97) panned +0.4 and delayed 16 ms; extra body = air-rifle shot slowed x0.5, LP 300 Hz, 60 ms decay, plus the finger snap slowed x0.5; bus compression.  _Sources: air_nailer_single_shot_1.wav, Pumpspray pfft, Air Rifle, Fishing Rod Swish Swoosh.wav, ROPEMvmt_Rope Zip Slow_MP_9.wav, Shhhwwshhhw, Finger clicks, Snapping twig (single). Level: short-window K-loudness -13.5 (true-peak capped)._
+* **`sp_thwip_swing`** -- thwip layers (twig crack, pump-spray air, resonant vowel 6->1.4 kHz) followed by the rope-zip recording (Freesound 527421) played at a rate falling 3.4x -> 1.5x over 0.45 s (real descending zip), a fishing-rod swish varispeeded 1.3->0.8 and a pen-whoosh whistle gliding 1.6x -> 0.7x; line layers band-limited 900 Hz-10 kHz, swell to 0.12 s and decay.  _Sources: Pen whoosh 1.wav, Pumpspray pfft, Fishing Rod Swish Swoosh.wav, ROPEMvmt_Rope Zip Slow_MP_9.wav, Shhhwwshhhw, Finger clicks, Snapping twig (single). Level: loudnorm I=-19.3._
+* **`sp_web_splat_1`** -- wet splat (Freesound 495118) onset cut, HP 120 Hz, ~90 ms decay; sticky-tape peel crackle HP 2.5 kHz under it; tack click on the attack.  _Sources: Tack tack tack, Sticky tape, Wet Splat 1.mp3. Level: short-window K-loudness -20.1 (true-peak capped)._
+* **`sp_web_splat_2`** -- slime slap (Freesound 794272) varispeed x1.15, tape crackle, mechanical-tack click.  _Sources: Mechanical tack, Slime slapping, Sticky tape. Level: short-window K-loudness -17.7 (true-peak capped)._
+* **`sp_web_splat_3`** -- wet splat 2 (Freesound 495117) varispeed x0.88, tape crackle, finger-snap click.  _Sources: Finger clicks, Sticky tape, Wet Splat 2.mp3. Level: short-window K-loudness -19.1 (true-peak capped)._
+* **`sp_web_hit_body`** -- Gravity Sound "Punch Flesh" onset (LP 2.5 kHz) + wet splat 1 x1.1 + Kenney impactSoft_medium; compressed.  _Sources: Punch Flesh, Impact Sounds, Wet Splat 1.mp3. Level: short-window K-loudness -16.7 (true-peak capped)._
+* **`sp_web_attach_1`** -- rope quick-snatch (Freesound 802697) onset HP 300 Hz + loose bow-string twang sped x2.2 + tack click.  _Sources: Deep twang of loose bow string, Rope - Quick snatch, Tack tack tack. Level: short-window K-loudness -23.9 (true-peak capped)._
+* **`sp_web_attach_2`** -- rope snatch (2nd onset) + bow twang x1.7 + mechanical tack.  _Sources: Deep twang of loose bow string, Mechanical tack, Rope - Quick snatch. Level: short-window K-loudness -20.1 (true-peak capped)._
+* **`sp_web_release`** -- bow-string twang x2.6 (HP 600 Hz, 60 ms) + pump-spray pfft tail (HP 3 kHz) + pen click.  _Sources: Deep twang of loose bow string, Retractable pen clicking, Pumpspray pfft. Level: short-window K-loudness -26.9 (true-peak capped)._
+* **`sp_web_snap`** -- cut-rope recording (Freesound 540266) onset + bull-whip crack (OGA, reemax CC-BY 3.0) + fishing-rod swish recoil slowed x0.8.  _Sources: cut rope.wav, Fishing Rod Swish Swoosh.wav, Whip sound. Level: loudnorm I=-27.1 (true-peak capped)._
+* **`sp_zip_whoosh`** -- rope-zip (Freesound 527421) played with a RISING varispeed 1.0->2.6, swing whoosh (Freesound 389590) swelling, clothes whoosh on top, Kenney impactSoft thump at the end.  _Sources: Foley_Whoosh_Clothes.wav, Impact Sounds, ROPEMvmt_Rope Zip Slow_MP_9.wav, Swing Woosh. Level: loudnorm I=-19.2._
+* **`sp_web_pull`** -- leash stretch-tighten-whoosh (Freesound 624485) loudest 0.45 s + rope snatch + quick woosh (Freesound 683101).  _Sources: Rope - leash - medium - stretched - tighten - whoosh.wav, quick woosh, Rope - Quick snatch. Level: loudnorm I=-24.1 (true-peak capped)._
+* **`sp_web_creak_1`** -- soft leather creak (Freesound 734598), loudest 0.5 s, HP 150 Hz.  _Sources: Leather - Creak, soft. Level: loudnorm I=-28.6 (true-peak capped)._
+* **`sp_web_creak_2`** -- creaking metal wire of a wooden gate (Freesound 861827), loudest 0.6 s, varispeed x1.25, HP 200 Hz.  _Sources: Creaking Metal Wire of Wooden Gate. Level: loudnorm I=-25.2 (true-peak capped)._
+* **`sp_web_tension_loop`** -- mooring rope creaking (Freesound 145721), 2.4 s loop crossfaded from the continuing recording, HP 120 Hz.  _Sources: Mooring Rope.wav. Level: loudnorm I=-20.8 (true-peak capped)._
+* **`sp_swing_whoosh_1`** -- swing woosh (Freesound 389590) slowed x0.7 + car strong wind noise (Freesound 439242) shaped into a swell.  _Sources: Car Strong Wind Noise.mp3, Swing Woosh. Level: loudnorm I=-26.8 (true-peak capped)._
+* **`sp_swing_whoosh_2`** -- shirt whoosh (Freesound 391448) slowed x0.6 + clothes whoosh + warehouse wind, swell.  _Sources: Foley_Whoosh_Clothes.wav, Shirt Whoosh 1.wav, Ambiance_Wind_Strong_Warehouse_Loop.wav. Level: loudnorm I=-28.9 (true-peak capped)._
+* **`sp_wind_loop`** -- car strong wind noise (Freesound 439242), HP 90 Hz, 4 s loop crossfaded from the continuing recording.  _Sources: Car Strong Wind Noise.mp3. Level: loudnorm I=-11.4._
+* **`sp_nano_flow`** -- grain pouring (Commons "Pouring particles like grain") + slish-slash box of nails (HP 2 kHz) + sorting cutlery (MarkZero bank, Gravity Sound) + metal-bristle crackle, swell in / clean tail.  _Sources: Crackling sound of short metal bristles, Pouring particles like grain, Sorting cutlery, Slish slash a box of nails. Level: loudnorm I=-15.2._
+* **`sp_nano_seal`** -- small metal mechanism click (Freesound 403587) + tight door lock (Gravity Sound) HP 800 Hz + short grain tail.  _Sources: Pouring particles like grain, Tight door lock 2, Metal_Mechanism_Click_Small.wav. Level: short-window K-loudness -14.8 (true-peak capped)._
+* **`sp_nano_mask_open`** -- grain pour (HP 800 Hz) + metal-bristle brush scrub (HP 2.5 kHz), fast attack, falling tail.  _Sources: Pouring particles like grain, Scrubbing with small metal bristled brush. Level: loudnorm I=-15.8 (true-peak capped)._
+* **`sp_nano_mask_close`** -- grain pour + bristle scrub swelling up, metallic click (Freesound 778444) at 0.62 s.  _Sources: Pouring particles like grain, Metallic_Click, Scrubbing with small metal bristled brush. Level: loudnorm I=-13.3._
+* **`sp_lens_focus`** -- compact camera lens / autofocus / shutter (Freesound 826117), loudest 0.25 s, HP 800 Hz, varispeed x1.2.  _Sources: Camera - Modern Compact (Lens, AF and Shutter). Level: short-window K-loudness -13.3 (true-peak capped)._
+* **`sp_leg_deploy`** -- servo motor (Freesound 322021) loudest 0.6 s varispeed 0.9->1.3 + ratchet (Freesound 375709) + mechanism activation sequence (Freesound 752067) + Gravity Sound lock at 0.72 s.  _Sources: Lock, Mechanism Activation Sequence, Ratchet (ratchet2.wav), Servo motor. Level: loudnorm I=-19.9 (true-peak capped)._
+* **`sp_leg_stow`** -- servo motor varispeed 1.2->0.85 + ratchet 2 (Freesound 333611) + latch (MarkZero bank, Gravity Sound "Lock").  _Sources: Lock, Ratchet2.aif, Servo motor. Level: loudnorm I=-22.6 (true-peak capped)._
+* **`sp_leg_step_1`** -- Gravity Sound "Nails on tile once" (variant 1) varispeed x1.00 + tack click.  _Sources: Nails on tile once, Tack tack tack. Level: short-window K-loudness -26.6 (true-peak capped)._
+* **`sp_leg_step_2`** -- Gravity Sound "Nails on tile once" (variant 2) varispeed x1.08 + tack click.  _Sources: Nails on tile once 2, Tack tack tack. Level: short-window K-loudness -24.5 (true-peak capped)._
+* **`sp_leg_step_3`** -- Gravity Sound "Nails on tile once" (variant 3) varispeed x0.94 + tack click.  _Sources: Nails on tile once 3, Tack tack tack. Level: short-window K-loudness -24.3 (true-peak capped)._
+* **`sp_leg_servo_1`** -- servo_a recording (Freesound CC0), loudest window, varispeed x1.0, 0.28 s.  _Sources: Small servo (arduino). Level: short-window K-loudness -11.5 (true-peak capped)._
+* **`sp_leg_servo_2`** -- servo_9 recording (Freesound CC0), loudest window, varispeed x1.1, 0.32 s.  _Sources: Servo 9. Level: short-window K-loudness -9.5 (true-peak capped)._
+* **`sp_leg_servo_3`** -- servo_m recording (Freesound CC0), loudest window, varispeed x1.3, 0.25 s.  _Sources: Servo motor. Level: short-window K-loudness -12.4 (true-peak capped)._
+* **`sp_leg_strike`** -- Gravity Sound "Sword Swipe" + "Slice" + Kenney impactMetal_medium, compressed.  _Sources: Slice, Sword Swipe, Impact Sounds. Level: loudnorm I=-19.2 (true-peak capped)._
+* **`sp_step_1`** -- rubber-shoe footsteps on concrete (Freesound 495475), onset 1, LP 6 kHz.  _Sources: footsteps-rubber shoes-concrete-empty warehouse.wav. Level: short-window K-loudness -38.2 (true-peak capped)._
+* **`sp_step_2`** -- rubber-shoe footsteps on concrete (Freesound 495475), onset 2, LP 6 kHz.  _Sources: footsteps-rubber shoes-concrete-empty warehouse.wav. Level: short-window K-loudness -27.6 (true-peak capped)._
+* **`sp_step_3`** -- rubber-shoe footsteps on concrete (Freesound 495475), onset 3, LP 6 kHz.  _Sources: footsteps-rubber shoes-concrete-empty warehouse.wav. Level: short-window K-loudness -31.6 (true-peak capped)._
+* **`sp_step_4`** -- rubber-shoe footsteps on concrete (Freesound 495475), onset 4, LP 6 kHz.  _Sources: footsteps-rubber shoes-concrete-empty warehouse.wav. Level: short-window K-loudness -24.3 (true-peak capped)._
+* **`sp_land_light`** -- Gravity Sound "Jump Landing" onset + Kenney footstep_concrete, LP 5 kHz.  _Sources: Jump Landing, Impact Sounds. Level: loudnorm I=-27.6 (true-peak capped)._
+* **`sp_land_hard`** -- Gravity Sound "Jump Landing" slowed x0.8 + Kenney impactSoft_heavy + gravel land (MarkZero bank) + keys shaking (HP 3 kHz, very low) for the suit rattle; compressed.  _Sources: Jump Landing, Keys shaking, Impact Sounds, Land in Gravel. Level: loudnorm I=-22.8 (true-peak capped)._
+* **`sp_jump`** -- sneaker on concrete on/off (Freesound 272312) onset + shirt whoosh (Freesound 391448).  _Sources: Shirt Whoosh 1.wav, concrete_10d_startassneakers_onoff.wav. Level: loudnorm I=-29.1 (true-peak capped)._
+* **`sp_punch_1`** -- Gravity Sound gs_punch onset + quickwh whoosh leading in, compressed.  _Sources: Punch Flesh, quick woosh. Level: loudnorm I=-24.9 (true-peak capped)._
+* **`sp_punch_2`** -- Gravity Sound gs_hardgut onset + shirtwh whoosh leading in, compressed.  _Sources: Hard Punch Gut, Shirt Whoosh 1.wav. Level: loudnorm I=-22.9 (true-peak capped)._
+* **`sp_kick`** -- swing woosh (Freesound 389590) + Gravity Sound "Hard Punch Gut" slowed x0.85 + Kenney impactPunch_heavy.  _Sources: Hard Punch Gut, Impact Sounds, Swing Woosh. Level: loudnorm I=-20.9 (true-peak capped)._
+* **`sp_whoosh_1`** -- gs_swipe3 loudest 0.4 s window, varispeed x1.0.  _Sources: Swipe 3. Level: loudnorm I=-43.1 (true-peak capped)._
+* **`sp_whoosh_2`** -- clothwh loudest 0.4 s window, varispeed x0.9.  _Sources: Foley_Whoosh_Clothes.wav. Level: loudnorm I=-25.9 (true-peak capped)._
+* **`sp_whoosh_3`** -- quickwh loudest 0.4 s window, varispeed x1.1.  _Sources: quick woosh. Level: loudnorm I=-24.1 (true-peak capped)._
+* **`sp_wall_grip`** -- rubber squeak (Commons) onset, LP 4 kHz + sticky-tape tick.  _Sources: Rubber squeaking, Sticky tape. Level: short-window K-loudness -21.7 (true-peak capped)._
+* **`sp_crawl_1`** -- Gravity Sound "Sandle on brick" (gs_sandle2) onset, LP 5 kHz + rubber squeak whisper.  _Sources: Sandle on brick 2, Rubber squeaking. Level: short-window K-loudness -11.9 (true-peak capped)._
+* **`sp_crawl_2`** -- Gravity Sound "Sandle on brick" (gs_sandle3) onset, LP 5 kHz + rubber squeak whisper.  _Sources: Sandle on brick 3, Rubber squeaking. Level: short-window K-loudness -21.2 (true-peak capped)._
+* **`sp_cloth_1`** -- zipper and hoodie clothes rustle (Freesound 427211), loudest window 1.  _Sources: zipper and hoodie clothes rustle.wav. Level: loudnorm I=-34.5 (true-peak capped)._
+* **`sp_cloth_2`** -- zipper and hoodie clothes rustle (Freesound 427211), loudest window 2.  _Sources: zipper and hoodie clothes rustle.wav. Level: loudnorm I=-34.5 (true-peak capped)._
+* **`sp_sneaker_1`** -- footsteps stone + sneaker (Freesound 677069), onset 1.  _Sources: Footsteps stone + sneaker. Level: short-window K-loudness -30.7 (true-peak capped)._
+* **`sp_sneaker_2`** -- footsteps stone + sneaker (Freesound 677069), onset 2.  _Sources: Footsteps stone + sneaker. Level: short-window K-loudness -34.3 (true-peak capped)._
+* **`sp_sneaker_3`** -- footsteps stone + sneaker (Freesound 677069), onset 3.  _Sources: Footsteps stone + sneaker. Level: short-window K-loudness -35.2 (true-peak capped)._
+* **`sp_sneaker_4`** -- footsteps stone + sneaker (Freesound 677069), onset 4.  _Sources: Footsteps stone + sneaker. Level: short-window K-loudness -36.7 (true-peak capped)._
+* **`sp_window_handle`** -- window handle click (Freesound 614248), onset.  _Sources: window_handle_click.wav. Level: short-window K-loudness -28.6 (true-peak capped)._
+* **`sp_window_push`** -- Commons "Flapping window opening" + "Door handle creaking" (HP 300 Hz).  _Sources: Door handle creaking, Flapping window opening. Level: loudnorm I=-32.5 (true-peak capped)._
+* **`sp_window_close`** -- Commons "Flapping window closing" + closing window handle (Freesound 823497).  _Sources: Flapping window closing, Closing window handle. Level: loudnorm I=-39.2 (true-peak capped)._
+* **`sp_sill_step`** -- Gravity Sound "Sandle on brick 3" onset, varispeed x0.9 + sneaker scuff.  _Sources: Sandle on brick 3, concrete_10d_startassneakers_onoff.wav. Level: short-window K-loudness -20.6 (true-peak capped)._
+
+## Loudness
+
+* Sounds >= 0.4 s: gain set from ffmpeg `loudnorm` (EBU R128) measurement to **-16 LUFS integrated**,
+  applied as a single linear gain (no dynamic processing), capped so the true peak stays <= -2 dBTP.
+* One-shots < 0.4 s: integrated loudness is not meaningful that short, so the gain is set from the
+  loudest 100 ms K-weighted window (target -11.0 LUFS on that window, which is where the -16 LUFS-I
+  items land), with the same true-peak cap.
+* `gain` in index.json balances ids against each other (sp_thwip_1 = 1.0 reference).
+* Loops: use the `.ogg` in engine (MP3 encoders add padding at the start, which breaks gapless looping).
+
+Full attribution text for the CC BY items:
+
+* "Punch Flesh" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Punch_Flesh_(Gravity_Sound).mp3>
+* "Hard Punch Gut" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Hard_Punch_Gut_(Gravity_Sound).mp3>
+* "Sword Swipe" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Sword_Swipe_(Gravity_Sound).mp3>
+* "Swipe 3" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Swipe_3_(Gravity_Sound).mp3>
+* "Slice" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Slice_(Gravity_Sound).mp3>
+* "Nails on tile once" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Nails_on_tile_once_(Gravity_Sound).wav>
+* "Nails on tile once 2" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Nails_on_tile_once_2_(Gravity_Sound).wav>
+* "Nails on tile once 3" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Nails_on_tile_once_3_(Gravity_Sound).wav>
+* "Sandle on brick 2" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Sandle_on_brick_2_(Gravity_Sound).wav>
+* "Sandle on brick 3" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Sandle_on_brick_3_(Gravity_Sound).wav>
+* "Lock" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Lock_(Gravity_Sound).wav>
+* "Tight door lock 2" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Tight_door_lock_2_(Gravity_Sound).wav>
+* "Keys shaking" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Keys_shaking_(Gravity_Sound).wav>
+* "Jump Landing" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Jump_Landing_(Gravity_Sound).mp3>
+* "Whip sound" by reemax, CC BY 3.0 (<https://creativecommons.org/licenses/by/3.0/>), via <https://opengameart.org/content/whip-sound>
+* "Sorting cutlery" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Sorting_cutlery_%28Gravity_Sound%29.wav>
+* "Lock" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Lock_%28Gravity_Sound%29.wav>
+* "Land in Gravel" by Gravity Sound, CC BY 4.0 (<https://creativecommons.org/licenses/by/4.0/>), via <https://commons.wikimedia.org/wiki/File:Land_in_Gravel_%28Gravity_Sound%29.mp3>
+
+
+---------------------------------------------------------------- assets/city/tex/CREDITS.md
+
+# City textures — credits
+
+All surface textures are **CC0** from ambientCG (<https://ambientcg.com>), resized to 512 px, packed into arrays by `blender/city/build_textures.py`:
+
+- Asphalt025C — https://ambientcg.com/view?id=Asphalt025C — CC0 1.0
+- Asphalt031 — https://ambientcg.com/view?id=Asphalt031 — CC0 1.0
+- Bricks053 — https://ambientcg.com/view?id=Bricks053 — CC0 1.0
+- Bricks085 — https://ambientcg.com/view?id=Bricks085 — CC0 1.0
+- Bricks097 — https://ambientcg.com/view?id=Bricks097 — CC0 1.0
+- Concrete031 — https://ambientcg.com/view?id=Concrete031 — CC0 1.0
+- Concrete034 — https://ambientcg.com/view?id=Concrete034 — CC0 1.0
+- Concrete042A — https://ambientcg.com/view?id=Concrete042A — CC0 1.0
+- CorrugatedSteel005 — https://ambientcg.com/view?id=CorrugatedSteel005 — CC0 1.0
+- Grass004 — https://ambientcg.com/view?id=Grass004 — CC0 1.0
+- Gravel022 — https://ambientcg.com/view?id=Gravel022 — CC0 1.0
+- Ground079S — https://ambientcg.com/view?id=Ground079S — CC0 1.0
+- PavingStones138 — https://ambientcg.com/view?id=PavingStones138 — CC0 1.0
+- Plaster001 — https://ambientcg.com/view?id=Plaster001 — CC0 1.0
+- Rock030 — https://ambientcg.com/view?id=Rock030 — CC0 1.0
+- Tiles143 — https://ambientcg.com/view?id=Tiles143 — CC0 1.0
+- WoodFloor051 — https://ambientcg.com/view?id=WoodFloor051 — CC0 1.0
+
+Water normal maps: `waternormals.jpg`, `Water_1_M_Normal.jpg` from the three.js repository examples (MIT licence, © three.js authors).
+
+Metal panel slice and the room atlases are procedural / rendered by our own scripts.

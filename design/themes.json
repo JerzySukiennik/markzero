@@ -1,0 +1,821 @@
+{
+ "version": 1,
+ "generated_by": "v3/design/tools/themes.py",
+ "transition": {
+  "crossfadeMs": 650,
+  "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+  "mapRetint": {
+   "mode": "ripple-from-player",
+   "speedPxPerS": 1400,
+   "dotFadeMs": 260
+  },
+  "glowPulseMs": 1800,
+  "stingerAt": 0,
+  "note": "On suit change: fire the stinger sound + `suit_select` haptic at t=0, cross-fade every token over crossfadeMs, re-tint map dots as a ring expanding from the player marker."
+ },
+ "contrast": {
+  "standard": "WCAG 2.1 AA \u2014 text 4.5:1, UI marks 3:1",
+  "measured_on": "panel @ 0.84 alpha composited over ['noon_sky', 'night']",
+  "panelAlpha": 0.84
+ },
+ "tokens": {
+  "accent": "signal colour: focus ring, selected item, HUD arcs, own markers",
+  "accent2": "suit body colour: large washes/fills only (never small text or icons)",
+  "accent3": "optional third suit colour (Iron Spider navy) \u2014 washes only",
+  "glow": "emissive highlight: marker cores, pulses, bloom tint, the map's brightest dots",
+  "bg": "full-screen background (menus)",
+  "panel": "panel fill, use at panelAlpha + 12px blur",
+  "text": "primary text",
+  "dim": "secondary text / labels",
+  "danger": "alarm/error ONLY (+blink +glyph). Same in every theme. Use for marks/glyphs (3:1) or as a chip fill with onDanger text \u2014 never as thin text on a panel",
+  "onDanger": "text on a danger chip",
+  "onAccent": "text drawn on an accent-filled chip/button",
+  "dotLow": "map dots: streets texture, low buildings, water shimmer (at 35% alpha)",
+  "dotMid": "map dots: mid-rise buildings, park",
+  "dotHigh": "map dots: towers, landmarks"
+ },
+ "themes": {
+  "mk1": {
+   "name": "Mark I",
+   "hero": "ironman",
+   "desc": "raw steel + ember orange",
+   "accent": "#FF8F3A",
+   "accent2": "#8E969D",
+   "glow": "#FFC27A",
+   "bg": "#0B0B0A",
+   "panel": "#151412",
+   "text": "#F1EEE9",
+   "dim": "#A8A29A",
+   "dotLow": "#3B3631",
+   "dotMid": "#8B8378",
+   "dotHigh": "#FFB25E",
+   "danger": "#FF3347",
+   "onAccent": "#0B0B0A",
+   "onDanger": "#140306",
+   "panelRgba": "rgba(21, 20, 18, 0.84)",
+   "rgb": {
+    "accent": [
+     255,
+     143,
+     58
+    ],
+    "accent2": [
+     142,
+     150,
+     157
+    ],
+    "glow": [
+     255,
+     194,
+     122
+    ],
+    "bg": [
+     11,
+     11,
+     10
+    ],
+    "panel": [
+     21,
+     20,
+     18
+    ],
+    "text": [
+     241,
+     238,
+     233
+    ],
+    "dim": [
+     168,
+     162,
+     154
+    ],
+    "dotLow": [
+     59,
+     54,
+     49
+    ],
+    "dotMid": [
+     139,
+     131,
+     120
+    ],
+    "dotHigh": [
+     255,
+     178,
+     94
+    ],
+    "danger": [
+     255,
+     51,
+     71
+    ],
+    "onAccent": [
+     11,
+     11,
+     10
+    ],
+    "onDanger": [
+     20,
+     3,
+     6
+    ]
+   },
+   "contrast": {
+    "text": 10.59,
+    "dim": 4.85,
+    "accent": 5.4,
+    "glow": 7.74,
+    "onAccent": 8.67,
+    "danger_mark": 3.4,
+    "onDanger_chip": 5.56,
+    "dotHigh_vs_bg": 11.05,
+    "accent_vs_danger_dE": 92.9
+   }
+  },
+  "mk2": {
+   "name": "Mark II",
+   "hero": "ironman",
+   "desc": "brushed silver + ice blue",
+   "accent": "#8FD8FF",
+   "accent2": "#C3CCD4",
+   "glow": "#D6F4FF",
+   "bg": "#070A0D",
+   "panel": "#0E1318",
+   "text": "#F1F6FA",
+   "dim": "#95A6B4",
+   "dotLow": "#1E2A33",
+   "dotMid": "#5F7A8C",
+   "dotHigh": "#BFEAFF",
+   "danger": "#FF3347",
+   "onAccent": "#070A0D",
+   "onDanger": "#140306",
+   "panelRgba": "rgba(14, 19, 24, 0.84)",
+   "rgb": {
+    "accent": [
+     143,
+     216,
+     255
+    ],
+    "accent2": [
+     195,
+     204,
+     212
+    ],
+    "glow": [
+     214,
+     244,
+     255
+    ],
+    "bg": [
+     7,
+     10,
+     13
+    ],
+    "panel": [
+     14,
+     19,
+     24
+    ],
+    "text": [
+     241,
+     246,
+     250
+    ],
+    "dim": [
+     149,
+     166,
+     180
+    ],
+    "dotLow": [
+     30,
+     42,
+     51
+    ],
+    "dotMid": [
+     95,
+     122,
+     140
+    ],
+    "dotHigh": [
+     191,
+     234,
+     255
+    ],
+    "danger": [
+     255,
+     51,
+     71
+    ],
+    "onAccent": [
+     7,
+     10,
+     13
+    ],
+    "onDanger": [
+     20,
+     3,
+     6
+    ]
+   },
+   "contrast": {
+    "text": 11.5,
+    "dim": 5.0,
+    "accent": 8.0,
+    "glow": 10.87,
+    "onAccent": 12.69,
+    "danger_mark": 3.47,
+    "onDanger_chip": 5.56,
+    "dotHigh_vs_bg": 15.52,
+    "accent_vs_danger_dE": 271.3
+   }
+  },
+  "mk3": {
+   "name": "Mark III",
+   "hero": "ironman",
+   "desc": "hot-rod red + soft gold",
+   "accent": "#F5C66E",
+   "accent2": "#C81F32",
+   "glow": "#FFE3A6",
+   "bg": "#0D0607",
+   "panel": "#170C0D",
+   "text": "#F7EEEA",
+   "dim": "#B39C98",
+   "dotLow": "#3C1A1C",
+   "dotMid": "#A34A3F",
+   "dotHigh": "#F5C66E",
+   "danger": "#FF3347",
+   "onAccent": "#0D0607",
+   "onDanger": "#140306",
+   "panelRgba": "rgba(23, 12, 13, 0.84)",
+   "rgb": {
+    "accent": [
+     245,
+     198,
+     110
+    ],
+    "accent2": [
+     200,
+     31,
+     50
+    ],
+    "glow": [
+     255,
+     227,
+     166
+    ],
+    "bg": [
+     13,
+     6,
+     7
+    ],
+    "panel": [
+     23,
+     12,
+     13
+    ],
+    "text": [
+     247,
+     238,
+     234
+    ],
+    "dim": [
+     179,
+     156,
+     152
+    ],
+    "dotLow": [
+     60,
+     26,
+     28
+    ],
+    "dotMid": [
+     163,
+     74,
+     63
+    ],
+    "dotHigh": [
+     245,
+     198,
+     110
+    ],
+    "danger": [
+     255,
+     51,
+     71
+    ],
+    "onAccent": [
+     13,
+     6,
+     7
+    ],
+    "onDanger": [
+     20,
+     3,
+     6
+    ]
+   },
+   "contrast": {
+    "text": 11.48,
+    "dim": 5.08,
+    "accent": 8.24,
+    "glow": 10.5,
+    "onAccent": 12.6,
+    "danger_mark": 3.64,
+    "onDanger_chip": 5.56,
+    "dotHigh_vs_bg": 12.6,
+    "accent_vs_danger_dE": 152.4
+   }
+  },
+  "mk42": {
+   "name": "Mark 42",
+   "hero": "ironman",
+   "desc": "champagne gold + red",
+   "accent": "#EBCF97",
+   "accent2": "#A82430",
+   "glow": "#FFF1D2",
+   "bg": "#0C0A07",
+   "panel": "#16120D",
+   "text": "#F6F1E8",
+   "dim": "#ABA08D",
+   "dotLow": "#2F2619",
+   "dotMid": "#7C6A4B",
+   "dotHigh": "#F2DDAE",
+   "danger": "#FF3347",
+   "onAccent": "#0C0A07",
+   "onDanger": "#140306",
+   "panelRgba": "rgba(22, 18, 13, 0.84)",
+   "rgb": {
+    "accent": [
+     235,
+     207,
+     151
+    ],
+    "accent2": [
+     168,
+     36,
+     48
+    ],
+    "glow": [
+     255,
+     241,
+     210
+    ],
+    "bg": [
+     12,
+     10,
+     7
+    ],
+    "panel": [
+     22,
+     18,
+     13
+    ],
+    "text": [
+     246,
+     241,
+     232
+    ],
+    "dim": [
+     171,
+     160,
+     141
+    ],
+    "dotLow": [
+     47,
+     38,
+     25
+    ],
+    "dotMid": [
+     124,
+     106,
+     75
+    ],
+    "dotHigh": [
+     242,
+     221,
+     174
+    ],
+    "danger": [
+     255,
+     51,
+     71
+    ],
+    "onAccent": [
+     12,
+     10,
+     7
+    ],
+    "onDanger": [
+     20,
+     3,
+     6
+    ]
+   },
+   "contrast": {
+    "text": 11.11,
+    "dim": 4.85,
+    "accent": 8.28,
+    "glow": 11.17,
+    "onAccent": 13.09,
+    "danger_mark": 3.46,
+    "onDanger_chip": 5.56,
+    "dotHigh_vs_bg": 14.81,
+    "accent_vs_danger_dE": 176.5
+   }
+  },
+  "mk85": {
+   "name": "Mark 85",
+   "hero": "ironman",
+   "desc": "candy red + warm gold, cyan glow",
+   "accent": "#FFB347",
+   "accent2": "#E0163F",
+   "glow": "#5CEBFF",
+   "bg": "#0C0508",
+   "panel": "#170A0F",
+   "text": "#F8EEF0",
+   "dim": "#B79AA2",
+   "dotLow": "#36141E",
+   "dotMid": "#9A6A45",
+   "dotHigh": "#FFC266",
+   "danger": "#FF3347",
+   "onAccent": "#0C0508",
+   "onDanger": "#140306",
+   "panelRgba": "rgba(23, 10, 15, 0.84)",
+   "rgb": {
+    "accent": [
+     255,
+     179,
+     71
+    ],
+    "accent2": [
+     224,
+     22,
+     63
+    ],
+    "glow": [
+     92,
+     235,
+     255
+    ],
+    "bg": [
+     12,
+     5,
+     8
+    ],
+    "panel": [
+     23,
+     10,
+     15
+    ],
+    "text": [
+     248,
+     238,
+     240
+    ],
+    "dim": [
+     183,
+     154,
+     162
+    ],
+    "dotLow": [
+     54,
+     20,
+     30
+    ],
+    "dotMid": [
+     154,
+     106,
+     69
+    ],
+    "dotHigh": [
+     255,
+     194,
+     102
+    ],
+    "danger": [
+     255,
+     51,
+     71
+    ],
+    "onAccent": [
+     12,
+     5,
+     8
+    ],
+    "onDanger": [
+     20,
+     3,
+     6
+    ]
+   },
+   "contrast": {
+    "text": 11.72,
+    "dim": 5.17,
+    "accent": 7.48,
+    "glow": 9.38,
+    "onAccent": 11.33,
+    "danger_mark": 3.69,
+    "onDanger_chip": 5.56,
+    "dotHigh_vs_bg": 12.64,
+    "accent_vs_danger_dE": 128.0
+   }
+  },
+  "hulkbuster": {
+   "name": "Hulkbuster",
+   "hero": "ironman",
+   "desc": "deep red + amber",
+   "accent": "#FFB12E",
+   "accent2": "#9C1C1F",
+   "glow": "#FFD27A",
+   "bg": "#0D0706",
+   "panel": "#180E0C",
+   "text": "#F6EEE8",
+   "dim": "#B09C92",
+   "dotLow": "#361714",
+   "dotMid": "#94452A",
+   "dotHigh": "#FFB84A",
+   "danger": "#FF3347",
+   "onAccent": "#0D0706",
+   "onDanger": "#140306",
+   "panelRgba": "rgba(24, 14, 12, 0.84)",
+   "rgb": {
+    "accent": [
+     255,
+     177,
+     46
+    ],
+    "accent2": [
+     156,
+     28,
+     31
+    ],
+    "glow": [
+     255,
+     210,
+     122
+    ],
+    "bg": [
+     13,
+     7,
+     6
+    ],
+    "panel": [
+     24,
+     14,
+     12
+    ],
+    "text": [
+     246,
+     238,
+     232
+    ],
+    "dim": [
+     176,
+     156,
+     146
+    ],
+    "dotLow": [
+     54,
+     23,
+     20
+    ],
+    "dotMid": [
+     148,
+     69,
+     42
+    ],
+    "dotHigh": [
+     255,
+     184,
+     74
+    ],
+    "danger": [
+     255,
+     51,
+     71
+    ],
+    "onAccent": [
+     13,
+     7,
+     6
+    ],
+    "onDanger": [
+     20,
+     3,
+     6
+    ]
+   },
+   "contrast": {
+    "text": 11.23,
+    "dim": 4.92,
+    "accent": 7.1,
+    "glow": 9.05,
+    "onAccent": 11.03,
+    "danger_mark": 3.57,
+    "onDanger_chip": 5.56,
+    "dotHigh_vs_bg": 11.62,
+    "accent_vs_danger_dE": 128.5
+   }
+  },
+  "ironspider": {
+   "name": "Iron Spider",
+   "hero": "spider",
+   "desc": "crimson + navy + gold, white lens glow",
+   "accent": "#F0C04F",
+   "accent2": "#C8243C",
+   "accent3": "#1B2B5A",
+   "glow": "#F2F7FF",
+   "bg": "#070A14",
+   "panel": "#0D1326",
+   "text": "#F1F4FB",
+   "dim": "#97A2C0",
+   "dotLow": "#17213F",
+   "dotMid": "#4C5E93",
+   "dotHigh": "#E9EEFF",
+   "danger": "#FF3347",
+   "onAccent": "#070A14",
+   "onDanger": "#140306",
+   "panelRgba": "rgba(13, 19, 38, 0.84)",
+   "rgb": {
+    "accent": [
+     240,
+     192,
+     79
+    ],
+    "accent2": [
+     200,
+     36,
+     60
+    ],
+    "accent3": [
+     27,
+     43,
+     90
+    ],
+    "glow": [
+     242,
+     247,
+     255
+    ],
+    "bg": [
+     7,
+     10,
+     20
+    ],
+    "panel": [
+     13,
+     19,
+     38
+    ],
+    "text": [
+     241,
+     244,
+     251
+    ],
+    "dim": [
+     151,
+     162,
+     192
+    ],
+    "dotLow": [
+     23,
+     33,
+     63
+    ],
+    "dotMid": [
+     76,
+     94,
+     147
+    ],
+    "dotHigh": [
+     233,
+     238,
+     255
+    ],
+    "danger": [
+     255,
+     51,
+     71
+    ],
+    "onAccent": [
+     7,
+     10,
+     20
+    ],
+    "onDanger": [
+     20,
+     3,
+     6
+    ]
+   },
+   "contrast": {
+    "text": 11.21,
+    "dim": 4.85,
+    "accent": 7.26,
+    "glow": 11.48,
+    "onAccent": 11.63,
+    "danger_mark": 3.42,
+    "onDanger_chip": 5.56,
+    "dotHigh_vs_bg": 17.07,
+    "accent_vs_danger_dE": 142.0
+   }
+  },
+  "peter": {
+   "name": "Peter Parker",
+   "hero": "spider",
+   "desc": "out of suit \u2014 warm neutral",
+   "accent": "#E6C9A1",
+   "accent2": "#8C7B6B",
+   "glow": "#FFE9C9",
+   "bg": "#0D0C0B",
+   "panel": "#171513",
+   "text": "#F3EFEA",
+   "dim": "#A89F95",
+   "dotLow": "#2C2824",
+   "dotMid": "#6E655B",
+   "dotHigh": "#E9D8BE",
+   "danger": "#FF3347",
+   "onAccent": "#0D0C0B",
+   "onDanger": "#140306",
+   "panelRgba": "rgba(23, 21, 19, 0.84)",
+   "rgb": {
+    "accent": [
+     230,
+     201,
+     161
+    ],
+    "accent2": [
+     140,
+     123,
+     107
+    ],
+    "glow": [
+     255,
+     233,
+     201
+    ],
+    "bg": [
+     13,
+     12,
+     11
+    ],
+    "panel": [
+     23,
+     21,
+     19
+    ],
+    "text": [
+     243,
+     239,
+     234
+    ],
+    "dim": [
+     168,
+     159,
+     149
+    ],
+    "dotLow": [
+     44,
+     40,
+     36
+    ],
+    "dotMid": [
+     110,
+     101,
+     91
+    ],
+    "dotHigh": [
+     233,
+     216,
+     190
+    ],
+    "danger": [
+     255,
+     51,
+     71
+    ],
+    "onAccent": [
+     13,
+     12,
+     11
+    ],
+    "onDanger": [
+     20,
+     3,
+     6
+    ]
+   },
+   "contrast": {
+    "text": 10.55,
+    "dim": 4.63,
+    "accent": 7.61,
+    "glow": 10.21,
+    "onAccent": 12.32,
+    "danger_mark": 3.34,
+    "onDanger_chip": 5.56,
+    "dotHigh_vs_bg": 13.99,
+    "accent_vs_danger_dE": 176.7
+   }
+  }
+ }
+}
