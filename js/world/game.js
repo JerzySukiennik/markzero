@@ -70,6 +70,8 @@ export class Game {
       this.MZ.stage.world.visible = true;
       progress(1, 'ready');
       this._phase('playing');
+      // first world on this machine with auto quality: time 4 s of real play (after 6 s settling) → next load's tier
+      const G = MZ.gfx; if (G?.auto && !G.detected.bench && !MZ.params.has('tier')) setTimeout(() => this.phase === 'playing' && G.bench(4, { label: 'play' }).then(b => b && MZ.emit('gfx:bench', b)), 6000);
       MZ.haptics.play('ui_start'); MZ.audio.ui('ui_start');
     } catch (e) {
       console.error('[game] world failed', e);

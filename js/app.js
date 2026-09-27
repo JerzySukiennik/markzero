@@ -9,6 +9,7 @@ import { Audio } from './core/audio.js';
 import { Assets } from './core/assets.js';
 import { Stage } from './gfx/stage.js';
 import { createNet } from './net/index.js';
+import { Gfx } from './gfx/quality.js';
 import { Game } from './world/game.js';
 import { Perf } from './core/perf.js';
 
@@ -69,10 +70,11 @@ export async function createApp() {
   MZ.game = new Game(MZ);
   stage.onRestore = () => (MZ.game.world ? MZ.game.recoverWorld() : null);
   MZ.perf = new Perf(MZ);
+  MZ.gfx = new Gfx(MZ, MZ.perf.gpu);
   net.connect();
 
   // ---- frame loop
-  let last = performance.now(), T = 0;
+  let last = performance.now(), T = 0; const _px = new Uint8Array(4);
   function tick(now) {
     const c0 = performance.now();
     const dt = Math.min(0.05, Math.max(0, (now - last) / 1000)); last = now; T += dt;
@@ -81,6 +83,7 @@ export async function createApp() {
     MZ.game.update(dt, T);
     bus.emit('frame', { dt, t: T });
     stage.render(dt);
+    if (MZ.gfx?.benching) { const gl = stage.renderer.getContext(); gl.readPixels(0, 0, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, _px); MZ.gfx.benchFrame(performance.now() - c0); }
     audio.update(MZ.game.camera);
     MZ.perf.cpu(performance.now() - c0);
     MZ.perf.frame(now);

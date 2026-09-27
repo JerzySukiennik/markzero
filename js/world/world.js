@@ -3,6 +3,7 @@
 // camera juice (shake / FOV kick / hitstop) and the player factory. Budget: docs/ADR-001-engine.md.
 import * as THREE from 'three';
 import { devPost } from '../core/env.js';
+import { TIERS as Q_TIERS } from '../gfx/quality.js';
 import { CityRenderer } from '../city/render.js';
 import { CityWorld } from '../city/world.js';
 import { CityAmbience } from '../city/ambience.js';
@@ -16,21 +17,14 @@ import { mergeRigid } from '../gfx/merge.js';
 import { buildWorldCollider, colliderDebug, uncoveredMeshes } from './colliders.js';
 import { installWater } from './water.js';
 
-// Quality tiers (auto from measured frame time later; ?tier= forces one)
-export const TIERS = {
-  high: { reflScale: 0.35, water: true, props: true, cascades: 3, shadowSize: 2048, renderScale: 1 },
-  balanced: { reflScale: 0.25, water: true, props: true, cascades: 2, shadowSize: 2048, renderScale: 0.85 },
-  low: { reflScale: 0.25, water: false, props: false, cascades: 2, shadowSize: 1024, renderScale: 0.7 },
-};
+// Quality tiers live in gfx/quality.js (MZ.gfx: auto = GPU class + measured bench, Settings override, ?tier= forces one)
+export const TIERS = Object.fromEntries(Object.entries(Q_TIERS).map(([k, v]) => [k, v.world]));
 let gameModule;   // web/js/game/index.js (gameplay agent) or null
 
 export class World {
   constructor(MZ) {
     this.MZ = MZ;
-    // default tier: headless = low; laptop GPUs (the HP's RTX 3050 Laptop, the Mac's Radeon 5500M) = balanced
-    // (Manhattan heights put the HP at 15–16 ms avg on high); others high
-    const gpu = MZ.perf?.gpu || '';
-    const tierName = MZ.params.get('tier') || (/Headless/.test(navigator.userAgent) ? 'low' : /Laptop|MX\d|[0-9]{4}M\b|5500M|Intel|Iris/i.test(gpu) ? 'balanced' : 'high');
+    const tierName = MZ.gfx?.tier || MZ.params.get('tier') || 'high';
     this.tier = TIERS[tierName] ? tierName : 'high'; this.T = { ...TIERS[this.tier] };
     // per-feature overrides for budget experiments: ?refl=0.25&cascades=2&props=0&water=0&shadowrate=0|1&scale=0.85
     const P = MZ.params, num = k => P.has(k) ? +P.get(k) : undefined;
@@ -143,7 +137,20 @@ export class World {
     base.userData.windows = out;
   }
   /** Compile every material now (behind the loading screen) instead of hitching on first sight. */
-  prewarm() { try { this.MZ.stage.renderer.compile(this.scene, this.camera); } catch (e) { console.warn(e); } }
+  /** Compile every material now. Compiles against the composer's scene target: renderer.compile() with no target
+   * builds the canvas variant (sRGB output + ACES in the shader) that the game never draws with — story's
+   * intro-spider called this 4 s after 'playing' and compiled 60 useless programs (the 5 s start hitch). */
+  prewarm() {
+    const r = this.MZ.stage.renderer, prev = r.getRenderTarget();
+    // compileAsync: with KHR_parallel_shader_compile the driver builds them side by side instead of one after another
+    try { r.setRenderTarget(this.cr?.rt || null); (r.compileAsync ? r.compileAsync(this.scene, this.camera) : r.compile(this.scene, this.camera))?.catch?.(() => { }); } catch (e) { console.warn(e); } finally { r.setRenderTarget(prev); }
+    // shadow-depth variants + buffers of whatever was added since the warm-up: render those alone over the next frames
+    if (this._warmed) {
+      const fresh = this.scene.children.filter(k => !this._warmed.has(k) && !/^city_env|__lightpool/.test(k.name));
+      fresh.forEach(k => this._warmed.add(k));
+      if (fresh.length) return import('./warmup.js').then(m => m.warmGroups(this, fresh.map(k => [k]))).catch(e => console.warn('[world] warm', e));
+    }
+  }
 
   /** Register a loaded model's materials with the city lighting (cascaded sun shadows). */
   litModel(root) {

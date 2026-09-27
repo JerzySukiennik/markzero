@@ -617,7 +617,7 @@ export class IronMan extends Hero {
     m.position.copy(pos); m.velocity.copy(velocity || _v.set(0, 0, 0)); m.yaw = yaw; m.pitch = 0; m.roll = 0; m._setBasis();
     m.grounded = grounded; m.hoverActive = false; m.hoverAnchor.copy(pos);
     this.slopeT = 0; this.takeoffT = 0; this.skidding = false; this.skidT = 0; this.landLock = 0; this.wasGrounded = grounded;
-    this.anim?.cancelShot(null, 0); this.cam.snap(); this._prev.copy(pos);
+    this.anim?.cancelShot(null, 0); this.cam.snap(); this._prev.copy(pos); this.stamper?.teleported();
   }
   /** In-game suit change with its sequence (Mk 85 nano, Mk 42 summon, Hulkbuster via Veronica). */
   async suitUp(id) {
@@ -652,24 +652,24 @@ export class IronMan extends Hero {
   state() {
     const m = this.m, f = (m.grounded ? 1 : 0) | (m.hoverActive ? 2 : 0) | (this._boosting ? 4 : 0) | (this.arms.L.want ? 8 : 0) | (this.arms.R.want ? 16 : 0);
     const r3 = v => +v.toFixed(2);
-    return { p: m.position.toArray().map(r3), q: this.root.quaternion.toArray().map(v => +v.toFixed(4)), v: m.velocity.toArray().map(r3),
+    return this.stamper.stamp({ p: m.position.toArray().map(r3), q: this.root.quaternion.toArray().map(v => +v.toFixed(4)), v: m.velocity.toArray().map(r3),
       th: r3(m.thrustMag), f, gs: r3(m.groundSpeed), bk: r3(m.bank), ap: this.aimPoint.toArray().map(v => +v.toFixed(1)),
-      c: [r3(this.lastCmd?.lateral || 0), r3(this.lastCmd?.retro || 0), r3(this.lastCmd?.vertical || 0)] };
+      c: [r3(this.lastCmd?.lateral || 0), r3(this.lastCmd?.retro || 0), r3(this.lastCmd?.vertical || 0)] });
   }
   updateRemote(dt, t) {
-    const n = this.net, m = this.m;
-    if (n.has) {
-      const k = 1 - Math.exp(-dt / 0.12);
-      m.position.lerp(_v.copy(n.p).addScaledVector(n.v, 0.05), k); m.velocity.lerp(n.v, k);
-      this.root.quaternion.slerp(n.q, k);
-      const s = n.s; m.grounded = !!(s.f & 1); m.hoverActive = !!(s.f & 2); m.thrustMag = lerp(m.thrustMag, s.th || 0, k);
-      m.groundSpeed = s.gs || 0; m.bank = s.bk || 0; this._boosting = !!(s.f & 4);
+    const m = this.m, S = this.smooth;
+    if (S.sample(performance.now(), dt)) {                 // interpolated ~100–250 ms in the past (netsmooth.js)
+      m.position.copy(S.p); m.velocity.copy(S.v); this.root.quaternion.copy(S.q);
+      const s = S.s, f = S.f;
+      m.grounded = !!(s.f & 1); m.hoverActive = !!(s.f & 2); this._boosting = !!(s.f & 4);
+      m.thrustMag = f.th || 0; m.groundSpeed = f.gs || 0; m.bank = f.bk || 0;
+      m.stridePhase += m.groundSpeed * dt / 1.8;
       this.arms.L.want = s.f & 8 ? 1 : 0; this.arms.R.want = s.f & 16 ? 1 : 0;
-      if (s.ap) { this.aimPoint.fromArray(s.ap); this.arms.L.target.copy(this.aimPoint); this.arms.R.target.copy(this.aimPoint); this.look.target.copy(this.aimPoint); }
-      _q.copy(this.root.quaternion); _e.setFromQuaternion(_q, 'YXZ'); m.yaw = _e.y; m.pitch = _e.x; m._setBasis();
+      if (f.ap) { this.aimPoint.fromArray(f.ap); this.arms.L.target.copy(this.aimPoint); this.arms.R.target.copy(this.aimPoint); this.look.target.copy(this.aimPoint); }
+      _e.setFromQuaternion(this.root.quaternion, 'YXZ'); m.yaw = _e.y; m.pitch = _e.x; m._setBasis();
     }
     this.root.position.copy(m.position); this.root.position.y -= 1;
-    const c = this.net.s?.c || [0, 0, 0], cmd = { lateral: c[0], retro: c[1], vertical: c[2], thrust: 0 };
+    const c = S.f?.c || [0, 0, 0], cmd = { lateral: c[0], retro: c[1], vertical: c[2], thrust: 0 };
     this.stateMachine(dt, cmd); this.anim.update(dt); this.nano?.update(dt); this.procedural(dt, cmd); this.effects(dt, cmd, false);
   }
   remoteEvent(e) {

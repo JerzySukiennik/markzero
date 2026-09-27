@@ -21,6 +21,10 @@ export function patchBase(root, cr, { shadows = true } = {}) {
     for (const m of [].concat(o.material)) {
       if (!m || seen.has(m)) continue;
       seen.add(m);
+      // already patched (shared by a cached clone, a kit marker, or a world rebuild after context loss): patching
+      // again would let poolWater() overwrite the chained hook while patchGeneric() returns early -> the pool shader
+      // used vCityW/uTime without their declarations ("'vCityW' : undeclared identifier" in the static build)
+      if (m.__cityPatched) { cr.addMaterial(m); continue; }
       const glow = /glow|screen|lampshade|led/i.test(m.name);
       if (/^mat_glass$|glass_clear/i.test(m.name)) {
         // Blender's exporter writes our window glass as opaque; it is thin clear glass
@@ -40,6 +44,7 @@ export function patchBase(root, cr, { shadows = true } = {}) {
 /** Pool water: clear turquoise with analytic world-space ripples (three crossing wave trains),
  *  so the sky/skyline reflection wobbles and the white tiles read through it. */
 function poolWater(m) {
+  if (m.__pool) return; m.__pool = true;
   m.transparent = true; m.opacity = 0.84; m.roughness = 0.02; m.metalness = 0.0;
   m.color?.setRGB(0.06, 0.5, 0.58);
   m.emissive?.setRGB(0.012, 0.11, 0.13);   // in-scattered light from the lit tiles below

@@ -4,6 +4,7 @@ import * as THREE from 'three';
 import { Animator } from './anim.js';
 import { CityCollider } from './collide.js';
 import { NanoController } from './fx/nano.js';
+import { NetSmoother, NetStamper } from './netsmooth.js';
 
 export const LIBS = {
   ironman: 'assets/anims/ironman_core.glb', spiderman: 'assets/anims/spider_core.glb',
@@ -25,6 +26,9 @@ export class Hero {
     Object.assign(this, { MZ, world, id, name, hero, suit, local, spawnOpt: spawn });
     this.fov = 64; this.health = 1; this.loops = {}; this._offs = [];
     this.net = { has: false, p: new THREE.Vector3(), q: new THREE.Quaternion(), v: new THREE.Vector3(), t: 0 };
+    // remote interpolation (netsmooth.js) — both heroes: push in applyState, read this.smooth.sample() per frame;
+    // local heroes stamp their state() with this.stamper.stamp() (+ stamper.teleported() on teleports)
+    this.smooth = new NetSmoother(); this.stamper = new NetStamper(MZ);
   }
   async loadBody(suit = this.suit) {
     const MZ = this.MZ;
@@ -81,6 +85,7 @@ export class Hero {
 
   snapshot() { const p = this.root?.position || new THREE.Vector3(); return { x: p.x, y: p.y, z: p.z, heading: this.heading || 0, speed: this.speedNow || 0 }; }
   applyState(s) {
+    this.smooth.push(s);
     const n = this.net; n.p.fromArray(s.p); n.q.fromArray(s.q); n.v.fromArray(s.v || [0, 0, 0]); n.s = s; n.has = true; n.t = performance.now();
   }
   dispose() {

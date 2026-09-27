@@ -1,1 +1,1 @@
-2026-09-27 15:03 e3f95ba Merge main (static core, Firebase net) into ui/front-end
+2026-09-27 15:38 a795735 Merge remote-tracking branch 'origin/ui/front-end'

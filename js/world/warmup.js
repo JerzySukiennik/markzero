@@ -10,8 +10,6 @@ import * as THREE from 'three';
 
 export async function warmWorld(world, { onProgress, perFrame = 1 } = {}) {
   const MZ = world.MZ, r = MZ.stage.renderer, scene = world.scene;
-  const rt = new THREE.WebGLRenderTarget(96, 96, { type: THREE.HalfFloatType, samples: 0 });
-  const cam = new THREE.PerspectiveCamera(50, 1, 0.3, 20000);
   // targets
   const groups = [];
   for (const t of world.city.tiles) groups.push([t.root]);
@@ -28,16 +26,27 @@ export async function warmWorld(world, { onProgress, perFrame = 1 } = {}) {
   // and everything else hanging off the scene (VFX pools: sparks, billboards, scorches, story actors…)
   const covered = new Set(groups.flat());
   for (const k of scene.children) if (!covered.has(k) && k !== world.city.group && !/^city_env|__lightpool/.test(k.name)) groups.push([k]);
+  world._warmed = new Set(scene.children);
+  return warmGroups(world, groups, { onProgress, perFrame });
+}
+
+/** Render each group of objects alone, once (lit + one shadow cascade), one group per frame. Used by warmWorld and
+ * by World.prewarm() for things added after the warm-up (story actors). */
+export async function warmGroups(world, groups, { onProgress, perFrame = 1 } = {}) {
+  const MZ = world.MZ, r = MZ.stage.renderer, scene = world.scene;
+  const rt = new THREE.WebGLRenderTarget(96, 96, { type: THREE.HalfFloatType, samples: 0 });
+  const cam = new THREE.PerspectiveCamera(50, 1, 0.3, 20000);
+  cam.layers.enableAll();   // props + crowd live on layer 1: a layer-0-only camera never compiled their lit programs
   // remember visibility of every top-level child + the things we touch
   const kids = scene.children.slice(), vis = kids.map(k => k.visible);
   const saved = new Map();
   const keep = new Set(); scene.traverse(o => { if (o.isLight || o.name === '__lightpool' || o.name === 'city_env') keep.add(o); });
   const sb = new THREE.Box3(), sph = new THREE.Sphere();
-  const lights = world.cr.csm.lights;
+  const lights = world.cr.csm.lights, lightAuto = lights.map(l => l.shadow.autoUpdate);
   const oldTarget = r.getRenderTarget(), oldAuto = r.shadowMap.autoUpdate;
   let n = 0;
   for (const g of groups) {
-    if (!g.length) continue;
+    if (!g.length || !world.cr) continue;   // world disposed meanwhile
     // show only this group (its ancestors must be visible too)
     for (const k of kids) k.visible = keep.has(k);
     const shown = [];
@@ -64,6 +73,7 @@ export async function warmWorld(world, { onProgress, perFrame = 1 } = {}) {
     if (n % perFrame === 0) await new Promise(res => requestAnimationFrame(() => res()));
   }
   r.shadowMap.autoUpdate = oldAuto;
+  lights.forEach((l, i) => { l.shadow.autoUpdate = lightAuto[i]; l.shadow.needsUpdate = true; });   // the maps now hold the last group only
   rt.dispose();
   return { groups: groups.length, programs: r.info.programs.length };
 }

@@ -75,9 +75,14 @@ export class HeroScreen extends Screen {
     this.cur = s;
   }
   /** Warm every other suit of this hero in the background, one at a time, so stopping on any of them is instant. */
+  // Only while this screen is on top and the player lingers (1.2 s): the moment they pick a suit the world
+  // starts streaming (~300 MB on a first visit to the web build) and must not share the bandwidth with
+  // previews nobody will look at. One GLB at a time; an in-flight one is allowed to finish.
   async preloadRest() {
     if (this._pre) return; this._pre = true;
-    for (const s of selectable(this.MZ, this.hero).filter(x => x.id !== this.cur?.id)) { if (this.dead) return; try { await HeroPreview.preload(this.MZ, s.id, 'hero'); } catch { } }
+    const idle = () => !this.dead && this.ui.top === this && this.MZ.game?.phase === 'menu';
+    await new Promise(r => setTimeout(r, 1200));
+    for (const s of selectable(this.MZ, this.hero).filter(x => x.id !== this.cur?.id)) { if (!idle()) break; try { await HeroPreview.preload(this.MZ, s.id, 'hero'); } catch { } }
     this._pre = false;
   }
   choose(s) {
