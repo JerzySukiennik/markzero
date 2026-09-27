@@ -1,0 +1,40 @@
+{
+ "tile_px": 512,
+ "grid": 4,
+ "back_wall_fraction": 0.5,
+ "room_box_m": [
+  4.0,
+  3.2,
+  5.0
+ ],
+ "avg_linear": {
+  "day": [
+   0.6071,
+   0.5867,
+   0.5542
+  ],
+  "night": [
+   0.3052,
+   0.2949,
+   0.2697
+  ]
+ },
+ "names": [
+  "office open plan",
+  "office cubicles",
+  "meeting room",
+  "office reception",
+  "living room A",
+  "living room B",
+  "bedroom A",
+  "bedroom B",
+  "kitchen",
+  "stair hall",
+  "loft studio",
+  "dance studio",
+  "clothes shop",
+  "cafe",
+  "marble lobby",
+  "corner store"
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "format": "crowd-1",
+ "note": "decimated skinned bodies; the runtime bakes the walk/idle clips into a vertex-animation texture at load",
+ "bodies": [
+  {
+   "name": "peter",
+   "file": "crowd_peter.glb",
+   "tris": 1100,
+   "clips": "anims/human_core_174.glb",
+   "lod1": {
+    "name": "peter",
+    "file": "crowd_peter_lod1.glb",
+    "tris": 220
+   }
+  },
+  {
+   "name": "tony",
+   "file": "crowd_tony.glb",
+   "tris": 1100,
+   "clips": "anims/human_core.glb",
+   "lod1": {
+    "name": "tony",
+    "file": "crowd_tony_lod1.glb",
+    "tris": 220
+   }
+  }
+ ]
+}

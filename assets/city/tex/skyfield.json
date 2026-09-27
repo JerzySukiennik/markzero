@@ -1,0 +1,10 @@
+{
+ "rect": [
+  -800.0,
+  -1760.0,
+  800.0,
+  1760.0
+ ],
+ "res": 2.0,
+ "channels": "R sky view factor, G mean height /300 m, B height /450 m"
+}
