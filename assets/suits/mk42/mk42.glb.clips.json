@@ -1,0 +1,1002 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "mask_open",
+   "frames": 31,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.0,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "mk42_faceplate_unlatch",
+     "at": "piv_head"
+    },
+    {
+     "t": 0.1,
+     "sfx": "mk42_faceplate_slide",
+     "at": "piv_head"
+    }
+   ],
+   "layer": "mask",
+   "nodes": [
+    "piv_faceplateL",
+    "piv_faceplateR"
+   ]
+  },
+  {
+   "name": "mask_close",
+   "frames": 31,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.0,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "mk42_faceplate_slide",
+     "at": "piv_head"
+    },
+    {
+     "t": 0.78,
+     "sfx": "mk42_faceplate_latch",
+     "at": "piv_head"
+    }
+   ],
+   "layer": "mask",
+   "nodes": [
+    "piv_faceplateL",
+    "piv_faceplateR"
+   ]
+  },
+  {
+   "name": "flaps_test",
+   "frames": 91,
+   "fps": 30,
+   "loop": false,
+   "duration": 3.0,
+   "events": [
+    {
+     "t": 0.18,
+     "sfx": "mk42_flap_open",
+     "at": "piv_chest"
+    },
+    {
+     "t": 2.3,
+     "sfx": "mk42_flap_close",
+     "at": "piv_chest"
+    }
+   ],
+   "layer": "flaps",
+   "nodes": [
+    "piv_flap_hipL",
+    "piv_flap_hipR",
+    "piv_flap_backL",
+    "piv_flap_backR",
+    "piv_flap_calfL",
+    "piv_flap_calfR",
+    "drv_flap_L",
+    "drv_flap_R"
+   ]
+  },
+  {
+   "name": "eject",
+   "frames": 103,
+   "fps": 30,
+   "loop": false,
+   "duration": 3.4,
+   "events": [
+    {
+     "t": 0.5667,
+     "sfx": "mk42_eject",
+     "vfx": "flash",
+     "at": "piv_chest",
+     "size": 1.4
+    },
+    {
+     "t": 0.5667,
+     "vfx": "smoke_puff",
+     "at": "piv_chest",
+     "size": 0.9
+    },
+    {
+     "t": 0.8667,
+     "sfx": "mk42_plate_bounce",
+     "at": "bootR_a",
+     "gain": 0.51
+    },
+    {
+     "t": 0.9333,
+     "sfx": "mk42_plate_hit",
+     "at": "gauntletR_a",
+     "gain": 1.0
+    },
+    {
+     "t": 0.9667,
+     "sfx": "mk42_plate_hit",
+     "at": "kneeR_a",
+     "gain": 0.84
+    },
+    {
+     "t": 0.9667,
+     "sfx": "mk42_plate_hit",
+     "at": "gauntletL_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.0,
+     "sfx": "mk42_plate_hit",
+     "at": "kneeL_a",
+     "gain": 0.83
+    },
+    {
+     "t": 1.0333,
+     "sfx": "mk42_plate_hit",
+     "at": "abdomen_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.0667,
+     "sfx": "mk42_plate_hit",
+     "at": "pelvis_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.1333,
+     "sfx": "mk42_plate_hit",
+     "at": "bootL_a",
+     "gain": 0.86
+    },
+    {
+     "t": 1.1333,
+     "sfx": "mk42_plate_bounce",
+     "at": "kneeL_a",
+     "gain": 0.38
+    },
+    {
+     "t": 1.1333,
+     "sfx": "mk42_plate_hit",
+     "at": "forearmL_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.1333,
+     "sfx": "mk42_plate_hit",
+     "at": "thighR_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.1667,
+     "sfx": "mk42_plate_bounce",
+     "at": "gauntletR_a",
+     "gain": 0.52
+    },
+    {
+     "t": 1.2,
+     "sfx": "mk42_plate_hit",
+     "at": "bicepR_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.2333,
+     "sfx": "mk42_plate_hit",
+     "at": "forearmR_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.2333,
+     "sfx": "mk42_plate_hit",
+     "at": "thighL_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.2333,
+     "sfx": "mk42_plate_bounce",
+     "at": "gauntletL_a",
+     "gain": 0.56
+    },
+    {
+     "t": 1.3,
+     "sfx": "mk42_plate_bounce",
+     "at": "pelvis_a",
+     "gain": 0.55
+    },
+    {
+     "t": 1.3,
+     "sfx": "mk42_plate_hit",
+     "at": "bicepL_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.3,
+     "sfx": "mk42_plate_bounce",
+     "at": "abdomen_a",
+     "gain": 0.58
+    },
+    {
+     "t": 1.3667,
+     "sfx": "mk42_plate_hit",
+     "at": "back_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.3667,
+     "sfx": "mk42_plate_bounce",
+     "at": "forearmL_a",
+     "gain": 0.52
+    },
+    {
+     "t": 1.4333,
+     "sfx": "mk42_plate_bounce",
+     "at": "bicepR_a",
+     "gain": 0.52
+    },
+    {
+     "t": 1.4667,
+     "sfx": "mk42_plate_hit",
+     "at": "chest_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.4667,
+     "sfx": "mk42_plate_bounce",
+     "at": "forearmR_a",
+     "gain": 0.47
+    },
+    {
+     "t": 1.4667,
+     "sfx": "mk42_plate_bounce",
+     "at": "thighL_a",
+     "gain": 0.54
+    },
+    {
+     "t": 1.5667,
+     "sfx": "mk42_plate_hit",
+     "at": "faceplateL_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.5667,
+     "sfx": "mk42_plate_hit",
+     "at": "faceplateR_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.6,
+     "sfx": "mk42_plate_bounce",
+     "at": "bicepL_a",
+     "gain": 0.6
+    },
+    {
+     "t": 1.6667,
+     "sfx": "mk42_plate_bounce",
+     "at": "back_a",
+     "gain": 0.58
+    },
+    {
+     "t": 1.7,
+     "sfx": "mk42_plate_hit",
+     "at": "pauldronL_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.7333,
+     "sfx": "mk42_plate_hit",
+     "at": "neck_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.8,
+     "sfx": "mk42_plate_hit",
+     "at": "pauldronR_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.8667,
+     "sfx": "mk42_plate_hit",
+     "at": "helmet_a",
+     "gain": 1.0
+    },
+    {
+     "t": 1.9,
+     "sfx": "mk42_plate_bounce",
+     "at": "faceplateL_a",
+     "gain": 0.63
+    },
+    {
+     "t": 1.9,
+     "sfx": "mk42_plate_hit",
+     "at": "chest_a",
+     "gain": 0.96
+    },
+    {
+     "t": 1.9333,
+     "sfx": "mk42_plate_bounce",
+     "at": "faceplateR_a",
+     "gain": 0.69
+    },
+    {
+     "t": 2.0,
+     "sfx": "mk42_plate_bounce",
+     "at": "faceplateL_a",
+     "gain": 0.4
+    },
+    {
+     "t": 2.1,
+     "sfx": "mk42_plate_bounce",
+     "at": "pauldronL_a",
+     "gain": 0.69
+    },
+    {
+     "t": 2.1333,
+     "sfx": "mk42_plate_bounce",
+     "at": "neck_a",
+     "gain": 0.7
+    },
+    {
+     "t": 2.2,
+     "sfx": "mk42_plate_bounce",
+     "at": "pauldronR_a",
+     "gain": 0.72
+    },
+    {
+     "t": 2.2333,
+     "sfx": "mk42_plate_bounce",
+     "at": "pauldronL_a",
+     "gain": 0.42
+    },
+    {
+     "t": 2.2333,
+     "sfx": "mk42_plate_bounce",
+     "at": "neck_a",
+     "gain": 0.38
+    },
+    {
+     "t": 2.3333,
+     "sfx": "mk42_plate_hit",
+     "at": "helmet_a",
+     "gain": 0.79
+    },
+    {
+     "t": 2.4667,
+     "sfx": "mk42_plate_bounce",
+     "at": "helmet_a",
+     "gain": 0.39
+    },
+    {
+     "t": 0.57,
+     "sfx": "human_hit_body",
+     "at": "piv_chest"
+    },
+    {
+     "t": 0.99,
+     "sfx": "human_step_scuff",
+     "at": "piv_toeR"
+    },
+    {
+     "t": 1.45,
+     "sfx": "human_step",
+     "at": "piv_toeL"
+    }
+   ],
+   "cutscene": true,
+   "wearer": "play the same clip on Tony (tony.glb): it animates the piv_* joints",
+   "ends_scattered": true
+  },
+  {
+   "name": "summon_demo",
+   "frames": 215,
+   "fps": 30,
+   "loop": false,
+   "duration": 7.133333333333334,
+   "events": [
+    {
+     "t": 1.0,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "bootL_a"
+    },
+    {
+     "t": 1.1333,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "bootR_a"
+    },
+    {
+     "t": 1.3,
+     "sfx": "mk42_whoosh",
+     "at": "bootL_a"
+    },
+    {
+     "t": 1.4,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "kneeR_a"
+    },
+    {
+     "t": 1.4333,
+     "sfx": "mk42_whoosh",
+     "at": "bootR_a"
+    },
+    {
+     "t": 1.4333,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "kneeL_a"
+    },
+    {
+     "t": 1.5333,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "thighL_a"
+    },
+    {
+     "t": 1.5333,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "thighR_a"
+    },
+    {
+     "t": 1.7,
+     "sfx": "mk42_whoosh_big",
+     "at": "kneeR_a"
+    },
+    {
+     "t": 1.7333,
+     "sfx": "mk42_whoosh_big",
+     "at": "kneeL_a"
+    },
+    {
+     "t": 1.8333,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "pelvis_a"
+    },
+    {
+     "t": 1.8333,
+     "sfx": "mk42_whoosh_big",
+     "at": "thighL_a"
+    },
+    {
+     "t": 1.8333,
+     "sfx": "mk42_whoosh_big",
+     "at": "thighR_a"
+    },
+    {
+     "t": 1.9667,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "chest_a"
+    },
+    {
+     "t": 2.0,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "abdomen_a"
+    },
+    {
+     "t": 2.1333,
+     "sfx": "mk42_whoosh_big",
+     "at": "pelvis_a"
+    },
+    {
+     "t": 2.1667,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "back_a"
+    },
+    {
+     "t": 2.2667,
+     "sfx": "mk42_whoosh_big",
+     "at": "chest_a"
+    },
+    {
+     "t": 2.3,
+     "sfx": "mk42_whoosh_big",
+     "at": "abdomen_a"
+    },
+    {
+     "t": 2.3333,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "pauldronR_a"
+    },
+    {
+     "t": 2.3667,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "pauldronL_a"
+    },
+    {
+     "t": 2.4,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "bicepL_a"
+    },
+    {
+     "t": 2.4,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "bicepR_a"
+    },
+    {
+     "t": 2.4333,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "forearmR_a"
+    },
+    {
+     "t": 2.4667,
+     "sfx": "mk42_servo",
+     "at": "bootL_a"
+    },
+    {
+     "t": 2.4667,
+     "sfx": "mk42_servo",
+     "at": "bootR_a"
+    },
+    {
+     "t": 2.4667,
+     "sfx": "mk42_whoosh_big",
+     "at": "back_a"
+    },
+    {
+     "t": 2.5,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "forearmL_a"
+    },
+    {
+     "t": 2.5333,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "bootL_a",
+     "n": 6
+    },
+    {
+     "t": 2.5333,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "bootR_a",
+     "n": 6
+    },
+    {
+     "t": 2.6333,
+     "sfx": "mk42_whoosh",
+     "at": "pauldronR_a"
+    },
+    {
+     "t": 2.6667,
+     "sfx": "mk42_whoosh",
+     "at": "pauldronL_a"
+    },
+    {
+     "t": 2.7,
+     "sfx": "mk42_whoosh",
+     "at": "bicepL_a"
+    },
+    {
+     "t": 2.7,
+     "sfx": "mk42_whoosh",
+     "at": "bicepR_a"
+    },
+    {
+     "t": 2.7333,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "gauntletL_a"
+    },
+    {
+     "t": 2.7333,
+     "sfx": "mk42_whoosh",
+     "at": "forearmR_a"
+    },
+    {
+     "t": 2.7667,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "gauntletR_a"
+    },
+    {
+     "t": 2.7667,
+     "sfx": "mk42_servo",
+     "at": "kneeR_a"
+    },
+    {
+     "t": 2.8,
+     "sfx": "mk42_whoosh",
+     "at": "forearmL_a"
+    },
+    {
+     "t": 2.8,
+     "sfx": "mk42_servo",
+     "at": "kneeL_a"
+    },
+    {
+     "t": 2.8333,
+     "sfx": "mk42_lock_big",
+     "vfx": "sparks",
+     "at": "kneeR_a",
+     "n": 6
+    },
+    {
+     "t": 2.8667,
+     "sfx": "mk42_lock_big",
+     "vfx": "sparks",
+     "at": "kneeL_a",
+     "n": 6
+    },
+    {
+     "t": 2.9333,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "helmet_a"
+    },
+    {
+     "t": 2.9667,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "neck_a"
+    },
+    {
+     "t": 2.9667,
+     "sfx": "mk42_servo",
+     "at": "thighR_a"
+    },
+    {
+     "t": 3.0,
+     "sfx": "mk42_servo",
+     "at": "thighL_a"
+    },
+    {
+     "t": 3.0333,
+     "sfx": "mk42_whoosh",
+     "at": "gauntletL_a"
+    },
+    {
+     "t": 3.0667,
+     "sfx": "mk42_lock_big",
+     "vfx": "sparks",
+     "at": "thighR_a",
+     "n": 6
+    },
+    {
+     "t": 3.0667,
+     "sfx": "mk42_whoosh",
+     "at": "gauntletR_a"
+    },
+    {
+     "t": 3.0667,
+     "sfx": "mk42_lock_big",
+     "vfx": "sparks",
+     "at": "thighL_a",
+     "n": 6
+    },
+    {
+     "t": 3.2333,
+     "sfx": "mk42_servo",
+     "at": "pelvis_a"
+    },
+    {
+     "t": 3.2333,
+     "sfx": "mk42_whoosh_big",
+     "at": "helmet_a"
+    },
+    {
+     "t": 3.2667,
+     "sfx": "mk42_whoosh",
+     "at": "neck_a"
+    },
+    {
+     "t": 3.3,
+     "sfx": "mk42_lock_big",
+     "vfx": "sparks",
+     "at": "pelvis_a",
+     "n": 6
+    },
+    {
+     "t": 3.3333,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "faceplateL_a"
+    },
+    {
+     "t": 3.4333,
+     "sfx": "mk42_servo",
+     "at": "abdomen_a"
+    },
+    {
+     "t": 3.4667,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "faceplateR_a"
+    },
+    {
+     "t": 3.4667,
+     "sfx": "mk42_servo",
+     "at": "chest_a"
+    },
+    {
+     "t": 3.5,
+     "sfx": "mk42_lock_big",
+     "vfx": "sparks",
+     "at": "abdomen_a",
+     "n": 6
+    },
+    {
+     "t": 3.5667,
+     "sfx": "mk42_lock_big",
+     "vfx": "sparks",
+     "at": "chest_a",
+     "n": 6
+    },
+    {
+     "t": 3.6333,
+     "sfx": "mk42_whoosh",
+     "at": "faceplateL_a"
+    },
+    {
+     "t": 3.7333,
+     "sfx": "mk42_servo",
+     "at": "back_a"
+    },
+    {
+     "t": 3.7667,
+     "sfx": "mk42_whoosh",
+     "at": "faceplateR_a"
+    },
+    {
+     "t": 3.8,
+     "sfx": "mk42_lock_big",
+     "vfx": "sparks",
+     "at": "back_a",
+     "n": 6
+    },
+    {
+     "t": 3.9,
+     "sfx": "mk42_servo",
+     "at": "bicepR_a"
+    },
+    {
+     "t": 3.9,
+     "sfx": "mk42_servo",
+     "at": "bicepL_a"
+    },
+    {
+     "t": 3.9,
+     "sfx": "mk42_servo",
+     "at": "pauldronL_a"
+    },
+    {
+     "t": 3.9333,
+     "sfx": "mk42_servo",
+     "at": "pauldronR_a"
+    },
+    {
+     "t": 3.9333,
+     "sfx": "mk42_servo",
+     "at": "forearmR_a"
+    },
+    {
+     "t": 3.9667,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "bicepR_a",
+     "n": 6
+    },
+    {
+     "t": 4.0,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "bicepL_a",
+     "n": 6
+    },
+    {
+     "t": 4.0,
+     "sfx": "mk42_servo",
+     "at": "forearmL_a"
+    },
+    {
+     "t": 4.0,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "pauldronL_a",
+     "n": 6
+    },
+    {
+     "t": 4.0,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "pauldronR_a",
+     "n": 6
+    },
+    {
+     "t": 4.0333,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "forearmR_a",
+     "n": 6
+    },
+    {
+     "t": 4.0667,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "forearmL_a",
+     "n": 6
+    },
+    {
+     "t": 4.1667,
+     "sfx": "mk42_servo",
+     "at": "gauntletL_a"
+    },
+    {
+     "t": 4.2,
+     "sfx": "mk42_servo",
+     "at": "gauntletR_a"
+    },
+    {
+     "t": 4.2333,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "gauntletL_a",
+     "n": 6
+    },
+    {
+     "t": 4.2667,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "gauntletR_a",
+     "n": 6
+    },
+    {
+     "t": 4.4,
+     "sfx": "mk42_servo",
+     "at": "helmet_a"
+    },
+    {
+     "t": 4.4667,
+     "sfx": "mk42_lock_big",
+     "vfx": "sparks",
+     "at": "helmet_a",
+     "n": 6
+    },
+    {
+     "t": 4.4667,
+     "sfx": "mk42_servo",
+     "at": "neck_a"
+    },
+    {
+     "t": 4.5667,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "neck_a",
+     "n": 6
+    },
+    {
+     "t": 4.9333,
+     "sfx": "mk42_servo",
+     "at": "faceplateL_a"
+    },
+    {
+     "t": 5.0,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "faceplateL_a",
+     "n": 6
+    },
+    {
+     "t": 5.0,
+     "sfx": "mk42_servo",
+     "at": "faceplateR_a"
+    },
+    {
+     "t": 5.1,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "faceplateR_a",
+     "n": 6
+    },
+    {
+     "t": 5.1,
+     "sfx": "mk42_suit_ready",
+     "at": "piv_head"
+    },
+    {
+     "t": 0.75,
+     "sfx": "human_cloth",
+     "at": "piv_shoulderR"
+    },
+    {
+     "t": 5.25,
+     "sfx": "mk42_faceplate_slide",
+     "at": "piv_head"
+    },
+    {
+     "t": 5.8,
+     "sfx": "mk42_faceplate_latch",
+     "at": "piv_head"
+    }
+   ],
+   "cutscene": true,
+   "wearer": "play the same clip on Tony (tony.glb): it animates the piv_* joints",
+   "starts_from": "the last frame of `eject` (wearer moved back to the origin)"
+  },
+  {
+   "name": "arm_only_summon",
+   "frames": 129,
+   "fps": 30,
+   "loop": false,
+   "duration": 4.266666666666667,
+   "events": [
+    {
+     "t": 0.9,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "forearmR_a"
+    },
+    {
+     "t": 1.1333,
+     "sfx": "mk42_wake",
+     "vfx": "plate_puff",
+     "at": "gauntletR_a"
+    },
+    {
+     "t": 1.2,
+     "sfx": "mk42_whoosh",
+     "at": "forearmR_a"
+    },
+    {
+     "t": 1.4333,
+     "sfx": "mk42_whoosh",
+     "at": "gauntletR_a"
+    },
+    {
+     "t": 2.3667,
+     "sfx": "mk42_servo",
+     "at": "forearmR_a"
+    },
+    {
+     "t": 2.4333,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "forearmR_a",
+     "n": 6
+    },
+    {
+     "t": 2.6,
+     "sfx": "mk42_servo",
+     "at": "gauntletR_a"
+    },
+    {
+     "t": 2.6667,
+     "sfx": "mk42_lock",
+     "vfx": "sparks",
+     "at": "gauntletR_a",
+     "n": 6
+    },
+    {
+     "t": 2.6667,
+     "sfx": "mk42_suit_ready",
+     "at": "piv_head"
+    },
+    {
+     "t": 0.7,
+     "sfx": "human_cloth",
+     "at": "piv_shoulderR"
+    },
+    {
+     "t": 2.9167,
+     "sfx": "mk42_servo",
+     "at": "piv_wristR"
+    }
+   ],
+   "cutscene": true,
+   "wearer": "play the same clip on Tony (tony.glb): it animates the piv_* joints",
+   "visible_groups": [
+    "handR",
+    "forearmR"
+   ],
+   "note": "all other plates are keyed to scale 0 (hidden) for the whole clip"
+  }
+ ]
+}

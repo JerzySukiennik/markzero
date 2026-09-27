@@ -1,0 +1,18 @@
+{
+ "nodes": 208,
+ "clips": [
+  "suitup_gantry",
+  "suitup_gantry_wearer",
+  "suitoff_gantry",
+  "suitoff_gantry_wearer",
+  "mask_open",
+  "mask_close",
+  "flaps_test",
+  "idle_armor"
+ ],
+ "triangles": 100207,
+ "size_mb": 20.2,
+ "missing_nodes": [],
+ "missing_clips": [],
+ "extensionsRequired": []
+}

@@ -1,0 +1,268 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "suitup_gantry",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [
+    {
+     "t": 22.3,
+     "sfx": "cl_faceplate_close",
+     "at": "piv_head"
+    },
+    {
+     "t": 19.35,
+     "sfx": "cl_reactor_on",
+     "vfx": "reactor_flare",
+     "at": "piv_reactor"
+    },
+    {
+     "t": 24.3,
+     "sfx": "cl_hud_on",
+     "vfx": "eye_flash",
+     "at": "piv_faceplate"
+    }
+   ],
+   "root_motion": true,
+   "note": "film choreography (Iron Man 2008 workshop): walk-in, hatches, floor arms boots->legs->pelvis, T-pose, ceiling arms torso->sleeves->gauntlets, reactor, helmet, faceplate from the front, eyes",
+   "pairs_with": "gantry.glb:suitup_gantry_mk3"
+  },
+  {
+   "name": "suitup_gantry_wearer",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [],
+   "note": "Tony's body during suitup_gantry (joints only)"
+  },
+  {
+   "name": "suitoff_gantry",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [
+    {
+     "t": 2.7,
+     "sfx": "cl_faceplate_open",
+     "at": "piv_head"
+    },
+    {
+     "t": 1.2,
+     "sfx": "cl_hud_off",
+     "at": "piv_head"
+    },
+    {
+     "t": 6.15,
+     "sfx": "cl_reactor_off",
+     "at": "piv_reactor"
+    }
+   ],
+   "root_motion": true,
+   "note": "film choreography (Iron Man 2008 workshop): walk-in, hatches, floor arms boots->legs->pelvis, T-pose, ceiling arms torso->sleeves->gauntlets, reactor, helmet, faceplate from the front, eyes",
+   "pairs_with": "gantry.glb:suitoff_gantry_mk3"
+  },
+  {
+   "name": "suitoff_gantry_wearer",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [],
+   "note": "Tony's body during suitoff_gantry (joints only)"
+  },
+  {
+   "name": "mask_open",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "cl_faceplate_open",
+     "at": "piv_head"
+    }
+   ],
+   "layer": "mask"
+  },
+  {
+   "name": "mask_close",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "cl_faceplate_close",
+     "at": "piv_head"
+    },
+    {
+     "t": 0.6,
+     "vfx": "eye_flash",
+     "at": "piv_faceplate"
+    }
+   ],
+   "layer": "mask"
+  },
+  {
+   "name": "flaps_test",
+   "frames": 85,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.8,
+   "events": [
+    {
+     "t": 0.15,
+     "sfx": "cl_flaps_open",
+     "at": "piv_chest"
+    },
+    {
+     "t": 2.0,
+     "sfx": "cl_flaps_close",
+     "at": "piv_chest"
+    }
+   ],
+   "layer": "flaps"
+  },
+  {
+   "name": "idle_armor",
+   "frames": 121,
+   "fps": 30,
+   "loop": true,
+   "duration": 4.0,
+   "events": []
+  },
+  {
+   "name": "missile_pod_open",
+   "frames": 73,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.4,
+   "events": [
+    {
+     "t": 0.1,
+     "sfx": "cl_servo_big",
+     "at": "piv_shoulderL"
+    },
+    {
+     "t": 0.55,
+     "sfx": "cl_pod_open",
+     "at": "piv_podL"
+    },
+    {
+     "t": 0.8,
+     "sfx": "cl_servo_small",
+     "at": "mk3_missile"
+    },
+    {
+     "t": 1.2,
+     "sfx": "cl_missile_launch",
+     "vfx": "missile_launch",
+     "at": "mk3_missile"
+    },
+    {
+     "t": 1.62,
+     "sfx": "cl_pod_close",
+     "at": "piv_podL"
+    },
+    {
+     "t": 1.95,
+     "sfx": "cl_servo_big",
+     "at": "piv_shoulderL"
+    }
+   ]
+  },
+  {
+   "name": "flares",
+   "frames": 61,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.0,
+   "events": [
+    {
+     "t": 0.34,
+     "sfx": "cl_flare",
+     "vfx": "flare",
+     "at": "emit_flareL"
+    },
+    {
+     "t": 0.39,
+     "vfx": "flare",
+     "at": "emit_flarehipL"
+    },
+    {
+     "t": 0.46,
+     "sfx": "cl_flare",
+     "vfx": "flare",
+     "at": "emit_flareR"
+    },
+    {
+     "t": 0.51,
+     "vfx": "flare",
+     "at": "emit_flarehipR"
+    },
+    {
+     "t": 0.58,
+     "sfx": "cl_flare",
+     "vfx": "flare",
+     "at": "emit_flareL"
+    },
+    {
+     "t": 0.63,
+     "vfx": "flare",
+     "at": "emit_flarehipL"
+    },
+    {
+     "t": 0.7,
+     "sfx": "cl_flare",
+     "vfx": "flare",
+     "at": "emit_flareR"
+    },
+    {
+     "t": 0.75,
+     "vfx": "flare",
+     "at": "emit_flarehipR"
+    },
+    {
+     "t": 0.82,
+     "sfx": "cl_flare",
+     "vfx": "flare",
+     "at": "emit_flareL"
+    },
+    {
+     "t": 0.87,
+     "vfx": "flare",
+     "at": "emit_flarehipL"
+    },
+    {
+     "t": 0.94,
+     "sfx": "cl_flare",
+     "vfx": "flare",
+     "at": "emit_flareR"
+    },
+    {
+     "t": 0.99,
+     "vfx": "flare",
+     "at": "emit_flarehipR"
+    },
+    {
+     "t": 0.08,
+     "sfx": "cl_hatch_pop",
+     "at": "piv_chest"
+    },
+    {
+     "t": 1.4,
+     "sfx": "cl_hatch_close",
+     "at": "piv_chest"
+    }
+   ],
+   "layer": "gadget"
+  }
+ ]
+}
