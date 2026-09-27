@@ -1,0 +1,258 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "descend",
+   "frames": 211,
+   "fps": 30,
+   "loop": false,
+   "duration": 7.0,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "vr_reentry",
+     "vfx": "reentry_trail",
+     "at": "vr_root"
+    },
+    {
+     "t": 4.1,
+     "sfx": "vr_flip",
+     "at": "vr_root"
+    },
+    {
+     "t": 4.4,
+     "sfx": "vr_retro",
+     "vfx": "retro_burn",
+     "at": "vr_engine_core"
+    },
+    {
+     "t": 4.4,
+     "vfx": "thruster_on",
+     "at": "vr_engine0a"
+    },
+    {
+     "t": 4.4,
+     "vfx": "thruster_on",
+     "at": "vr_engine0b"
+    },
+    {
+     "t": 4.4,
+     "vfx": "thruster_on",
+     "at": "vr_engine1a"
+    },
+    {
+     "t": 4.4,
+     "vfx": "thruster_on",
+     "at": "vr_engine1b"
+    },
+    {
+     "t": 4.4,
+     "vfx": "thruster_on",
+     "at": "vr_engine2a"
+    },
+    {
+     "t": 4.4,
+     "vfx": "thruster_on",
+     "at": "vr_engine2b"
+    },
+    {
+     "t": 4.4,
+     "vfx": "thruster_on",
+     "at": "vr_engine3a"
+    },
+    {
+     "t": 4.4,
+     "vfx": "thruster_on",
+     "at": "vr_engine3b"
+    },
+    {
+     "t": 6.9,
+     "sfx": "vr_hover_loop",
+     "at": "vr_root",
+     "loop": true
+    }
+   ],
+   "root_motion": true,
+   "space": "deploy"
+  },
+  {
+   "name": "hover",
+   "frames": 121,
+   "fps": 30,
+   "loop": true,
+   "duration": 4.0,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "vr_hover_loop",
+     "at": "vr_root",
+     "loop": true
+    }
+   ],
+   "space": "deploy"
+  },
+  {
+   "name": "bay_open",
+   "frames": 58,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.9,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "vr_clamp_release",
+     "at": "vr_bay"
+    },
+    {
+     "t": 0.25,
+     "sfx": "vr_bay_open",
+     "at": "vr_bay"
+    }
+   ],
+   "space": "deploy"
+  },
+  {
+   "name": "deploy_all",
+   "frames": 301,
+   "fps": 30,
+   "loop": false,
+   "duration": 10.0,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "vr_release",
+     "at": "vr_bay",
+     "module": "back"
+    },
+    {
+     "t": 0.35,
+     "sfx": "vr_release",
+     "at": "vr_bay",
+     "module": "pelvis"
+    },
+    {
+     "t": 0.25,
+     "sfx": "vr_release",
+     "at": "vr_bay",
+     "module": "legL"
+    },
+    {
+     "t": 0.3,
+     "sfx": "vr_release",
+     "at": "vr_bay",
+     "module": "legR"
+    },
+    {
+     "t": 0.55,
+     "sfx": "vr_release",
+     "at": "vr_bay",
+     "module": "torso_front"
+    },
+    {
+     "t": 0.8,
+     "sfx": "vr_release",
+     "at": "vr_bay",
+     "module": "armL"
+    },
+    {
+     "t": 0.85,
+     "sfx": "vr_release",
+     "at": "vr_bay",
+     "module": "armR"
+    },
+    {
+     "t": 1.0,
+     "sfx": "vr_release",
+     "at": "vr_bay",
+     "module": "handL"
+    },
+    {
+     "t": 1.05,
+     "sfx": "vr_release",
+     "at": "vr_bay",
+     "module": "handR"
+    },
+    {
+     "t": 1.3,
+     "sfx": "vr_release",
+     "at": "vr_bay",
+     "module": "helmet"
+    }
+   ],
+   "space": "deploy",
+   "sync": [
+    "hulkbuster.assemble",
+    "pilot.hb_assemble"
+   ]
+  },
+  {
+   "name": "deploy_part",
+   "frames": 91,
+   "fps": 30,
+   "loop": false,
+   "duration": 3.0,
+   "events": [
+    {
+     "t": 0.2,
+     "sfx": "vr_bay_open",
+     "at": "vr_petal3",
+     "gain": 0.6
+    },
+    {
+     "t": 0.8,
+     "sfx": "vr_part_launch",
+     "vfx": "smoke_puff",
+     "at": "vr_chute"
+    },
+    {
+     "t": 2.2,
+     "sfx": "vr_bay_close",
+     "at": "vr_petal3",
+     "gain": 0.6
+    }
+   ],
+   "space": "deploy",
+   "sync": [
+    "hulkbuster.part_replace"
+   ],
+   "launch_t": 0.8,
+   "launch_node": "vr_chute"
+  },
+  {
+   "name": "bay_close",
+   "frames": 58,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.9,
+   "events": [
+    {
+     "t": 0.2,
+     "sfx": "vr_bay_close",
+     "at": "vr_bay"
+    },
+    {
+     "t": 1.75,
+     "sfx": "vr_clamp_lock",
+     "at": "vr_bay"
+    }
+   ],
+   "space": "deploy"
+  },
+  {
+   "name": "ascend",
+   "frames": 151,
+   "fps": 30,
+   "loop": false,
+   "duration": 5.0,
+   "events": [
+    {
+     "t": 0.1,
+     "sfx": "vr_ascend",
+     "at": "vr_root"
+    }
+   ],
+   "root_motion": true,
+   "space": "deploy"
+  }
+ ]
+}

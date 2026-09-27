@@ -1,0 +1,710 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "nano_suitup",
+   "frames": 109,
+   "fps": 30,
+   "loop": false,
+   "duration": 3.6,
+   "events": [
+    {
+     "t": 0.52,
+     "sfx": "mk85_nano_tap",
+     "at": "piv_reactor",
+     "kind": "tap"
+    },
+    {
+     "t": 0.56,
+     "sfx": "mk85_nano_flow",
+     "vfx": "nano_flow",
+     "at": "piv_reactor",
+     "kind": "nano_start",
+     "duration": 2.0
+    },
+    {
+     "t": 1.6,
+     "sfx": "mk85_nano_crystallise",
+     "at": "piv_chest"
+    },
+    {
+     "t": 2.45,
+     "sfx": "mk85_nano_helmet",
+     "vfx": "nano_flow",
+     "at": "piv_neck",
+     "kind": "helmet_close"
+    },
+    {
+     "t": 3.22,
+     "sfx": "mk85_nano_lock",
+     "at": "piv_head",
+     "kind": "eyes_on"
+    }
+   ],
+   "label": "Nano suit-up",
+   "category": "nano",
+   "drivers": [
+    "drv_nano",
+    "drv_paint",
+    "drv_nano_helmet",
+    "drv_paint_helmet"
+   ],
+   "note": "drv_nano/drv_paint: body; drv_nano_helmet/drv_paint_helmet: helmet + faceplate"
+  },
+  {
+   "name": "nano_suitdown",
+   "frames": 79,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.6,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "mk85_nano_helmet_open",
+     "vfx": "nano_flow",
+     "at": "piv_head",
+     "kind": "helmet_open"
+    },
+    {
+     "t": 0.6,
+     "sfx": "mk85_nano_recede",
+     "vfx": "nano_flow",
+     "at": "piv_chest",
+     "kind": "nano_recede",
+     "duration": 1.7
+    }
+   ],
+   "label": "Nano suit-down (flows back into the reactor)",
+   "category": "nano",
+   "drivers": [
+    "drv_nano",
+    "drv_paint",
+    "drv_nano_helmet",
+    "drv_paint_helmet"
+   ]
+  },
+  {
+   "name": "mask_open",
+   "frames": 34,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.1,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "mk85_nano_helmet_open",
+     "vfx": "nano_flow",
+     "at": "piv_neck"
+    }
+   ],
+   "label": "Mask open (recedes into the collar)",
+   "category": "nano",
+   "drivers": [
+    "drv_nano_helmet",
+    "drv_paint_helmet",
+    "drv_glow"
+   ],
+   "note": "layer: plays on top of anything; owns only neck/head + the helmet drivers",
+   "layer": "upper",
+   "blend": "override",
+   "joints": [
+    "piv_neck",
+    "piv_head"
+   ]
+  },
+  {
+   "name": "mask_close",
+   "frames": 34,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.1,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "mk85_nano_helmet",
+     "vfx": "nano_flow",
+     "at": "piv_neck"
+    },
+    {
+     "t": 0.95,
+     "sfx": "mk85_nano_lock",
+     "at": "piv_head",
+     "kind": "eyes_on"
+    }
+   ],
+   "label": "Mask close (rises from the collar)",
+   "category": "nano",
+   "drivers": [
+    "drv_nano_helmet",
+    "drv_paint_helmet",
+    "drv_glow"
+   ],
+   "note": "layer: plays on top of anything; owns only neck/head + the helmet drivers",
+   "layer": "upper",
+   "blend": "override",
+   "joints": [
+    "piv_neck",
+    "piv_head"
+   ]
+  },
+  {
+   "name": "wing_deploy",
+   "frames": 40,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.3,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "mk85_wing_deploy",
+     "vfx": "nano_flow",
+     "at": "wpn_wing_hub",
+     "kind": "deploy"
+    }
+   ],
+   "label": "Wing-pack deploy (layer)",
+   "category": "weapon",
+   "weapon": "wing",
+   "drivers": [
+    "drv_nano_wing"
+   ],
+   "note": "weapon layer: animates wpn_wing_* + drv_nano_wing only; the last frame is the deployed hold",
+   "layer": "upper",
+   "blend": "override",
+   "joints": []
+  },
+  {
+   "name": "wing_fire",
+   "frames": 43,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.4,
+   "events": [
+    {
+     "t": 0.1,
+     "vfx": "rocket_launch",
+     "at": "wpn_wing_L1_tip",
+     "kind": "rocket",
+     "target": [
+      0,
+      1.5,
+      -25
+     ]
+    },
+    {
+     "t": 0.19,
+     "vfx": "rocket_launch",
+     "at": "wpn_wing_R1_tip",
+     "kind": "rocket",
+     "target": [
+      0,
+      1.5,
+      -25
+     ]
+    },
+    {
+     "t": 0.28,
+     "vfx": "rocket_launch",
+     "at": "wpn_wing_L2_tip",
+     "kind": "rocket",
+     "target": [
+      0,
+      1.5,
+      -25
+     ]
+    },
+    {
+     "t": 0.37,
+     "vfx": "rocket_launch",
+     "at": "wpn_wing_R2_tip",
+     "kind": "rocket",
+     "target": [
+      0,
+      1.5,
+      -25
+     ]
+    },
+    {
+     "t": 0.46,
+     "vfx": "rocket_launch",
+     "at": "wpn_wing_L3_tip",
+     "kind": "rocket",
+     "target": [
+      0,
+      1.5,
+      -25
+     ]
+    },
+    {
+     "t": 0.55,
+     "vfx": "rocket_launch",
+     "at": "wpn_wing_R3_tip",
+     "kind": "rocket",
+     "target": [
+      0,
+      1.5,
+      -25
+     ]
+    },
+    {
+     "t": 0.1,
+     "sfx": "mk85_rocket_launch",
+     "at": "wpn_wing_hub"
+    },
+    {
+     "t": 0.46,
+     "sfx": "mk85_rocket_launch",
+     "at": "wpn_wing_hub",
+     "gain": 0.8
+    }
+   ],
+   "label": "Wing-pack rocket volley (layer)",
+   "category": "weapon",
+   "weapon": "wing",
+   "drivers": [
+    "drv_nano_wing"
+   ],
+   "layer": "upper",
+   "blend": "override",
+   "joints": []
+  },
+  {
+   "name": "wing_retract",
+   "frames": 34,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.1,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "mk85_wing_retract",
+     "at": "wpn_wing_hub",
+     "kind": "retract"
+    }
+   ],
+   "label": "Wing-pack retract (layer)",
+   "category": "weapon",
+   "weapon": "wing",
+   "drivers": [
+    "drv_nano_wing"
+   ],
+   "layer": "upper",
+   "blend": "override",
+   "joints": []
+  },
+  {
+   "name": "missiles_deploy",
+   "frames": 22,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.7,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "mk85_missile_deploy",
+     "at": "wpn_missilesR",
+     "kind": "deploy"
+    }
+   ],
+   "label": "Shoulder micro-missiles deploy (layer)",
+   "category": "weapon",
+   "weapon": "missiles",
+   "drivers": [
+    "drv_nano_missiles"
+   ],
+   "layer": "upper",
+   "blend": "override",
+   "joints": []
+  },
+  {
+   "name": "missiles_fire",
+   "frames": 37,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.2,
+   "events": [
+    {
+     "t": 0.08,
+     "vfx": "missile_launch",
+     "at": "wpn_missilesL_muzzle",
+     "kind": "missile",
+     "target": [
+      0,
+      1.5,
+      -30
+     ]
+    },
+    {
+     "t": 0.18,
+     "vfx": "missile_launch",
+     "at": "wpn_missilesR_muzzle",
+     "kind": "missile",
+     "target": [
+      0,
+      1.5,
+      -30
+     ]
+    },
+    {
+     "t": 0.28,
+     "vfx": "missile_launch",
+     "at": "wpn_missilesL_muzzle",
+     "kind": "missile",
+     "target": [
+      0,
+      1.5,
+      -30
+     ]
+    },
+    {
+     "t": 0.38,
+     "vfx": "missile_launch",
+     "at": "wpn_missilesR_muzzle",
+     "kind": "missile",
+     "target": [
+      0,
+      1.5,
+      -30
+     ]
+    },
+    {
+     "t": 0.48,
+     "vfx": "missile_launch",
+     "at": "wpn_missilesL_muzzle",
+     "kind": "missile",
+     "target": [
+      0,
+      1.5,
+      -30
+     ]
+    },
+    {
+     "t": 0.58,
+     "vfx": "missile_launch",
+     "at": "wpn_missilesR_muzzle",
+     "kind": "missile",
+     "target": [
+      0,
+      1.5,
+      -30
+     ]
+    },
+    {
+     "t": 0.08,
+     "sfx": "mk85_missile_launch",
+     "at": "wpn_missilesL"
+    }
+   ],
+   "label": "Micro-missile salvo (layer)",
+   "category": "weapon",
+   "weapon": "missiles",
+   "drivers": [
+    "drv_nano_missiles"
+   ],
+   "layer": "upper",
+   "blend": "override",
+   "joints": []
+  },
+  {
+   "name": "missiles_retract",
+   "frames": 22,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.7,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "mk85_missile_deploy",
+     "at": "wpn_missilesR",
+     "kind": "retract",
+     "rate": 0.85
+    }
+   ],
+   "label": "Shoulder micro-missiles retract (layer)",
+   "category": "weapon",
+   "weapon": "missiles",
+   "drivers": [
+    "drv_nano_missiles"
+   ],
+   "layer": "upper",
+   "blend": "override",
+   "joints": []
+  },
+  {
+   "name": "blades_deploy",
+   "frames": 31,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.0,
+   "events": [
+    {
+     "t": 0.12,
+     "sfx": "mk85_blade_deploy",
+     "vfx": "nano_flow",
+     "at": "wpn_bladeR",
+     "kind": "deploy"
+    },
+    {
+     "t": 0.14,
+     "vfx": "nano_flow",
+     "at": "wpn_bladeL"
+    }
+   ],
+   "label": "Wrist blades deploy",
+   "category": "weapon",
+   "weapon": "blade",
+   "drivers": [
+    "drv_nano_blade"
+   ],
+   "note": "optional hum: loop mk85_blade_hum while drv_nano_blade > 0.5"
+  },
+  {
+   "name": "blades_slash",
+   "frames": 29,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.9333333333333333,
+   "events": [
+    {
+     "t": 0.22,
+     "sfx": "mk85_blade_slash",
+     "vfx": "blade_trail",
+     "at": "wpn_bladeR_tip",
+     "kind": "slash",
+     "duration": 0.2
+    },
+    {
+     "t": 0.34,
+     "kind": "hit",
+     "at": "wpn_bladeR_tip"
+    }
+   ],
+   "label": "Blade slash (right)",
+   "category": "weapon",
+   "weapon": "blade",
+   "hit_time": 0.34,
+   "drivers": [
+    "drv_nano_blade"
+   ]
+  },
+  {
+   "name": "blades_retract",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "mk85_blade_retract",
+     "at": "wpn_bladeR",
+     "kind": "retract"
+    }
+   ],
+   "label": "Wrist blades retract",
+   "category": "weapon",
+   "weapon": "blade",
+   "drivers": [
+    "drv_nano_blade"
+   ]
+  },
+  {
+   "name": "shield_up",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.16,
+     "sfx": "mk85_shield_up",
+     "vfx": "nano_flow",
+     "at": "wpn_shieldL",
+     "kind": "deploy"
+    }
+   ],
+   "label": "Nano shield up",
+   "category": "weapon",
+   "weapon": "shield",
+   "drivers": [
+    "drv_nano_shield"
+   ]
+  },
+  {
+   "name": "shield_hold",
+   "frames": 61,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.0,
+   "events": [],
+   "label": "Nano shield hold (loop)",
+   "category": "weapon",
+   "weapon": "shield",
+   "drivers": [
+    "drv_nano_shield"
+   ]
+  },
+  {
+   "name": "shield_hit",
+   "frames": 22,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.7,
+   "events": [
+    {
+     "t": 0.03,
+     "sfx": "mk85_shield_hit",
+     "vfx": "shield_impact",
+     "at": "wpn_shieldL",
+     "kind": "hit"
+    }
+   ],
+   "label": "Nano shield takes a hit",
+   "category": "weapon",
+   "weapon": "shield",
+   "hit_time": 0.03,
+   "drivers": [
+    "drv_nano_shield"
+   ]
+  },
+  {
+   "name": "shield_down",
+   "frames": 22,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.7,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "mk85_shield_down",
+     "at": "wpn_shieldL",
+     "kind": "retract"
+    }
+   ],
+   "label": "Nano shield down",
+   "category": "weapon",
+   "weapon": "shield",
+   "drivers": [
+    "drv_nano_shield"
+   ]
+  },
+  {
+   "name": "cannon_deploy",
+   "frames": 40,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.3,
+   "events": [
+    {
+     "t": 0.1,
+     "sfx": "mk85_cannon_deploy",
+     "vfx": "nano_flow",
+     "at": "wpn_cannonR",
+     "kind": "deploy"
+    }
+   ],
+   "label": "Arm cannon deploy (right forearm)",
+   "category": "weapon",
+   "weapon": "cannon",
+   "drivers": [
+    "drv_nano_cannon"
+   ]
+  },
+  {
+   "name": "cannon_fire",
+   "frames": 46,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.5,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "mk85_cannon_charge",
+     "vfx": "repulsor_charge",
+     "at": "wpn_cannonR_muzzle",
+     "kind": "charge"
+    },
+    {
+     "t": 0.6,
+     "sfx": "mk85_cannon_fire",
+     "vfx": "repulsor_fire",
+     "at": "wpn_cannonR_muzzle",
+     "kind": "fire",
+     "big": true,
+     "target": [
+      0,
+      1.45,
+      -20
+     ]
+    }
+   ],
+   "label": "Arm cannon charge + fire",
+   "category": "weapon",
+   "weapon": "cannon",
+   "fire_time": 0.6,
+   "drivers": [
+    "drv_nano_cannon",
+    "drv_charge_R"
+   ]
+  },
+  {
+   "name": "cannon_retract",
+   "frames": 31,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.0,
+   "events": [
+    {
+     "t": 0.05,
+     "sfx": "mk85_cannon_retract",
+     "at": "wpn_cannonR",
+     "kind": "retract"
+    }
+   ],
+   "label": "Arm cannon retract",
+   "category": "weapon",
+   "weapon": "cannon",
+   "drivers": [
+    "drv_nano_cannon"
+   ]
+  },
+  {
+   "name": "gauntlet_snap",
+   "frames": 139,
+   "fps": 30,
+   "loop": false,
+   "duration": 4.6,
+   "events": [
+    {
+     "t": 0.3,
+     "sfx": "mk85_gauntlet_form",
+     "vfx": "nano_flow",
+     "at": "wpn_gauntletR",
+     "kind": "deploy"
+    },
+    {
+     "t": 1.5,
+     "vfx": "stone_lightning",
+     "at": "wpn_gauntletR",
+     "kind": "stones_on",
+     "duration": 1.45
+    },
+    {
+     "t": 2.96,
+     "sfx": "mk85_snap",
+     "vfx": "snap_flash",
+     "at": "wpn_gauntletR",
+     "kind": "snap"
+    }
+   ],
+   "label": "Nano gauntlet: the snap",
+   "category": "weapon",
+   "weapon": "gauntlet",
+   "snap_time": 2.96,
+   "drivers": [
+    "drv_nano_gauntlet",
+    "drv_stones"
+   ]
+  }
+ ]
+}
