@@ -1,0 +1,195 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "suitup_gantry",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [
+    {
+     "t": 22.3,
+     "sfx": "cl_mk1_visor",
+     "at": "piv_head"
+    },
+    {
+     "t": 19.35,
+     "sfx": "cl_reactor_on",
+     "vfx": "reactor_flare",
+     "at": "piv_reactor"
+    },
+    {
+     "t": 24.3,
+     "sfx": "cl_hud_on",
+     "vfx": "eye_flash",
+     "at": "piv_faceplate"
+    }
+   ],
+   "root_motion": true,
+   "note": "film choreography (Iron Man 2008 workshop): walk-in, hatches, floor arms boots->legs->pelvis, T-pose, ceiling arms torso->sleeves->gauntlets, reactor, helmet, faceplate from the front, eyes",
+   "pairs_with": "gantry.glb:suitup_gantry_mk1"
+  },
+  {
+   "name": "suitup_gantry_wearer",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [],
+   "note": "Tony's body during suitup_gantry (joints only)"
+  },
+  {
+   "name": "suitoff_gantry",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [
+    {
+     "t": 2.7,
+     "sfx": "cl_mk1_visor",
+     "at": "piv_head"
+    },
+    {
+     "t": 1.2,
+     "sfx": "cl_hud_off",
+     "at": "piv_head"
+    },
+    {
+     "t": 6.15,
+     "sfx": "cl_reactor_off",
+     "at": "piv_reactor"
+    }
+   ],
+   "root_motion": true,
+   "note": "film choreography (Iron Man 2008 workshop): walk-in, hatches, floor arms boots->legs->pelvis, T-pose, ceiling arms torso->sleeves->gauntlets, reactor, helmet, faceplate from the front, eyes",
+   "pairs_with": "gantry.glb:suitoff_gantry_mk1"
+  },
+  {
+   "name": "suitoff_gantry_wearer",
+   "frames": 766,
+   "fps": 30,
+   "loop": false,
+   "duration": 25.5,
+   "events": [],
+   "note": "Tony's body during suitoff_gantry (joints only)"
+  },
+  {
+   "name": "mask_open",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "cl_mk1_visor",
+     "at": "piv_head"
+    }
+   ],
+   "layer": "mask"
+  },
+  {
+   "name": "mask_close",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "cl_mk1_visor",
+     "at": "piv_head"
+    },
+    {
+     "t": 0.6,
+     "vfx": "eye_flash",
+     "at": "piv_faceplate"
+    }
+   ],
+   "layer": "mask"
+  },
+  {
+   "name": "idle_armor",
+   "frames": 121,
+   "fps": 30,
+   "loop": true,
+   "duration": 4.0,
+   "events": []
+  },
+  {
+   "name": "flamethrower_on",
+   "frames": 97,
+   "fps": 30,
+   "loop": false,
+   "duration": 3.2,
+   "events": [
+    {
+     "t": 0.05,
+     "sfx": "cl_mk1_hydraulic",
+     "at": "piv_chest"
+    },
+    {
+     "t": 0.62,
+     "sfx": "cl_flame_start",
+     "vfx": "flame_on",
+     "at": "emit_flameL"
+    },
+    {
+     "t": 0.62,
+     "vfx": "flame_on",
+     "at": "emit_flameR"
+    },
+    {
+     "t": 0.75,
+     "sfx": "cl_flame_loop",
+     "at": "piv_chest",
+     "loop": true,
+     "stop": 2.5
+    },
+    {
+     "t": 2.45,
+     "sfx": "cl_flame_stop",
+     "vfx": "flame_off",
+     "at": "piv_chest"
+    },
+    {
+     "t": 2.75,
+     "sfx": "cl_mk1_hydraulic",
+     "at": "piv_chest"
+    }
+   ]
+  },
+  {
+   "name": "rocket_fire",
+   "frames": 70,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.3,
+   "events": [
+    {
+     "t": 0.1,
+     "sfx": "cl_mk1_hydraulic",
+     "at": "piv_shoulderL"
+    },
+    {
+     "t": 0.97,
+     "sfx": "cl_rocket_launch",
+     "vfx": "rocket_launch",
+     "at": "emit_rocketL"
+    },
+    {
+     "t": 1.02,
+     "vfx": "smoke_puff",
+     "at": "emit_rocketL"
+    },
+    {
+     "t": 1.85,
+     "sfx": "cl_mk1_hydraulic",
+     "at": "piv_shoulderL"
+    }
+   ]
+  }
+ ]
+}

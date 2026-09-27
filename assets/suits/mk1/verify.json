@@ -1,0 +1,19 @@
+{
+ "nodes": 222,
+ "clips": [
+  "suitup_gantry",
+  "suitup_gantry_wearer",
+  "suitoff_gantry",
+  "suitoff_gantry_wearer",
+  "mask_open",
+  "mask_close",
+  "idle_armor",
+  "flamethrower_on",
+  "rocket_fire"
+ ],
+ "triangles": 132836,
+ "size_mb": 23.29,
+ "missing_nodes": [],
+ "missing_clips": [],
+ "extensionsRequired": []
+}

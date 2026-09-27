@@ -1,0 +1,330 @@
+{
+ "fps": 30,
+ "clips": [
+  {
+   "name": "legs_deploy",
+   "frames": 28,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.9,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "sp_leg_deploy",
+     "at": "piv_chest"
+    },
+    {
+     "t": 0.3,
+     "sfx": "sp_leg_servo_1",
+     "at": "piv_leg1R_b"
+    },
+    {
+     "t": 0.42,
+     "sfx": "sp_leg_servo_2",
+     "at": "piv_leg2L_b"
+    }
+   ],
+   "layer": "legs",
+   "blend": "override",
+   "joints": [
+    "piv_leg1L_a",
+    "piv_leg1L_b",
+    "piv_leg1L_c",
+    "piv_leg1R_a",
+    "piv_leg1R_b",
+    "piv_leg1R_c",
+    "piv_leg2L_a",
+    "piv_leg2L_b",
+    "piv_leg2L_c",
+    "piv_leg2R_a",
+    "piv_leg2R_b",
+    "piv_leg2R_c",
+    "drv_legs"
+   ],
+   "desc": "four legs grow out of the back ports (nano, drv_legs 0->1 by 0.42) and spring into the ready pose, staggered"
+  },
+  {
+   "name": "legs_stow",
+   "frames": 19,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.6,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "sp_leg_stow",
+     "at": "piv_chest"
+    }
+   ],
+   "layer": "legs",
+   "blend": "override",
+   "joints": [
+    "piv_leg1L_a",
+    "piv_leg1L_b",
+    "piv_leg1L_c",
+    "piv_leg1R_a",
+    "piv_leg1R_b",
+    "piv_leg1R_c",
+    "piv_leg2L_a",
+    "piv_leg2L_b",
+    "piv_leg2L_c",
+    "piv_leg2R_a",
+    "piv_leg2R_b",
+    "piv_leg2R_c",
+    "drv_legs"
+   ],
+   "desc": "legs fold against the back and melt into the ports (drv_legs 1->0 from 0.22)"
+  },
+  {
+   "name": "legs_strike",
+   "frames": 34,
+   "fps": 30,
+   "loop": false,
+   "duration": 1.1,
+   "events": [
+    {
+     "t": 0.09,
+     "sfx": "sp_leg_strike",
+     "at": "piv_leg1R_tip",
+     "hit": true,
+     "vfx": "sparks"
+    },
+    {
+     "t": 0.19,
+     "sfx": "sp_leg_strike",
+     "at": "piv_leg2L_tip",
+     "hit": true,
+     "vfx": "sparks"
+    },
+    {
+     "t": 0.29,
+     "sfx": "sp_leg_strike",
+     "at": "piv_leg1L_tip",
+     "hit": true,
+     "vfx": "sparks"
+    },
+    {
+     "t": 0.39,
+     "sfx": "sp_leg_strike",
+     "at": "piv_leg2R_tip",
+     "hit": true,
+     "vfx": "sparks"
+    }
+   ],
+   "layer": "legs",
+   "blend": "override",
+   "joints": [
+    "piv_leg1L_a",
+    "piv_leg1L_b",
+    "piv_leg1L_c",
+    "piv_leg1R_a",
+    "piv_leg1R_b",
+    "piv_leg1R_c",
+    "piv_leg2L_a",
+    "piv_leg2L_b",
+    "piv_leg2L_c",
+    "piv_leg2R_a",
+    "piv_leg2R_b",
+    "piv_leg2R_c",
+    "drv_legs"
+   ],
+   "hits": [
+    0.12,
+    0.22,
+    0.32,
+    0.42
+   ],
+   "desc": "legs out: four staggered stabs forward (hit frames = 'hits', at piv_leg*_tip), springing back"
+  },
+  {
+   "name": "legs_stand",
+   "frames": 73,
+   "fps": 30,
+   "loop": true,
+   "duration": 2.4,
+   "events": [],
+   "desc": "loop: perched in the air on the four legs (standing-on-legs.jpg). piv_root is raised 0.62 m: the body is up on the legs, the character origin stays on the ground.",
+   "root_motion": false
+  },
+  {
+   "name": "legs_walk",
+   "frames": 43,
+   "fps": 30,
+   "loop": true,
+   "duration": 1.4,
+   "events": [
+    {
+     "t": 0.0,
+     "sfx": "sp_leg_step_1",
+     "at": "piv_leg1R_tip"
+    },
+    {
+     "t": 1.092,
+     "sfx": "sp_leg_servo_1",
+     "at": "piv_leg1R_b",
+     "gain": 0.5
+    },
+    {
+     "t": 0.35,
+     "sfx": "sp_leg_step_2",
+     "at": "piv_leg2L_tip"
+    },
+    {
+     "t": 0.042,
+     "sfx": "sp_leg_servo_2",
+     "at": "piv_leg2L_b",
+     "gain": 0.5
+    },
+    {
+     "t": 0.7,
+     "sfx": "sp_leg_step_3",
+     "at": "piv_leg1L_tip"
+    },
+    {
+     "t": 0.392,
+     "sfx": "sp_leg_servo_3",
+     "at": "piv_leg1L_b",
+     "gain": 0.5
+    },
+    {
+     "t": 1.05,
+     "sfx": "sp_leg_step_1",
+     "at": "piv_leg2R_tip"
+    },
+    {
+     "t": 0.742,
+     "sfx": "sp_leg_servo_1",
+     "at": "piv_leg2R_b",
+     "gain": 0.5
+    }
+   ],
+   "desc": "loop: carried by the legs, spider gait (1R,2L,1L,2R); in place \u2014 play at rate = speed / 0.52 m/s",
+   "speed_mps": 0.52,
+   "root_motion": false
+  },
+  {
+   "name": "mask_open",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "sp_nano_mask_open",
+     "at": "piv_head"
+    }
+   ],
+   "layer": "mask",
+   "blend": "override",
+   "joints": [
+    "drv_mask",
+    "drv_glow"
+   ],
+   "desc": "mask recedes down into the collar (drv_mask 1->0), Peter's face shows"
+  },
+  {
+   "name": "mask_close",
+   "frames": 25,
+   "fps": 30,
+   "loop": false,
+   "duration": 0.8,
+   "events": [
+    {
+     "t": 0.02,
+     "sfx": "sp_nano_mask_close",
+     "at": "piv_head"
+    },
+    {
+     "t": 0.62,
+     "sfx": "sp_lens_focus",
+     "at": "piv_head"
+    }
+   ],
+   "layer": "mask",
+   "blend": "override",
+   "joints": [
+    "drv_mask",
+    "drv_glow"
+   ],
+   "desc": "mask flows up from the collar over the head (drv_mask 0->1), lenses light"
+  },
+  {
+   "name": "nano_suitup",
+   "frames": 91,
+   "fps": 30,
+   "loop": false,
+   "duration": 3.0,
+   "events": [
+    {
+     "t": 0.42,
+     "sfx": "sp_nano_flow",
+     "vfx": "nano_flow",
+     "at": "piv_reactor"
+    },
+    {
+     "t": 2.02,
+     "sfx": "sp_nano_mask_close",
+     "at": "piv_head"
+    },
+    {
+     "t": 2.7,
+     "sfx": "sp_nano_seal",
+     "at": "piv_head"
+    },
+    {
+     "t": 2.72,
+     "sfx": "sp_lens_focus",
+     "at": "piv_head"
+    }
+   ],
+   "desc": "Peter taps the chest emblem (0.42), the suit flows out of it over the body (drv_nano 0->1 by 2.2; Peter's clothes dissolve under the front), the mask closes from the neck up (drv_mask 2.02-2.68), lenses light at 2.7",
+   "preview_cam": [
+    [
+     -1.9,
+     1.5,
+     -2.2
+    ],
+    [
+     0,
+     1.1,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "nano_suitdown",
+   "frames": 73,
+   "fps": 30,
+   "loop": false,
+   "duration": 2.4,
+   "events": [
+    {
+     "t": 0.05,
+     "sfx": "sp_nano_mask_open",
+     "at": "piv_head"
+    },
+    {
+     "t": 0.5,
+     "sfx": "sp_nano_flow",
+     "vfx": "nano_flow",
+     "at": "piv_reactor",
+     "rate": 1.1
+    }
+   ],
+   "desc": "lenses off, mask recedes to the neck (0.05-0.6), the suit retracts into the chest emblem (0.5-1.95), hand catches it",
+   "preview_cam": [
+    [
+     -1.9,
+     1.5,
+     -2.2
+    ],
+    [
+     0,
+     1.1,
+     0
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,5061 @@
+{
+ "modules": {
+  "back": {
+   "release_t": 0.0,
+   "clamp_t": 3.25,
+   "packed_in_veronica": [
+    0.0,
+    1.899999976158142,
+    1.25
+   ],
+   "approach_dir": [
+    0.0,
+    0.14834046363830566,
+    0.9889363646507263
+   ]
+  },
+  "pelvis": {
+   "release_t": 0.35,
+   "clamp_t": 3.7,
+   "packed_in_veronica": [
+    0.0,
+    -0.8999999761581421,
+    -1.25
+   ],
+   "approach_dir": [
+    0.0,
+    -0.371390700340271,
+    -0.9284767508506775
+   ]
+  },
+  "legL": {
+   "release_t": 0.25,
+   "clamp_t": 3.9,
+   "packed_in_veronica": [
+    -1.25,
+    -3.0999999046325684,
+    0.0
+   ],
+   "approach_dir": [
+    -0.4472135901451111,
+    -0.8944271802902222,
+    0.0
+   ]
+  },
+  "legR": {
+   "release_t": 0.3,
+   "clamp_t": 4.05,
+   "packed_in_veronica": [
+    1.25,
+    -3.0999999046325684,
+    0.0
+   ],
+   "approach_dir": [
+    0.4472135901451111,
+    -0.8944271802902222,
+    0.0
+   ]
+  },
+  "torso_front": {
+   "release_t": 0.55,
+   "clamp_t": 4.55,
+   "packed_in_veronica": [
+    0.0,
+    1.899999976158142,
+    -1.25
+   ],
+   "approach_dir": [
+    0.0,
+    0.09950371831655502,
+    -0.9950371384620667
+   ]
+  },
+  "armL": {
+   "release_t": 0.8,
+   "clamp_t": 5.05,
+   "packed_in_veronica": [
+    -1.25,
+    1.7999999523162842,
+    0.0
+   ],
+   "approach_dir": [
+    -0.9889363646507263,
+    0.14834046363830566,
+    0.0
+   ]
+  },
+  "armR": {
+   "release_t": 0.85,
+   "clamp_t": 5.2,
+   "packed_in_veronica": [
+    1.25,
+    1.7999999523162842,
+    0.0
+   ],
+   "approach_dir": [
+    0.9889363646507263,
+    0.14834046363830566,
+    0.0
+   ]
+  },
+  "handL": {
+   "release_t": 1.0,
+   "clamp_t": 5.65,
+   "packed_in_veronica": [
+    -1.25,
+    -0.6000000238418579,
+    0.0
+   ],
+   "approach_dir": [
+    -0.9407208561897278,
+    -0.28221628069877625,
+    -0.18814417719841003
+   ]
+  },
+  "handR": {
+   "release_t": 1.05,
+   "clamp_t": 5.75,
+   "packed_in_veronica": [
+    1.25,
+    -0.6000000238418579,
+    0.0
+   ],
+   "approach_dir": [
+    0.9407208561897278,
+    -0.28221628069877625,
+    -0.18814417719841003
+   ]
+  },
+  "helmet": {
+   "release_t": 1.3,
+   "clamp_t": 6.3,
+   "packed_in_veronica": [
+    0.0,
+    -0.6000000238418579,
+    1.25
+   ],
+   "approach_dir": [
+    0.0,
+    0.9950371384620667,
+    0.09950371831655502
+   ]
+  }
+ },
+ "deploy_space": {
+  "veronica_hover": [
+   0.0,
+   25.0,
+   7.0
+  ],
+  "assembly_root": [
+   0.0,
+   7.5,
+   0.0
+  ],
+  "fall_t": 6.9,
+  "impact_t": 8.136548417073746
+ },
+ "plates": {
+  "abdomen": {
+   "module": "torso_front",
+   "pivot": "piv_spine",
+   "role": "plate",
+   "local_pos": [
+    0.0,
+    0.06795,
+    -0.41183
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0039,
+    -0.4764,
+    -0.8792
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.8252,
+    0.4981,
+    -0.2662
+   ],
+   "delay_s": 0.105
+  },
+  "abdomen_belt": {
+   "module": "torso_front",
+   "pivot": "piv_spine",
+   "role": "plate",
+   "local_pos": [
+    0.0,
+    -0.05854,
+    -0.34478
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0036,
+    -0.5832,
+    -0.8123
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.4622,
+    0.7213,
+    -0.5159
+   ],
+   "delay_s": 0.164
+  },
+  "ankleL_gear0": {
+   "module": "legL",
+   "pivot": "piv_ankleL",
+   "role": "plate",
+   "local_pos": [
+    -0.33024,
+    0.06787,
+    -0.00479
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.672,
+    -0.7357,
+    0.0851
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.7389,
+    0.6585,
+    -0.1428
+   ],
+   "delay_s": 0.166
+  },
+  "ankleL_gear1": {
+   "module": "legL",
+   "pivot": "piv_ankleL",
+   "role": "plate",
+   "local_pos": [
+    0.33359,
+    0.01036,
+    0.00096
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.1101,
+    -0.9854,
+    0.13
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.9801,
+    0.1294,
+    0.1505
+   ],
+   "delay_s": 0.205
+  },
+  "ankleR_gear0": {
+   "module": "legR",
+   "pivot": "piv_ankleR",
+   "role": "plate",
+   "local_pos": [
+    0.33024,
+    0.06787,
+    -0.00479
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.6719,
+    -0.7357,
+    0.0849
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.5023,
+    0.537,
+    0.6777
+   ],
+   "delay_s": 0.19
+  },
+  "ankleR_gear1": {
+   "module": "legR",
+   "pivot": "piv_ankleR",
+   "role": "plate",
+   "local_pos": [
+    -0.33359,
+    0.01036,
+    0.00096
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.1103,
+    -0.9854,
+    0.1297
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6962,
+    -0.1697,
+    -0.6975
+   ],
+   "delay_s": 0.188
+  },
+  "back_hood": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    0.0,
+    0.60122,
+    0.10042
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.0,
+    0.7965,
+    0.6046
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.9901,
+    -0.0847,
+    0.1116
+   ],
+   "delay_s": 0.181
+  },
+  "back_spine": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    0.0,
+    0.08591,
+    0.56617
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.0,
+    0.2021,
+    0.9794
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.315,
+    0.9295,
+    -0.1918
+   ],
+   "delay_s": 0.138
+  },
+  "back_ventL": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    -0.39767,
+    0.28867,
+    0.54715
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3853,
+    0.2498,
+    0.8883
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.6309,
+    0.6312,
+    -0.4512
+   ],
+   "delay_s": 0.232
+  },
+  "back_ventR": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    0.39767,
+    0.28867,
+    0.54715
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3853,
+    0.2498,
+    0.8883
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.7226,
+    -0.6804,
+    -0.1221
+   ],
+   "delay_s": 0.221
+  },
+  "backL": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    -0.33905,
+    -0.13825,
+    0.46261
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.4483,
+    0.0835,
+    0.89
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.3172,
+    0.9457,
+    0.071
+   ],
+   "delay_s": 0.171
+  },
+  "backLower": {
+   "module": "back",
+   "pivot": "piv_spine",
+   "role": "plate",
+   "local_pos": [
+    0.0,
+    0.00807,
+    0.37516
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0,
+    -0.2095,
+    0.9778
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.9724,
+    0.2281,
+    0.0489
+   ],
+   "delay_s": 0.115
+  },
+  "backR": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    0.33905,
+    -0.13826,
+    0.46261
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.4483,
+    0.0835,
+    0.89
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.2166,
+    -0.9558,
+    0.1988
+   ],
+   "delay_s": 0.168
+  },
+  "beltL": {
+   "module": "pelvis",
+   "pivot": "piv_hips",
+   "role": "plate",
+   "local_pos": [
+    -0.37864,
+    0.0121,
+    -0.26719
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.4803,
+    -0.244,
+    -0.8425
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.8748,
+    0.2026,
+    0.4401
+   ],
+   "delay_s": 0.196
+  },
+  "beltR": {
+   "module": "pelvis",
+   "pivot": "piv_hips",
+   "role": "plate",
+   "local_pos": [
+    0.37864,
+    0.0121,
+    -0.26719
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.4803,
+    -0.244,
+    -0.8425
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.74,
+    -0.4029,
+    0.5385
+   ],
+   "delay_s": 0.174
+  },
+  "bicepL": {
+   "module": "armL",
+   "pivot": "piv_shoulderL",
+   "role": "plate",
+   "local_pos": [
+    -0.09266,
+    -0.23287,
+    -0.06203
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.6678,
+    0.5874,
+    -0.4571
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6576,
+    0.1779,
+    -0.7321
+   ],
+   "delay_s": 0.102
+  },
+  "bicepL_ring": {
+   "module": "armL",
+   "pivot": "piv_shoulderL",
+   "role": "plate",
+   "local_pos": [
+    -0.09321,
+    -0.3974,
+    -0.02796
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9889,
+    0.1483,
+    0.0
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.0521,
+    0.3474,
+    0.9362
+   ],
+   "delay_s": 0.065
+  },
+  "bicepR": {
+   "module": "armR",
+   "pivot": "piv_shoulderR",
+   "role": "plate",
+   "local_pos": [
+    0.09266,
+    -0.23287,
+    -0.06203
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.6761,
+    0.5817,
+    -0.4522
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.7102,
+    0.351,
+    -0.6102
+   ],
+   "delay_s": 0.111
+  },
+  "bicepR_ring": {
+   "module": "armR",
+   "pivot": "piv_shoulderR",
+   "role": "plate",
+   "local_pos": [
+    0.09321,
+    -0.3974,
+    -0.02796
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.9889,
+    0.1483,
+    0.0
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.0753,
+    -0.5019,
+    0.8616
+   ],
+   "delay_s": 0.092
+  },
+  "bootL": {
+   "module": "legL",
+   "pivot": "piv_ankleL",
+   "role": "plate",
+   "local_pos": [
+    0.0024,
+    -0.03457,
+    0.08566
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3353,
+    -0.9009,
+    0.2757
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.34,
+    -0.1572,
+    -0.9272
+   ],
+   "delay_s": 0.14
+  },
+  "bootR": {
+   "module": "legR",
+   "pivot": "piv_ankleR",
+   "role": "plate",
+   "local_pos": [
+    -0.0024,
+    -0.03457,
+    0.08566
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3351,
+    -0.901,
+    0.2756
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.5031,
+    -0.0762,
+    -0.8609
+   ],
+   "delay_s": 0.16
+  },
+  "butt": {
+   "module": "back",
+   "pivot": "piv_hips",
+   "role": "plate",
+   "local_pos": [
+    -0.0,
+    -0.06855,
+    0.32527
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0,
+    -0.4834,
+    0.8754
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6494,
+    -0.6657,
+    -0.3676
+   ],
+   "delay_s": 0.106
+  },
+  "calfL": {
+   "module": "legL",
+   "pivot": "piv_kneeL",
+   "role": "plate",
+   "local_pos": [
+    -0.02363,
+    -0.46348,
+    0.34902
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3256,
+    -0.7754,
+    0.5411
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.6071,
+    0.6102,
+    0.509
+   ],
+   "delay_s": 0.204
+  },
+  "calfR": {
+   "module": "legR",
+   "pivot": "piv_kneeR",
+   "role": "plate",
+   "local_pos": [
+    0.02363,
+    -0.46348,
+    0.34902
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3254,
+    -0.7755,
+    0.5411
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.7268,
+    0.5712,
+    0.3816
+   ],
+   "delay_s": 0.19
+  },
+  "chest_band": {
+   "module": "torso_front",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    -0.0,
+    -0.08872,
+    -0.54652
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0024,
+    -0.1743,
+    -0.9847
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.4133,
+    0.8965,
+    -0.1597
+   ],
+   "delay_s": 0.113
+  },
+  "chest_belly": {
+   "module": "torso_front",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    0.0,
+    0.07797,
+    -0.5759
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0023,
+    -0.0195,
+    -0.9998
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.2753,
+    0.9612,
+    -0.0181
+   ],
+   "delay_s": 0.121
+  },
+  "chest_mechL": {
+   "module": "torso_front",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    -0.56259,
+    -0.02132,
+    -0.41458
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.5726,
+    0.0016,
+    -0.8198
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.3929,
+    -0.8772,
+    -0.2761
+   ],
+   "delay_s": 0.221
+  },
+  "chest_mechR": {
+   "module": "torso_front",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    0.586,
+    -0.02132,
+    -0.36155
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.5992,
+    0.0045,
+    -0.8006
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.7689,
+    -0.2817,
+    0.5739
+   ],
+   "delay_s": 0.255
+  },
+  "chest_pecL": {
+   "module": "torso_front",
+   "pivot": "piv_hatch_chestL",
+   "role": "plate",
+   "local_pos": [
+    0.38299,
+    0.04903,
+    -0.20978
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.408,
+    0.1669,
+    -0.8976
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.5767,
+    0.7151,
+    0.3951
+   ],
+   "delay_s": 0.215
+  },
+  "chest_pecR": {
+   "module": "torso_front",
+   "pivot": "piv_hatch_chestR",
+   "role": "plate",
+   "local_pos": [
+    -0.38299,
+    0.04903,
+    -0.20978
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.4069,
+    0.1672,
+    -0.898
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.9077,
+    -0.1847,
+    0.3769
+   ],
+   "delay_s": 0.173
+  },
+  "chest_sternum": {
+   "module": "torso_front",
+   "pivot": "piv_hatch_chestR",
+   "role": "plate",
+   "local_pos": [
+    -0.7262,
+    0.01519,
+    -0.27116
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0016,
+    0.1689,
+    -0.9856
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.5793,
+    0.8033,
+    0.1387
+   ],
+   "delay_s": 0.163
+  },
+  "chest_strapL": {
+   "module": "torso_front",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    -0.68065,
+    0.25518,
+    -0.32434
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.6114,
+    0.1146,
+    -0.783
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.0122,
+    0.9907,
+    0.1355
+   ],
+   "delay_s": 0.257
+  },
+  "chest_strapR": {
+   "module": "torso_front",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    0.68065,
+    0.25518,
+    -0.32434
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.6115,
+    0.1147,
+    -0.7829
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.0745,
+    -0.9767,
+    -0.2013
+   ],
+   "delay_s": 0.258
+  },
+  "collarL": {
+   "module": "torso_front",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    -0.44567,
+    0.65577,
+    -0.11067
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.6261,
+    0.3794,
+    -0.6813
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.7132,
+    0.6317,
+    -0.3036
+   ],
+   "delay_s": 0.209
+  },
+  "collarR": {
+   "module": "torso_front",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    0.44567,
+    0.65577,
+    -0.11067
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.6257,
+    0.3807,
+    -0.6809
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.4234,
+    0.8988,
+    0.1134
+   ],
+   "delay_s": 0.255
+  },
+  "earL": {
+   "module": "helmet",
+   "pivot": "piv_head",
+   "role": "plate",
+   "local_pos": [
+    -0.28691,
+    0.06534,
+    -0.01
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.567,
+    0.7803,
+    0.2639
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.5856,
+    -0.6071,
+    0.5371
+   ],
+   "delay_s": 0.169
+  },
+  "earR": {
+   "module": "helmet",
+   "pivot": "piv_head",
+   "role": "plate",
+   "local_pos": [
+    0.28691,
+    0.06534,
+    -0.01
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.567,
+    0.7803,
+    0.2639
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.5457,
+    -0.5957,
+    0.5893
+   ],
+   "delay_s": 0.16
+  },
+  "elbowL": {
+   "module": "armL",
+   "pivot": "piv_elbowL",
+   "role": "plate",
+   "local_pos": [
+    0.01075,
+    0.02598,
+    0.13914
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.7431,
+    0.0583,
+    0.6667
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.5407,
+    0.6392,
+    0.5468
+   ],
+   "delay_s": 0.103
+  },
+  "elbowL_ball": {
+   "module": "armL",
+   "pivot": "piv_elbowL",
+   "role": "plate",
+   "local_pos": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9889,
+    0.1483,
+    0.0
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.1114,
+    0.7426,
+    0.6604
+   ],
+   "delay_s": 0.118
+  },
+  "elbowR": {
+   "module": "armR",
+   "pivot": "piv_elbowR",
+   "role": "plate",
+   "local_pos": [
+    -0.01075,
+    0.02598,
+    0.13914
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.7481,
+    0.0583,
+    0.661
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6175,
+    0.3038,
+    -0.7256
+   ],
+   "delay_s": 0.114
+  },
+  "elbowR_ball": {
+   "module": "armR",
+   "pivot": "piv_elbowR",
+   "role": "plate",
+   "local_pos": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.9889,
+    0.1483,
+    0.0
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.1017,
+    0.6781,
+    -0.7279
+   ],
+   "delay_s": 0.094
+  },
+  "f_index1L": {
+   "module": "handL",
+   "pivot": "piv_f_index1L",
+   "role": "plate",
+   "local_pos": [
+    -0.01662,
+    -0.06019,
+    -0.00935
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.798,
+    -0.1912,
+    -0.5715
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6025,
+    -0.2781,
+    -0.7481
+   ],
+   "delay_s": 0.127
+  },
+  "f_index1R": {
+   "module": "handR",
+   "pivot": "piv_f_index1R",
+   "role": "plate",
+   "local_pos": [
+    0.01662,
+    -0.06019,
+    -0.00935
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.798,
+    -0.1912,
+    -0.5715
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.2247,
+    0.7856,
+    -0.5765
+   ],
+   "delay_s": 0.112
+  },
+  "f_index2L": {
+   "module": "handL",
+   "pivot": "piv_f_index2L",
+   "role": "plate",
+   "local_pos": [
+    -0.01486,
+    -0.0542,
+    -0.00841
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.8201,
+    -0.3339,
+    -0.4648
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.5425,
+    -0.1951,
+    -0.8171
+   ],
+   "delay_s": 0.111
+  },
+  "f_index2R": {
+   "module": "handR",
+   "pivot": "piv_f_index2R",
+   "role": "plate",
+   "local_pos": [
+    0.01486,
+    -0.0542,
+    -0.00841
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.8201,
+    -0.3339,
+    -0.4648
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.4723,
+    -0.0639,
+    0.8791
+   ],
+   "delay_s": 0.14
+  },
+  "f_middle1L": {
+   "module": "handL",
+   "pivot": "piv_f_middle1L",
+   "role": "plate",
+   "local_pos": [
+    -0.01733,
+    -0.06238,
+    -0.00969
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9407,
+    -0.2822,
+    -0.1881
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.209,
+    0.0456,
+    0.9768
+   ],
+   "delay_s": 0.075
+  },
+  "f_middle1R": {
+   "module": "handR",
+   "pivot": "piv_f_middle1R",
+   "role": "plate",
+   "local_pos": [
+    0.01733,
+    -0.06238,
+    -0.0097
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.9407,
+    -0.2822,
+    -0.1881
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.3248,
+    -0.5897,
+    -0.7394
+   ],
+   "delay_s": 0.067
+  },
+  "f_middle2L": {
+   "module": "handL",
+   "pivot": "piv_f_middle2L",
+   "role": "plate",
+   "local_pos": [
+    -0.01485,
+    -0.0542,
+    -0.00841
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.8863,
+    -0.396,
+    -0.2399
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.0114,
+    -0.5366,
+    0.8437
+   ],
+   "delay_s": 0.119
+  },
+  "f_middle2R": {
+   "module": "handR",
+   "pivot": "piv_f_middle2R",
+   "role": "plate",
+   "local_pos": [
+    0.01485,
+    -0.0542,
+    -0.00841
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.8863,
+    -0.396,
+    -0.2399
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.1065,
+    0.6786,
+    -0.7267
+   ],
+   "delay_s": 0.103
+  },
+  "f_pinky1L": {
+   "module": "handL",
+   "pivot": "piv_f_pinky1L",
+   "role": "plate",
+   "local_pos": [
+    -0.01424,
+    -0.05147,
+    -0.008
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.8968,
+    -0.2177,
+    0.385
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.4423,
+    -0.4549,
+    0.773
+   ],
+   "delay_s": 0.119
+  },
+  "f_pinky1R": {
+   "module": "handR",
+   "pivot": "piv_f_pinky1R",
+   "role": "plate",
+   "local_pos": [
+    0.01424,
+    -0.05147,
+    -0.008
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.8968,
+    -0.2177,
+    0.385
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.1924,
+    -0.5919,
+    -0.7827
+   ],
+   "delay_s": 0.127
+  },
+  "f_pinky2L": {
+   "module": "handL",
+   "pivot": "piv_f_pinky2L",
+   "role": "plate",
+   "local_pos": [
+    -0.01347,
+    -0.04696,
+    -0.00735
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9044,
+    -0.3302,
+    0.2701
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.0198,
+    -0.665,
+    -0.7466
+   ],
+   "delay_s": 0.143
+  },
+  "f_pinky2R": {
+   "module": "handR",
+   "pivot": "piv_f_pinky2R",
+   "role": "plate",
+   "local_pos": [
+    0.01347,
+    -0.04696,
+    -0.00735
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.9044,
+    -0.3302,
+    0.2701
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.258,
+    0.0807,
+    0.9628
+   ],
+   "delay_s": 0.146
+  },
+  "f_ring1L": {
+   "module": "handL",
+   "pivot": "piv_f_ring1L",
+   "role": "plate",
+   "local_pos": [
+    -0.01662,
+    -0.06019,
+    -0.00934
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9342,
+    -0.2433,
+    0.2608
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.3191,
+    -0.8969,
+    0.3063
+   ],
+   "delay_s": 0.129
+  },
+  "f_ring1R": {
+   "module": "handR",
+   "pivot": "piv_f_ring1R",
+   "role": "plate",
+   "local_pos": [
+    0.01662,
+    -0.06019,
+    -0.00934
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.9342,
+    -0.2433,
+    0.2608
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.0504,
+    -0.8139,
+    -0.5788
+   ],
+   "delay_s": 0.123
+  },
+  "f_ring2L": {
+   "module": "handL",
+   "pivot": "piv_f_ring2L",
+   "role": "plate",
+   "local_pos": [
+    -0.01485,
+    -0.0542,
+    -0.00841
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9174,
+    -0.393,
+    0.0625
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.3932,
+    -0.8712,
+    0.2938
+   ],
+   "delay_s": 0.097
+  },
+  "f_ring2R": {
+   "module": "handR",
+   "pivot": "piv_f_ring2R",
+   "role": "plate",
+   "local_pos": [
+    0.01485,
+    -0.0542,
+    -0.00841
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.9174,
+    -0.393,
+    0.0625
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.0202,
+    -0.2029,
+    -0.979
+   ],
+   "delay_s": 0.083
+  },
+  "f_thumb1L": {
+   "module": "handL",
+   "pivot": "piv_f_thumb1L",
+   "role": "plate",
+   "local_pos": [
+    0.02846,
+    -0.03764,
+    -0.03459
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.544,
+    -0.0455,
+    -0.8379
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6947,
+    0.5357,
+    -0.4801
+   ],
+   "delay_s": 0.12
+  },
+  "f_thumb1R": {
+   "module": "handR",
+   "pivot": "piv_f_thumb1R",
+   "role": "plate",
+   "local_pos": [
+    -0.02846,
+    -0.03764,
+    -0.03459
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.544,
+    -0.0455,
+    -0.8379
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.8347,
+    -0.0734,
+    0.5459
+   ],
+   "delay_s": 0.097
+  },
+  "f_thumb2L": {
+   "module": "handL",
+   "pivot": "piv_f_thumb2L",
+   "role": "plate",
+   "local_pos": [
+    0.0249,
+    -0.03892,
+    -0.03494
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.5038,
+    -0.2417,
+    -0.8293
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.8619,
+    -0.2051,
+    -0.4638
+   ],
+   "delay_s": 0.148
+  },
+  "f_thumb2R": {
+   "module": "handR",
+   "pivot": "piv_f_thumb2R",
+   "role": "plate",
+   "local_pos": [
+    -0.0249,
+    -0.03892,
+    -0.03494
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.5038,
+    -0.2417,
+    -0.8293
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6282,
+    0.7615,
+    0.1596
+   ],
+   "delay_s": 0.154
+  },
+  "faceplate": {
+   "module": "helmet",
+   "pivot": "piv_faceplate",
+   "role": "plate",
+   "local_pos": [
+    -0.0,
+    0.01355,
+    -0.27943
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.0,
+    0.8344,
+    -0.5511
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.1781,
+    -0.5423,
+    -0.8211
+   ],
+   "delay_s": 0.1
+  },
+  "flap_backL": {
+   "module": "back",
+   "pivot": "piv_flap_backL",
+   "role": "plate",
+   "local_pos": [
+    -0.00801,
+    -0.21881,
+    -0.02762
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3803,
+    0.2333,
+    0.895
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.1546,
+    -0.9701,
+    0.1872
+   ],
+   "delay_s": 0.209
+  },
+  "flap_backR": {
+   "module": "back",
+   "pivot": "piv_flap_backR",
+   "role": "plate",
+   "local_pos": [
+    0.00801,
+    -0.21881,
+    -0.02762
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3803,
+    0.2333,
+    0.895
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.4095,
+    -0.8252,
+    0.3891
+   ],
+   "delay_s": 0.226
+  },
+  "flap_calfL": {
+   "module": "legL",
+   "pivot": "piv_flap_calfL",
+   "role": "plate",
+   "local_pos": [
+    -0.01796,
+    -0.24985,
+    0.04326
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3356,
+    -0.6754,
+    0.6566
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.4126,
+    0.732,
+    0.5421
+   ],
+   "delay_s": 0.16
+  },
+  "flap_calfR": {
+   "module": "legR",
+   "pivot": "piv_flap_calfR",
+   "role": "plate",
+   "local_pos": [
+    0.01796,
+    -0.24985,
+    0.04326
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3353,
+    -0.6755,
+    0.6567
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.0862,
+    -0.6721,
+    -0.7354
+   ],
+   "delay_s": 0.193
+  },
+  "flap_hipL": {
+   "module": "pelvis",
+   "pivot": "piv_flap_hipL",
+   "role": "plate",
+   "local_pos": [
+    0.03163,
+    0.02176,
+    0.24188
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.6737,
+    -0.3467,
+    -0.6526
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6877,
+    -0.6174,
+    -0.3819
+   ],
+   "delay_s": 0.205
+  },
+  "flap_hipR": {
+   "module": "pelvis",
+   "pivot": "piv_flap_hipR",
+   "role": "plate",
+   "local_pos": [
+    -0.03163,
+    0.02176,
+    0.24188
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.6737,
+    -0.3467,
+    -0.6526
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6457,
+    0.7057,
+    0.2917
+   ],
+   "delay_s": 0.252
+  },
+  "forearmL": {
+   "module": "armL",
+   "pivot": "piv_elbowL",
+   "role": "plate",
+   "local_pos": [
+    0.04231,
+    -0.16743,
+    -0.22278
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.7681,
+    -0.0957,
+    -0.6331
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6275,
+    -0.3088,
+    -0.7147
+   ],
+   "delay_s": 0.138
+  },
+  "forearmL_b": {
+   "module": "armL",
+   "pivot": "piv_elbowL",
+   "role": "plate",
+   "local_pos": [
+    -0.02636,
+    -0.22104,
+    0.12751
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.8444,
+    -0.3312,
+    0.421
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.0991,
+    0.6758,
+    0.7304
+   ],
+   "delay_s": 0.093
+  },
+  "forearmR": {
+   "module": "armR",
+   "pivot": "piv_elbowR",
+   "role": "plate",
+   "local_pos": [
+    -0.04231,
+    -0.16743,
+    -0.22278
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.7703,
+    -0.0951,
+    -0.6305
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.4356,
+    0.8006,
+    0.4114
+   ],
+   "delay_s": 0.144
+  },
+  "forearmR_b": {
+   "module": "armR",
+   "pivot": "piv_elbowR",
+   "role": "plate",
+   "local_pos": [
+    0.02636,
+    -0.22104,
+    0.12751
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.8482,
+    -0.3269,
+    0.4168
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.1409,
+    0.6192,
+    0.7725
+   ],
+   "delay_s": 0.142
+  },
+  "gauntletL": {
+   "module": "armL",
+   "pivot": "piv_elbowL",
+   "role": "plate",
+   "local_pos": [
+    -0.14566,
+    -0.39756,
+    -0.07768
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9359,
+    -0.2824,
+    -0.2107
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.0573,
+    -0.7119,
+    0.7
+   ],
+   "delay_s": 0.165
+  },
+  "gauntletR": {
+   "module": "armR",
+   "pivot": "piv_elbowR",
+   "role": "plate",
+   "local_pos": [
+    0.14566,
+    -0.39756,
+    -0.07768
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.9375,
+    -0.2785,
+    -0.2086
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.312,
+    0.4074,
+    0.8583
+   ],
+   "delay_s": 0.132
+  },
+  "glow_eyes": {
+   "module": "helmet",
+   "pivot": "piv_faceplate",
+   "role": "glow",
+   "local_pos": [
+    -0.0,
+    0.03055,
+    -0.35116
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.0,
+    0.843,
+    -0.538
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.3005,
+    0.5131,
+    0.804
+   ],
+   "delay_s": 0.124
+  },
+  "glow_kneeL_rx": {
+   "module": "legL",
+   "pivot": "piv_hipL",
+   "role": "glow",
+   "local_pos": [
+    -0.10567,
+    -0.53847,
+    -0.39413
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3893,
+    -0.6151,
+    -0.6857
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.033,
+    0.7346,
+    -0.6777
+   ],
+   "delay_s": 0.176
+  },
+  "glow_kneeR_rx": {
+   "module": "legR",
+   "pivot": "piv_hipR",
+   "role": "glow",
+   "local_pos": [
+    0.10567,
+    -0.53847,
+    -0.39413
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.389,
+    -0.6152,
+    -0.6857
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.7042,
+    -0.2813,
+    0.6519
+   ],
+   "delay_s": 0.198
+  },
+  "glow_palmL_rep": {
+   "module": "handL",
+   "pivot": "piv_wristL",
+   "role": "glow",
+   "local_pos": [
+    0.05042,
+    -0.19343,
+    -0.0198
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9087,
+    -0.1652,
+    0.3834
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.1171,
+    0.7806,
+    0.614
+   ],
+   "delay_s": 0.126
+  },
+  "glow_palmR_rep": {
+   "module": "handR",
+   "pivot": "piv_wristR",
+   "role": "glow",
+   "local_pos": [
+    -0.05042,
+    -0.19343,
+    -0.0198
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.9087,
+    -0.1652,
+    0.3834
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.2021,
+    -0.6295,
+    -0.7502
+   ],
+   "delay_s": 0.083
+  },
+  "glow_reactor": {
+   "module": "torso_front",
+   "pivot": "piv_reactor",
+   "role": "glow",
+   "local_pos": [
+    -0.0,
+    0.00674,
+    -0.08137
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0013,
+    0.0518,
+    -0.9987
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.8655,
+    0.5002,
+    0.0248
+   ],
+   "delay_s": 0.16
+  },
+  "glow_shinL_port": {
+   "module": "legL",
+   "pivot": "piv_kneeL",
+   "role": "glow",
+   "local_pos": [
+    -0.40654,
+    -0.48462,
+    0.00346
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.7464,
+    -0.6654,
+    0.0088
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6605,
+    -0.7391,
+    0.1319
+   ],
+   "delay_s": 0.19
+  },
+  "glow_shinR_port": {
+   "module": "legR",
+   "pivot": "piv_kneeR",
+   "role": "glow",
+   "local_pos": [
+    0.40654,
+    -0.48462,
+    0.00346
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.7464,
+    -0.6654,
+    0.0087
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6654,
+    0.746,
+    -0.0273
+   ],
+   "delay_s": 0.211
+  },
+  "glow_thruster_backL": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "glow",
+   "local_pos": [
+    -0.34798,
+    -0.10951,
+    0.57047
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3703,
+    0.0934,
+    0.9242
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.8183,
+    -0.4381,
+    0.3722
+   ],
+   "delay_s": 0.17
+  },
+  "glow_thruster_backR": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "glow",
+   "local_pos": [
+    0.34798,
+    -0.10951,
+    0.57047
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3703,
+    0.0934,
+    0.9242
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.9245,
+    -0.1344,
+    -0.3568
+   ],
+   "delay_s": 0.171
+  },
+  "glow_thrusterL": {
+   "module": "legL",
+   "pivot": "piv_ankleL",
+   "role": "glow",
+   "local_pos": [
+    -0.0,
+    -0.2595,
+    0.06
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3187,
+    -0.9296,
+    0.1854
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.8849,
+    0.3618,
+    0.2932
+   ],
+   "delay_s": 0.151
+  },
+  "glow_thrusterR": {
+   "module": "legR",
+   "pivot": "piv_ankleR",
+   "role": "glow",
+   "local_pos": [
+    0.0,
+    -0.2595,
+    0.06
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3185,
+    -0.9297,
+    0.1853
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.5965,
+    -0.0447,
+    0.8013
+   ],
+   "delay_s": 0.184
+  },
+  "helmet": {
+   "module": "helmet",
+   "pivot": "piv_head",
+   "role": "plate",
+   "local_pos": [
+    -0.0,
+    0.19011,
+    -0.0093
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.0,
+    0.8475,
+    0.5307
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.9702,
+    0.1286,
+    -0.2054
+   ],
+   "delay_s": 0.077
+  },
+  "hipballL": {
+   "module": "pelvis",
+   "pivot": "piv_hips",
+   "role": "plate",
+   "local_pos": [
+    -0.43,
+    -0.07,
+    -0.0
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.6449,
+    -0.3676,
+    -0.6701
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.4752,
+    0.4939,
+    -0.7282
+   ],
+   "delay_s": 0.203
+  },
+  "hipballR": {
+   "module": "pelvis",
+   "pivot": "piv_hips",
+   "role": "plate",
+   "local_pos": [
+    0.43,
+    -0.07,
+    -0.0
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.6449,
+    -0.3676,
+    -0.6701
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.4117,
+    -0.5716,
+    0.7098
+   ],
+   "delay_s": 0.218
+  },
+  "kneeL": {
+   "module": "legL",
+   "pivot": "piv_kneeL",
+   "role": "plate",
+   "local_pos": [
+    -0.00351,
+    -0.04847,
+    -0.27848
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3732,
+    -0.6363,
+    -0.6752
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.7396,
+    -0.2353,
+    0.6306
+   ],
+   "delay_s": 0.157
+  },
+  "kneeR": {
+   "module": "legR",
+   "pivot": "piv_kneeR",
+   "role": "plate",
+   "local_pos": [
+    0.00351,
+    -0.04847,
+    -0.27848
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3728,
+    -0.6365,
+    -0.6752
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.5933,
+    0.723,
+    -0.3539
+   ],
+   "delay_s": 0.171
+  },
+  "neck": {
+   "module": "torso_front",
+   "pivot": "piv_neck",
+   "role": "plate",
+   "local_pos": [
+    0.0,
+    0.0088,
+    -0.03381
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.006,
+    0.777,
+    -0.6294
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.5583,
+    0.5248,
+    0.6426
+   ],
+   "delay_s": 0.129
+  },
+  "palmL": {
+   "module": "handL",
+   "pivot": "piv_wristL",
+   "role": "plate",
+   "local_pos": [
+    -0.0701,
+    -0.14285,
+    -0.02521
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9502,
+    0.2186,
+    0.2221
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.2876,
+    0.8895,
+    0.3549
+   ],
+   "delay_s": 0.129
+  },
+  "palmL_rep": {
+   "module": "handL",
+   "pivot": "piv_wristL",
+   "role": "plate",
+   "local_pos": [
+    0.04825,
+    -0.19272,
+    -0.01992
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9087,
+    -0.1486,
+    0.3902
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.3588,
+    0.756,
+    -0.5475
+   ],
+   "delay_s": 0.132
+  },
+  "palmR": {
+   "module": "handR",
+   "pivot": "piv_wristR",
+   "role": "plate",
+   "local_pos": [
+    0.0701,
+    -0.14285,
+    -0.02521
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.9502,
+    0.2186,
+    0.2221
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.0514,
+    -0.8129,
+    0.5801
+   ],
+   "delay_s": 0.075
+  },
+  "palmR_rep": {
+   "module": "handR",
+   "pivot": "piv_wristR",
+   "role": "plate",
+   "local_pos": [
+    -0.04825,
+    -0.19272,
+    -0.01992
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.9086,
+    -0.1486,
+    0.3902
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.3307,
+    -0.8266,
+    0.4553
+   ],
+   "delay_s": 0.13
+  },
+  "pauldronL": {
+   "module": "armL",
+   "pivot": "piv_clavicleL",
+   "role": "plate",
+   "local_pos": [
+    -0.59485,
+    0.16906,
+    -0.03299
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.6618,
+    0.7469,
+    -0.0648
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.3439,
+    0.3792,
+    0.859
+   ],
+   "delay_s": 0.168
+  },
+  "pauldronL_b": {
+   "module": "armL",
+   "pivot": "piv_clavicleL",
+   "role": "plate",
+   "local_pos": [
+    -0.78681,
+    -0.21821,
+    0.01488
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9217,
+    0.3816,
+    0.0696
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.2105,
+    -0.3413,
+    -0.9161
+   ],
+   "delay_s": 0.105
+  },
+  "pauldronR": {
+   "module": "armR",
+   "pivot": "piv_clavicleR",
+   "role": "plate",
+   "local_pos": [
+    0.59178,
+    0.16816,
+    -0.033
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.6619,
+    0.7467,
+    -0.0648
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.3917,
+    0.4184,
+    0.8195
+   ],
+   "delay_s": 0.17
+  },
+  "pauldronR_b": {
+   "module": "armR",
+   "pivot": "piv_clavicleR",
+   "role": "plate",
+   "local_pos": [
+    0.75547,
+    -0.22505,
+    0.01488
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.8964,
+    0.4352,
+    0.0841
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.3147,
+    -0.7585,
+    0.5707
+   ],
+   "delay_s": 0.091
+  },
+  "pelvis": {
+   "module": "pelvis",
+   "pivot": "piv_hips",
+   "role": "plate",
+   "local_pos": [
+    -0.0,
+    -0.06994,
+    -0.34659
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.0,
+    -0.2521,
+    -0.9677
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.4139,
+    0.8809,
+    -0.2295
+   ],
+   "delay_s": 0.112
+  },
+  "pst_elbowL_cyl": {
+   "module": "armL",
+   "pivot": "piv_shoulderL",
+   "role": "piston",
+   "local_pos": [
+    -0.02,
+    -0.14,
+    0.14
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.6476,
+    0.5089,
+    0.5671
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.2617,
+    -0.5504,
+    0.7928
+   ],
+   "delay_s": 0.134
+  },
+  "pst_elbowL_rod": {
+   "module": "armL",
+   "pivot": "piv_elbowL",
+   "role": "piston",
+   "local_pos": [
+    -0.01,
+    -0.21,
+    0.21
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.8143,
+    -0.1909,
+    0.5481
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.2222,
+    0.7699,
+    0.5982
+   ],
+   "delay_s": 0.149
+  },
+  "pst_elbowR_cyl": {
+   "module": "armR",
+   "pivot": "piv_shoulderR",
+   "role": "piston",
+   "local_pos": [
+    0.02,
+    -0.14,
+    0.14
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.6502,
+    0.5074,
+    0.5655
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.7547,
+    0.3462,
+    0.5573
+   ],
+   "delay_s": 0.107
+  },
+  "pst_elbowR_rod": {
+   "module": "armR",
+   "pivot": "piv_elbowR",
+   "role": "piston",
+   "local_pos": [
+    0.01,
+    -0.21,
+    0.21
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.8171,
+    -0.189,
+    0.5446
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.576,
+    -0.3048,
+    0.7585
+   ],
+   "delay_s": 0.146
+  },
+  "pst_kneeL_cyl": {
+   "module": "legL",
+   "pivot": "piv_hipL",
+   "role": "piston",
+   "local_pos": [
+    -0.09,
+    -0.28,
+    0.19
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.4817,
+    -0.5201,
+    0.7053
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.7152,
+    -0.2318,
+    -0.6594
+   ],
+   "delay_s": 0.159
+  },
+  "pst_kneeL_rod": {
+   "module": "legL",
+   "pivot": "piv_kneeL",
+   "role": "piston",
+   "local_pos": [
+    0.0,
+    -0.3,
+    0.25
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.2969,
+    -0.7425,
+    0.6005
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.0414,
+    -0.6383,
+    -0.7687
+   ],
+   "delay_s": 0.151
+  },
+  "pst_kneeR_cyl": {
+   "module": "legR",
+   "pivot": "piv_hipR",
+   "role": "piston",
+   "local_pos": [
+    0.09,
+    -0.28,
+    0.19
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.4814,
+    -0.5202,
+    0.7054
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.5995,
+    -0.3916,
+    -0.698
+   ],
+   "delay_s": 0.147
+  },
+  "pst_kneeR_rod": {
+   "module": "legR",
+   "pivot": "piv_kneeR",
+   "role": "piston",
+   "local_pos": [
+    0.0,
+    -0.3,
+    0.25
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.2965,
+    -0.7426,
+    0.6005
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.8033,
+    -0.534,
+    -0.2637
+   ],
+   "delay_s": 0.156
+  },
+  "pst_waistAL_cyl": {
+   "module": "back",
+   "pivot": "piv_hips",
+   "role": "piston",
+   "local_pos": [
+    -0.44,
+    0.08,
+    -0.15
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.7256,
+    -0.0042,
+    0.6881
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6618,
+    0.2696,
+    0.6995
+   ],
+   "delay_s": 0.23
+  },
+  "pst_waistAL_rod": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "piston",
+   "local_pos": [
+    -0.5,
+    -0.08,
+    -0.16
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.7216,
+    0.2127,
+    0.6588
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.655,
+    -0.518,
+    -0.5502
+   ],
+   "delay_s": 0.262
+  },
+  "pst_waistAR_cyl": {
+   "module": "back",
+   "pivot": "piv_hips",
+   "role": "piston",
+   "local_pos": [
+    0.44,
+    0.08,
+    -0.15
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.7256,
+    -0.0042,
+    0.6881
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.3286,
+    0.8807,
+    -0.3411
+   ],
+   "delay_s": 0.257
+  },
+  "pst_waistAR_rod": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "piston",
+   "local_pos": [
+    0.5,
+    -0.08,
+    -0.16
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.7216,
+    0.2127,
+    0.6588
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.4163,
+    0.8937,
+    0.1675
+   ],
+   "delay_s": 0.237
+  },
+  "pst_waistBL_cyl": {
+   "module": "back",
+   "pivot": "piv_hips",
+   "role": "piston",
+   "local_pos": [
+    -0.44,
+    0.08,
+    0.11
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.677,
+    -0.05,
+    0.7343
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.3808,
+    -0.8776,
+    0.2913
+   ],
+   "delay_s": 0.213
+  },
+  "pst_waistBL_rod": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "piston",
+   "local_pos": [
+    -0.5,
+    -0.08,
+    0.1
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.679,
+    0.1616,
+    0.7161
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.5171,
+    -0.5872,
+    0.6228
+   ],
+   "delay_s": 0.223
+  },
+  "pst_waistBR_cyl": {
+   "module": "back",
+   "pivot": "piv_hips",
+   "role": "piston",
+   "local_pos": [
+    0.44,
+    0.08,
+    0.11
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.677,
+    -0.05,
+    0.7343
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.5688,
+    -0.6687,
+    0.4788
+   ],
+   "delay_s": 0.225
+  },
+  "pst_waistBR_rod": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "piston",
+   "local_pos": [
+    0.5,
+    -0.08,
+    0.1
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.679,
+    0.1616,
+    0.7161
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.7054,
+    -0.414,
+    -0.5754
+   ],
+   "delay_s": 0.223
+  },
+  "reactor": {
+   "module": "torso_front",
+   "pivot": "piv_reactor",
+   "role": "plate",
+   "local_pos": [
+    -0.0,
+    -0.01266,
+    -0.06996
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0014,
+    0.0415,
+    -0.9991
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.9596,
+    -0.2811,
+    -0.0103
+   ],
+   "delay_s": 0.184
+  },
+  "ribL": {
+   "module": "torso_front",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    -0.64547,
+    0.13266,
+    0.05313
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.7165,
+    0.1014,
+    -0.6902
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.1356,
+    -0.9503,
+    -0.2804
+   ],
+   "delay_s": 0.266
+  },
+  "ribR": {
+   "module": "torso_front",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    0.64547,
+    0.13266,
+    0.05313
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.7167,
+    0.1015,
+    -0.69
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6654,
+    0.197,
+    0.7201
+   ],
+   "delay_s": 0.249
+  },
+  "shieldL": {
+   "module": "armL",
+   "pivot": "piv_elbowL",
+   "role": "plate",
+   "local_pos": [
+    -0.315,
+    -0.16031,
+    -0.03332
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9961,
+    -0.0376,
+    -0.0794
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.0071,
+    -0.9354,
+    0.3536
+   ],
+   "delay_s": 0.133
+  },
+  "shieldR": {
+   "module": "armR",
+   "pivot": "piv_elbowR",
+   "role": "plate",
+   "local_pos": [
+    0.315,
+    -0.16031,
+    -0.03332
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.9963,
+    -0.036,
+    -0.0786
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.0738,
+    -0.827,
+    -0.5574
+   ],
+   "delay_s": 0.178
+  },
+  "shinL": {
+   "module": "legL",
+   "pivot": "piv_kneeL",
+   "role": "plate",
+   "local_pos": [
+    -0.03763,
+    -0.44042,
+    -0.26013
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.344,
+    -0.7777,
+    -0.5261
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.8464,
+    0.0142,
+    0.5324
+   ],
+   "delay_s": 0.142
+  },
+  "shinL_b": {
+   "module": "legL",
+   "pivot": "piv_kneeL",
+   "role": "plate",
+   "local_pos": [
+    -0.36105,
+    -0.40101,
+    0.01387
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.7649,
+    -0.6437,
+    0.0252
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.4312,
+    0.5407,
+    0.7223
+   ],
+   "delay_s": 0.142
+  },
+  "shinL_c": {
+   "module": "legL",
+   "pivot": "piv_kneeL",
+   "role": "plate",
+   "local_pos": [
+    0.259,
+    -0.36034,
+    0.00715
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.2822,
+    -0.959,
+    0.0275
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.9465,
+    -0.283,
+    -0.1552
+   ],
+   "delay_s": 0.175
+  },
+  "shinR": {
+   "module": "legR",
+   "pivot": "piv_kneeR",
+   "role": "plate",
+   "local_pos": [
+    0.03764,
+    -0.44042,
+    -0.26013
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3437,
+    -0.7778,
+    -0.5262
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.5373,
+    -0.6225,
+    0.5691
+   ],
+   "delay_s": 0.162
+  },
+  "shinR_b": {
+   "module": "legR",
+   "pivot": "piv_kneeR",
+   "role": "plate",
+   "local_pos": [
+    0.36105,
+    -0.40101,
+    0.01387
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.7649,
+    -0.6437,
+    0.0251
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.2422,
+    -0.3234,
+    -0.9148
+   ],
+   "delay_s": 0.164
+  },
+  "shinR_c": {
+   "module": "legR",
+   "pivot": "piv_kneeR",
+   "role": "plate",
+   "local_pos": [
+    -0.259,
+    -0.36034,
+    0.00715
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.2822,
+    -0.959,
+    0.0271
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.5672,
+    0.144,
+    -0.8109
+   ],
+   "delay_s": 0.155
+  },
+  "soleL": {
+   "module": "legL",
+   "pivot": "piv_ankleL",
+   "role": "plate",
+   "local_pos": [
+    0.00507,
+    -0.25797,
+    -0.14387
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3107,
+    -0.9469,
+    -0.0828
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.8015,
+    0.2141,
+    0.5584
+   ],
+   "delay_s": 0.143
+  },
+  "soleR": {
+   "module": "legR",
+   "pivot": "piv_ankleR",
+   "role": "plate",
+   "local_pos": [
+    -0.00507,
+    -0.25797,
+    -0.14387
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3105,
+    -0.9469,
+    -0.083
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.0986,
+    -0.119,
+    0.988
+   ],
+   "delay_s": 0.178
+  },
+  "thighL": {
+   "module": "legL",
+   "pivot": "piv_hipL",
+   "role": "plate",
+   "local_pos": [
+    -0.0476,
+    -0.30074,
+    -0.35337
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3642,
+    -0.5826,
+    -0.7266
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.8872,
+    -0.4542,
+    -0.0805
+   ],
+   "delay_s": 0.2
+  },
+  "thighL_b": {
+   "module": "legL",
+   "pivot": "piv_hipL",
+   "role": "plate",
+   "local_pos": [
+    -0.36851,
+    -0.2909,
+    -0.02316
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9334,
+    -0.3528,
+    0.0657
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.1843,
+    0.6282,
+    0.7559
+   ],
+   "delay_s": 0.192
+  },
+  "thighL_c": {
+   "module": "legL",
+   "pivot": "piv_hipL",
+   "role": "plate",
+   "local_pos": [
+    0.01665,
+    -0.28271,
+    0.23075
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.2413,
+    -0.6396,
+    0.7298
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6626,
+    -0.6581,
+    -0.3577
+   ],
+   "delay_s": 0.197
+  },
+  "thighL_d": {
+   "module": "legL",
+   "pivot": "piv_hipL",
+   "role": "plate",
+   "local_pos": [
+    0.23793,
+    -0.38299,
+    -0.09571
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3297,
+    -0.936,
+    -0.1231
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.6955,
+    -0.1526,
+    -0.7022
+   ],
+   "delay_s": 0.221
+  },
+  "thighL_knee": {
+   "module": "legL",
+   "pivot": "piv_hipL",
+   "role": "plate",
+   "local_pos": [
+    -0.10437,
+    -0.53587,
+    -0.37242
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3906,
+    -0.6089,
+    -0.6904
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.9204,
+    0.2449,
+    0.3048
+   ],
+   "delay_s": 0.185
+  },
+  "thighL_mech": {
+   "module": "legL",
+   "pivot": "piv_hipL",
+   "role": "plate",
+   "local_pos": [
+    -0.14164,
+    0.01927,
+    -0.15869
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.8543,
+    -0.358,
+    -0.3767
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.4776,
+    0.2548,
+    0.8408
+   ],
+   "delay_s": 0.158
+  },
+  "thighR": {
+   "module": "legR",
+   "pivot": "piv_hipR",
+   "role": "plate",
+   "local_pos": [
+    0.0476,
+    -0.30074,
+    -0.35337
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3638,
+    -0.5828,
+    -0.7266
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.835,
+    -0.5498,
+    0.0229
+   ],
+   "delay_s": 0.184
+  },
+  "thighR_b": {
+   "module": "legR",
+   "pivot": "piv_hipR",
+   "role": "plate",
+   "local_pos": [
+    0.36851,
+    -0.2909,
+    -0.02316
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.9334,
+    -0.3527,
+    0.0654
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.2162,
+    -0.4076,
+    0.8872
+   ],
+   "delay_s": 0.196
+  },
+  "thighR_c": {
+   "module": "legR",
+   "pivot": "piv_hipR",
+   "role": "plate",
+   "local_pos": [
+    -0.01665,
+    -0.28271,
+    0.23075
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.2409,
+    -0.6398,
+    0.7298
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.8338,
+    0.2484,
+    0.493
+   ],
+   "delay_s": 0.191
+  },
+  "thighR_d": {
+   "module": "legR",
+   "pivot": "piv_hipR",
+   "role": "plate",
+   "local_pos": [
+    -0.23793,
+    -0.383,
+    -0.09571
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3297,
+    -0.936,
+    -0.1234
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.3813,
+    -0.2516,
+    0.8896
+   ],
+   "delay_s": 0.212
+  },
+  "thighR_knee": {
+   "module": "legR",
+   "pivot": "piv_hipR",
+   "role": "plate",
+   "local_pos": [
+    0.10437,
+    -0.53587,
+    -0.37242
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3903,
+    -0.609,
+    -0.6905
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.4897,
+    0.4977,
+    -0.7159
+   ],
+   "delay_s": 0.181
+  },
+  "thighR_mech": {
+   "module": "legR",
+   "pivot": "piv_hipR",
+   "role": "plate",
+   "local_pos": [
+    0.146,
+    0.01972,
+    -0.15503
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.863,
+    -0.3523,
+    -0.3621
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.5051,
+    -0.6167,
+    -0.6038
+   ],
+   "delay_s": 0.164
+  },
+  "thruster_backL": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    -0.34798,
+    -0.18718,
+    0.5935
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3556,
+    0.0612,
+    0.9326
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.9097,
+    0.2518,
+    0.3303
+   ],
+   "delay_s": 0.225
+  },
+  "thruster_backR": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "plate",
+   "local_pos": [
+    0.34798,
+    -0.18718,
+    0.5935
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3556,
+    0.0612,
+    0.9326
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.4247,
+    -0.8783,
+    0.2196
+   ],
+   "delay_s": 0.173
+  },
+  "thrusterL": {
+   "module": "legL",
+   "pivot": "piv_ankleL",
+   "role": "plate",
+   "local_pos": [
+    -0.0,
+    -0.257,
+    0.06
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3188,
+    -0.9294,
+    0.1859
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.5143,
+    -0.3344,
+    -0.7898
+   ],
+   "delay_s": 0.155
+  },
+  "thrusterR": {
+   "module": "legR",
+   "pivot": "piv_ankleR",
+   "role": "plate",
+   "local_pos": [
+    0.0,
+    -0.257,
+    0.06
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3186,
+    -0.9295,
+    0.1858
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6515,
+    0.0724,
+    -0.7552
+   ],
+   "delay_s": 0.159
+  },
+  "toeL": {
+   "module": "legL",
+   "pivot": "piv_toeL",
+   "role": "plate",
+   "local_pos": [
+    0.0292,
+    0.01309,
+    -0.11431
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3254,
+    -0.8497,
+    -0.4149
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.7232,
+    0.059,
+    -0.6881
+   ],
+   "delay_s": 0.193
+  },
+  "toeR": {
+   "module": "legR",
+   "pivot": "piv_toeR",
+   "role": "plate",
+   "local_pos": [
+    -0.0292,
+    0.01309,
+    -0.11431
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3253,
+    -0.8497,
+    -0.4149
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.9412,
+    0.2486,
+    0.2288
+   ],
+   "delay_s": 0.199
+  },
+  "under_abd_b": {
+   "module": "back",
+   "pivot": "piv_spine",
+   "role": "under",
+   "local_pos": [
+    -0.0,
+    -0.0096,
+    0.28402
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0,
+    -0.5574,
+    0.8302
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.785,
+    0.5144,
+    0.3454
+   ],
+   "delay_s": 0.0
+  },
+  "under_abd_f": {
+   "module": "torso_front",
+   "pivot": "piv_spine",
+   "role": "under",
+   "local_pos": [
+    -0.0,
+    -0.00955,
+    -0.27175
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0045,
+    -0.6503,
+    -0.7597
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.7877,
+    0.4704,
+    -0.3979
+   ],
+   "delay_s": 0.0
+  },
+  "under_bicepL": {
+   "module": "armL",
+   "pivot": "piv_shoulderL",
+   "role": "under",
+   "local_pos": [
+    -0.04601,
+    -0.17081,
+    -0.01366
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.5768,
+    0.8151,
+    -0.0538
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.0606,
+    0.1084,
+    0.9923
+   ],
+   "delay_s": 0.0
+  },
+  "under_bicepR": {
+   "module": "armR",
+   "pivot": "piv_shoulderR",
+   "role": "under",
+   "local_pos": [
+    0.04599,
+    -0.17081,
+    -0.01366
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.5798,
+    0.813,
+    -0.0538
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.2516,
+    0.1159,
+    -0.9609
+   ],
+   "delay_s": 0.0
+  },
+  "under_bootL": {
+   "module": "legL",
+   "pivot": "piv_ankleL",
+   "role": "under",
+   "local_pos": [
+    0.0053,
+    -0.17193,
+    -0.16614
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.3165,
+    -0.9403,
+    -0.1252
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.847,
+    -0.3395,
+    0.4091
+   ],
+   "delay_s": 0.0
+  },
+  "under_bootR": {
+   "module": "legR",
+   "pivot": "piv_ankleR",
+   "role": "under",
+   "local_pos": [
+    -0.0053,
+    -0.17193,
+    -0.16614
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.3162,
+    -0.9403,
+    -0.1254
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.9429,
+    -0.3262,
+    0.068
+   ],
+   "delay_s": 0.0
+  },
+  "under_chest_b": {
+   "module": "back",
+   "pivot": "piv_chest",
+   "role": "under",
+   "local_pos": [
+    0.0,
+    0.22589,
+    0.33922
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0,
+    0.5752,
+    0.818
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.4765,
+    -0.7192,
+    0.5057
+   ],
+   "delay_s": 0.0
+  },
+  "under_chest_fc": {
+   "module": "torso_front",
+   "pivot": "piv_chest",
+   "role": "under",
+   "local_pos": [
+    0.0,
+    -0.01,
+    -0.41634
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0068,
+    -0.3874,
+    -0.9219
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.7892,
+    0.5641,
+    -0.2429
+   ],
+   "delay_s": 0.0
+  },
+  "under_chest_fL": {
+   "module": "torso_front",
+   "pivot": "piv_hatch_chestL",
+   "role": "under",
+   "local_pos": [
+    0.29231,
+    0.00687,
+    -0.06638
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.5417,
+    0.1604,
+    -0.8251
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.1222,
+    -0.9562,
+    -0.2661
+   ],
+   "delay_s": 0.0
+  },
+  "under_chest_fR": {
+   "module": "torso_front",
+   "pivot": "piv_hatch_chestR",
+   "role": "under",
+   "local_pos": [
+    -0.29231,
+    0.00687,
+    -0.06638
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.5415,
+    0.1608,
+    -0.8252
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.5296,
+    -0.6971,
+    -0.4833
+   ],
+   "delay_s": 0.0
+  },
+  "under_forearmL": {
+   "module": "armL",
+   "pivot": "piv_elbowL",
+   "role": "under",
+   "local_pos": [
+    -0.0705,
+    -0.18172,
+    -0.03963
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.9127,
+    -0.309,
+    -0.2673
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.3067,
+    0.0859,
+    0.9479
+   ],
+   "delay_s": 0.0
+  },
+  "under_forearmR": {
+   "module": "armR",
+   "pivot": "piv_elbowR",
+   "role": "under",
+   "local_pos": [
+    0.0705,
+    -0.18172,
+    -0.03963
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.9165,
+    -0.3017,
+    -0.2627
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.3525,
+    0.2986,
+    0.8869
+   ],
+   "delay_s": 0.0
+  },
+  "under_head": {
+   "module": "helmet",
+   "pivot": "piv_head",
+   "role": "under",
+   "local_pos": [
+    -1e-05,
+    0.10697,
+    -0.01556
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0,
+    0.7722,
+    0.6354
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.4913,
+    -0.5534,
+    0.6726
+   ],
+   "delay_s": 0.0
+  },
+  "under_pauldronL": {
+   "module": "armL",
+   "pivot": "piv_clavicleL",
+   "role": "under",
+   "local_pos": [
+    -0.60315,
+    -0.01081,
+    0.01393
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.6419,
+    0.7631,
+    0.0746
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.4702,
+    0.4686,
+    -0.7479
+   ],
+   "delay_s": 0.0
+  },
+  "under_pauldronR": {
+   "module": "armR",
+   "pivot": "piv_clavicleR",
+   "role": "under",
+   "local_pos": [
+    0.58905,
+    -0.01339,
+    0.01393
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.6305,
+    0.7725,
+    0.0755
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.2888,
+    -0.1433,
+    -0.9466
+   ],
+   "delay_s": 0.0
+  },
+  "under_pelvis_b": {
+   "module": "back",
+   "pivot": "piv_hips",
+   "role": "under",
+   "local_pos": [
+    -0.0,
+    -0.02287,
+    0.24063
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.0,
+    -0.5943,
+    0.8043
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6545,
+    -0.6081,
+    -0.4493
+   ],
+   "delay_s": 0.0
+  },
+  "under_pelvis_f": {
+   "module": "pelvis",
+   "pivot": "piv_hips",
+   "role": "under",
+   "local_pos": [
+    -0.0,
+    -0.02293,
+    -0.22294
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.0,
+    -0.2189,
+    -0.9758
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.7141,
+    0.683,
+    -0.1532
+   ],
+   "delay_s": 0.0
+  },
+  "under_shinL": {
+   "module": "legL",
+   "pivot": "piv_kneeL",
+   "role": "under",
+   "local_pos": [
+    -0.03255,
+    -0.35165,
+    0.04071
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.4472,
+    -0.8944,
+    0.0
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.166,
+    -0.083,
+    0.9826
+   ],
+   "delay_s": 0.0
+  },
+  "under_shinR": {
+   "module": "legR",
+   "pivot": "piv_kneeR",
+   "role": "under",
+   "local_pos": [
+    0.03255,
+    -0.35165,
+    0.04071
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.4472,
+    -0.8944,
+    0.0
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    -0.7504,
+    -0.3752,
+    -0.5442
+   ],
+   "delay_s": 0.0
+  },
+  "under_thighL": {
+   "module": "legL",
+   "pivot": "piv_hipL",
+   "role": "under",
+   "local_pos": [
+    -0.04565,
+    -0.21375,
+    -0.02277
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    -0.7013,
+    -0.6674,
+    0.2505
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.5275,
+    -0.2495,
+    0.8121
+   ],
+   "delay_s": 0.0
+  },
+  "under_thighR": {
+   "module": "legR",
+   "pivot": "piv_hipR",
+   "role": "under",
+   "local_pos": [
+    0.04565,
+    -0.21375,
+    -0.02277
+   ],
+   "local_rot_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "approach_dir_world_rest": [
+    0.7008,
+    -0.6683,
+    0.2496
+   ],
+   "pre_socket_offset_m": 0.28,
+   "pre_socket_rot_deg": 16.0,
+   "tumble_axis": [
+    0.6404,
+    0.7435,
+    0.1927
+   ],
+   "delay_s": 0.0
+  }
+ }
+}
